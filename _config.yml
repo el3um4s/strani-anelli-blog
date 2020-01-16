@@ -18,14 +18,14 @@ email                       : stranianelli@gmail.com
 description                 : Un nerd dall'aria intelligente con gli occhialini e che non capisce nulla di musica
 twitter_username            : el3um4s
 github_username             : el3um4s
-minimal_mistakes_skin       : sunrise
+minimal_mistakes_skin       : dark
 search                      : true
 teaser                      : "/assets/images/page-header-teaser.webp"
 
 #url                         : "https://el3um4s.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 #baseurl                     : "/strani-anelli-old" # the subpath of your site, e.g. "/blog"
 #repository                 : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-logo                        : "https://el3um4s.github.io/strani-anelli-blog/assets/images/logo-1718-riga.svg" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                        : "https://blog.stranianelli.com/assets/images/logo-1718-riga.svg" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title              : " " # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs               : false # true, false (default)
 
