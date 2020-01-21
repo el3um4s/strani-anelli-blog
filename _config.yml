@@ -18,7 +18,7 @@ email                       : stranianelli@gmail.com
 description                 : Un nerd dall'aria intelligente con gli occhialini e che non capisce nulla di musica
 twitter_username            : el3um4s
 twitter                     :
-  username                  : "@el3um4s"
+  username                  : "el3um4s"
 github_username             : el3um4s
 minimal_mistakes_skin       : dark
 search                      : true
@@ -88,7 +88,7 @@ plugins:
 
 author:
   name                      : "Samuele"
-  twitter                   : "@el3um4s"
+  twitter                   : "el3um4s"
   avatar                    : "https://avatars0.githubusercontent.com/u/23579630?s=200&v=4"
   bio                       : "'Un nerd dall'aria intelligente con gli occhialini e che non capisce nulla di musica' (cit.)"
   links:
