@@ -61,7 +61,7 @@ include:
 comments:
   provider                  : "disqus"
   disqus:
-    shortname               : "test"
+    shortname               : "strani-anelli"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
