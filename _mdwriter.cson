@@ -21,12 +21,13 @@ siteUrl: ""
 # - Leave it empty to use the current project path (recommended)
 siteLocalDir: ""
 # Directory to drafts from siteLocalDir
-siteDraftsDir: "_drafts/"
+siteDraftsDir: "_drafts/{year}/{year}-{month}-{day}-{inserisci-titolo}/"
 # Directory to posts from siteLocalDir
-sitePostsDir: "_posts/"
+sitePostsDir: "_posts/{year}/{year}-{month}-{day}-{inserisci-titolo}/"
 # Directory to images from siteLocalDir
 # - E.g. to use the current filename directory, can use {directory}
-siteImagesDir: "images/"
+# siteImagesDir: "images/"
+siteImagesDir: "{directory}"
 
 # URLs to tags/posts/categories JSON files
 # https://github.com/zhuochun/md-writer/wiki/Settings-for-Front-Matters
@@ -55,10 +56,10 @@ frontMatter: """
 ---
 title: "{title}"
 header:
-  teaser: "/images/image.webp"
-  overlay_image: "/images/image.webp"
-  overlay_filter: rgba(249, 178, 72, 0.5)
-  caption: "Photo credit: [**CreditImageNome**](CreditImageURL)"
+  miniatura: "image.webp"
+  immagine_estesa: "image.webp"
+  immagine_fonte: "Photo credit: [**CreditImageNome**](CreditImageURL)"
+  overlay_filter: rgba(79, 79, 79, 0.5)
 date: "{date}"
 ---
 """
@@ -218,11 +219,13 @@ lineStyles:
 # - height: height of image
 # - align: alignment of image
 #
-imageTag: '![{alt}]({{ "/{src}" | absolute_url }} )'
+imageTag: '![{alt}]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}{src})'
+#imageTag: '![{alt}]({{site.immagini}}{src})'
+#imageTag: '![{alt}]({{ "/{src}" | absolute_url }})'
 # Use relative path to image from the opened file
-relativeImagePath: false
+relativeImagePath: true
 # Rename copyed image based on title/alt
-renameImageOnCopy: false
+renameImageOnCopy: true
 
 # Inline link tag template
 linkInlineTag: "[{text}]({url})"
