@@ -40,13 +40,17 @@ Il passo successivo è stato capire come far sì che ogni articoli avesse una su
 
 Avendo scelto di usare questa configurazione posso ottenere il nome del post e il nome della cartella nello stesso identico modo usando la variabile
 
+{% raw %} 
 ~~~{{ page.url }}
 ~~~
+{% endraw %}
 
 Se unisco le due cose ottengo:
 
+{% raw %} 
 ~~~![]({{site.immagini}}{{page.url | remove_first: "/"}}nome-immagine.webp)
 ~~~
+{% endraw %}
 
 che nel caso di questo articolo significa: "_{{site.immagini}}{{page.url | remove_first: "/"}}nome-immagine.webp_". Però c'è un problema. Così facendo posso avere ogni articolo nella sua bella cartellina, e avere il tutto in ordine alfabetico. Che é sì più ordinato rispetto ad avere le immagini tutte mischiate ma rischia di diventare molto confuso quando si tratta di lavorare con molti articoli. E io voglio dover trattare molti articoli diversi: fa parte dei [miei obiettivi per i #100DaysOfCode]({% post_url 2020-01-21-un-nuovo-inizio %}).
 
@@ -54,18 +58,24 @@ Quindi che fare?
 
 Beh, salvare i post divisi per anno può essere il primo passo. E il successivo è ordinare le cartelle in ordine di data. Questo è abbastanza semplice, basta chiamare la cartella con lo stesso nome del file markdown del post. Così facendo posso ricavare l'anno tramite:
 
+{% raw %} 
 ~~~{{ page.date | date: "%Y"}}
 ~~~
+{% endraw %}
 
 A me interessa però avere la data completa, perché il posto è salvato nel formato "_ANNO-MESE-GIORNO-Titolo-del-Post_":
 
+{% raw %}
 ~~~{{ page.date | date: "%Y/%Y-%m-%d"}}
 ~~~
+{% endraw %}
 
 Unendo tutto questo ottengo:
 
+{% raw %} 
 ~~~{{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}nome-immagine.webp
 ~~~
+{% endraw %}
 
 ovvero "_{{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}funziona.webp_"
 
@@ -73,6 +83,7 @@ ovvero "_{{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remo
 
 Ovviamente non sono soddisfatto di questo risultato: è comunque una serie lunga di caratteri da digitare, ed è facile sbagliare. Come si può semplificare? Usando un plugin per Atom: [Markdown-Writer for Atom](https://atom.io/packages/markdown-writer). Andando a modificare il file _\_mdwriter.cson_ posso far sì che le immagini vengano salvate direttamente nella cartella dell'articolo, e che venga scritta automaticamente la stringa giusta per poterla visualizzare.
 
+{% raw %} 
 ~~~sitePostsDir: "_posts/{year}/{year}-{month}-{day}-{inserisci-titolo}/"
 siteImagesDir: "{directory}"
 newPostFileName: "{year}-{month}-{day}-{slug}{extension}"
@@ -80,5 +91,6 @@ imageTag: '![{alt}]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page
 relativeImagePath: true
 renameImageOnCopy: true
 ~~~
+{% endraw %}
 
 Direi che è tutto. Non resta altro che mettere il [collegamento al repository del blog](https://github.com/el3um4s/strani-anelli-blog), dove c'è anche il file markdown di questo articolo.
