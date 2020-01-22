@@ -14,7 +14,7 @@ tags:
 
 Ogni tanto ci riprovo a scrivere, a programmare, a completare un progetto. La vita però si diverte a complicare le cose. Avevo promesso a me stesso di riprovare con i **100DaysOfCode**. È il momento.
 
-Ma questa volta voglio affrontare il tutto con un po' di metodo. E fare rientrare nei 100 Giorni anche questo blog. La volta scorsa, due anni fa, avevo individuato **due problemi** che non ero riuscito a risolvere:
+Ma questa volta voglio affrontare il tutto con un po' di metodo. E fare rientrare nei 100 Giorni anche questo blog. La volta scorsa, [due anni fa]({% post_url 2018-04-16-100-days-of-coding-tempo-scaduto-piu-o-meno %}), avevo individuato **due problemi** che non ero riuscito a risolvere:
 
 1. **Non avevo ben chiaro cosa volessi fare.** Sono partito allo sbaraglio, senza uno straccio di progetto, un piano di studi, nulla. Alla lunga questo mi ha fatto studiare, provare, testare mille cose diverse. E se da un lato sento di aver approfondito alcuni aspetti della programmazione, d’altro canto mi sono perso. A un certo punto volevo fare tutto, e mi sono ritrovato a non riuscire più a fare nulla. E ho smesso di contare i giorni, e ho considerato finito l’esperimento, con un fallimento.
 2. **Ho preteso troppo da me.** Che è abbastanza naturale, mi rendo conto, quando si affronta una sfida. Però ci vuole misura, e non sempre è possibile ottenere tutto subito. Anzi, a volte invece di incaponirsi su una funzione che… non funziona, a volte è meglio lasciare stare. Chiudere il PC e andare a dormire. E, a proposito di dormire, come corollario forse è meglio non dormire una manciata di ore a notte, per troppe notti di fila. Me lo devo ricordare, la prossima volta.
