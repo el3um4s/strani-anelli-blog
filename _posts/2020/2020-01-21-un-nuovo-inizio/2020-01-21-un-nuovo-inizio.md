@@ -25,9 +25,9 @@ Quindi, partendo dall'esperienza della volta scorsa, **ecco quello che voglio ot
 2. Fare qualcosa ogni giorno. Tutti i giorni. Ma senza mettermi un tempo minimo. Ci saranno giorni in cui farò proprio pochino, altri in cui farò di più. Questa volta non mi farò prendere dal patema.
 3. Aggiornare ogni giorno questo blog. E Twitter. Non mi interessa scrivere tanto. Basta anche solo ripubblicare il link a quello che scrivo su Twitter.
 4. Andando più nel dettaglio:
-   1. finire di sistemare il trasloco dei blog miei e di mia moglie da WordPress a Jekyll (ehi, questo è il primo post su Jekyll! ::smile::);
+   1. finire di sistemare il trasloco dei blog miei e di mia moglie da WordPress a Jekyll (ehi, questo è il primo post su Jekyll! :smile:);
    2. sistemare il sito del matrimonio: si sono alcune cosette da correggere, dovute soprattutto al cambio di hosting e al passaggio da _http_ a _https_;
    3. cominciare e finire un giochino. Con finire intendo anche pubblicarlo su Google Play. Per il momento non mi interessa Steam;
-   4. partecipare a una Game Jams, fino in fondo. Ovviamente non posso ambire a vincere, pecco di esperienza. Però posso mettermi alla prova e imparare dagli errori.
+   4. partecipare a una Game Jam, fino in fondo. Ovviamente non posso ambire a vincere, pecco di esperienza. Però posso mettermi alla prova e imparare dagli errori.
 
 Date le regole di ingaggio, è ora di cominciare.
