@@ -1,8 +1,8 @@
 main:
   - title: "Posts"
     url: /posts/
-  - title: "Old Blog"
-    url: "https://old.stranianelli.com/"
+  # - title: "Old Blog"
+  #   url: "https://old.stranianelli.com/"
   # - title: "Categories"
   #   url: /categories/
   # - title: "Tags"
