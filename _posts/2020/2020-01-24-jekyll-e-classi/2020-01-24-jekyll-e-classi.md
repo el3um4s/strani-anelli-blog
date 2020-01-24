@@ -38,10 +38,8 @@ Questo è un paragrafo rosso
 
 Il risultato sarà così:
 
-~~~
 Questo è un paragrafo rosso
 {: .rosso}
-~~~
 
 Ovviamente per ottenere il risultato che ci aspettiamo bisogna avere inserito nel progetto un file CSS contente la classe corrispondente. In alternativa è possibile scrivere direttamente, nel file Markdown:
 
@@ -55,13 +53,14 @@ Ovviamente per ottenere il risultato che ci aspettiamo bisogna avere inserito ne
 
 Volendo è possibile inserire più classi, così:
 
-~~~
+
 Questa è una frase blu in grassetto{: .blu .grassetto .sfondo-chiaro }
-{% raw %}{: .blu .grassetto .sfondo-chiaro }{% endraw %}
-~~~
+{% raw %}
+{: .blu .grassetto .sfondo-chiaro }
+{% endraw %}
+
 
 In questi giorni ho imparato anche altri trucchetti interessanti, soprattutto grazie a [stackoverflow.com ](https://stackoverflow.com/). Ho trovato anche molto utile questa [guida sul Markdown](https://about.gitlab.com/handbook/engineering/technical-writing/markdown-guide/) e questa lista di [trucchi e consigli](https://about.gitlab.com/blog/2016/07/19/markdown-kramdown-tips-and-tricks/).
-
 
 <style type="text/css">
   .rosso {
