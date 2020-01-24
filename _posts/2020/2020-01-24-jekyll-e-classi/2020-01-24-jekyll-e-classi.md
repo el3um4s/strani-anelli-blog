@@ -19,6 +19,24 @@ Una delle cose che mi ha richiesto un po' di tempo è stato capire come personal
 
 ### Come inserire classi CSS dentro Markdown
 
+<style type="text/css">
+  .rosso {
+    color: red;
+  }
+
+  .blu {
+    color: blue;
+  }
+
+  .grassetto {
+    font-weight: bold;
+  }
+
+  .sfondo-chiaro {
+    background-color: #c2c9d4
+  }
+</style>
+
 Allora, se penso a una classe CSS la prima cosa che mi viene in mente è qualcosa del tipo:
 
 ~~~css
@@ -53,29 +71,6 @@ Ovviamente per ottenere il risultato che ci aspettiamo bisogna avere inserito ne
 
 Volendo è possibile inserire più classi, così:
 
-
-Questa è una frase blu in grassetto{: .blu .grassetto .sfondo-chiaro }
-{% raw %}
-{: .blu .grassetto .sfondo-chiaro }
-{% endraw %}
-
+_Questa è una frase blu in grassetto_{: .blu .grassetto .sfondo-chiaro}{% raw %}{: .blu .grassetto .sfondo-chiaro}{% endraw %}
 
 In questi giorni ho imparato anche altri trucchetti interessanti, soprattutto grazie a [stackoverflow.com ](https://stackoverflow.com/). Ho trovato anche molto utile questa [guida sul Markdown](https://about.gitlab.com/handbook/engineering/technical-writing/markdown-guide/) e questa lista di [trucchi e consigli](https://about.gitlab.com/blog/2016/07/19/markdown-kramdown-tips-and-tricks/).
-
-<style type="text/css">
-  .rosso {
-    color: red;
-  }
-
-  .blu {
-    color: blue;
-  }
-
-  .grassetto {
-    font-weight: bold;
-  }
-
-  .sfondo-chiaro {
-    background-color: #c2c9d4
-  }
-</style>
