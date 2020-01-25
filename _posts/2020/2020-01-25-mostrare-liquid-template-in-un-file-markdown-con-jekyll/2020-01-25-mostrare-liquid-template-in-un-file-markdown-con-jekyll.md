@@ -15,7 +15,7 @@ graffa: "{"
 tilde: "~"
 ---
 
-Scrivendo il primo articolo di questi nuovi #100DaysOfCode (quello su [come inserire immagini nella stessa directory del file md]({%2020-01-22-jekyll-immagini-nella-stessa-cartella-dei-post%})) mi sono trovato ad affrontare un problema curioso: come mostrare un template Liquid in un file Markdown?
+Scrivendo il primo articolo di questi nuovi #100DaysOfCode (quello su [come inserire immagini nella stessa directory del file md]({% post_url 2020-01-22-jekyll-immagini-nella-stessa-cartella-dei-post %})) mi sono trovato ad affrontare un problema curioso: come mostrare un template Liquid in un file Markdown?
 
 Non so bene perché, ma quando Jekyll compila i file di un sito processa tutti le doppie parentesi  graffe (`{{page.graffa}}{`) e le graffe seguite dal percentuale (`{{page.graffa}}%`) anche se inseriti in un paragrafo di codice. Cercando in rete ho trovato due soluzioni, una di [Nate Eagle](https://nateeagle.com/2011/08/31/how-to-output-curly-brackets-in-jekyll/), l'altra di [Ozzie Liu](https://ozzieliu.com/2016/04/26/writing-liquid-template-in-markdown-with-jekyll/). Partiamo dalla seconda.
 
