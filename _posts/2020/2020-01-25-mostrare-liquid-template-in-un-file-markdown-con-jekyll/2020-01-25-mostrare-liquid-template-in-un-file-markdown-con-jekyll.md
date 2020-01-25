@@ -27,15 +27,15 @@ Per esempio, posso scrivere
 
 ```html
 {{page.graffa}}% raw %}
-{{tilde}}{{tilde}}{{tilde}}html
+{{tilde}}~~html
 <ul>
 {{page.graffa}}% for tag in site.tags %}
   {{page.graffa}}% assign name = tag | first %}
   {{page.graffa}}% assign posts = tag | last %}
-  <li>{{page.graffa}}{ name | camelize | replace: "-", " " }} has {{page.graffa}}{posts | size}} posts</li>
+  <li>{{page.graffa}}{ name | camelize | replace: "-", " " }}</li>
 {{page.graffa}}% endfor %}
 </ul>
-{{tilde}}{{tilde}}{{tilde}}
+{{tilde}}~~
 {{page.graffa}}% endraw %}
 ```
 
@@ -61,15 +61,15 @@ graffa: "{"
 Quindi nel markdown posso inserire il codice richiamando la variabile tramite il tag `{{page.graffa}}{ page.graffa }}` (oppure `{{page.graffa}}{ site.graffa }}` ):
 
 ```html
-{{tilde}}{{tilde}}{{tilde}}html
+{{tilde}}~~html
 <ul>
 {{page.graffa}}{ page.graffa }}% for tag in site.tags %}
   {{page.graffa}}{ page.graffa }}% assign name = tag | first %}
   {{page.graffa}}{ page.graffa }}% assign posts = tag | last %}
-  <li>{{page.graffa}}{ page.graffa }}{ name | camelize | replace: "-", " " }} has {{page.graffa}}{ page.graffa }}{posts | size}} posts</li>
+  <li>{{page.graffa}}{ page.graffa }}{ name | camelize | replace: "-", " " }}</li>
 {{page.graffa}}{ page.graffa }}% endfor %}
 </ul>
-{{tilde}}{{tilde}}{{tilde}}
+{{tilde}}~~
 ```
 
 Comunque, sì, questo è un discreto pasticcio. Forse la prossima volta mi conviene fare semplicemente uno screenshot del codice che voglio mostrare :wink:.
