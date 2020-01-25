@@ -49,7 +49,7 @@ In questo ottengo:
   <li>{{ name | camelize | replace: "-", " " }}</li>
 {% endfor %}
 </ul>
-~~~html
+~~~
 {% endraw %}
 
 ### Usare una variabile
