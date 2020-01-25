@@ -7,4 +7,6 @@ header:
   caption: "Photo credit: [**CreditImageNome**](CreditImageURL)"
 ---
 
-{% post_url 2020-01-21-un-nuovo-inizio %}
+{% post_url 2014-12-01-claudia-falzone %}
+
+{: .align-left}
