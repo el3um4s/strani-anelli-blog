@@ -39,7 +39,8 @@ Per esempio, posso scrivere
 {{page.graffa}}% endraw %}
 ```
 
-In questo ottengo:
+Con questo ottengo:
+
 {% raw %}
 ~~~html
 <ul>
