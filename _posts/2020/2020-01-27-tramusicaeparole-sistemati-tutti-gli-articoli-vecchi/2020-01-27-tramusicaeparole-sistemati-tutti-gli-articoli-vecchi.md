@@ -6,6 +6,12 @@ header:
   immagine_fonte: "Photo credit: [**Pineapple Supply Co.**](https://unsplash.com/@pineapple)"
   overlay_filter: rgba(79, 79, 79, 0.5)
 date: "2020-01-27 23:59"
+categories:
+  - jekyll
+  - 100DaysOfCode
+tags:
+  - jekyll
+  - 100DaysOfCode
 ---
 
 È abbastanza tardi ma sono soddisfatto: ho finito di sistemare tutti gli articoli vecchi di [Tra Musica e Parole](https://tramusicaeparole.com/), il blog di mia moglie. Al momento sono tutti in un [repository su GitHub](https://github.com/el3um4s/tra-musica-e-parole) pronti per diventare la versione ufficiale.
