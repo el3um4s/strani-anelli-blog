@@ -1,11 +1,11 @@
 ---
 title: "Mostrare playlist Spotify su Jekyll"
 header:
-  miniatura: "image.webp"
-  immagine_estesa: "image.webp"
-  immagine_fonte: "Photo credit: [**CreditImageNome**](CreditImageURL)"
+  miniatura: "spotify-e-jekyll.webp"
+  immagine_estesa: "spotify-e-jekyll.webp"
+  immagine_fonte: "Photo credit: [**Zarak Khan**](https://unsplash.com/@zarakvg)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2020-01-27 00:21"
+date: "2020-01-26 23:21"
 categories:
   - jekyll
 tags:
@@ -40,7 +40,7 @@ Per prima cosa si crea il file `spotifyplaylist.html` nella cartella `_includes`
 
 Poi in un file `CSS` vanno inseriti questi stili:
 
-~~~CSS
+~~~css
 .embed-spotify {
   position: relative;
   padding-bottom: 100%;
