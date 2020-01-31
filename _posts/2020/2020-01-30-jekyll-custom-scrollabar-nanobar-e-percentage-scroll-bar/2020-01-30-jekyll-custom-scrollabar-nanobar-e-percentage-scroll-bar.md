@@ -18,13 +18,13 @@ Le ultime cose che ho aggiunto, subito dopo aver completato il trasloco, sono pe
 
 Questa è stata la parte più semplice, è stato sufficiente usare un po' di CSS. Per prima cosa sistemo la larghezza della barra laterale in modo da farla un po' più grossa e, a mio parere, più bellina
 
-~~~CSS
+~~~css
 body::-webkit-scrollbar { width: 1em; }
 ~~~
 
 Subito dopo sistemo il colore della barra armonizzandola con il colore primario del blog. E già che ci sono arrotondo i gli angoli.
 
-~~~CSS
+~~~css
 body::-webkit-scrollbar-thumb {
   background-color: #639497;
   outline: 1px solid #639497;
@@ -34,7 +34,7 @@ body::-webkit-scrollbar-thumb {
 
 Infine scurisco leggermente rispetto allo sfondo la colonna dove scorre la barra: è un effetto che ho visto in più siti e mi piace.
 
-~~~CSS
+~~~css
 body::-webkit-scrollbar-track { background-color: #1a1d24; }
 ~~~
 
