@@ -1,5 +1,5 @@
 ---
-title: "Jekyll: Custom Scrollabar, Nanobar e Percentage Scroll Bar"
+title: "Jekyll: Custom Scrollbar, Nanobar e Percentage Scroll Bar"
 header:
   miniatura: "linee-astratte.webp"
   immagine_estesa: "linee-astratte.webp"
