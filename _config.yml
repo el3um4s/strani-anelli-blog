@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title                       : Strani Anelli
-email                       : stranianelli@gmail.com
+email                       : samuele@stranianelli.com
 description                 : Un nerd dall'aria intelligente con gli occhialini e che non capisce nulla di musica
 twitter_username            : el3um4s
 twitter                     :
