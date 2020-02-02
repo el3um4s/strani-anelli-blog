@@ -6,6 +6,12 @@ header:
   immagine_fonte: "Photo credit: [**Stock Photography**](https://unsplash.com/@aplaceforcreation)"
   overlay_filter: rgba(79, 79, 79, 0.5)
 date: "2020-01-30 23:59"
+categories:
+  - jekyll
+  - 100DaysOfCode
+tags:
+  - jekyll
+  - 100DaysOfCode
 ---
 
 [Tra Musica e Parole](https://www.tramusicaeparole.com/) è ora online nella sua nuova casa: un bel repository su GitHub unito a un dominio acquistato su Google. E, onestamente, sono un po' geloso del blog di mia moglie, è più bello del mio e ha alcune funzioni in più. Ma presto aggiornerò anche il codice di questo qui.
