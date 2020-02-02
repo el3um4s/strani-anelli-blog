@@ -3,7 +3,7 @@ title: "Lazy Loading di immagini in Jekyll"
 header:
   miniatura: "pigro.webp"
   immagine_estesa: "pigro.webp"
-  immagine_fonte: "Photo credit: [**CreditImageNome**](CreditImageURL)"
+  immagine_fonte: "Photo credit: [**Gerhard Gellinger**](https://pixabay.com/it/users/gellinger-201217/)"
   overlay_filter: rgba(79, 79, 79, 0.5)
 date: "2020-02-02 22:46"
 categories:
