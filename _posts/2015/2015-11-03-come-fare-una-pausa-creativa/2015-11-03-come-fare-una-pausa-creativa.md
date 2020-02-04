@@ -16,7 +16,7 @@ Lo so, la domanda è strana, ma se ci pensi un attimino non lo è nemmeno troppo
 
 ### Cos’è una pausa creativa?
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}creatività-pausa.webp)
+{% include picture img="creatività-pausa" ext="jpg" alt="" %}
 
 **Edward De Bono** è probabilmente il primo a utilizzare questo termine – “pausa creativa” – nella sua accezione completa. E descrive la pausa creativa come un’azione cosciente, deliberata: è una pausa che ci auto imponiamo, del tempo da usare per prendere in considerazioni soluzioni alternative a un problema. Una pausa da fare anche quando le cose stanno andando alla perfezione: “alcuni dei risultati migliori arrivano quando smettiamo di pensare a quello che nessun altro ha smesso di pensare”. De Bono suggerisce che non occorrono necessariamente delle pause lunghe: a volte **anche solo 30 secondi possono bastare**.
 
@@ -28,7 +28,7 @@ Entrambi concordano sulla necessità di una interruzione auto imposta, ovvero su
 
 ### Come fare una vera pausa creativa
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}come-essere-creativi.webp)
+{% include picture img="come-essere-creativi" ext="jpg" alt="" %}
 
 Ma non è solo questo. Se bastasse fare uno stacco per risolvere tutti i problemi sarebbe davvero bello. E facile. Sfortunatamente non è così. Quindi, perché una doccia può essere creativa e una pausa a caso no? Per capirlo, e per capire come rendere creativi anche altri momenti, vediamo cosa rende così speciale una doccia:
 

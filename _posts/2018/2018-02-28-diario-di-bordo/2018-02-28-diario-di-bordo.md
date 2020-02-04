@@ -23,13 +23,13 @@ Il secondo punto, il corso Udacity, mi ha un po’ deluso: è stato abbastanza s
 
 Invece del progetto [**Random Quote Machine**](https://el3um4s.github.io/FCC-Random-Quote-Machine/) sono soddisfatto: la versione nuova, costruita con VueJS, è venuta è più elegante.
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}FCC-Random-Quote-Machine.webp)
+{% include picture img="FCC-Random-Quote-Machine" ext="jpg" alt="" %}
 
 A sinistra la la nuova versione (creata usando VueJS). A destra la versione dell’anno scorso (fatta con JQuery).
 
 Oltre a essere più bellina, la nuova versione cambia colore ogni volta che viene generata una nuova citazione.
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}FCC-Random-Quote-Machine-collage-1024x727.webp)
+{% include picture img="FCC-Random-Quote-Machine-collage-1024x727" ext="jpg" alt="" %}
 
 Mi piace molto il gradiente e i pulsanti con il colore abbinato. E mi piace sopratutto che con meno codice ho creato un’applicazione più elegante, leggera, flessibile. Sì, lo so, pare uno spottone, ma aver ridotto il tutto a **130 righe** di codice contro le 300 di prima è un buon risultato, per me.
 

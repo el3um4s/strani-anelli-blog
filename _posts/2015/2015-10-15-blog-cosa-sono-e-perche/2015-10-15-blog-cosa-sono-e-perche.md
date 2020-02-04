@@ -16,7 +16,7 @@ Quindi, di cosa parla quello che ho letto? Di tante cose interessanti, e di tant
 
 ### La Storia Dei Blog
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}storia-dei-blog.webp)
+{% include picture img="storia-dei-blog" ext="jpg" alt="" %}
 
 L’inizio è interessante, storicamente parlando. Ancor di più se uno prova ad usare Google Plus o Facebook e scopre che tutti i protagonisti della storia dei blog sono in questi social network. Fa comunque impressione scoprire che _Dave Winer_, **il primo protoblogger** con _Scripting News_, _Jorn Barger_, l’autore del **primo blog della storia**, e _Peter Merholz_, quello che ha detto _we blog_ per primo, ecco, tutti questi tre sono qui, a portata di click. E, no, non ho dimenticato il **primo blogger italiano**, _Antonio Cavedoni_, con il suo _Blogorroico_ del 2000.
 
@@ -26,7 +26,7 @@ Prima di proseguire dico subito una cosa: i consigli su come scrivere, e anche l
 
 ### Differenze Tra Blog e Social Network
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}differenze-social-e-blog.webp)
+{% include picture img="differenze-social-e-blog" ext="jpg" alt="" %}
 
 Ok, basta logorrea e passiamo alle due cose che più mi hanno colpito. Che poi sono due confronti. Il primo tra blog e social network. Il secondo tra l’editoria su internet e quella tradizionale.
 
@@ -39,7 +39,7 @@ Partiamo da Blog e Social Network. Dai miei appunti posso trarre 4 punti di dive
 
 ### E Quelle Tra Blog Ed Editoria Tradizionale
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}differenze-editoria-blog.webp)
+{% include picture img="differenze-editoria-blog" ext="jpg" alt="" %}
 
 Il passo successivo è scontato, direi quasi ovvio. Ad un certo punto l’autrice sfiora un tema interessane, e sui cui non avevo, e non ho, ancora riflettuto a fondo. Cosa? I diversi modi con cui leggiamo un romanzo, un giornale e su internet.
 

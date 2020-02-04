@@ -22,7 +22,7 @@ Le ultime cose che ho aggiunto, subito dopo aver completato il trasloco, sono pe
 
 ### Come colorare la scrollbar
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}modifiche-estetiche-tramusicaeparole.webp)
+{% include picture img="modifiche-estetiche-tramusicaeparole" ext="jpg" alt="" %}
 
 Questa è stata la parte più semplice, è stato sufficiente usare un po' di CSS. Per prima cosa sistemo la larghezza della barra laterale in modo da farla un po' più grossa e, a mio parere, più bellina
 

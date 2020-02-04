@@ -19,7 +19,7 @@ Hai presente quando ti guardi allo specchio e ti chiedi che cosa stai facendo de
 
 ### Strano è bene
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}strano-e-bene.webp)
+{% include picture img="strano-e-bene" ext="jpg" alt="" %}
 
 Allora, facciamo così, fai conto che fai un lavoro che ti piace (fai finta, per il momento, ok?), che ti dà soddisfazione, che ti fa crescere, e che ti fa sentire realizzato. Cosa ti manca alla felicità? Beh, manca la giusta dose di stranezza e di eccentricità. E il coraggio di seguire questo tuo essere strano. Dovresti trovarlo, il coraggio: **essere strano porta dei vantaggi**, è innegabile:
 

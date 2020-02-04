@@ -23,7 +23,7 @@ Che poi è proprio il motivo per cui mi sono ripromesso di scrivere ogni settima
 
 ### Creatività è conoscere le regole
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}conoscere-le-regole.webp)
+{% include picture img="conoscere-le-regole" ext="jpg" alt="" %}
 
 Conoscere le regole è fondamentale, in qualsiasi ambito, qualsiasi cosa si faccia. A volte – ok, spesso – sento raccontare la favola del “genio innato”. **Non esiste genio innato**, non è mai esistito e non potrà mai esistere. Sono troppo secco? Forse, ma non credo.  Edison definiva, efficacemente, il genio composto per il 99% da sudore. E dava solo un 1% di peso all’ispirazione.
 
@@ -47,7 +47,7 @@ Pensare che tutte queste conoscenze arrivino in noi tramite l’ispirazione è a
 
 ### Creatività è rompere le regole
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}rompi-le-regole.webp)
+{% include picture img="rompi-le-regole" ext="jpg" alt="" %}
 
 Imparare costa fatica e tempo. Richiede studio e una certa dose di dedizione. Tutto questo per **poter arrivare al punto di ignorare le regole**. Ehi, non sbarrare gli occhi! È proprio così: lo scopo finale è assimilare talmente bene le regole da poterle ignorare. Anche se sembra assurdo, fidati non è così.
 
@@ -57,7 +57,7 @@ Solo grazie alla piena padronanza delle regole e della tecnica si può decidere 
 
 ### Creatività è esercizio
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}fare-esercizio.webp)
+{% include picture img="fare-esercizio" ext="jpg" alt="" %}
 
 Molto esercizio per la verità. Serve esercizio per imparare le basi della scrittura, della musica, di qualsiasi cosa. E serve molto esercizio per padroneggiare bene una qualsiasi tecnica. Ci sono anche delle ragioni fisiologiche sul perché è così: più volte ripetiamo un’azione più il nostro cervello consolida i movimenti necessari per ripetere l’azione stessa. Il risultato è poter dedicare sempre meno attenzione a come si svolge un’azione permettendo alla nostra mente di concentrarsi più a fondo su altri aspetti.
 

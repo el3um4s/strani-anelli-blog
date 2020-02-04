@@ -14,7 +14,7 @@ Hai presente quando dici “_Ho troppe responsabilità, non posso nemmeno fermar
 
 ### Fai un Pranzo “Vero”
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}pranzo-vero.webp)
+{% include picture img="pranzo-vero" ext="jpg" alt="" %}
 
 Tanto per cominciare evita di mangiare al PC. Esci, vai in pizzeria, o dal kebabbaro, al bar o addirittura a casa, se abiti vicino. Lo so, dici “se mangio e nello stesso tempo lavoro risparmio tempo”. L’impressione è quella, vero. Il problema, però, è che non sempre le ore lavorate coincidono con la qualità: più lavori, più ti stanchi. E arrivi al punto di metterci mezz’ora per fare quello che, normalmente, ci impieghi dieci minuti. Spesso basta un’ora di pausa, magari a pranzo con i colleghi, per tornare al lavoro più freschi, più produttivi e – infine – meno stressati.
 
@@ -29,7 +29,7 @@ L’unione di questi quattro elementi è un problema, ci rende più irritabili, 
 
 ### Va a farti un giro
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}camminare.webp)
+{% include picture img="camminare" ext="jpg" alt="" %}
 
 Quando sei stressato, sovraccaricato e ti pare di non star combinando niente, vai a fare una passeggiata. Dico davvero, fai due passi, prendi una boccata d’aria, e lascia la mente libera di vagare. In questo modo ottieni due risultati in un colpo solo
 
@@ -40,13 +40,13 @@ Bello, no?
 
 ### Ricordati di te
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}me.webp)
+{% include picture img="me" ext="jpg" alt="" %}
 
 Sei al lavoro, è un momento stressante, e non te ne puoi proprio andare. Allora fai un bel respiro, e ricordati di te: sei importante anche tu, non solo il tuo lavoro. Se puoi, ritagliati cinque minuti e fai un po’ di Yoga. Ci sono anche alcune [app per meditare](https://buddhify.com/) che potrebbero tornarti utili. Oppure, se non sei tipo da meditazione, fai un po’ di stretching: alcuni esercizi si possono fare anche in ufficio (e [99u.com ne presenta alcuni](https://99u.adobe.com/articles/6999/6-simple-yoga-stretches-for-daily-de-stressing)).
 
 ### Prenditi un week-end di vacanza
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}holiday.webp)
+{% include picture img="holiday" ext="jpg" alt="" %}
 
 L’ideale sarebbe una settimana completa di vacanza ogni tre mesi, ma se non puoi concediti per lo meno un week-end ogni tanto. Non è un lusso, è una necessità, se non vuoi andare in cortocircuito. È lo stesso concetto della pausa a pranzo: ogni tanto abbiamo bisogno di staccare completamente la spina, e conviene farlo regolarmente piuttosto che una volta all’anno. Però servono alcuni accorgimenti se vogliamo **rendere rilassante una vacanza**:
 
@@ -59,7 +59,7 @@ Quindi, a quando il prossimo week end al lago o al mare?
 
 ### Fai la siesta
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}siesta.webp)
+{% include picture img="siesta" ext="jpg" alt="" %}
 
 Lo so che per molti è tempo perso: ma che fai, dormi? Sì, dormo, dopo pranzo, prima di rimettermi al lavoro, un quarto d’ora, venti minuti massimo. La siesta serve per rigenerarsi, permette al nostro cervello di riposare, e al nostro corpo di ricaricarsi. Ma deve essere corta, non troppo lunga. In genere è consigliabile un pisolino di
 
@@ -83,7 +83,7 @@ C’è, infine, una terza possibilità: unire i benefici del caffè con quelli d
 
 ### Costruisci la tua routine mattutina
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}mattino.webp)
+{% include picture img="mattino" ext="jpg" alt="" %}
 
 Infine uno degli aspetti più importanti per evitare stress e affrontare la meglio le giornate: la mattina. Pare un luogo comune, e in parte lo è, ma davvero cominciare bene la giornata permette di avere un bel giorno. Ma cosa significa nella pratica? Beh, per prima cosa vuol dire costruire una solida routine mattutina: prendere della abitudini che ci facciano stare bene, e che ci facciano anche bene. Ognuno ha le sue abitudini, e ognuno deve trovare quelle più adatte alle proprie esigenze. Però sarebbe meglio ricordare alcune cose:
 

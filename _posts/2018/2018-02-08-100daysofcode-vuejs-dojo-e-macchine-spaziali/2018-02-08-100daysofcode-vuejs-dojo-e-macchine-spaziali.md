@@ -20,7 +20,7 @@ Un’altra cosa bella dei 100 giorni è sapere di non essere il solo ad affronta
 
 ### Non solo codice
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}falcon.webp)
+{% include picture img="falcon" ext="jpg" alt="" %}
 
 Ma questa settimana è stata interessante anche per un’altra ragione: il lancio del **Falcon Heavy** e la _tamarissima_ Tesla nello spazio. È la prima volta che riesco a vedere in diretta il lancio di un Falcon e, dai, mi sono emozionato. Vedere i motori accendersi, il razzo partire, e poi i due booster (si chiamano così, vero?) tornare indietro e atterrare in sincrono: alla fine il 2000 è arrivato.
 

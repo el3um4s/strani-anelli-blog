@@ -19,7 +19,7 @@ Il secondo libro, il fumetto, è **SuperGod** di **Warren Ellis** e di **Garrie 
 
 ### SuperGod
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}supergod.webp)
+{% include picture img="supergod" ext="jpg" alt="" %}
 
 INRI è del 1966, SuperGod del 2011: 45 anni separano queste due immaginazioni. Storie, fantasie, chiamiamole come vogliamo. Sono storie di fantascienza, sicuramente. Ma **sono anche, e forse soprattutto, la storia di come noi creiamo i nostri dei, a nostro uso e consumo**. Ma sopratutto a nostra immagine e somiglianza.
 
@@ -29,7 +29,7 @@ Sicuramente è **una visione cupa, razionalistica e tragica della religione**. E
 
 ### I.N.R.I.
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}inri.webp)
+{% include picture img="inri" ext="jpg" alt="" %}
 
 Diverso, invece, è la prospettiva offerta da Michael Moorcock. Siamo sempre di fronte alla creazione di Dio da parte dell’uomo, ma non per portare distruzione. No, assistiamo, seguendo le vicende narrate nel romanzo, alla nascita, alla vita e alla morte di Gesù di Nazareth. Ma non il Cristo narrato dai Vangeli. O, meglio, **scopriamo che il Messia alla base dei Vangeli non è altri che un viaggiatore nel tempo**. Karl Glogauer affronta un difficile viaggio nel passato per poter finalmente conoscere Gesù, e **scoprire se la propria fede ha un senso**.
 
@@ -37,7 +37,7 @@ San Tommaso? Sì, è un moderno San Tommaso, con la necessità di verificare, e 
 
 ### 45 anni
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}morgan-freeman.webp)
+{% include picture img="morgan-freeman" ext="jpg" alt="" %}
 
 Sono 45 gli anni che dividono questi due racconti. La storia, alla fine, è la stessa raccontata in due varianti. E’ triste, o per lo meno lo è per me, pensare come negli ultimi decenni sia cambiata la visione delle cose. **Negli anni ’60 il Dio creato dall’uomo è un dio benigno**, tutto sommato salvifico. **Oggi**, nel secondo decennio del 2000, gli dei dell’uomo sono… no, non malvagi. **Sono divinità per cui l’uomo non ha senso**. Come a rappresentare questa nostra povera umanità sballottata dagli eventi, dalle crisi, dalle guerre e dalle catastrofi naturali. Come se non ci fosse più motivo per aver fiducia nel futuro. Anzi, è quasi come se ci fosse la certezza di non avere più futuro, davanti a noi.
 

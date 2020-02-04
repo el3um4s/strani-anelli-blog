@@ -14,17 +14,17 @@ Segui sempre le tue passioni. Sì, certo, pare un buon consiglio. Se organizzi l
 
 ### Segui le tue passioni: il problema del tempo
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}strani-anelli-tempo-che-passa.webp)
+{% include picture img="strani-anelli-tempo-che-passa" ext="jpg" alt="" %}
 
 Beh, è sbagliato. Non in senso assoluto, per alcuni può anche funzionare. Ma non per tutti. E, sopratutto, per la maggior parte di noi è un pessimo consiglio. Non mi credi? Beh, guarda qua:
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}come-cambiano-le-passioni-nel-tempo.webp)
+{% include picture img="come-cambiano-le-passioni-nel-tempo" ext="jpg" alt="" %}
 
 Ok, il grafico non è bellissimo. Però rappresenta bene il concetto: quello che ci piace adesso non è detto che ci piacerà tra 10, 20 o 30 anni. Cambiano i gusti, cambiano le opinioni, **con il trascorrere del tempo cambiano anche le passioni**. Giù, in fondo, trovi tutti i link alla ricerca originale, con i numerini per verificare tu stesso sta cosa. Oppure, se preferisci, pensa a cosa ti piaceva fare solo qualche anno fa, e a quello che ti piace fare oggi.
 
 ### Ok, ma il lavoro?
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}non-esiste-il-lavoro-dei-tuoi-sogni.webp)
+{% include picture img="non-esiste-il-lavoro-dei-tuoi-sogni" ext="jpg" alt="" %}
 
 Ma non è solo questo il problema. Anzi, a voler ben vedere ci si può anche adattare a un lavoro che un po’ alla volta smette di appassionare. Il problema è che il lavoro dei propri sogni, quello che ci permette di seguire le nostre passioni, mica è detto che esista. O se anche esiste, perché dovremmo essere proprio noi a poterlo fare?
 
@@ -34,7 +34,7 @@ Se è così, e lo è, cosa ci resta da fare? Rassegnarci a un destino di frustra
 
 ### La ricerca della felicità: riconoscere il lavoro dei propri sogni
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}la-ricerca-della-felicità.webp)
+{% include picture img="la-ricerca-della-felicità" ext="jpg" alt="" %}
 
 Perché la questione del “segui le tue passioni” in realtà è un’altra. Noi tutti abbiamo in testa questa idea romantica: segui le tue passioni, **se vuoi essere felice devi fare quello che ci piace. Falso!** E per varie ragioni:
 
@@ -47,7 +47,7 @@ Il problema è, semmai, fare un lavoro che ci coinvolga. E che ci possa appassio
 
 ### Il lavoro più bello del mondo
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}il-lavoro-piu-bello-del-mondo.webp)
+{% include picture img="il-lavoro-piu-bello-del-mondo" ext="jpg" alt="" %}
 
 Ma quali caratteristiche deve avere un lavoro per essere coinvolgente? E, di conseguenza che genere di lavoro è un bel lavoro? Non esiste una risposta assoluta a questa domanda ma possiamo comunque provare a stilare una lista delle **5 caratteristiche di un buon lavoro**:
 

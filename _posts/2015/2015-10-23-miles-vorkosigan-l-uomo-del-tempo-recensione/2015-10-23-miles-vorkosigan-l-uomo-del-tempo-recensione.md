@@ -25,13 +25,13 @@ Però prima di andare avanti stai attento: ci sono un paio di spoiler.
 
 ### Come si dirige una squadra
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}squadra.webp)
+{% include picture img="squadra" ext="jpg" alt="" %}
 
 Se sei il figlio di una leggenda vivente, eroe di guerra, salvatore della patria nonché l’autorità più importante dell’impero, come mai finisci in una base sperduta in mezzo ai ghiacci? Beh, perché sei anche indisciplinato, e non sai assolutamente farti seguire dai tuoi uomini. Ed è questo il rebus che devi risolvere. O, meglio, che Miles Vorkosigan deve risolvere appena arrivato alla base Lazkowski: come si diventa dei bravi leader?
 
 ### Responsabilità individuale e responsabilità collettiva
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}leader.webp)
+{% include picture img="leader" ext="jpg" alt="" %}
 
 l secondo tema affrontato da  Lois McMaster Bujold è più drammatico: cosa fare quando si riceve un ordine criminale? E, sopratutto, come distinguere un comando lecito da uno illecito? A volte la differenza è sottile, e lo stesso Miles si ritrova in difficoltà. Se da un lato per noi lettori è facile distinguere il bene dal male, dall’altro lato diventa difficile per chi si ritrova isolato nel gelo capire fin dove può arrivare la disciplina militare e dove comincia l’insubordinazione.
 

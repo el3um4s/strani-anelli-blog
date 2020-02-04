@@ -21,7 +21,7 @@ Una cosa che mi ha richiesto qualche ora è stato capire come gestire i post e l
 
 Jekyll di suo richiede di tenere separata la directory con i post da quella con le immagini. Non so se è una scelta di progettazione voluta o una conseguenza data dal fatto che Jekyll non salva le risorse contenute nelle cartelle che cominciano con l'_underscore_ ( _ ). Fatto sta che se si prova ad accedere a un'immagine contenuta in \_post non si ottiene nulla. C'è però un modo per riuscirci, senza dover ricorrere a plugin.
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}schema-cartelle-jekyll.webp)
+{% include picture img="schema-cartelle-jekyll" ext="jpg" alt="" %}
 
 Premessa: questo blog utilizza le GitHub Pages e quindi si appoggia su un repository pubblico. Di conseguenza le risorse che utilizzo sono tutte online, anche quelle che salvo dentro le cartelle speciali di Jekyll. Quindi, perché non usarle direttamente invece di ricaricarle nuovamente? Da qui l'idea di collegare le immagini direttamente al mio repository. Per farlo è sufficiente conoscere l'url corrispondente. Url che è nella forma di:
 
@@ -89,7 +89,7 @@ Unendo tutto questo ottengo:
 
 ovvero "_{{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}funziona.webp_"
 
-![funziona]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}funziona.webp)
+{% include picture img="funziona" ext="jpg" alt="" %}
 
 Ovviamente non sono soddisfatto di questo risultato: è comunque una serie lunga di caratteri da digitare, ed è facile sbagliare. Come si può semplificare? Usando un plugin per Atom: [Markdown-Writer for Atom](https://atom.io/packages/markdown-writer). Andando a modificare il file _\_mdwriter.cson_ posso far sì che le immagini vengano salvate direttamente nella cartella dell'articolo, e che venga scritta automaticamente la stringa giusta per poterla visualizzare.
 

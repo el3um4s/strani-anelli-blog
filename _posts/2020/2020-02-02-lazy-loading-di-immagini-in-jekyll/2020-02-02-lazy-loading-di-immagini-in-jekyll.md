@@ -34,7 +34,7 @@ Praticamente basta far così:
 
 per ottenere questo
 
-![Can I Use Loading]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}can-i-use-loading.webp)
+{% include picture img="can-i-use-loading" ext="jpg" alt="" %}
 
 E visto che ho usato questa immagine come esempio, è il momento di parlare del principale limite di questo metodo: non è diffuso in tutti i browser. Funziona con Chrome, che da solo copre poco più del 60% degli utenti internet. Ma questo vuol dire che non funziona per circa il 40% deli internauti.
 
@@ -69,7 +69,7 @@ Ovviamente devo inserire anche l'immagine:
 <img class="lazy" data-src="gattino.webp">
 ~~~
 
-![gattino]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}gattino.webp)
+{% include picture img="gattino" ext="jpg" alt="" %}
 
 In pratica aggiungo una classe "_lazy_" e invece di usare "_src_" uso "_data-src_". Perché? Perché funziona così: quando viene caricata la pagina se il browser supporta l'attributo "_loading_" allora viene inserito automaticamente nel tag altrimenti JavaScript mostrerà le immagini solamente quando appariranno nella pagina.
 

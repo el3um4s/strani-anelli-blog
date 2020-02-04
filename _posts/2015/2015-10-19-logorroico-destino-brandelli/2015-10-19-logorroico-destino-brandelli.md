@@ -14,7 +14,7 @@ Ho letto, e riflettuto su molte questioni. Non ho trovato nessuna soluzione. Non
 
 ### Cosa sono io?
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}chi-sono-io.webp)
+{% include picture img="chi-sono-io" ext="jpg" alt="" %}
 
 Qual è stato il filo d’Arianna dei miei pensieri? Un concetto, semplice e inestricabile: cosa sono io? E’ una domanda senza risposta, lo so. E’ una domanda da sempre oggetto di discussione. Quanti della nostra specie hanno affrontato l’enigma supremo, l’enigma del nostro essere? Molti, se non tutti. Ma nessuno, veramente, ha mai risolto il nodo. Nessuno.
 
@@ -26,7 +26,7 @@ Sono stupito. Sono affascinato: la mia anima compenetra l’anima di quelli che 
 
 ### Quale è il mio destino?
 
-![]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}destino.webp)
+{% include picture img="destino" ext="jpg" alt="" %}
 
 Lo so, sono pensieri strani. Sono pensieri che non sono chiari nemmeno a me. Sono pensieri che forse è meglio non fare. E’ strano prendere coscienza di come nessuno di noi sia un’essere completo. Io per primo sono il frutto di un processo complesso, il risultato in divenire di scelte mie e altrui. Alla fine, da un certo punto di vista, è quasi liberante pensare di non essere altro che il risultato di un processo non pianificato. Siamo esseri che vengono ad esistere un poco alla volta, quasi per caso.
 
