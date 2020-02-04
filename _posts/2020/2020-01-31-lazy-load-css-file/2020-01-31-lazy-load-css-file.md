@@ -7,7 +7,7 @@ header:
   immagine_estesa: "lazy_loading_css_in_jekyll.webp"
   immagine_fonte: "Photo credit: [**InspiredImages**](https://pixabay.com/users/inspiredimages-57296/)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2020-01-03 18:16"
+date: "2020-01-31 18:16"
 ---
 
 Non tutte le cose che si imparano sono immediatamente utili. Me ne sono ricordato poco fa, dopo aver modificato il tema di [Tra Musica E Parole](https://www.tramusicaeparole.com/) per permettere il caricamento lento dei file CSS.
