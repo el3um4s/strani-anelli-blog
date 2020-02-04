@@ -1,6 +1,8 @@
 ---
 title: "Lazy Loading di immagini in Jekyll"
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: "pigro.webp"
   immagine_estesa: "pigro.webp"
   immagine_fonte: "Photo credit: [**Gerhard Gellinger**](https://pixabay.com/it/users/gellinger-201217/)"

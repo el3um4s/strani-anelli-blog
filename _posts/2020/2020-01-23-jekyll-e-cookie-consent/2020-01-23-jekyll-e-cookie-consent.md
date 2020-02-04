@@ -1,6 +1,8 @@
 ---
 title: "Jekyll e Cookie Consent"
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: "cookie-e-jekyll.webp"
   immagine_estesa: "cookie-e-jekyll.webp"
   immagine_fonte: "Photo credit: [**Mollie Sivaram**](https://unsplash.com/@molliesivaram)"

@@ -1,6 +1,8 @@
 ---
 title: Luglio (Racconto)
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: strani-anelli-viaggio-in-treno.webp
   immagine_estesa: strani-anelli-viaggio-in-treno.webp
   overlay_filter: rgba(79, 79, 79, 0.5)

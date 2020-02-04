@@ -1,6 +1,8 @@
 ---
 title: "Jekyll: immagini nella stessa cartella dei post"
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: "immagini-nella-stessa-cartella-dei-post.webp"
   immagine_estesa: "immagini-nella-stessa-cartella-dei-post.webp"
   immagine_fonte: "Photo credit: [**David Fintz**](https://unsplash.com/@theotherworkspace)"
@@ -43,7 +45,7 @@ permalink                   : /:title/
 
 Avendo scelto di usare questa configurazione posso ottenere il nome del post e il nome della cartella nello stesso identico modo usando la variabile
 
-{% raw %} 
+{% raw %}
 ~~~
 {{ page.url }}
 ~~~
@@ -51,7 +53,7 @@ Avendo scelto di usare questa configurazione posso ottenere il nome del post e i
 
 Se unisco le due cose ottengo:
 
-{% raw %} 
+{% raw %}
 ~~~
 ![]({{site.immagini}}{{page.url | remove_first: "/"}}nome-immagine.webp)
 ~~~
@@ -63,7 +65,7 @@ Quindi che fare?
 
 Beh, salvare i post divisi per anno può essere il primo passo. E il successivo è ordinare le cartelle in ordine di data. Questo è abbastanza semplice, basta chiamare la cartella con lo stesso nome del file markdown del post. Così facendo posso ricavare l'anno tramite:
 
-{% raw %} 
+{% raw %}
 ~~~
 {{ page.date | date: "%Y"}}
 ~~~
@@ -79,7 +81,7 @@ A me interessa però avere la data completa, perché il posto è salvato nel for
 
 Unendo tutto questo ottengo:
 
-{% raw %} 
+{% raw %}
 ~~~
 {{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}nome-immagine.webp
 ~~~
@@ -91,7 +93,7 @@ ovvero "_{{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remo
 
 Ovviamente non sono soddisfatto di questo risultato: è comunque una serie lunga di caratteri da digitare, ed è facile sbagliare. Come si può semplificare? Usando un plugin per Atom: [Markdown-Writer for Atom](https://atom.io/packages/markdown-writer). Andando a modificare il file _\_mdwriter.cson_ posso far sì che le immagini vengano salvate direttamente nella cartella dell'articolo, e che venga scritta automaticamente la stringa giusta per poterla visualizzare.
 
-{% raw %} 
+{% raw %}
 ~~~
 sitePostsDir: "_posts/{year}/{year}-{month}-{day}-{inserisci-titolo}/"
 siteImagesDir: "{directory}"

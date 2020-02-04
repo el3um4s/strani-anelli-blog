@@ -1,6 +1,8 @@
 ---
 title: "Selezione: 30 per 3000 (Racconto)"
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura:  "300.webp"
   immagine_estesa: "300.webp"
   overlay_filter: rgba(79, 79, 79, 0.5)

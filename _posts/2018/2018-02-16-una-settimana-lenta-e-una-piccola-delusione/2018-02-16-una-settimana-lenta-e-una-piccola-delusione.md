@@ -1,6 +1,8 @@
 ---
 title: "Una settimana lenta e una piccola delusione"
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: "week.webp"
   immagine_estesa: "week.webp"
   overlay_filter: rgba(79, 79, 79, 0.5)

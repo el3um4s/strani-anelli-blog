@@ -1,6 +1,8 @@
 ---
 title: "La Erre (Racconto)"
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: "discorso-senza-r.webp"
   immagine_estesa: "discorso-senza-r.webp"
   overlay_filter: rgba(79, 79, 79, 0.5)

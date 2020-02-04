@@ -1,6 +1,8 @@
 ---
 title: "Tra Musica E Parole: sistemati tutti gli articoli vecchi"
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: "tra_musica_e_parole_spostamento_completato.webp"
   immagine_estesa: "tra_musica_e_parole_spostamento_completato.webp"
   immagine_fonte: "Photo credit: [**Pineapple Supply Co.**](https://unsplash.com/@pineapple)"

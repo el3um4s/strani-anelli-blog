@@ -1,6 +1,8 @@
 ---
 title: "Come fare una pausa creativa"
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: "pausa-creativa.webp"
   immagine_estesa: "pausa-creativa.webp"
   overlay_filter: rgba(79, 79, 79, 0.5)

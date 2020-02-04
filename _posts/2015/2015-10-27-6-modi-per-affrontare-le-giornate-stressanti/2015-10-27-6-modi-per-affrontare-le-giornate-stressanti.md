@@ -1,6 +1,8 @@
 ---
 title: "6 Modi per affrontare le giornate stressanti"
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: "come-affrontare-lo-stress.webp"
   immagine_estesa: "come-affrontare-lo-stress.webp"
   overlay_filter: rgba(79, 79, 79, 0.5)

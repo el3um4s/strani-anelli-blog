@@ -1,6 +1,8 @@
 ---
 title: "La Fontana (Racconto)"
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: "la-fontana.webp"
   immagine_estesa: "la-fontana.webp"
   overlay_filter: rgba(79, 79, 79, 0.5)

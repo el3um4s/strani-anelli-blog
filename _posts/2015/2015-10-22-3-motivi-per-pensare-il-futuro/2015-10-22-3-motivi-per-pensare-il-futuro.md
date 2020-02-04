@@ -1,6 +1,8 @@
 ---
 title: "3 Motivi per pensare il futuro"
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: "pensare-il-futuro.webp"
   immagine_estesa: "pensare-il-futuro.webp"
   overlay_filter: rgba(79, 79, 79, 0.5)

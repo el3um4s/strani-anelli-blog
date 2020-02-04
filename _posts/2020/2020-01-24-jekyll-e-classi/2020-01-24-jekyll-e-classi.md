@@ -1,6 +1,8 @@
 ---
 title: "Jekyll e classi"
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: "classi-css-dentro-markdown.webp"
   immagine_estesa: "classi-css-dentro-markdown.webp"
   immagine_fonte: "Photo credit: [**Caspar Camille Rubin**](https://unsplash.com/@casparrubin)"

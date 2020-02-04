@@ -1,6 +1,8 @@
 ---
 title: "Mostrare Liquid Template in un file Markdown con Jekyll"
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: "liquid.webp"
   immagine_estesa: "liquid.webp"
   immagine_fonte: "Photo credit: [**Paweł Czerwiński**](https://unsplash.com/@pawel_czerwinski)"

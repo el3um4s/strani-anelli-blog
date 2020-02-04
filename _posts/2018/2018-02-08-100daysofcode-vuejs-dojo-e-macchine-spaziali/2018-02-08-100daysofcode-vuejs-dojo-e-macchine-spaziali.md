@@ -1,6 +1,8 @@
 ---
 title: "100DaysOfCode: VueJS, Dojo e macchine spaziali"
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: "samurai.webp"
   immagine_estesa: "samurai.webp"
   overlay_filter: rgba(79, 79, 79, 0.5)

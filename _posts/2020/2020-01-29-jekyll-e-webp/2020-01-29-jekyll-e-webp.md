@@ -1,6 +1,8 @@
 ---
 title: "Jekyll e WebP"
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: "immagini-su-jekyll.webp"
   immagine_estesa: "immagini-su-jekyll.webp"
   immagine_fonte: "Photo credit: [**Héctor J. Rivas**](https://unsplash.com/@hjrc33)"

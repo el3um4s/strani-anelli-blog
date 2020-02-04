@@ -1,6 +1,8 @@
 ---
 title: "Lazy Load di file CSS in Jekyll"
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: "lazy_loading_css_in_jekyll.webp"
   immagine_estesa: "lazy_loading_css_in_jekyll.webp"
   immagine_fonte: "Photo credit: [**InspiredImages**](https://pixabay.com/users/inspiredimages-57296/)"

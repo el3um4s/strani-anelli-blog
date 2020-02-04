@@ -1,6 +1,8 @@
 ---
 title: Logorroico Destino (Brandelli)
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: "logorroico-destino.webp"
   immagine_estesa: "logorroico-destino.webp"
   overlay_filter: 'rgba(79, 79, 79, 0.5)'

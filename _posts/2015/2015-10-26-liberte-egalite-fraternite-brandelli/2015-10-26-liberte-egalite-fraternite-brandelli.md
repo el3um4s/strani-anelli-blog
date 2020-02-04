@@ -1,6 +1,8 @@
 ---
 title: "Liberté, Égalité, Fraternité (Brandelli)"
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: "milan.webp"
   immagine_estesa: "milan.webp"
   overlay_filter: rgba(79, 79, 79, 0.5)

@@ -1,6 +1,8 @@
 ---
 title: Un nuovo inizio
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: un-nuovo-inizio.webp
   immagine_estesa: un-nuovo-inizio.webp
   immagine_fonte: 'Photo credit: [**Jan Kahánek**](https://unsplash.com/@honza_kahanek)'

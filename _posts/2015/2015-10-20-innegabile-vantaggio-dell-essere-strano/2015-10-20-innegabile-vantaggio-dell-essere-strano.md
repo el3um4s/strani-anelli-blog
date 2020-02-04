@@ -1,6 +1,8 @@
 ---
 title: "L’innegabile vantaggio dell’essere strano"
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: "strano.webp"
   immagine_estesa: "strano.webp"
   overlay_filter: rgba(79, 79, 79, 0.5)

@@ -1,6 +1,8 @@
 ---
 title: "SuperGod + INRI (Doppia Recensione)"
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   overlay_filter: rgba(79, 79, 79, 0.5)
 date: "2015-10-16 17:00"
 ---

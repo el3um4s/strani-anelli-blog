@@ -1,6 +1,8 @@
 ---
 title: "Bianco (Racconto)"
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: "bianco.webp"
   immagine_estesa: "bianco.webp"
   overlay_filter: rgba(79, 79, 79, 0.5)

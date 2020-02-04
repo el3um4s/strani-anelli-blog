@@ -1,7 +1,12 @@
 ---
 title: "No Hope, No Love, No Glory (Sindrome di Calimero)"
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
+  miniatura: "calimero.webp"
+  immagine_estesa: "calimero.webp"
   overlay_filter: rgba(79, 79, 79, 0.5)
+  immagine_fonte: "Photo credit: [**Philipp Kleindienst**](https://pixabay.com/users/onefox-25891/)"
 date: "2015-10-29 17:00"
 ---
 

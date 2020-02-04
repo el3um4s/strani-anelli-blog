@@ -1,6 +1,8 @@
 ---
 title: "Jekyll: Custom Scrollbar, Nanobar e Percentage Scroll Bar"
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: "linee-astratte.webp"
   immagine_estesa: "linee-astratte.webp"
   immagine_fonte: "Photo credit: [**Stock Photography**](https://unsplash.com/@aplaceforcreation)"

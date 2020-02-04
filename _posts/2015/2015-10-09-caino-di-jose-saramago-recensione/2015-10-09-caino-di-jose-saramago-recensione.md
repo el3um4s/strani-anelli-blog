@@ -1,6 +1,8 @@
 ---
 title: Caino di José Saramago (Recensione)
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: strani-anelli-caino.webp
   immagine_estesa: strani-anelli-caino.webp
   overlay_filter: 'rgba(79, 79, 79, 0.5)'

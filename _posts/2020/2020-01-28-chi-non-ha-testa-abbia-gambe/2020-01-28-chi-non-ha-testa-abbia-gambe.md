@@ -1,6 +1,8 @@
 ---
 title: "Chi non ha testa abbia gambe"
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: "errore.webp"
   immagine_estesa: "errore.webp"
   immagine_fonte: "Photo credit: [**Sarah Kilian**](https://unsplash.com/@rojekilian)"

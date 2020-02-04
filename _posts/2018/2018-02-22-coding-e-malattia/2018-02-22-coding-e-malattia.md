@@ -1,6 +1,8 @@
 ---
 title: "Coding e malattia"
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: "eat-sleep-code.webp"
   immagine_estesa: "eat-sleep-code.webp"
   overlay_filter: rgba(79, 79, 79, 0.5)

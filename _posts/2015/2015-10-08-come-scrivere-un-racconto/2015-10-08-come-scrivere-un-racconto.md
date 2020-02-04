@@ -1,6 +1,8 @@
 ---
 title: Come scrivere un racconto
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: strani-anelli-come-scrivere-un-racconto.webp
   immagine_estesa: strani-anelli-come-scrivere-un-racconto.webp
   overlay_filter: 'rgba(79, 79, 79, 0.5)'

@@ -1,6 +1,8 @@
 ---
 title: Metti che un Dinosauro… (Brandelli)
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: strani-anelli-dinosauri.webp
   immagine_estesa: strani-anelli-dinosauri.webp
   overlay_filter: 'rgba(79, 79, 79, 0.5)'

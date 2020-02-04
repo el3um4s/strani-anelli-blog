@@ -1,6 +1,8 @@
 ---
 title: "100 Days of Coding: tempo scaduto, più o meno"
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: "fine-100-giorni.webp"
   immagine_estesa: "fine-100-giorni.webp"
   overlay_filter: rgba(79, 79, 79, 0.5)

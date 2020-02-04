@@ -1,6 +1,8 @@
 ---
 title: Il Problema del “Segui le Tue Passioni”
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: "segui-le-tue-passioni.webp"
   immagine_estesa: "segui-le-tue-passioni.webp"
   overlay_filter: 'rgba(79, 79, 79, 0.5)'

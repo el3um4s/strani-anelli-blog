@@ -1,6 +1,8 @@
 ---
 title: 'Blog: Cosa Sono e Perché'
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: "blog.webp"
   immagine_estesa: "blog.webp"
   overlay_filter: 'rgba(79, 79, 79, 0.5)'

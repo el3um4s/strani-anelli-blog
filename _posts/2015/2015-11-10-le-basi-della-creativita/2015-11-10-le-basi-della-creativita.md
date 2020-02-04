@@ -1,6 +1,8 @@
 ---
 title: "Le Basi della Creatività"
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: "le-basi-della-fantasia.webp"
   immagine_estesa: "le-basi-della-fantasia.webp"
   overlay_filter: rgba(79, 79, 79, 0.5)
