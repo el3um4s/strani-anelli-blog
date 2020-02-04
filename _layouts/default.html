@@ -35,9 +35,13 @@
         {% include_cached footer.html %}
       </footer>
     </div>
-    
+
+    {% include scroll_to_top.html %}
+    <!--  include nanobar.html -->
+    {% include percentage_scroll_bar.html %}
     {% include scripts.html %}
     {% include cookie-consent.html %}
-
+    {% include custom_style.html %}
+    {% include lazy_load_images.html %}
   </body>
 </html>

@@ -1,0 +1,22 @@
+<div class="nanobar nanobar_custom" id="nanobar_top" style="position: fixed;">
+    <div class="bar"></div>
+</div>
+
+<style>
+  .nanobar_custom .bar {
+    background: #639497;
+  }
+</style>
+
+<script src="{{ '/assets/js/nanobar/nanobar.min.js' | absolute_url }}"></script>
+
+<script>
+  var options = {
+    classname: 'nanobar_custom',
+    id: 'nanobar_top'
+  };
+  var nanobar = new Nanobar( options );
+  nanobar.go( 30 );
+  nanobar.go( 76 );
+  nanobar.go(100);
+</script>

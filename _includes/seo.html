@@ -32,50 +32,31 @@
   {%- assign author_twitter = author.twitter | replace: "@", "" -%}
 {%- endif -%}
 
+{% if page.usa_webp %}
+  {% assign ext_image = "webp "%}
+{% else %}
+  {% capture ext_image %}{{ page.header.immagine_tipo }}{% endcapture %}
+{% endif %}
 
-{% if page.header.og_image contains "://" %}
-  {% capture page_large_image %}{{ page.header.og_image }}{% endcapture %}
-{% elsif page.header.og_image %}
-  {% capture page_large_image %}{{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}{{ page.header.og_image }}{% endcapture %}
-{% elsif page.header.immagine contains "://" %}
+{% if page.header.immagine contains "://" %}
   {% capture page_large_image %}{{ page.header.immagine }}{% endcapture %}
 {% elsif page.header.immagine %}
-  {% capture page_large_image %}{{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}{{ page.header.immagine }}{% endcapture %}
+  {% capture page_large_image %}{{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}{{ page.header.immagine }}.{{ ext_image }}{% endcapture %}
 {% elsif page.header.immagine_estesa contains "://" %}
   {% capture page_large_image %}{{ page.header.immagine_estesa }}{% endcapture %}
 {% elsif page.header.immagine_estesa %}
-  {% capture page_large_image %}{{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}{{ page.header.immagine_estesa }}{% endcapture %}
-{% elsif page.header.overlay_image contains "://" %}
-  {% capture page_large_image %}{{ page.header.overlay_image }}{% endcapture %}
-{% elsif page.header.overlay_image %}
-  {% capture page_large_image %}{{ page.header.overlay_image | relative_url }}{% endcapture %}
-{% elsif page.header.image contains "://" %}
-  {% capture page_large_image %}{{ page.header.image }}{% endcapture %}
-{% else %}
-  {% capture page_large_image %}{{ page.header.image | relative_url }}{% endcapture %}
+  {% capture page_large_image %}{{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}{{ page.header.immagine_estesa }}.{{ ext_image }}{% endcapture %}
 {% endif %}
 {%- assign page_large_image = page_large_image | escape -%}
 
-{% if page.header.og_image contains "://" %}
-  {% capture page_teaser_image %}{{ page.header.og_image }}{% endcapture %}
-{% elsif page.header.og_image %}
-  {% capture page_teaser_image %}{{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}{{ page.header.og_image }}{% endcapture %}
-{% elsif page.header.immagine contains "://" %}
+{% if page.header.immagine contains "://" %}
   {% capture page_teaser_image %}{{ page.header.immagine }}{% endcapture %}
 {% elsif page.header.immagine %}
-  {% capture page_teaser_image %}{{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}{{ page.header.immagine }}{% endcapture %}
+  {% capture page_teaser_image %}{{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}{{ page.header.immagine }}.{{ ext_image }}{% endcapture %}
 {% elsif page.header.immagine_estesa contains "://" %}
   {% capture page_teaser_image %}{{ page.header.immagine_estesa }}{% endcapture %}
 {% elsif page.header.immagine_estesa %}
-  {% capture page_teaser_image %}{{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}{{ page.header.immagine_estesa }}{% endcapture %}
-{% elsif page.header.overlay_image contains "://" %}
-  {% capture page_teaser_image %}{{ page.header.overlay_image }}{% endcapture %}
-{% elsif page.header.overlay_image %}
-  {% capture page_teaser_image %}{{ page.header.overlay_image | relative_url }}{% endcapture %}
-{% elsif page.header.image contains "://" %}
-  {% capture page_teaser_image %}{{ page.header.image }}{% endcapture %}
-{% else %}
-  {% capture page_teaser_image %}{{ page.header.image | relative_url }}{% endcapture %}
+  {% capture page_teaser_image %}{{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}{{ page.header.immagine_estesa }}.{{ ext_image }}{% endcapture %}
 {% endif %}
 {%- assign page_teaser_image = page_teaser_image | escape -%}
 

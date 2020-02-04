@@ -17,7 +17,9 @@
 {% if page.header.immagine_estesa contains "://" %}
   {% capture overlay_img_path %}{{ page.header.immagine_estesa }}{% endcapture %}
 {% elsif page.header.immagine_estesa %}
-  {% capture overlay_img_path %}{{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}{{ page.header.immagine_estesa }}{% endcapture %}
+  {% assign img = page.header.immagine_estesa | split: '.' %}
+  {% assign img = img[0] %}
+  {% capture overlay_img_path %}{{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}{{ img }}{% endcapture %}
 {% elsif page.header.overlay_image contains "://" %}
   {% capture overlay_img_path %}{{ page.header.overlay_image }}{% endcapture %}
 {% elsif page.header.overlay_image %}
@@ -38,9 +40,29 @@
 
 {% assign image_description = image_description | markdownify | strip_html | strip_newlines | escape_once %}
 
-<div class="page__hero{% if page.header.overlay_color or page.header.overlay_image or page.header.immagine_estesa %}--overlay{% endif %}"
-  style="{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url('{{ overlay_img_path }}');{% endif %}"
+{% capture estensione %}{{ page.header.immagine_tipo }}{% endcapture %}
+
+<style>
+  .no-webp #hero-immagine {
+    {% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %}
+    {% if overlay_img_path %}background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url('{{ overlay_img_path }}.{{ estensione }}');{% endif %}
+  }
+
+  .webp .usa_webp#hero-immagine {
+    {% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %}
+    {% if overlay_img_path %}background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url('{{ overlay_img_path }}.webp');{% endif %}
+  }
+
+  .webp .non_usa_webp#hero-immagine {
+    {% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %}
+    {% if overlay_img_path %}background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url('{{ overlay_img_path }}.{{ estensione }}');{% endif %}
+  }
+</style>
+
+<div class="page__hero{% if page.header.overlay_color or page.header.overlay_image or page.header.immagine_estesa %}--overlay{% endif %} {% if page.usa_webp %}usa_webp{% else %}non_usa_webp{% endif %}"
+  id='hero-immagine'
 >
+
   {% if page.header.overlay_color or page.header.overlay_image or page.header.immagine_estesa %}
     <div class="wrapper">
       <h1 id="page-title" class="page__title" itemprop="headline">

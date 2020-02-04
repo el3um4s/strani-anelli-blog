@@ -19,9 +19,17 @@ var store = [
       {%- else -%}
         {%- assign miniatura = site.teaser -%}
       {%- endif -%}
+      {%- if doc.usa_webp -%}
+        {%- assign ext_image = 'webp' -%}
+      {%- else -%}
+        {%- capture ext_image -%}{{ doc.header.immagine_tipo }}{%- endcapture -%}
+      {%- endif -%}
       {%- if miniatura contains "://" -%}
       {%- else -%}
-          {%- capture miniatura -%}{{ site.immagini }}{{ doc.date | date: "%Y/%Y-%m-%d" }}-{{ doc.url | remove_first: "/"}}{{ doc.header.miniatura }}{%- endcapture -%}
+          {%- capture miniatura -%}{{ site.immagini }}{{ doc.date | date: "%Y/%Y-%m-%d" }}-{{ doc.url | remove_first: "/"}}{{ doc.header.miniatura }}.{{ ext_image }}{%- endcapture -%}
+          {%- capture indirizzo_base -%}{{ site.immagini }}{{ doc.date | date: "%Y/%Y-%m-%d" }}-{{ doc.url | remove_first: "/"}}{%- endcapture -%}
+          {%- capture nome_immagine -%}{{ doc.header.miniatura | split: '.' | first }}{%- endcapture -%}
+          {%- capture miniatura -%}{{ indirizzo_base }}{{ nome_immagine }}.{{ ext_image }}{%- endcapture -%}
       {%- endif -%}
       {
         "title": {{ doc.title | jsonify }},

@@ -55,12 +55,15 @@ frontMatterDate: "{year}-{month}-{day} {hour}:{minute}"
 frontMatter: """
 ---
 title: "{title}"
+usa_webp: true
 header:
+  immagine_tipo: "jpg"
   miniatura: "image.webp"
   immagine_estesa: "image.webp"
   immagine_fonte: "Photo credit: [**CreditImageNome**](CreditImageURL)"
   overlay_filter: rgba(79, 79, 79, 0.5)
 date: "{date}"
+excerpt_separator: <!--more-->
 ---
 """
 
@@ -219,7 +222,8 @@ lineStyles:
 # - height: height of image
 # - align: alignment of image
 #
-imageTag: '![{alt}]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}{src})'
+#imageTag: '![{alt}]({{site.immagini}}{{ page.date | date: "%Y/%Y-%m-%d"}}-{{page.url | remove_first: "/"}}{src})'
+imageTag: '{% include picture img="{src}" ext="jpg" alt="{alt}" %}'
 #imageTag: '![{alt}]({{site.immagini}}{src})'
 #imageTag: '![{alt}]({{ "/{src}" | absolute_url }})'
 # Use relative path to image from the opened file

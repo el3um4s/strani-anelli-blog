@@ -16,6 +16,10 @@
   {% assign title = post.title %}
 {% endif %}
 
+{% capture immagine %}{{ post.header.miniatura }}{% endcapture %}
+{% capture immagine_tipo %}{{ post.header.immagine_tipo }}{% endcapture %}
+{% capture immagine_alt %}{{ title }}{% endcapture %}
+
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     <h2 class="archive__item-title" itemprop="headline">
@@ -28,12 +32,7 @@
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
         <a href="{{ post.url | relative_url }}" rel="permalink">
-          <img src=   {% if teaser contains "://" %}
-                        "{{ teaser }}"
-                      {% else %}
-                        "{{ teaser | relative_url }}"
-                      {% endif %}
-                      alt="">
+          {% include miniatura img=immagine ext=immagine_tipo alt=immagine_alt %}
         </a>
       </div>
     {% endif %}

@@ -55,8 +55,6 @@ $(document).ready(function() {
               '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
             '</article>'+
           '</div>';
-          console.log("miniatura")
-          console.log(store[ref]);
       }
       else{
     	  var searchitem =
