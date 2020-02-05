@@ -3,8 +3,8 @@ title: "L'Arancia (Racconto)"
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: "arancia.webp"
-  immagine_estesa: "arancia.webp"
+  miniatura: "arancia"
+  immagine_estesa: "arancia"
   overlay_filter: rgba(79, 79, 79, 0.5)
   immagine_fonte: "Photo credit: [**Rinck Content Studio**](https://unsplash.com/@rinckad)"
 date: "2015-11-02 15:53"

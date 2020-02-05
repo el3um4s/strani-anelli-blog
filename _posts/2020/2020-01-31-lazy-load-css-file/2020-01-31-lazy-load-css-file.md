@@ -3,8 +3,8 @@ title: "Lazy Load di file CSS in Jekyll"
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: "lazy_loading_css_in_jekyll.webp"
-  immagine_estesa: "lazy_loading_css_in_jekyll.webp"
+  miniatura: "lazy_loading_css_in_jekyll"
+  immagine_estesa: "lazy_loading_css_in_jekyll"
   immagine_fonte: "Photo credit: [**InspiredImages**](https://pixabay.com/users/inspiredimages-57296/)"
   overlay_filter: rgba(79, 79, 79, 0.5)
 date: "2020-01-31 18:16"

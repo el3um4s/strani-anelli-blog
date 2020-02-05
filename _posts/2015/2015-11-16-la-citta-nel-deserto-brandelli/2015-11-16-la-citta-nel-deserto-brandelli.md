@@ -3,8 +3,8 @@ title: "La Città nel Deserto (Brandelli)"
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: "deserto.webp"
-  immagine_estesa: "deserto.webp"
+  miniatura: "deserto"
+  immagine_estesa: "deserto"
   overlay_filter: rgba(79, 79, 79, 0.5)
   immagine_fonte: "Photo credit: [**Fares Nimri**](https://unsplash.com/@nimri)"
 date: "2015-11-16 17:00"

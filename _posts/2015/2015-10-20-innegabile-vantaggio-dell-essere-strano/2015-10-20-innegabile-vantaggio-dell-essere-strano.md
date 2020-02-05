@@ -3,8 +3,8 @@ title: "L’innegabile vantaggio dell’essere strano"
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: "strano.webp"
-  immagine_estesa: "strano.webp"
+  miniatura: "strano"
+  immagine_estesa: "strano"
   overlay_filter: rgba(79, 79, 79, 0.5)
   immagine_fonte: "Photo credit: [**Berlian Khatulistiwa**](https://unsplash.com/@bearlion)"
 date: "2015-10-20 17:00"

@@ -3,8 +3,8 @@ title: "La Fontana (Racconto)"
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: "la-fontana.webp"
-  immagine_estesa: "la-fontana.webp"
+  miniatura: "la-fontana"
+  immagine_estesa: "la-fontana"
   overlay_filter: rgba(79, 79, 79, 0.5)
   immagine_fonte: "Photo credit: [**CreditImageNome**](CreditImageURL)"
 date: "2015-12-02 17:00"

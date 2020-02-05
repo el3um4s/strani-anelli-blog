@@ -3,8 +3,8 @@ title: "Diario di bordo"
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: "diario-di-bordo.webp"
-  immagine_estesa: "diario-di-bordo.webp"
+  miniatura: "diario-di-bordo"
+  immagine_estesa: "diario-di-bordo"
   overlay_filter: rgba(79, 79, 79, 0.5)
   immagine_fonte: "Photo credit: [**Aaron Burden**](https://unsplash.com/@aaronburden)"
 date: "2018-02-28 17:00"

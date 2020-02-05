@@ -3,8 +3,8 @@ title: "Liberté, Égalité, Fraternité (Brandelli)"
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: "milan.webp"
-  immagine_estesa: "milan.webp"
+  miniatura: "milan"
+  immagine_estesa: "milan"
   overlay_filter: rgba(79, 79, 79, 0.5)
   immagine_fonte: "Photo credit: [**Ignazio Di Gangi**](https://unsplash.com/@igny_5)"
 date: "2015-10-26 17:00"

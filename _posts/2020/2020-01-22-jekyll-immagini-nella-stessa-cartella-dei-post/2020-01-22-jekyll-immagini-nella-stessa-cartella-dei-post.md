@@ -3,8 +3,8 @@ title: "Jekyll: immagini nella stessa cartella dei post"
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: "immagini-nella-stessa-cartella-dei-post.webp"
-  immagine_estesa: "immagini-nella-stessa-cartella-dei-post.webp"
+  miniatura: "immagini-nella-stessa-cartella-dei-post"
+  immagine_estesa: "immagini-nella-stessa-cartella-dei-post"
   immagine_fonte: "Photo credit: [**David Fintz**](https://unsplash.com/@theotherworkspace)"
   overlay_filter: rgba(79, 79, 79, 0.5)
 date: "2020-01-22 15:47"

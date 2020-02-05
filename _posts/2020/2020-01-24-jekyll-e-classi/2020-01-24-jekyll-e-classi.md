@@ -3,8 +3,8 @@ title: "Jekyll e classi"
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: "classi-css-dentro-markdown.webp"
-  immagine_estesa: "classi-css-dentro-markdown.webp"
+  miniatura: "classi-css-dentro-markdown"
+  immagine_estesa: "classi-css-dentro-markdown"
   immagine_fonte: "Photo credit: [**Caspar Camille Rubin**](https://unsplash.com/@casparrubin)"
   overlay_filter: rgba(79, 79, 79, 0.5)
 date: "2020-01-24 23:32"

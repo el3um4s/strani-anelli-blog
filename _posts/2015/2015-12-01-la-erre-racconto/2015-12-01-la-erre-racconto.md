@@ -3,8 +3,8 @@ title: "La Erre (Racconto)"
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: "discorso-senza-r.webp"
-  immagine_estesa: "discorso-senza-r.webp"
+  miniatura: "discorso-senza-r"
+  immagine_estesa: "discorso-senza-r"
   overlay_filter: rgba(79, 79, 79, 0.5)
   immagine_fonte: "Photo credit: [**Marc Schaefer**](https://unsplash.com/@marcschaefer)"
 date: "2015-12-01 17:00"

@@ -3,8 +3,8 @@ title: Un nuovo inizio
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: un-nuovo-inizio.webp
-  immagine_estesa: un-nuovo-inizio.webp
+  miniatura: un-nuovo-inizio
+  immagine_estesa: un-nuovo-inizio
   immagine_fonte: 'Photo credit: [**Jan Kahánek**](https://unsplash.com/@honza_kahanek)'
   overlay_filter: 'rgba(79, 79, 79, 0.5)'
 date: '2020-01-21 22:54'

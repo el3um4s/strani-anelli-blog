@@ -3,8 +3,8 @@ title: "Coding e malattia"
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: "eat-sleep-code.webp"
-  immagine_estesa: "eat-sleep-code.webp"
+  miniatura: "eat-sleep-code"
+  immagine_estesa: "eat-sleep-code"
   overlay_filter: rgba(79, 79, 79, 0.5)
   immagine_fonte: "Photo credit: [**Roman Synkevych**](https://unsplash.com/@synkevych)"
 date: "2018-02-22 17:00"

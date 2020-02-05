@@ -3,8 +3,8 @@ title: "Le Basi della Creatività"
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: "le-basi-della-fantasia.webp"
-  immagine_estesa: "le-basi-della-fantasia.webp"
+  miniatura: "le-basi-della-fantasia"
+  immagine_estesa: "le-basi-della-fantasia"
   overlay_filter: rgba(79, 79, 79, 0.5)
   immagine_fonte: "Photo credit: [**Tú Nguyễn**](https://www.pexels.com/@tu-nguy-n-709154)"
 date: "2015-11-10 17:00"

@@ -3,8 +3,8 @@ title: "Come fare una pausa creativa"
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: "pausa-creativa.webp"
-  immagine_estesa: "pausa-creativa.webp"
+  miniatura: "pausa-creativa"
+  immagine_estesa: "pausa-creativa"
   overlay_filter: rgba(79, 79, 79, 0.5)
   immagine_fonte: "Photo credit: [**Edu Lauton**](https://unsplash.com/@edulauton)"
 date: "2015-11-03 17:00"

@@ -3,8 +3,8 @@ title: "Mostrare Liquid Template in un file Markdown con Jekyll"
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: "liquid.webp"
-  immagine_estesa: "liquid.webp"
+  miniatura: "liquid"
+  immagine_estesa: "liquid"
   immagine_fonte: "Photo credit: [**Paweł Czerwiński**](https://unsplash.com/@pawel_czerwinski)"
   overlay_filter: rgba(79, 79, 79, 0.5)
 date: "2020-01-25 15:04"

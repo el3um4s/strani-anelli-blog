@@ -3,8 +3,8 @@ title: 'Blog: Cosa Sono e Perché'
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: "blog.webp"
-  immagine_estesa: "blog.webp"
+  miniatura: "blog"
+  immagine_estesa: "blog"
   overlay_filter: 'rgba(79, 79, 79, 0.5)'
   immagine_fonte: 'Photo credit: [**Kelly Sikkema**](https://unsplash.com/@kellysikkema)'
 date: '2015-10-15 17:10'

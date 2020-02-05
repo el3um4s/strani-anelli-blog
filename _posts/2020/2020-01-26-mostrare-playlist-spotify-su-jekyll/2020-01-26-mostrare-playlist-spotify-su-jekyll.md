@@ -3,8 +3,8 @@ title: "Mostrare playlist Spotify su Jekyll"
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: "spotify-e-jekyll.webp"
-  immagine_estesa: "spotify-e-jekyll.webp"
+  miniatura: "spotify-e-jekyll"
+  immagine_estesa: "spotify-e-jekyll"
   immagine_fonte: "Photo credit: [**Zarak Khan**](https://unsplash.com/@zarakvg)"
   overlay_filter: rgba(79, 79, 79, 0.5)
 date: "2020-01-26 23:21"

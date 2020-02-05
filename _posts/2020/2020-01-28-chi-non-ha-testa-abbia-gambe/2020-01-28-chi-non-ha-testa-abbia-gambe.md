@@ -3,8 +3,8 @@ title: "Chi non ha testa abbia gambe"
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: "errore.webp"
-  immagine_estesa: "errore.webp"
+  miniatura: "errore"
+  immagine_estesa: "errore"
   immagine_fonte: "Photo credit: [**Sarah Kilian**](https://unsplash.com/@rojekilian)"
   overlay_filter: rgba(79, 79, 79, 0.5)
 date: "2020-01-28 23:59"

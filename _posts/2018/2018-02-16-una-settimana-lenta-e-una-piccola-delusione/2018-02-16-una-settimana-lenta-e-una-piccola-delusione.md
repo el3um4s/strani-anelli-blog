@@ -3,8 +3,8 @@ title: "Una settimana lenta e una piccola delusione"
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: "week.webp"
-  immagine_estesa: "week.webp"
+  miniatura: "week"
+  immagine_estesa: "week"
   overlay_filter: rgba(79, 79, 79, 0.5)
   immagine_fonte: "Photo credit: [**Jazmin Quaynor**](https://unsplash.com/@jazminantoinette)"
 date: "2018-02-16 17:00"

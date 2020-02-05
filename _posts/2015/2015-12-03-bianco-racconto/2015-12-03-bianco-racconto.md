@@ -3,8 +3,8 @@ title: "Bianco (Racconto)"
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: "bianco.webp"
-  immagine_estesa: "bianco.webp"
+  miniatura: "bianco"
+  immagine_estesa: "bianco"
   overlay_filter: rgba(79, 79, 79, 0.5)
   immagine_fonte: "Photo credit: [**Shapelined**](https://unsplash.com/@shapelined)"
 date: "2015-12-03 17:00"

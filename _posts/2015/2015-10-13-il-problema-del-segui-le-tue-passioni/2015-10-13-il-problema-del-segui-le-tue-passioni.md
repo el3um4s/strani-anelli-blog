@@ -3,8 +3,8 @@ title: Il Problema del “Segui le Tue Passioni”
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: "segui-le-tue-passioni.webp"
-  immagine_estesa: "segui-le-tue-passioni.webp"
+  miniatura: "segui-le-tue-passioni"
+  immagine_estesa: "segui-le-tue-passioni"
   overlay_filter: 'rgba(79, 79, 79, 0.5)'
   immagine_fonte: 'Photo credit: [**Jossuha Théophile**](https://unsplash.com/@nunchakouy)'
 date: '2015-10-13 17:00'

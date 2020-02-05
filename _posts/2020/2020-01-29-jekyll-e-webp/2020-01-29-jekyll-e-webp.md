@@ -3,8 +3,8 @@ title: "Jekyll e WebP"
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: "immagini-su-jekyll.webp"
-  immagine_estesa: "immagini-su-jekyll.webp"
+  miniatura: "immagini-su-jekyll"
+  immagine_estesa: "immagini-su-jekyll"
   immagine_fonte: "Photo credit: [**Héctor J. Rivas**](https://unsplash.com/@hjrc33)"
   overlay_filter: rgba(79, 79, 79, 0.5)
 date: "2020-01-29 23:59"

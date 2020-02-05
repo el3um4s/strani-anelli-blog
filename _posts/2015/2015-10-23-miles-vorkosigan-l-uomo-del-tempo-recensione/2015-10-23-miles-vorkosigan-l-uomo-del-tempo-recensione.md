@@ -3,8 +3,8 @@ title: "Miles Vorkosigan l’Uomo del Tempo (Recensione)"
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: "uomo-del-tempo.webp"
-  immagine_estesa: "uomo-del-tempo.webp"
+  miniatura: "uomo-del-tempo"
+  immagine_estesa: "uomo-del-tempo"
   overlay_filter: rgba(79, 79, 79, 0.5)
   immagine_fonte: "Photo credit: [**Johannes Plenio**](https://www.pexels.com/@jplenio)"
 date: "2015-10-23 17:00"

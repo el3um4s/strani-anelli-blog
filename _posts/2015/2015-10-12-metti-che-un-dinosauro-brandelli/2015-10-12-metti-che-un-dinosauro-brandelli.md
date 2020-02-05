@@ -3,8 +3,8 @@ title: Metti che un Dinosauro… (Brandelli)
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: strani-anelli-dinosauri.webp
-  immagine_estesa: strani-anelli-dinosauri.webp
+  miniatura: strani-anelli-dinosauri
+  immagine_estesa: strani-anelli-dinosauri
   overlay_filter: 'rgba(79, 79, 79, 0.5)'
   immagine_fonte: 'Photo credit: [Arturo Garcia](https://unsplash.com/@arturomontes)'
 date: '2015-10-12 17:00'

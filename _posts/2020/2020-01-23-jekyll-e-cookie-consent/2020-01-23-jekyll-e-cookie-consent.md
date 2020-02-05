@@ -3,8 +3,8 @@ title: "Jekyll e Cookie Consent"
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: "cookie-e-jekyll.webp"
-  immagine_estesa: "cookie-e-jekyll.webp"
+  miniatura: "cookie-e-jekyll"
+  immagine_estesa: "cookie-e-jekyll"
   immagine_fonte: "Photo credit: [**Mollie Sivaram**](https://unsplash.com/@molliesivaram)"
   overlay_filter: rgba(79, 79, 79, 0.5)
 date: "2020-01-23 13:13"

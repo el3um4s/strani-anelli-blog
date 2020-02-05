@@ -3,8 +3,8 @@ title: Logorroico Destino (Brandelli)
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: "logorroico-destino.webp"
-  immagine_estesa: "logorroico-destino.webp"
+  miniatura: "logorroico-destino"
+  immagine_estesa: "logorroico-destino"
   overlay_filter: 'rgba(79, 79, 79, 0.5)'
   immagine_fonte: 'Photo credit: [**JR Korpa**](https://unsplash.com/@korpa)'
 date: '2015-10-19 17:00'
