@@ -3,8 +3,8 @@ title: "Perché sono passato a Jekyll"
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: "perche-ho-scelto-jekyll.webp"
-  immagine_estesa: "perche-ho-scelto-jekyll.webp"
+  miniatura: "perche-ho-scelto-jekyll"
+  immagine_estesa: "perche-ho-scelto-jekyll"
   immagine_fonte: "Photo credit: [**Nick Morrison**](https://unsplash.com/@nickmorrison)"
   overlay_filter: rgba(79, 79, 79, 0.5)
 date: "2020-02-04 20:41"
