@@ -8,6 +8,12 @@ header:
   immagine_fonte: "Photo credit: [**Nick Morrison**](https://unsplash.com/@nickmorrison)"
   overlay_filter: rgba(79, 79, 79, 0.5)
 date: "2020-02-04 20:41"
+categories:
+  - jekyll
+  - 100DaysOfCode
+tags:
+  - jekyll
+  - 100DaysOfCode
 ---
 
 Bene, il primo di tre obiettivi dei [miei cento giorni]({% post_url 2020-01-21-un-nuovo-inizio %}) è fatto: `finire di sistemare il trasloco dei blog miei e di mia moglie da WordPress a Jekyll`. Resta però una domanda: _perché sono passato a Jekyll_? Ovviamente la prima ragione è che costa meno. Ma non solo per questo.

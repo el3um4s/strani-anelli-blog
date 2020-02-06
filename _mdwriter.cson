@@ -58,11 +58,15 @@ title: "{title}"
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: "image.webp"
-  immagine_estesa: "image.webp"
+  miniatura: "image"
+  immagine_estesa: "image"
   immagine_fonte: "Photo credit: [**CreditImageNome**](CreditImageURL)"
   overlay_filter: rgba(79, 79, 79, 0.5)
 date: "{date}"
+categories:
+  - Senza Categoria
+tags:
+  - Altro
 ---
 """
 
