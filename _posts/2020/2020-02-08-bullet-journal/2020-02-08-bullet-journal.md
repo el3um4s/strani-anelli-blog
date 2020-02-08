@@ -42,6 +42,8 @@ Non serve davvero altro. Se cercate online troverete molti tutorial con dei Bull
 
 ### Come si usa un Bullet Journal
 
+{% include picture img="scrivere.webp" ext="jpg" alt="Scrivere" %}
+
 Si usa nella maniera più semplice possibile. Nessun bisogno di mille teorie e mille complicazioni. Si usa e basta, e il più velocemente possibile. Per farlo occorre però un po' di allenamento e alcune, piccole, regole e consigli:
 
 1. **Scegli per cosa usarlo**. Non è necessario che serva per tutto. Io lo uso come diario personale, come agenda delle cose importanti e come tracking per idee e per i [#100DaysOfCode]({% post_url 2020-01-21-un-nuovo-inizio %}). E poi ne ho un altro che uso per lavoro, e solo per quello. (E qui dovrei aprire una parentesi sul perché, magari ci torno alla fine o domani, vediamo).
@@ -54,8 +56,6 @@ Si usa nella maniera più semplice possibile. Nessun bisogno di mille teorie e m
    - Febbraio, pag. 16
    - Diaro del Grazie, pag. 22
    Non è importate l'ordine, l'importante è che ci siano le cose che ci servono.
-
-{% include picture img="scrivere.webp" ext="jpg" alt="Scrivere" %}
 
 Comunque, in genere ci sono alcune raccolte comuni a tutti i Bullet Journal (oltre all'indice ovviamente):
 
