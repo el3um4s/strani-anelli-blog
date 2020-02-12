@@ -10,7 +10,7 @@ header:
 date: "2020-02-07 23:59"
 categories:
   - 100DaysOfCode
-  - Time Management
+  - Productivity
 tags:
   - 100DaysOfCode
   - Time Management
