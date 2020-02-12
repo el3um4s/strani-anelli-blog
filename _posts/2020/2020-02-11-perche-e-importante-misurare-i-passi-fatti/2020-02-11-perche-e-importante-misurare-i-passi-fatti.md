@@ -38,7 +38,7 @@ Alla fine, se ben ci pensiamo, non esiste una sola grande azione, un'unica grand
 
 ### Le riunioni con noi stessi
 
-{% include picture img="pausa-di-riflessione.webp" ext="jpg" alt="Pareto ancora" %}
+{% include picture img="pausa-di-riflessione.webp" ext="jpg" alt="Riunine con me stesso" %}
 
 Va da sé che misurare senza ragionare non serve a nulla. E ragionare significa confrontare, confrontare dove siamo rispetto a dove vogliamo arrivare. Ne nasce, quindi, la necessità di prenderci il nostro tempo per analizzare il lavoro fatto, e le strategie che abbiamo adottato. E serve fare questa verifica con costanza e periodicamente.
 
