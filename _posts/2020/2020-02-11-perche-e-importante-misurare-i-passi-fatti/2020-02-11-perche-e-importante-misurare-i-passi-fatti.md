@@ -30,11 +30,15 @@ E più efficacemente misuriamo la nostra produttività più acceleriamo il migli
 
 ### Pareto, ancora
 
+{% include picture img="pareto-ancora.webp" ext="jpg" alt="Pareto ancora" %}
+
 Volendo è lo stesso discorso già fatto per il _Principio di Pareto_: il 20% delle nostre azioni influenzano l'80% del nostro risultato. Allora conviene massimizzare il 20 per cento dei nostri sforzi per avere una leva molto forte sulla gran parte dei risultati che otteniamo. E spesso questo 20 percento è composto da compiti piccoli, da operazioni che tutto sommato sono anche piuttosto semplici. Ma per scoprirlo dobbiamo misurare. Misurare e tenere traccia del nostro processo.
 
 Alla fine, se ben ci pensiamo, non esiste una sola grande azione, un'unica grande cosa, che separa l'ordinario dallo straordinario: sono, invece, centinaia, migliaia, forse milioni di piccole cose, all'apparenza separate ma intrinsecamente legate tra di loro. Invece di concentrarsi su una o due grandi azioni, val la pena di mettere la nostra attenzione su questo 20 per cento di cose piccole ma in grado di dare grandi risultati.
 
 ### Le riunioni con noi stessi
+
+{% include picture img="pausa-di-riflessione.webp" ext="jpg" alt="Pareto ancora" %}
 
 Va da sé che misurare senza ragionare non serve a nulla. E ragionare significa confrontare, confrontare dove siamo rispetto a dove vogliamo arrivare. Ne nasce, quindi, la necessità di prenderci il nostro tempo per analizzare il lavoro fatto, e le strategie che abbiamo adottato. E serve fare questa verifica con costanza e periodicamente.
 
