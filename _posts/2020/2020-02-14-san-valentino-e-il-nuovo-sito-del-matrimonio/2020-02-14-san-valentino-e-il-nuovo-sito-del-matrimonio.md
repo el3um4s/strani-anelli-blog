@@ -5,7 +5,7 @@ header:
   immagine_tipo: "jpg"
   miniatura: "san-valentino"
   immagine_estesa: "san-valentino"
-  immagine_fonte: "Photo credit: [**Micheile Henderson**](https://unsplash.com/@micheile)"
+  immagine_fonte: "Photo credit: [**Samuele**](https://blog.stranianelli.com/)"
   overlay_filter: rgba(79, 79, 79, 0.5)
 date: "2020-02-14 13:37"
 categories:
