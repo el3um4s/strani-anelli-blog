@@ -1,0 +1,14 @@
+{
+  "name": "prova-electron-c3",
+  "version": "1.0.0",
+  "description": "Versione di prova",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^8.0.1"
+  }
+}

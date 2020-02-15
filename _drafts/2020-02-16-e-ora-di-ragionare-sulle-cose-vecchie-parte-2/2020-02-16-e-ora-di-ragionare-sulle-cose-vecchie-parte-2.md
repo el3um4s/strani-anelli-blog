@@ -9,13 +9,14 @@ header:
   overlay_filter: rgba(79, 79, 79, 0.5)
 date: "2020-02-16 15:00"
 categories:
-  - Senza Categoria
+  - 100DaysOfCode
 tags:
-  - Altro
+  - 100DaysOfCode
+  - Construct 3
+  - Progetti
 ---
 
-Alla fine ieri ho rinunciato a finire. Tentare di mettere ordine a un paio d'anni di esperimenti, fatti per lo più senza metodo e perseveranza, richiede molto più tempo di quello che speravo. Oggi continuo con questa esplorazione del passato, più o meno recente.
-
+Alla fine ieri ho rinunciato a finire. Tentare di mettere ordine a un paio d'anni di esperimenti, fatti per lo più senza metodo e perseveranza, richiede molto più tempo di quello che speravo. Oggi [continuo con questa esplorazione del passato]({% post_url 2020-02-15-e-ora-di-ragionare-sulle-cose-vecchie-parte-1 %}), più o meno recente.
 
 ### GitHub: resti di altri Progetti
 
