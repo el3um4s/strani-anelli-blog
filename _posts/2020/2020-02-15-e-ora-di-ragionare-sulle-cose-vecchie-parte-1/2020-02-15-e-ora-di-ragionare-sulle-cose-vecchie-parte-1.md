@@ -7,7 +7,7 @@ header:
   immagine_estesa: "vecchi-tempi"
   immagine_fonte: "Photo credit: [**Jon Moore**](https://unsplash.com/@thejmoore)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2020-02-17 14:51"
+date: "2020-02-15 14:51"
 categories:
   - 100DaysOfCode
 tags:
