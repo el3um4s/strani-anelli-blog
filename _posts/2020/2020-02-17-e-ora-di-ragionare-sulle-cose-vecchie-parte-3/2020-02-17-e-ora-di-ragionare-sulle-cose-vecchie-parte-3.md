@@ -1,4 +1,5 @@
 ---
+published: false
 title: "È ora di ragionare sulle cose vecchie (parte 3)"
 usa_webp: true
 header:
@@ -15,7 +16,7 @@ tags:
   - Progetti
 ---
 
-Dopo la [prima]({% post_url 2020-02-15-e-ora-di-ragionare-sulle-cose-vecchie-parte-1 %}) e la seconda parte è il momento della terza. Onestamente non pensavo di aver lasciato per strada tani progetti cominciati e mai finiti. E mi fa anche una certa impressione l'elenco dei corsi che ho comprato (per fortuna tutti in offerta :smile:) di cui solo una piccola parte completati. Penso mi sia utile mettere in ordine anche questo aspetto.
+Dopo la [prima]({% post_url 2020-02-15-e-ora-di-ragionare-sulle-cose-vecchie-parte-1 %}) e la [seconda parte]({% post_url 2020-02-16-e-ora-di-ragionare-sulle-cose-vecchie-parte-2 %}) è il momento della terza. Onestamente non pensavo di aver lasciato per strada tani progetti cominciati e mai finiti. E mi fa anche una certa impressione l'elenco dei corsi che ho comprato (per fortuna tutti in offerta :smile:) di cui solo una piccola parte completati. Penso mi sia utile mettere in ordine anche questo aspetto.
 
 ### Mammoth Interactive
 

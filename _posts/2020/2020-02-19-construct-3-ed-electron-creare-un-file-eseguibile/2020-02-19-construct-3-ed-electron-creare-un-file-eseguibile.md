@@ -1,4 +1,5 @@
 ---
+published: false
 title: "Construct 3 ed Electron: creare un file eseguibile"
 usa_webp: true
 header:

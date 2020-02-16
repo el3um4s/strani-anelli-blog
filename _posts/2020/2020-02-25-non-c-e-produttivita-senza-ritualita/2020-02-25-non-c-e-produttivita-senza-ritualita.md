@@ -1,4 +1,5 @@
 ---
+published: false
 title: "Non c'è produttività senza ritualità"
 usa_webp: true
 header:
@@ -7,7 +8,7 @@ header:
   immagine_estesa: "ritualita"
   immagine_fonte: "Photo credit: [**THE 5TH**](https://unsplash.com/@the5th)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2020-02-21 10:00"
+date: "2020-02-25 10:00"
 categories:
   - 100DaysOfCode
   - Productivity
