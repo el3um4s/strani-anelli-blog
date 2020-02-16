@@ -21,7 +21,7 @@ Mi sono bloccato su un aspetto di VueJS: le transiction. Penso sia dovuto a una 
 
 Il secondo punto, il corso Udacity, mi ha un po’ deluso: è stato abbastanza semplice e superficiale. Però mi ha dato un’infarinatura di come funziona la Canvas: in futuro approfondirò la questione.
 
-Invece del progetto [**Random Quote Machine**](https://el3um4s.github.io/FCC-Random-Quote-Machine/) sono soddisfatto: la versione nuova, costruita con VueJS, è venuta è più elegante.
+Invece del progetto [**Random Quote Machine**](https://github.com/el3um4s/100-days-of-code/tree/master/FreeCodeCamp/FCC-Random-Quote-Machine) sono soddisfatto: la versione nuova, costruita con VueJS, è venuta è più elegante.
 
 {% include picture img="FCC-Random-Quote-Machine" ext="jpg" alt="" %}
 
