@@ -55,6 +55,7 @@ frontMatterDate: "{year}-{month}-{day} {hour}:{minute}"
 frontMatter: """
 ---
 title: "{title}"
+published: false
 usa_webp: true
 header:
   immagine_tipo: "jpg"

@@ -86,5 +86,5 @@ Basterà cliccarci sopra per avviare il gioco.
 
 Come ieri, ecco i file su cui ho lavorato, con le modifiche di oggi
 
-* **[index.js]()**
-* **[package.json]()**
+* **[index.js](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2020/2020-02-19-construct-3-ed-electron-creare-un-file-eseguibile/index)**
+* **[package.json](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2020/2020-02-19-construct-3-ed-electron-creare-un-file-eseguibile/package)**

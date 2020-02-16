@@ -137,5 +137,5 @@ Ma per creare un file eseguibile? Ne parlerò domani.
 
 Ah, dimenticavo, questi sono i link due file su cui ho lavorato:
 
-* **[index.js]()**
-* **[package.json]()**
+* **[index.js](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2020/2020-02-18-construct-3-ed-electron-avviare-un-gioco/index)**
+* **[package.json](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2020/2020-02-18-construct-3-ed-electron-avviare-un-gioco/package)**
