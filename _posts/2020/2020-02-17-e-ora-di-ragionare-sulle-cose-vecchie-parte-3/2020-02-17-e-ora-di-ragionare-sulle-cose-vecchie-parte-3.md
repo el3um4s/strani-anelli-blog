@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: "È ora di ragionare sulle cose vecchie (parte 3)"
 usa_webp: true
 header:
