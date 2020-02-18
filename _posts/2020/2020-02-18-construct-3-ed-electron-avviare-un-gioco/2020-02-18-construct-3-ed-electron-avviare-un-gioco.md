@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: "Construct 3 ed Electron: avviare un gioco"
 usa_webp: true
 header:
