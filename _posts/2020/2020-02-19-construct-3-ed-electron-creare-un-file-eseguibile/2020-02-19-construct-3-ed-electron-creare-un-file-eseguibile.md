@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: "Construct 3 ed Electron: creare un file eseguibile"
 usa_webp: true
 header:
@@ -8,7 +8,7 @@ header:
   immagine_estesa: "c3-ed-electron"
   immagine_fonte: "Photo credit: [**Glenn Carstens-Peters**](https://unsplash.com/@glenncarstenspeters)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2020-02-19 16:44"
+date: "2020-02-19 15:00"
 categories:
   - 100DaysOfCode
   - Construct 3
