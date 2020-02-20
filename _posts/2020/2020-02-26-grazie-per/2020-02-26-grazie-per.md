@@ -8,7 +8,7 @@ header:
   immagine_estesa: "grazie-per"
   immagine_fonte: "Photo credit: [**Freshh Connection**](https://unsplash.com/@freshhconnection)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2020-02-24 13:00"
+date: "2020-02-26 14:00"
 categories:
   - 100DaysOfCode
   - Productivity

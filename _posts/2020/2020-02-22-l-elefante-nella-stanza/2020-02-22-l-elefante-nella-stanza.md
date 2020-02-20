@@ -11,6 +11,7 @@ header:
 date: "2020-02-22 15:00"
 categories:
   - 100DaysOfCode
+  - Aphantasia
 tags:
   - 100DaysOfCode
   - Aphantasia

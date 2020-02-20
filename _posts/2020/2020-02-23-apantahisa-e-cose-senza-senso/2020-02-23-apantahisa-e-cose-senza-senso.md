@@ -1,5 +1,5 @@
 ---
-title: "Non pensare all'ippopotamo"
+title: "Cose che non hanno senso, se hai l'Aphantasia"
 published: false
 usa_webp: true
 header:
@@ -10,6 +10,7 @@ header:
 date: "2020-02-23 21:35"
 categories:
   - 100DaysOfCode
+  - Aphantasia
 tags:
   - 100DaysOfCode
   - Aphantasia
@@ -67,3 +68,13 @@ Improvvisamente è diventato molto disturbante scoprire che si può letteralment
 Non mi è chiara una cosa: quanto è possibile indurre immagini mentali alle altre persone. Per dire, è possibile sfruttare questa caratteristica per indurre una persona ad avere un bel ricordo di un posto o di una situazione legandole delle immagini mentali indotte? O anche, semplicemente, rendere più divertente una conversazione facendo apparire cose assurde nelle mente degli altri. Tipo, non so, un topino che arriva spingendo una grossa forma di formaggio. Ovviamente il topino indossa un cappello a punta, rosso.
 
 Quando qualcuno dice di _pensare con le parole_, penso intenda _vedendo le parole nella propria testa_. Su questo non sono ben sicuro, ma mi pare di aver capito che è come se apparissero. Per me non ci sono né parole da vedere ne voci da sentire. Non ho ancora capito come descrivere questa cosa.
+
+Quindi le lingue pittografiche e quelle con gli ideogrammi sono la rappresentazione più vicina al modo comune di pensare? Se è così, per fortuna sono nato in un luogo con le lettere, altrimenti sarei spacciato :grin:.
+
+Non sono mai riuscito a usare con successo le mappe mentali. Questo perché sono uno strumento creato per chi ragiona per immagini: parte da una figura e segue le altre, sfruttando l'immagine mentale della mappa.
+
+Il palazzo della memoria di Sherlock Holmes non è una metafora. Il personaggio vede davvero nella propria mente il palazzo dei ricordi. E lo vedono tutti, chi più chi meno.
+
+È davvero difficile, per chi non è un'aphant, concentrarsi sul momento presente. Continuano ad avere pop up pubblicitari sul passato, il futuro, i problemi, le aspirazioni, e così via. Effettivamente, a pensarci bene, come cavolo fate a concentrarvi su qualsiasi cosa con tutto questo casino nella testa?
+
+Quando l'allenatore mi diceva di _fare l'esercizio nella testa_, in modo da _immaginare bene i movimenti da compiere_, intendeva in maniera letterale. Ed ecco perché sono sempre stato una capra in atletica :smile:.
