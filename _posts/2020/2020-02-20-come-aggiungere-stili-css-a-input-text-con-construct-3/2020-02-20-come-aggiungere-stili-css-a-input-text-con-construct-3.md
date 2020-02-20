@@ -1,12 +1,12 @@
 ---
-published: false
+published: true
 title: "Come aggiungere stili CSS a Input Text con Construct 3"
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: "image"
-  immagine_estesa: "image"
-  immagine_fonte: "Photo credit: [**CreditImageNome**](CreditImageURL)"
+  miniatura: "colori"
+  immagine_estesa: "colori"
+  immagine_fonte: "Photo credit: [**Robert Katzki**](https://unsplash.com/@ro_ka)"
   overlay_filter: rgba(79, 79, 79, 0.5)
 date: "2020-02-20 11:00"
 categories:
