@@ -1,13 +1,13 @@
 ---
 title: "Plugins for Construct 3: risistemato!"
-published: false
+published: true
 usa_webp: true
 header:
   immagine_tipo: "jpg"
   miniatura: "c3plugins"
   immagine_estesa: "c3plugins"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2020-02-21 23:29"
+date: "2020-02-21 17:01"
 categories:
   - 100DaysOfCode
 tags:
