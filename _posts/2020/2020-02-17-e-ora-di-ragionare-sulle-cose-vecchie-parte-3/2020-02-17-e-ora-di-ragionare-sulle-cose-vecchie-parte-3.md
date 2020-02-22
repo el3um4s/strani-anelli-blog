@@ -56,7 +56,7 @@ Udemy è pittosto famoso, e ha molti corsi tecnici ben fatti. Il sito è fatto m
 * **[The Advanced Web Developer Bootcamp](https://www.udemy.com/course/the-advanced-web-developer-bootcamp/)** di Colt Steele
 * **[Ultimate Beginner’s Guide to Photography Entrepreneurship](https://www.udemy.com/course/photography-entrepreneurship/)** di Eric Kim
 * **[Ultimate Beginner's Guide to Mastering Photography: Eric Kim](https://www.udemy.com/course/ultimate-beginners-guide-to-mastering-photography-eric-kim/)** di Eric Kim
-* **[Vue JS 2 - The Complete Guide (incl. Vue Router & Vuex)]https://www.udemy.com/course/vuejs-2-the-complete-guide/))** di Maximilian Schwarzmüller
+* **[Vue JS 2 - The Complete Guide (incl. Vue Router & Vuex)](https://www.udemy.com/course/vuejs-2-the-complete-guide/)** di Maximilian Schwarzmüller
 * **[Web Components & Stencil.js - Build Custom HTML Elements](https://www.udemy.com/course/web-components-stenciljs-build-custom-html-elements/)** di Maximilian Schwarzmüller
 
 ### Domestika
