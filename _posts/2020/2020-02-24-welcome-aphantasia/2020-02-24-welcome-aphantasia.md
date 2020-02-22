@@ -17,7 +17,7 @@ tags:
   - Aphantasia
 ---
 
-Non ho mai usato granché reddit, ma in questi giorni mi sono trovato spesso a leggere nella [sezione Aphantasia](https://www.reddit.com/r/Aphantasia/). C'è una discussione molto positiva, intitolata [Welcome, new people! An acceptance + positivity thread](https://www.reddit.com/r/Aphantasia/comments/f1efmw/welcome_new_people_an_acceptance_positivity_thread/). Mi piace e la trovo interessante. Per questo, dopo aver parlato delle mie piccole scoperte su [come pensa chi è dotato di immaginazione mentale]({% post_url 2020-02-23-non-pensare-all-ippopotamo %}) voglio riportare alcuni motivi per dare il benvenuto all'Aphantasia.
+Non ho mai usato granché reddit, ma in questi giorni mi sono trovato spesso a leggere nella [sezione Aphantasia](https://www.reddit.com/r/Aphantasia/). C'è una discussione molto positiva, intitolata [Welcome, new people! An acceptance + positivity thread](https://www.reddit.com/r/Aphantasia/comments/f1efmw/welcome_new_people_an_acceptance_positivity_thread/). Mi piace e la trovo interessante. Per questo, dopo aver parlato delle mie piccole scoperte su [come pensa chi è dotato di immaginazione mentale]({% post_url 2020-02-23-apantahisa-e-cose-senza-senso %}) voglio riportare alcuni motivi per dare il benvenuto all'Aphantasia.
 
 Perché, [ne ho già parlato]({% post_url 2020-02-22-l-elefante-nella-stanza %}), ci vuole un po' di tempo per accettare l'Aphantasia, e prima di poterlo fare tocca passare per uno stato di frustrazione, di confusione e di tristezza. Per contrastare tutto questo è bene ricordare alcune cose:
 
