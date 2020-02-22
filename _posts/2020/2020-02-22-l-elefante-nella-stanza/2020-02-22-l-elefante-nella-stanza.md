@@ -1,6 +1,6 @@
 ---
 title: "L'elefante nella stanza"
-published: false
+published: true
 usa_webp: true
 header:
   immagine_tipo: "jpg"
