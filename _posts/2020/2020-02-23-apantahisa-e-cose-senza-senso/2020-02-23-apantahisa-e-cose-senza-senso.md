@@ -1,13 +1,13 @@
 ---
 title: "Cose che non hanno senso, se hai l'Aphantasia"
-published: false
+published: true
 usa_webp: true
 header:
   immagine_tipo: "jpg"
   miniatura: "olga"
   immagine_estesa: "olga"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2020-02-23 21:35"
+date: "2020-02-23 13:00"
 categories:
   - 100DaysOfCode
   - Aphantasia
