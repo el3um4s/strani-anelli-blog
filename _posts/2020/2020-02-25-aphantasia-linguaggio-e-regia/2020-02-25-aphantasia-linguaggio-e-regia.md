@@ -1,6 +1,6 @@
 ---
 title: "Aphantasia, linguaggio e regia"
-published: false
+published: true
 usa_webp: true
 header:
   immagine_tipo: "jpg"
@@ -8,7 +8,7 @@ header:
   immagine_estesa: "regia"
   immagine_fonte: "Photo credit: [**Avel Chuklanov**](https://unsplash.com/@chuklanov)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2020-02-25 15:00"
+date: "2020-02-25 23:00"
 categories:
   - 100DaysOfCode
   - Aphantasia
