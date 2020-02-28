@@ -6,6 +6,7 @@ header:
   immagine_tipo: "jpg"
   miniatura: "c3plugins"
   immagine_estesa: "c3plugins"
+  immagine_fonte: "Photo credit: [**Samuele**](https://blog.stranianelli.com/)"
   overlay_filter: rgba(79, 79, 79, 0.5)
 date: "2020-02-21 17:01"
 categories:

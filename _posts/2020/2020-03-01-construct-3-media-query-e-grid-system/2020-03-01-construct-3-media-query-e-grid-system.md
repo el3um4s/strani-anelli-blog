@@ -4,9 +4,9 @@ published: false
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: "image"
-  immagine_estesa: "image"
-  immagine_fonte: "Photo credit: [**CreditImageNome**](CreditImageURL)"
+  miniatura: "css-media-query-construct-3"
+  immagine_estesa: "css-media-query-construct-3"
+  immagine_fonte: "Photo credit: [**Samuele**](https://blog.stranianelli.com/)"
   overlay_filter: rgba(79, 79, 79, 0.5)
 date: "2020-03-01 15:00"
 categories:
