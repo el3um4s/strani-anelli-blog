@@ -1,6 +1,6 @@
 ---
 title: "Construct 3: come caricare un dictionary da file"
-published: false
+published: true
 usa_webp: true
 header:
   immagine_tipo: "jpg"
