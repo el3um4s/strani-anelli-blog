@@ -21,7 +21,7 @@ Lavorando alla mia idea di un metodo semplice e veloce per [personalizzare l'esp
 
 Comincio con il far vedere il risultato che ho ottenuto. La GIF è un po' pesante, spero non in impieghi una vita e mezza a caricarsi.
 
-<img src="grid-and-media-query-construct-3.gif">
+<img src="https://blog.stranianelli.com/images/gif/2020-03-01-construct-3-media-query-e-grid-system.gif">
 
 Bello, vero? Ovviamente [questo è il file c3p con il codice che ho usato]((https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2020/2020-03-01-construct-3-media-query-e-grid-system/grid-system-for-construct-3.c3p)). Vale però la pena, soprattutto pensando al _me futuro_ riassumere il ragionamento e i vari passaggi necessari.
 
@@ -108,6 +108,6 @@ rendere visibile solo il layer voluto.
 
 ### Infine
 
-<img src="grid-and-media-query-construct-3-smile.gif">
+<img src="https://blog.stranianelli.com/images/gif/2020-03-01-construct-3-media-query-e-grid-system-smile.gif">
 
 Infine, l'ultima questione. Questo metodo permette di creare una griglia responsive in grado di adattarsi a diversi schermi. Si puù usare lo stesso metodo, oltre che per gli sprite anche per ogni altro oggetto di Construct. Oppure, volendo, usare questa griglia come base di riferimento per l'inserimento di altri elementi.

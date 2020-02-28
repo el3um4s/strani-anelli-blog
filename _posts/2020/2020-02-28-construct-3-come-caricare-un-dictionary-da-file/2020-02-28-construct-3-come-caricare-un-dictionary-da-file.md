@@ -29,8 +29,8 @@ In soldoni, si usa _drag'n'drop_ per ricavare un'_url_ da passare ad _AJAX_ per 
 
 Ovviamente ho creato anche una demo per mostrare praticamente il funzionamento.
 
-<img src="2020-02-22-demo-dictionary.gif">
+<img src="https://blog.stranianelli.com/images/gif/2020-02-28-construct-3-come-caricare-un-dictionary-da-file-demo.gif">
 
 Nella [pagina ufficiale del plugin Drag And Drop Construct 3](https://c3plugins.stranianelli.com/drag-drop-files/) è possibile scaricare sia il codice dell'esempio che un (piccolo) dictionary da usare come test.
 
-<iframe src="https://www.mywebsite.com/mygame/" width="600" height="400" scrolling="no" noresize="noresize" />
+<iframe src="https://c3plugins.stranianelli.com/drag-drop-files/demo/dictionary/" width="600" height="400" scrolling="no" noresize="noresize" />
