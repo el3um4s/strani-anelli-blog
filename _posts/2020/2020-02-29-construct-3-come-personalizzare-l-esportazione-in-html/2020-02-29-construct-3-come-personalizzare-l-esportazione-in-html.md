@@ -63,7 +63,7 @@ Con questo inserisco una stringa html subito prima del tag di chiusura dell'elem
 
 Unendo questi tre pezzetti si può ottenere, in pratica, un semplice codice che scorre un file `config.json` scritto nella forma:
 
-~~~JSON
+~~~json
 {
 	"meta": [
 		{
