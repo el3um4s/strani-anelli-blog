@@ -32,3 +32,7 @@ Ho usato la possibilità di "mappare" le funzioni in modo da poterle chiamare tr
 {% include picture img="sidebar-mouse-over.webp" ext="jpg" alt="" %}
 
 Per gestire il cambio di colore al passaggio del mouse uso uno sprite aggiuntivo in modo da poter coordinare il colore tra la scritta e l'icona. Lo sprite (bianco) cambia la dimensione in base alla visibilità del menù esteso.
+
+### Post Scriptum
+
+Ovviamente, mentre scrivevo questo articolo mi sono accorto che è possibile semplificare ulteriormente il tutto: basta usare un _container_ per icone e testo. Quindi, ecco qui [la versione più semplice di questo esempio](https://blog.stranianelli.com/c3p/custom-menu-with-transition-defrag.c3p).
