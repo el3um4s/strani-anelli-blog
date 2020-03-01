@@ -39,4 +39,4 @@ Esiste un modo per ottenere lo stesso risultato usando semplicemente il plugin u
 -> TextInput: Set CSS style "padding" to "16px"
 ~~~
 
-Tutto qui. Non servono né addons né altro. Questo file **[text-input-css-vanilla.c3p](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2020/2020-02-20-come-aggiungere-stili-css-a-input-text-con-construct-3/text-input-css-vanilla.c3p)** contiene una dimostrazione di questo piccolo pezzetto di codice.
+Tutto qui. Non servono né addons né altro. Questo file **[text-input-css-vanilla.c3p](https://blog.stranianelli.com/c3p/text-input-css-vanilla.c3p)** contiene una dimostrazione di questo piccolo pezzetto di codice.

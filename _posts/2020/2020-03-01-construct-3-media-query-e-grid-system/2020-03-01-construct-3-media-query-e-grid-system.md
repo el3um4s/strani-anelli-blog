@@ -1,6 +1,6 @@
 ---
 title: "Construct 3: Media Query e grid system"
-published: false
+published: true
 usa_webp: true
 header:
   immagine_tipo: "jpg"
@@ -23,7 +23,7 @@ Comincio con il far vedere il risultato che ho ottenuto. La GIF è un po' pesant
 
 <img src="https://blog.stranianelli.com/images/gif/2020-03-01-construct-3-media-query-e-grid-system.gif">
 
-Bello, vero? Ovviamente [questo è il file c3p con il codice che ho usato]((https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2020/2020-03-01-construct-3-media-query-e-grid-system/grid-system-for-construct-3.c3p)). Vale però la pena, soprattutto pensando al _me futuro_ riassumere il ragionamento e i vari passaggi necessari.
+Bello, vero? Ovviamente [questo è il file c3p con il codice che ho usato](https://blog.stranianelli.com/c3p/grid-system-for-construct-3.c3p). Vale però la pena, soprattutto pensando al _me futuro_ riassumere il ragionamento e i vari passaggi necessari.
 
 ### L'idea
 

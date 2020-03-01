@@ -91,6 +91,6 @@ per inserire dentro l'head
 <base href="https://c3plugins.stranianelli.com/">
 ~~~
 
-Ovviamente questo pemette di modificare il file HTML durante l'esecuzione del progetto (non necessariamente un gioco). Questo è il suo limite principale, perché impedisce di usare con efficacia questa tecnica per aggiungere elementi [Open Graph](https://ogp.me/).
+Ovviamente questo permette di modificare il file HTML durante l'esecuzione del progetto (non necessariamente un gioco). Questo è il suo limite principale, perché impedisce di usare con efficacia questa tecnica per aggiungere elementi [Open Graph](https://ogp.me/).
 
-Ovviamente, questo è il [link al file C3P con un progetto demo](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2020/2020-02-29-construct-3-come-personalizzare-l-esportazione-in-html/custom-head-web.c3p).
+Ovviamente, questo è il [link al file C3P con un progetto demo](https://blog.stranianelli.com/c3p/custom-head-web.c3p).

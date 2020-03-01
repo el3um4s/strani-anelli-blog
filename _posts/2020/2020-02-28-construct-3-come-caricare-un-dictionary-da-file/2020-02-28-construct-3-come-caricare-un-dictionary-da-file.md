@@ -4,8 +4,8 @@ published: true
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  immagine_estesa: "dictionary"
-  miniatura: "dictionary"
+  immagine_estesa: "dictionary-eng"
+  miniatura: "dictionary-eng"
   immagine_fonte: "Photo credit: [**Waldemar Brandt**](https://unsplash.com/@waldemarbrandt67w)"
   overlay_filter: rgba(79, 79, 79, 0.5)
 date: "2020-02-28 17:00"
