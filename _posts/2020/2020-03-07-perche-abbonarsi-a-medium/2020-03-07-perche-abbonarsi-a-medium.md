@@ -8,7 +8,7 @@ header:
   immagine_estesa: "image"
   immagine_fonte: "Photo credit: [**CreditImageNome**](CreditImageURL)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2020-03-05 15:00"
+date: "2020-03-07 15:00"
 categories:
   - 100DaysOfCode
   - Productivity
