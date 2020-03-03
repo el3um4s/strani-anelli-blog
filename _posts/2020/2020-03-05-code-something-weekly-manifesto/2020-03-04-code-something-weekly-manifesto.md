@@ -8,7 +8,7 @@ header:
   immagine_estesa: "settimana"
   immagine_fonte: "Photo credit: [**Jazmin Quaynor**](https://unsplash.com/@jazminantoinette)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2020-03-04 17:00"
+date: "2020-03-05 17:00"
 categories:
   - 100DaysOfCode
   - Productivity
@@ -17,7 +17,7 @@ tags:
   - Time Management
 ---
 
-Riprendo il discorso di ieri sui diversi [tipi di progetto a cui si può lavorare]({% post_url 2020-03-03-elefanti-cavalli-conigli-quanti-progetti-anno %}). Ovviamente questo discorso vale in particolar modo per i progetti personali, collaterali al proprio impiego. Ma non necessariamente solo a questi. L'idea del _Code Something Weekly_, **Un nuovo progetto a settimana**, si può riassumere con 4 parole: Scopri, Divertiti, Fai, Scrivi.
+Riprendo il discorso di ieri sui diversi [tipi di progetto a cui si può lavorare]({% post_url 2020-03-04-elefanti-cavalli-conigli-quanti-progetti-anno %}). Ovviamente questo discorso vale in particolar modo per i progetti personali, collaterali al proprio impiego. Ma non necessariamente solo a questi. L'idea del _Code Something Weekly_, **Un nuovo progetto a settimana**, si può riassumere con 4 parole: Scopri, Divertiti, Fai, Scrivi.
 
 ### Scopri
 

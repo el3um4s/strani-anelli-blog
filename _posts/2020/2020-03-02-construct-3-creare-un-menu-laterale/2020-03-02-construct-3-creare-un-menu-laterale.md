@@ -25,8 +25,8 @@ Allora, mi piacerebbe avere un menù laterale per gestire le varie sezioni dell'
 
 Come ieri, ecco qui il [file c3p da scaricare](https://blog.stranianelli.com/c3p/custom-menu-with-transition.c3p). Non penso che servano grandi spiegazioni sul funzionamento. Giusto un paio di note.
 
-
 {% include picture img="sidebar-initialize-e-call-function.webp" ext="jpg" alt="" %}
+
 Ho usato la possibilità di "mappare" le funzioni in modo da poterle chiamare tramite una stringa di testo. In questo modo posso usare la stessa funzione per ogni elemento del menù. Ovviamente per un menù così semplice è possibile usare un metodo più semplice e veloce: passare direttamente il nome del layer da mostrare e nasconde come parametro. Però mi interessava provare sul campo questo metodo, e così ho fatto.
 
 {% include picture img="sidebar-mouse-over.webp" ext="jpg" alt="" %}
