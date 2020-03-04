@@ -1,6 +1,6 @@
 ---
 title: "Elefanti, cavalli e conigli: quanti progetti in un anno?"
-published: false
+published: true
 usa_webp: true
 header:
   immagine_tipo: "jpg"
