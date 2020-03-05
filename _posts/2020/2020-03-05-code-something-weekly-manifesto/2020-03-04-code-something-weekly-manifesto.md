@@ -1,6 +1,6 @@
 ---
 title: "Code Something Weekly: Manifesto"
-published: false
+published: true
 usa_webp: true
 header:
   immagine_tipo: "jpg"
