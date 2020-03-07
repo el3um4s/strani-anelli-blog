@@ -1,6 +1,6 @@
 ---
 title: "Medium e altri abbonamenti da fare"
-published: false
+published: true
 usa_webp: true
 header:
   immagine_tipo: "jpg"
