@@ -35,8 +35,10 @@ Milano non è una città morta. Milano è una città sospesa, che si riscopre de
 
 {% include picture img="covid19-06.webp" ext="jpg" alt="" %}
 
-Non è un film apocalittico, è la realtà. Come sono una realtà le file davanti ai supermercati. File ordinate, tutti a distanza, tutti con la mascherina e lo sguardo vitreo. Lo sguardo è un miscuglio strano di paura, speranza, solitudine e voglia di abbracciare tutti. Sono occhi diversi, diversi da prima. Sono occhi che non saranno più quelli di prima.
+Non è un film apocalittico, è la realtà. Come sono una realtà le file davanti ai supermercati. File ordinate, tutti a distanza, tutti con la mascherina e lo sguardo vitreo. Lo sguardo è un miscuglio strano di paura, speranza, solitudine e voglia di abbracciare tutti. Sono occhi diversi, diversi da prima.
 
 {% include picture img="covid19-07.webp" ext="jpg" alt="" %}
+
+Sono occhi che non saranno più quelli di prima.
 
 {% include picture img="covid19-08.webp" ext="jpg" alt="" %}
