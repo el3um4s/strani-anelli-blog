@@ -1,6 +1,6 @@
 ---
 title: "Coronavirus: tre"
-published: false
+published: true
 usa_webp: true
 header:
   immagine_tipo: "jpg"
