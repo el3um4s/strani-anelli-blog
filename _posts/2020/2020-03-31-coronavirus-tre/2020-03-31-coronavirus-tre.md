@@ -1,5 +1,5 @@
 ---
-title: "Coronavirus: tre"
+title: "Coronavirus: Tre"
 published: true
 usa_webp: true
 header:
