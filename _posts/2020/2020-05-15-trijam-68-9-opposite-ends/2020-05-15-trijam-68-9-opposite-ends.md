@@ -4,8 +4,8 @@ published: true
 usa_webp: true
 header:
   immagine_tipo: "jpg"
-  miniatura: "trijam-68.9"
-  immagine_estesa: "trijam-68.9"
+  miniatura: "trijam-69"
+  immagine_estesa: "trijam-69"
   immagine_fonte: "Photo credit: [**Samuele**](https://blog.stranianelli.com/)"
   overlay_filter: rgba(79, 79, 79, 0.5)
 date: "2020-05-15 22:56"
