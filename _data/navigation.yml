@@ -1,7 +1,9 @@
 main:
   - title: "Posts"
     url: /posts/
-  - title: "Plugins for Construct 3"
+  - title: "Demo"
+    url: "https://c3demo.stranianelli.com/"
+  - title: "Plugins"
     url: "https://c3plugins.stranianelli.com/"
   - title: "Categories"
     url: /categories/
