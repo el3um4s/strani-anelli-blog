@@ -21,7 +21,7 @@ Nell'ultimo mese e mezzo, circa, ho sistemato alcuni vecchi template e progetti,
 
 ### L'idea
 
-![first version](firs-version.gif)
+{% include picture img="first-version.gif" ext="gif" alt="" %}
 
 L'idea alla base è, anzi, era, replicare [questo video di Zyger su Youtube](https://www.youtube.com/watch?v=5TO_GHShqEQ): un semplice Idle game, con solamente un pulsante da premere e 4 o 5 "potenziamenti". Devo ammettere di essere stato abbastanza veloce: in qualche ora ho ottenuto un template funzionate. Ma... ma non ero soddisfatto del risultato. Perché? Perché Construct 3 è ottimo per creare dei prototipi veloci, ma nella velocità si perde una cosa a mio parere fondamentale: la possibilità di riusare il codice. Quindi ho deciso di andare più lentamente e sistemare alcune cose. Con il senno del poi sono però andato troppo lento, ma questo è un altro aspetto.
 
@@ -88,7 +88,7 @@ Per quanto a prima vista possa sembrare complicato, il concetto alla base è ins
 
 ### Vai con JavaScript
 
-![json and javascript](json-and-javascript.gif)
+![json and javascript](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2020/2020-09-18-one-color-idle-game/json-and-javascript.gif)
 
 E qui entra il secondo problema: come far comunicare le regole con Construct 3? Beh, il modo più sensato sarebbe stato usare il [plugin JSON](https://www.construct.net/en/make-games/manuals/construct-3/plugin-reference/json). Ma questo avrebbe reso meno semplice il codice del gioco rispetto al puro JS. Inoltre avrebbe richiesto un ulteriore passaggio verso javascript per fare i calcoli. La soluzione che ho trovato, e di cui sono anche abbastanza soddisfatto, è dividere i compiti. C3 si sarrbbe occupato della gestione della grafica, JS dei calcoli e di tutto il resto.
 
