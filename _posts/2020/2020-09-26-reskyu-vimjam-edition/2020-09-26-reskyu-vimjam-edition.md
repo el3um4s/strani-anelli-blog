@@ -23,7 +23,7 @@ tags:
 
 Ho completato e inviato il mio gioco per la [VimJam: Collectables (8 Bits to Infinity)](https://itch.io/jam/vimjam), svoltasi dal 18 al 25 settembre (2020, ovviamente). Il vincolo era "_Collezionabili_", il tema "**There and back again**". E, lo devo ammettere, sono soddisfatto del risultato: per la prima volta sono riuscito a completare una Jam creando non solo il codice ma anche tutti gli assets (font escluso). Ho disegnato i personaggi e l'ambientazione, ho composto la musica, e persino i suoni del gioco. I risultati sono quelli che sono ma non mi importa.
 
-Comincio con un po' di link, e poi ti racconto come è andata:
+Comincio con un po' di link, e poi racconto come è andata:
 
   - pagina del gioco: [Reskyu (Vimjam Edition)"](https://el3um4s.itch.io/reskyu-vimjam-edition)
   - pagina per votare: [Rate the Game](https://itch.io/jam/vimjam/rate/768009)
@@ -48,7 +48,7 @@ Comunque sia, stabilito cosa fare si è trattato di affrontare i problemi man ma
 
 {% include picture img="reskyu-01.webp" ext="jpg" alt="" %}
 
-**Il primo problema è sempre il solito: il tempo**. Non ho sfruttato tutto il tempo a disposizione e mi sono perso dietro ad alcuni dettagli di poco conto. Ma rispetto alle altre volte la decisione di partire dalla meccanica di gioco mi ha avvantaggiato. Anche se non sono riuscito a creare molti livelli (e in realtà ne ho creato solamente uno), ho ottenuto un prototipo funzionante in tutte le sue funzioni principali: il giocatore si muove, i personaggi seguono il giocatore, i nemici possono ferire, l'area sicura è sicura e il pulsante di recupero funziona.
+**Il primo problema è sempre il solito: il tempo**. Non ho sfruttato tutto il tempo a disposizione e mi sono perso dietro ad alcuni dettagli di poco conto. Ma rispetto alle altre volte la decisione di partire dalla meccanica di gioco mi ha avvantaggiato. Anche se non sono riuscito a creare molti livelli (e in realtà ne ho creato solamente due), ho ottenuto un prototipo funzionante in tutte le sue funzioni principali: il giocatore si muove, i personaggi seguono il giocatore, i nemici possono ferire, l'area sicura è sicura e il pulsante di recupero funziona.
 
 Avere le meccaniche di base funzionanti mi ha permesso di creare molto rapidamente i due livelli presenti nella versione inviata per la VimJam, e anche il livello Tutorial. Quindi, se da un lato ho speso molto tempo a sistemare un livello sandbox non visibile, dall'altro questo mi ha permesso di creare un qualcosa di utilizzabile ancora per i prossimi livelli.
 
@@ -71,6 +71,8 @@ In realtà volevo anche aggiungerci un effetto ombra ma non ci sono riuscito...
 
 **Il quarto problema sono la musica e i suoni**. Per carità, li ho composti io, usando [BoscaCeoil](https://boscaceoil.net/), e di per sé non sono malaccio. Anche se a dire il vero c'è anche lo zampino di mia moglie che ha tentato di risolvere il mio disastro acustico. Però dai primi commenti al gioco non pare vadano bene. Ed è vero: alcuni effetti sono troppo alti, altri creano confusione. Però non sono preoccupato, ho tutto il tempo per sistemare il tutto.
 
-Infine, c'è un problema che è apparso alla fine, dopo aver spedito. Ed è un problema che pensavo di aver risolto: in alcune situazioni, situazioni che non sono riuscito a identificare, ogni tanto il meccanismo di gioco si inceppa e i personaggi escono dall'area sicura e finiscono nella coordinata 0-0. Onestamente non ho capito perché si sia ripresentato questo bug. Dovrò ricontrollare il codice ma sono abbastanza ottimista di poter risolvere questo problema.
+{% include picture img="reskyu-copertina.webp" ext="jpg" alt="" %}
+
+**L'ultimo problema è apparso alla fine**, dopo aver spedito. Ed è un problema che pensavo di aver risolto: in alcune situazioni, situazioni che non sono riuscito a identificare, ogni tanto il meccanismo di gioco si inceppa e i personaggi escono dall'area sicura e finiscono nella coordinata 0-0. Onestamente non ho capito perché si sia ripresentato questo bug. Dovrò ricontrollare il codice ma sono abbastanza ottimista di poter risolvere questo problema.
 
 E quindi? Quindi niente. Adesso si tratta di provare gli altri giochi partecipanti alla Jam, ce ne sono alcuni molto interessanti. E poi di ragionare su come continuare con questo progetto.
