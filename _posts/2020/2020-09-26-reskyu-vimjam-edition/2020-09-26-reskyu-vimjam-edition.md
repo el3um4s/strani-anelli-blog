@@ -21,11 +21,11 @@ tags:
   - Vimjam
 ---
 
-Ho completato e inviato il mio gioco per la [VimJam: Collectables (8 Bits to Infinity)](https://itch.io/jam/vimjam), svoltasi dal 18 al 25 settembre (2020, ovviamente). Il vincolo era "_Collezionabili_", il tema "**There and back again**". E, lo devo ammettere, sono soddisfatto del risultato: per la prima volta sono riuscito a completare una Jam creando non solo il codice ma anche tutti gli assets (font escluso). Ho disegnato i personaggi e l'ambientazione, ho composto la musica, e persino i suoni del gioco. I risultati sono quelli che sono ma non mi importa.
+Ho completato e inviato il mio gioco per la [VimJam: Collectables (8 Bits to Infinity)](https://itch.io/jam/vimjam), svoltasi dal 18 al 25 settembre (2020, ovviamente). Il vincolo era "_Collezionabili_", il tema "**There and back**". E, lo devo ammettere, sono soddisfatto del risultato: per la prima volta sono riuscito a completare una Jam creando non solo il codice ma anche tutti gli assets (font escluso). Ho disegnato i personaggi e l'ambientazione, ho composto la musica, e persino i suoni del gioco. I risultati sono quelli che sono ma non mi importa.
 
 Comincio con un po' di link, e poi racconto come è andata:
 
-  - pagina del gioco: [Reskyu (Vimjam Edition)"](https://el3um4s.itch.io/reskyu-vimjam-edition)
+  - pagina del gioco: [Reskyu (Vimjam Edition)](https://el3um4s.itch.io/reskyu-vimjam-edition)
   - pagina per votare: [Rate the Game](https://itch.io/jam/vimjam/rate/768009)
   - elenco dei giochi degli altri concorrenti: [VimJam - entries](https://itch.io/jam/vimjam/entries)
 
