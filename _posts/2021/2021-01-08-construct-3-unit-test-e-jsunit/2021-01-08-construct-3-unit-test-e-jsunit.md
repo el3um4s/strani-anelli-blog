@@ -1,6 +1,6 @@
 ---
 title: "Construct 3, Unit Test e JsUnit"
-published: false
+published: true
 usa_webp: true
 header:
   immagine_tipo: "jpg"
