@@ -12,10 +12,12 @@ date: "2020-02-29 14:30"
 categories:
   - 100DaysOfCode
   - Construct 3
+  - Template
 tags:
   - 100DaysOfCode
   - Construct 3
   - JavaScript
+  - Template
 ---
 
 Risistemando i miei plugin mi sono imbattuto in un limite di Construct 3: non è possibile personalizzare il file HTML. Il che non è un gran problema, a dire il vero, perché si può sempre editare con un qualsiasi editor. Però, soprattutto in fase di sviluppo, diventa una faccenda noiosa e anche ripetitiva. Per fortuna è possibile automatizzare il tutto.

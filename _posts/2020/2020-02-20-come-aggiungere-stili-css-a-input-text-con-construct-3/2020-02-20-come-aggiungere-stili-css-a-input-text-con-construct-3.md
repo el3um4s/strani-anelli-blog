@@ -12,11 +12,13 @@ date: "2020-02-20 11:00"
 categories:
   - 100DaysOfCode
   - Construct 3
+  - Template
 tags:
   - 100DaysOfCode
   - Construct 3
   - Plugin
   - HTMLElement
+  - Template
 ---
 
 Devo ammettere che un po' mi inorgoglisce quando qualcuno mi chiede come fare qualcosa con uno dei plugin che ho creato. Anche quando alla fine salta fuori che il problema è legato il mio plugin. L'ultimo in ordine di tempo è una domanda su [HTMLElement](https://www.construct.net/en/make-games/addons/190/html-element), un plugin nato con lo scopo di semplificare l'inserimenti di elementi HTML5 nei giochi Construct 3. Penso sia un plugin da riscrivere completamente, e magari approfitto di questi #100DaysOfCode per farlo.

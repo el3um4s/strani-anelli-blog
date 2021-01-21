@@ -12,9 +12,11 @@ date: "2020-03-01 15:00"
 categories:
   - 100DaysOfCode
   - Construct 3
+  - Template
 tags:
   - 100DaysOfCode
   - Construct 3
+  - Template
 ---
 
 Lavorando alla mia idea di un metodo semplice e veloce per [personalizzare l'esportazione in HTML di progetti di Construct 3]({% post_url 2020-02-29-construct-3-come-personalizzare-l-esportazione-in-html %}) mi sono nuovamente imbattuto in un problema: C3 rende abbastanza difficile gestire pagine html responsive. Anche se, dopo averci sbattuto la testa un po' di volte, ho forse trovato un metodo abbastanza veloce e replicabile per simulare Media Query in Construct 3.

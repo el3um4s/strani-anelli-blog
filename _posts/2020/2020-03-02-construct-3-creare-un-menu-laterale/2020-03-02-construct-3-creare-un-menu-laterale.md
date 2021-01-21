@@ -12,9 +12,11 @@ date: "2020-03-02 13:00"
 categories:
   - 100DaysOfCode
   - Construct 3
+  - Template
 tags:
   - 100DaysOfCode
   - Construct 3
+  - Template
 ---
 
 Dopo aver capito come [gestire in maniera dinamica la grafica in Construct 3]({% post_url 2020-03-01-construct-3-media-query-e-grid-system %}) è il momento di cominciare lavorare sul menù. Già, perché di fatto sta cominciando a profilarsi un nuovo progetto: la mia idea è di trovare un metodo abbastanza semplice per [personalizzare l'esportazione HTML]({% post_url 2020-02-29-construct-3-come-personalizzare-l-esportazione-in-html %}) e, soprattutto, risolvere i limiti legati all'inserimento di elementi durante l'esecuzione di un progetto C3.

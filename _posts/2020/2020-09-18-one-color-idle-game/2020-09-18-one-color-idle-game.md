@@ -12,9 +12,11 @@ date: "2020-09-18 15:40"
 categories:
   - 100DaysOfCode
   - Construct 3
+  - Template
 tags:
   - 100DaysOfCode
   - Construct 3
+  - Template
 ---
 
 Nell'ultimo mese e mezzo, circa, ho sistemato alcuni vecchi template e progetti, rendendoli open source in un repository su GitHub dal nome molto fantasioso: [Construct Demo](https://github.com/el3um4s/construct-demo). E visto che c'ero ho creato anche un mini sito, [qui](https://c3demo.stranianelli.com/). Ma non è di questo che voglio parlare bensì dell'ultimo template che ho pubblicato: **One Color Idle Game**.

@@ -12,11 +12,13 @@ date: "2020-02-28 17:00"
 categories:
   - 100DaysOfCode
   - Construct 3
+  - Template
 tags:
   - 100DaysOfCode
   - Construct 3
   - Plugin
   - Drag'n'Drop
+  - Template
 ---
 
 Dopo aver completato la [risistemazione dei miei plugin per Construct 3]({% post_url 2020-02-21-plugins-for-construct-3-risistemato %}) ho ricevuto alcuni feedback. E una domanda, su [Twitter](https://twitter.com/el3um4s): è possibile caricare un file dictionary (C3) usando il plugin [Drag and Drop](https://c3plugins.stranianelli.com/drag-drop-files/)? La risposta è: **sì**. Vediamo come.
