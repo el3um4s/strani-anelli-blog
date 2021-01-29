@@ -1,6 +1,8 @@
 main:
   - title: "Posts"
     url: /posts/
+  - title: "Thanks"
+    url: /thanks/
   - title: "Demo"
     url: "https://c3demo.stranianelli.com/"
   - title: "Plugins"
@@ -9,5 +11,3 @@ main:
     url: /categories/
   - title: "Tags"
     url: /tags/
-  # - title: "About"
-  #   url: /about/
