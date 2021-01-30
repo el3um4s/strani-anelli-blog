@@ -1,5 +1,5 @@
 ---
-title: "Construct 3 & YouTube"
+title: "Construct 3 & YouTube (English)"
 published: true
 usa_webp: true
 header:
@@ -8,7 +8,7 @@ header:
   immagine_estesa: "construct-youtube"
   immagine_fonte: "Photo credit: [**Samuele**](https://blog.stranianelli.com/)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2021-01-27 18:00"
+date: "2021-01-30 20:00"
 categories:
   - Construct 3
   - Template
@@ -20,28 +20,28 @@ tags:
   - YouTube
 ---
 
-Il template di oggi riguarda Construct 3 e YouTube. È un progetto molto semplice, pensato con l'unico obiettivo di testare l'integrazione tra questi due mondi. Il risultato è carino e permette di fare delle cose interessanti.
+Today's template is about Construct 3 and YouTube. It's very simple, because I just want to test the integration between these two tools. The result is nice and allows you to do some interesting apps.
 
-Come ho fatto negli ultimi progetti, sto continuando a integrare la struttura "_event sheets_" di C3 con i "_moduli js_" introdotti con la [release r226](https://www.construct.net/en/make-games/releases/beta/r226) del 24 novembre 2020. Devo ammettere che mi sto trovando bene: posso scrivere funzioni abbastanza comprensibili direttamente sull'editor e nel contempo renderle facilmente utilizzabili tramite alcune funzioni di Construct 3.
+I'm still integrating the C3 "_event sheets_" with the "_js modules_" introduced in the [r226 release](https://www.construct.net/en/make-games/releases/beta/r226) of November 24, 2020. I like this: I can write clean code in js and use it in Construct 3 easily.
 
 {% include picture img="event-sheets.webp" ext="jpg" alt="" %}
 
-Il codice JavaScript è diviso in alcuni moduli:
+I have split the js code into multiple modules:
 - [**main.js**](https://github.com/el3um4s/construct-demo/blob/master/javascript/007-youtube/source/files/scripts/main.js)
 - [**globals.js**](https://github.com/el3um4s/construct-demo/blob/master/javascript/007-youtube/source/files/scripts/globals.js)
 - [**youTube.js**](https://github.com/el3um4s/construct-demo/blob/master/javascript/007-youtube/source/files/scripts/youtube.js)
 - [**videoYT.js**](https://github.com/el3um4s/construct-demo/blob/master/javascript/007-youtube/source/files/scripts/videoyt.js)
 - [**importForEvents.js**](https://github.com/el3um4s/construct-demo/blob/master/javascript/007-youtube/source/files/scripts/importforevents.js)
 
-`main.js` è molto semplice:
+The first, `main.js`, is very simple:
 
 ```js
 runOnStartup(async runtime => {	globalThis.g_runtime = runtime; });
 ```
 
-Non ricordo di averne mai parlato, ma questo è un trucco molto semplice per poter accedere a `runtime` da ogni parte di Construct 3: mi serve in praticamente tutti gli script successivi.
+I think I never wrote about it. This is a trick that allows you to access the `runtime` from anywhere in Construct 3. I will be using `g_runtime` in basically all my scripts.
 
-C'è una possibile variante, ed è questa:
+There is a possible variant for `main.js`:
 
 ```js
 import * as YouTube from "./youTube.js";
@@ -52,9 +52,9 @@ runOnStartup(async runtime => {
 });
 ```
 
-Nell'esempio che ho pubblicato su GitHub il comando `await YouTube.LoadAPI();` lo eseguo direttamente dal foglio `Loader`. L'importante è che ci sia, prima o poi, nel progetto. Perché? Perché serve per caricare l'[API di YouTube](https://developers.google.com/youtube/iframe_api_reference).
+In the GitHub example I launch `await YouTube.LoadAPI();` directly from the `Loader` sheet. No matter where it is performed, the important thing is to do it sooner or later. Why? Because it is used to load [the YouTube API](https://developers.google.com/youtube/iframe_api_reference).
 
-Il secondo file è `globals.js` e serve per avere delle variabili globali, trasversali a tutto il progetto.
+The second file is `global.js`. I use this script to save, edit and access global project variables.
 
 ```js
 const Globals = {
@@ -68,9 +68,9 @@ const Globals = {
 export default Globals;
 ```
 
-Voglio fare notare `Globals.ytPlayer`: è un oggetto vuoto, verrà riempito più avanti in maniera dinamica, con tanti elementi quanti sono i player YouTube disegnati a schermo.
+Look at `Globals.ytPlayers`: it's an empty object. I'll dynamically fill it later based on how many YouTube players I want to run.
 
-Il file successivo è quello che permette il collegamento tra YouTube e Construct 3, `youTube.js`, e contiene due funzioni fondamentali: `LoadAPI` e `CreatePlayer`.
+The next js file is the one that allows you to link YouTube and C3. `youTube.js` contains two important functions: `LoadAPI` and `CreatePlayer`.
 
 ```js
 export function LoadAPI()
@@ -100,11 +100,12 @@ export function CreatePlayer(iframeId, eventHandlers)
 }
 ```
 
-La prima, `LoadAPI`, inserisce il collegamento all'API di YouTube direttamente nell'header della pagina. È una funzione asincrona (restituisce una promessa) e può essere utilizzata nel loader per ritardare l'avvio del progetto fino al momento giusto.
 
-La seconda funzione, sempre asincrona, collega un Player YouTube a un Iframe usando come riferimento l'ID dell'elemento nella pagina HTML.
+`LoadAPI` inserts the YouTube link directly into the page header. It is an asynchronous function (returns a promise) and can be used in the loader to delay the start of the project.
 
-Una volta importato questo nel progetto è finalmente possibile divertirsi un po' implementando i comandi che ci servono. Lo faccio nel file `videoYT.js`
+`CreatePlayer` is also an asynchronous function. This piece of code links a YouTube player to an Iframe using the element ID as a reference.
+
+After importing this code it is finally possible to implement the commands we need. I do this in the `videoYT.js` file:
 
 ```js
 import * as YouTube from "./youTube.js";
@@ -147,11 +148,11 @@ export function unMute(iframeId) { Globals.ytPlayer[iframeId]["player"].unMute()
 export function lengthPlaylist(iframeId) { return Globals.ytPlayer[iframeId]["player"].getPlaylist().length; }
 ```
 
-La prima funzione, `initializeVideo(iframeId)` va eseguita una sola volta per elemento e non fa altro che inserire un riferimento al player nella variabile `Globals`.
+The `initializeVideo(iframeId)` function only needs to be executed once for each element. The function inserts a empty reference in `Globals`.
 
-Anche `createVideo(iframeId)` va lanciata solamente una volta per ogni elemento: crea un player YouTube per ogni elemento, e lo salva dentro `Globals`.
+The `createVideo(iframeId)` function must also be executed once for each element. The function creates a YouTube player for each element and saves it in `Globals`.
 
-Infine ci sono le varie funzioni, che richiamano quelle ufficiali di YouTube e che possono essere eseguite direttamente da Construct 3. O, meglio, lo potranno dopo aver inserito un altro file, `importForEvents.js`
+Finally there are various functions. They're similar to the official ones but can be performed directly from C3. Or rather, they can only do this after creating the last file, `importForEvents.js`:
 
 ```js
 import Globals from "./globals.js";
@@ -159,9 +160,9 @@ import * as YouTube from "./youTube.js";
 import * as VideoYT from "./videoYT.js";
 ```
 
-Questo script è anche l'unico con la proprietà `Purpose` impostata su `Imports for events`.
+This script is the only one with the `Purpose` property set to` Imports for events`.
 
-Basta, questo è tutto. Come ultima cosa i link al progetto:
+That said, it's time for links:
 
-- [il progetto su GitHub](https://github.com/el3um4s/construct-demo)
-- [la demo online](https://c3demo.stranianelli.com/javascript/007-youtube/demo/)
+- [the project on github](https://github.com/el3um4s/construct-demo)
+- [the online demo](https://c3demo.stranianelli.com/javascript/007-youtube/demo/)

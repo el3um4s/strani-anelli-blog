@@ -1,5 +1,5 @@
 ---
-title: "New Template - Typo Battle (English)"
+title: "Typo Battle (English)"
 published: true
 usa_webp: true
 header:

@@ -1,5 +1,5 @@
 ---
-title: "New Template: Typo Battle"
+title: "Typo Battle"
 published: true
 usa_webp: true
 header:
@@ -8,7 +8,7 @@ header:
   immagine_estesa: "typo-battle"
   immagine_fonte: "Photo credit: [**Samuele**](https://blog.stranianelli.com/)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2021-01-21 20:00"
+date: "2021-01-21 18:00"
 categories:
   - Construct 3
   - Template
