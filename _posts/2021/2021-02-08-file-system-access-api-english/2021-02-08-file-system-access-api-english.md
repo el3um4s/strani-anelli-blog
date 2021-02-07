@@ -6,7 +6,7 @@ header:
   immagine_tipo: "jpg"
   miniatura: "image"
   immagine_estesa: "image"
-  immagine_fonte: "Photo credit: [**Samuele**](https://blog.stranianelli.com/)"
+  immagine_fonte: "Photo credit: [**Shubham Bombarde**](https://unsplash.com/@shubhambombarde)"
   overlay_filter: rgba(79, 79, 79, 0.5)
 date: "2021-02-08 10:00"
 categories:
