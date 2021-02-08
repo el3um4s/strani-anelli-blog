@@ -62,10 +62,10 @@ export async function openFile({description = "Text Files", accept = {'text/plai
 }
 ```
 
-For simplicity, I leave out the explanation of error handling. The entry point is window.showOpenFilePicker() [`window.showOpenFilePicker()`](https://wicg.github.io/file-system-access/#api-showopenfilepicker). When called, it shows a file picker dialog box, and prompts the user to select a file. After they select a file, the API returns an array of file handles. An optional parameter lets you influence the behavior of the file picker, for example, by allowing the user to select multiple files, or directories, or different file types. Without any option specified, the file picker allows the user to select a single file. 
+For simplicity, I leave out the explanation of error handling. The entry point is [`window.showOpenFilePicker()`](https://wicg.github.io/file-system-access/#api-showopenfilepicker). When called, it shows a file picker dialog box, and prompts the user to select a file. After they select a file, the API returns an array of file handles. An optional parameter lets you influence the behavior of the file picker, for example, by allowing the user to select multiple files, or directories, or different file types. Without any option specified, the file picker allows the user to select a single file. 
 
 ```js
-	[Globals.fileHandle] = await window.showOpenFilePicker(options);
+[Globals.fileHandle] = await window.showOpenFilePicker(options);
 ```
 
 I assign an array of [`FileSystemFileHandle`](https://wicg.github.io/file-system-access/#filesystemfilehandle) to `Globals.fileHandle`. In this case it's a one-element array that contains the properties and methods needed to interact with the file.
