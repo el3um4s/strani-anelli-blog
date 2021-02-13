@@ -24,7 +24,7 @@ I waited for the release of Construct 3 beta [r235](https://www.construct.net/en
 
 {% include picture img="code.webp" ext="jpg" alt="" %}
 
-To create this template I used only one module,[`mesh.js`](https://github.com/el3um4s/construct-demo/blob/master/javascript/009-mesh-and-shapes/source/files/scripts/mesh.js), and a json object, [`MeshPremadeShapes`](https://github.com/el3um4s/construct-demo/blob/master/javascript/009-mesh-and-shapes/source/files/scripts/meshpremadeshapes.js). The template's core are these two functions:
+To create this template I used only one module, [`mesh.js`](https://github.com/el3um4s/construct-demo/blob/master/javascript/009-mesh-and-shapes/source/files/scripts/mesh.js), and a json object, [`MeshPremadeShapes`](https://github.com/el3um4s/construct-demo/blob/master/javascript/009-mesh-and-shapes/source/files/scripts/meshpremadeshapes.js). The template's core are these two functions:
 
 - `setMeshPointAbsolute`
 - `drawShape`
