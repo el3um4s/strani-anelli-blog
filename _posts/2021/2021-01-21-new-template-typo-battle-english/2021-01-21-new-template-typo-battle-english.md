@@ -43,3 +43,4 @@ That said, it's time for links:
 
 - [the project on github](https://github.com/el3um4s/construct-demo)
 - [the online demo](https://c3demo.stranianelli.com/template/015-typo-battle/demo/)
+- [my Patreon](https://www.patreon.com/el3um4s)

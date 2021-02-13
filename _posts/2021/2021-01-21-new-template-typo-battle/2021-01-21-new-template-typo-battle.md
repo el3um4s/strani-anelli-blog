@@ -40,3 +40,4 @@ Basta, è il momento dei link:
 
 - [il progetto su github](https://github.com/el3um4s/construct-demo)
 - [la demo giocabile](https://c3demo.stranianelli.com/template/015-typo-battle/demo/)
+- [Patreon](https://www.patreon.com/el3um4s)

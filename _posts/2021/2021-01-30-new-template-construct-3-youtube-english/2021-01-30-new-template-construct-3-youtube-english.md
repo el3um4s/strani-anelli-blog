@@ -166,3 +166,4 @@ That said, it's time for links:
 
 - [the project on github](https://github.com/el3um4s/construct-demo)
 - [the online demo](https://c3demo.stranianelli.com/javascript/007-youtube/demo/)
+- [my Patreon](https://www.patreon.com/el3um4s)

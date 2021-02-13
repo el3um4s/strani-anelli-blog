@@ -165,3 +165,4 @@ Basta, questo è tutto. Come ultima cosa i link al progetto:
 
 - [il progetto su GitHub](https://github.com/el3um4s/construct-demo)
 - [la demo online](https://c3demo.stranianelli.com/javascript/007-youtube/demo/)
+- [Patreon](https://www.patreon.com/el3um4s)

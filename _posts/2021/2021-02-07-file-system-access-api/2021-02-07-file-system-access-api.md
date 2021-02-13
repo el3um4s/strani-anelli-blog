@@ -233,4 +233,4 @@ Le funzioni successive non fanno altro che richiamare quelle del modulo `FileSys
 Detto questo, come al solito potete trovare tutto qui:
 - [il progetto su GitHub](https://github.com/el3um4s/construct-demo)
 - [la demo online](https://c3demo.stranianelli.com/javascript/008-text-editor/demo/)
-- e nei prossimi giorni anche su [Patreon](https://www.patreon.com/el3um4s)
+- [Patreon](https://www.patreon.com/el3um4s)
