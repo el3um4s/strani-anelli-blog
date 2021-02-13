@@ -224,7 +224,6 @@ This code allows you to access the Construct 3 text box. The first modifies the 
 
 The following functions do nothing but call those of the `FileSystemAccess` module by connecting them to the actual editor.
 
-
 That said, it's time for links:
 
 - [the project on github](https://github.com/el3um4s/construct-demo)
