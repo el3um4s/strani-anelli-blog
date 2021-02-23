@@ -35,7 +35,6 @@ Rispetto ai miei ultimi template la struttura è molto più lineare e semplice:
 - 1 event sheet
 - 4 file js, di cui 2 sono gli standard [`main.js`](https://github.com/el3um4s/DenoC3Webview2/blob/main/source/files/scripts/main.js) e [`importforevents.js`](https://github.com/el3um4s/DenoC3Webview2/blob/main/source/files/scripts/importforevents.js)
 
-
 In compenso ho preferito inserire direttamente del codice JavaScript nell'event sheet
 
 {% include picture img="code.webp" ext="jpg" alt="" %}
@@ -65,6 +64,8 @@ window.addEventListener('beforeunload', async (e) => {
 A cosa serve? A chiudere automaticamente il server alla chiusura della finestra del browser. Ovviamente questo ha un senso se abbiamo intenzione di usare questa tecnica per un'applicazione da usare solo in locale. E a proposito di questo, passiamo alla seconda tecnologia, **Microsoft Edge WebView2**, e nella fattispecie il wrapper di Construct (quello presentato [in questo forum](https://www.construct.net/en/forum/construct-3/general-discussion-7/experimental-new-lightweight-158536)).
 
 Non serve codice, basta scaricare il file presente nel forum, estrarlo e poi copiare nella cartella **www** il progetto C3, ovviamente dopo averlo esportato come **Web (HTML5)**. Poi si esegue il file **WebView2Wrapper.exe** e, voilà, ecco il nostro esempio funzionare su Windows senza dover passare per una nuova finestra del browser. Beh, funzionare è una parola grossa, perché se proviamo a cliccare uno qualsiasi dei pulsanti non succede niente. Per far avvenire la magia occorre prima avviare un server locale, configurarlo e capire come gestire le varie richieste provenienti da Construct. Ed è qui che ci viene in aiuto **Deno**.
+
+> Ovviamente appena pubblicato questo articolo è uscito un nuovo aggiornamento di Construct: adesso è possibile [esportare direttamente con WebView2 dall'editor](https://www.construct.net/en/tutorials/exporting-windows-webview2-2685). Il procedimento è tuttavia lo stesso: si copia nella cartella `app` il contenuto del file zip (cioè la cartella `www` e i file `DenoC3Webview2.exe`, `DenoC3Webview2.dll` e `package.json`).
 
 Deno è un runtime per JavaScript e TypeScripe. Ha alcune caratteristiche molto interessati, e che mi fanno ben sperare per il futuro. Meglio, per la possibilità, in futuro, di poter sviluppare alcune mie vecchie idee. Ne riparlerò, prima o poi. Tralascio la parte dedicata all'installazione e alla presentazione delle sue caratteristiche, che tanto sono ben spiegate su [Deno.land](https://deno.land/).
 
