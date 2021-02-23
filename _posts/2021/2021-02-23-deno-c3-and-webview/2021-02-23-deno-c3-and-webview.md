@@ -21,7 +21,7 @@ tags:
   - Deno
 ---
 
-Nelle ultime due settimane ho sperimentato con [Deno](https://deno.land), [Construct 3](https://www.construct.net) e [Microsoft Edge WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/). Sono tornato un mio vecchio, vecchissimo progetto e ho fatto alcuni passi in avanti grazie alla combinazione di queste 3 tecnologie. Come al solito, ho caricato [il progetto su GitHub](https://github.com/el3um4s/DenoC3Webview2).
+Nelle ultime due settimane ho sperimentato con [Deno](https://deno.land), [Construct 3](https://www.construct.net) e [Microsoft Edge WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/). Sono tornato a un mio vecchio, vecchissimo progetto e ho fatto alcuni passi in avanti grazie alla combinazione di queste 3 tecnologie. Come al solito, ho caricato [il progetto su GitHub](https://github.com/el3um4s/DenoC3Webview2).
 
 Oggi voglio riportare alcuni appunti su come far comunicare questi tre strumenti. Il progetto di esempio fa una sola cosa: esegue delle operazioni a caso. Non ha nessuna utilità pratica se non mostrare come creare un server locale (con Deno), aprire un'applicazione Windows (via WebView2) e usare C3 per ottenere il risultato.
 
@@ -36,11 +36,11 @@ Rispetto ai miei ultimi template la struttura è molto più lineare e semplice:
 - 4 file js, di cui 2 sono gli standard [`main.js`](https://github.com/el3um4s/DenoC3Webview2/blob/main/source/files/scripts/main.js) e [`importforevents.js`](https://github.com/el3um4s/DenoC3Webview2/blob/main/source/files/scripts/importforevents.js)
 
 
-In compenso ho preferito inserire direttamente del codice JavaScript nell'event sheet:
+In compenso ho preferito inserire direttamente del codice JavaScript nell'event sheet
 
 {% include picture img="code.webp" ext="jpg" alt="" %}
 
-Questo per rendere esplicito la tecnica che ho utilizzato. Ovviamente sarebbe più sensato fare un bel refractoring del codice ed eliminare il codice duplicato. Ma per il momento limitiamoci ad osservare come funziona:
+per mostrare esplicitamente la tecnica che ho usato. Ovviamente sarebbe più sensato fare un bel refractoring del codice ed eliminare il codice duplicato. Ma per il momento limitiamoci ad osservare come funziona:
 
 ```js
 const responses = await fetch(`http://localhost:8081/addition/?a=1&b=10`);
@@ -64,7 +64,7 @@ window.addEventListener('beforeunload', async (e) => {
 
 A cosa serve? A chiudere automaticamente il server alla chiusura della finestra del browser. Ovviamente questo ha un senso se abbiamo intenzione di usare questa tecnica per un'applicazione da usare solo in locale. E a proposito di questo, passiamo alla seconda tecnologia, **Microsoft Edge WebView2**, e nella fattispecie il wrapper di Construct (quello presentato [in questo forum](https://www.construct.net/en/forum/construct-3/general-discussion-7/experimental-new-lightweight-158536)).
 
-Ok, questa è una cosa facile: si tratta di scaricare il file presente nel forum, estrarlo e poi copiare nella cartella **www** il progetto C3, ovviamente dopo averlo esportato come **Web (HTML5)**. Poi si esegue il file **WebView2Wrapper.exe.** e, voilà, ecco il nostro esempio funzionare su Windows senza dover passare per una nuova finestra del browser. Beh, funzionare è una parola grossa, perché se proviamo a cliccare uno qualsiasi dei pulsanti non succede niente. Per far avvenire la magia occorre prima avviare un server locale, configurarlo e capire come gestire le varie richieste provenienti da Construct. Ed è qui che ci viene in aiuto **Deno**.
+Non serve codice, basta scaricare il file presente nel forum, estrarlo e poi copiare nella cartella **www** il progetto C3, ovviamente dopo averlo esportato come **Web (HTML5)**. Poi si esegue il file **WebView2Wrapper.exe** e, voilà, ecco il nostro esempio funzionare su Windows senza dover passare per una nuova finestra del browser. Beh, funzionare è una parola grossa, perché se proviamo a cliccare uno qualsiasi dei pulsanti non succede niente. Per far avvenire la magia occorre prima avviare un server locale, configurarlo e capire come gestire le varie richieste provenienti da Construct. Ed è qui che ci viene in aiuto **Deno**.
 
 Deno è un runtime per JavaScript e TypeScripe. Ha alcune caratteristiche molto interessati, e che mi fanno ben sperare per il futuro. Meglio, per la possibilità, in futuro, di poter sviluppare alcune mie vecchie idee. Ne riparlerò, prima o poi. Tralascio la parte dedicata all'installazione e alla presentazione delle sue caratteristiche, che tanto sono ben spiegate su [Deno.land](https://deno.land/).
 
@@ -72,7 +72,7 @@ Passiamo invece alla struttura del progetto.
 
 {% include picture img="deno-project.webp" ext="jpg" alt="" %}
 
-Nel repository ci sono varie cartelle, ma quella con i progetto vero e proprio si chiama `app`. Dentro troverete tre cartelle:
+Nel repository ci sono varie cartelle, ma quella con il progetto vero e proprio si chiama `app`. Dentro troverete tre cartelle:
 
 - controllers
 - lib
@@ -292,7 +292,7 @@ Per finire un confronto tra le dimensioni dei diversi modi di distribuire il nos
 
 {% include picture img="size.webp" ext="jpg" alt="" %}
 
-Il file più pensate è di circa 8 MB: decisamente meno dei quasi 100 MB richiesti da Node per lo stesso programma. Gli altri due file sono ancora più leggeri, rendendo ancora più interessante questo mix.
+Il file più pesante è di circa 8 MB: decisamente meno dei quasi 100 MB richiesti da Node per lo stesso programma. Gli altri due file sono ancora più leggeri, rendendo ancora più interessante questo mix.
 
 Ok, fine. Ricordo solo l'indirizzo del progetto e del mio Patreon:
 
