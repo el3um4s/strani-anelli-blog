@@ -50,7 +50,7 @@ log("OperationResult", resultRounded);
 log("ResultTestB", `${results.operation}(${results.a}; ${results.b}) = ${resultRounded}`);
 ```
 
-This snippet queries the server for `1 + 10`. Then writes the result in the `ResultTestB` text box. The `log` command is not native to C3 but is a function inserted in the file [`utils.js`] (https://github.com/el3um4s/DenoC3Webview2/blob/main/source/files/scripts/utils.js).
+This snippet queries the server for `1 + 10`. Then writes the result in the `ResultTestB` text box. The `log` command is not native to C3 but is a function inserted in the file [`utils.js`](https://github.com/el3um4s/DenoC3Webview2/blob/main/source/files/scripts/utils.js).
 
 In the example file (you can [download it from GitHub](https://github.com/el3um4s/DenoC3Webview2/tree/main/source/c3p)) there are some other uses of the same pattern. An interesting one is inserted at the start of the layout.
 
