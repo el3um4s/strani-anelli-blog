@@ -65,7 +65,7 @@ This code allows you to automatically close the server when the browser window i
 
 Just download the file from the forum, extract it and then copy the C3 project to the **www** folder. The project must be **exported as Web (HTML5)**. Then you run the **WebView2Wrapper.exe** file and, voila, here's our example running on Windows. Well, working is a big word, because if we try to click any of the buttons, nothing happens. To make the magic happen, you first need to start a local server, configure it and understand how to handle the various requests coming from Construct. And this is where **Deno** comes to our aid.
 
-> Obviously, as soon as I finished writing this article, a new Construct update came out: now you can [export directly with WebView2](https://www.construct.net/en/tutorials/exporting-windows-webview2-2685). However, the procedure is the same: copy the contents of the zip file (the `www` folder and the`DenoC3Webview2.exe`, `DenoC3Webview2.dll` and`package.json` files) into the `app` folder.
+> Obviously, as soon as I finished writing this article, a new Construct update came out: now you can [export directly with WebView2](https://www.construct.net/en/tutorials/exporting-windows-webview2-2685). However, the procedure is the same: copy the contents of the zip file (the `www` folder and the `DenoC3Webview2.exe`, `DenoC3Webview2.dll` and `package.json` files) into the `app` folder.
 
 Deno is a **runtime for JavaScript and TypeScripe**. It has some very interesting features, and that's what gives me hope for the future. Better, for the possibility, in the future, to be able to develop some of my old ideas. I'll talk about it sooner or later. I leave out the part dedicated to the installation and presentation of its features, which are so well explained on [Deno.land](https://deno.land/).
 
@@ -85,7 +85,7 @@ and the files:
 - mod.ts
 - api.ts
 
-** deps.ts ** contains the list of external dependencies of the project. Since it is quite simple, we only need one:
+**deps.ts** contains the list of external dependencies of the project. Since it is quite simple, we only need one:
 
 ```ts
 export {
@@ -176,7 +176,7 @@ export function addition(ctx: Context) {
 }
 ```
 
-First I run the `calculateFromContextWithOperation(ctx, operation) function which returns a result. This result is then sent to the application web page, that is to our Construct 3 project. C3 receives the result of the operation and uses it to update a text box.
+First I run the `calculateFromContextWithOperation(ctx, operation)` function which returns a result. This result is then sent to the application web page, that is to our Construct 3 project. C3 receives the result of the operation and uses it to update a text box.
 
 ```ts
 export function calculateFromContextWithOperation(
