@@ -20,7 +20,7 @@ tags:
   - Genetic Algorithms
 ---
 
-La scorsa settimana è stata abbastanza complicata e non ho avuto molto tempo per sperimentare. Sono però riuscito a trovare il tempo per partecipare a una jam e a replicare un semplice algoritmo genetico per... scrivere "_hello world_".
+La scorsa settimana è stata abbastanza complicata e non ho avuto molto tempo per sperimentare. Sono però riuscito a trovare il tempo per partecipare a una jam e per replicare un semplice algoritmo genetico per... scrivere "_hello world_".
 
 Della Jam parlerò magari un'altra volta, oggi voglio parlare di questo:
 
@@ -93,8 +93,8 @@ class Chromosome {
 
 Il nostro _Cromosoma_ ha due proprietà:
 
-- `code`: dove salvare i vari geni
-- `cost`: dove conservare il valore di fitness del cromosoma stesso.
+- `code` : dove salvare i vari geni
+- `cost` : dove conservare il valore di fitness del cromosoma stesso
 
 La prima cosa da fare dopo aver creato un cromosoma è riempirlo di geni a caso:
 
@@ -177,9 +177,9 @@ class Population {
 
 **Population** ha come proprietà:
 
-- `members`: un array dove inserire tutti gli individui (cromosomi) vivi in quel momento
-- `goal`: la frase da insegnare all'algoritmo
-- `generationNumber`: il numero della generazione in corso
+- `members` : un array dove inserire tutti gli individui (cromosomi) vivi in quel momento
+- `goal` : la frase da insegnare all'algoritmo
+- `generationNumber` : il numero della generazione in corso
 
 Inoltre il costruttore della classe genera cromosoma casuale per ogni individuo della prima generazione.
 
