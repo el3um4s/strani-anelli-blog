@@ -8,7 +8,7 @@ header:
   immagine_estesa: "image"
   immagine_fonte: "Photo credit: [**Samuele**](https://blog.stranianelli.com/)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2021-03-10 23:30"
+date: "2021-03-10 23:45"
 categories:
   - Construct 3
   - JavaScript
@@ -26,7 +26,7 @@ Last week was pretty complicated and I didn't have much time to experiment. But 
 
 It's not spectacular. It looks like a monkey trying to write the Divine Comedy by pressing random letters. And that's right: a genetic algorithm tries more or less randomly to learn to write. It's the Hello World of machine learning. As usual on GitHub you will find both [the code](https://github.com/el3um4s/construct-demo) and the [online demo](https://c3demo.stranianelli.com/machine-learning/001-hello-world/demo/).
 
-I don't know anything about ml, so I was inspired by a 2012 article by Burak Kanber: [Machine Learning: Introduction to Genetic Algorithms](https://burakkanber.com/blog/machine-learning-genetic-algorithms-part-1-javascript/). I recommend reading it.
+I don't know anything about ml, so I was inspired by a 2012 article by Burak Kanber: [Machine Learning: Introduction to Genetic Algorithms](https://burakkanber.com/blog/machine-learning-genetic-algorithms-part-1-javascript/). I recommend you to read it.
 
 Today I will content myself with reporting what I understand.
 
@@ -55,7 +55,7 @@ There are also other techniques, but the important thing is the underlying conce
 
 ### How do you get rid of the wrong solutions?
 
-Just delete the solutions that are too wrong. The problem is to understand and decide which candidates are too wrong. Also for this step there are [various techniques](https://en.wikipedia.org/wiki/Selection_(genetic_algorithm)):
+Just delete the definitely wrong solutions. The problem is to understand which candidates can be considered as too wrong. Also for this step there are [various techniques](https://en.wikipedia.org/wiki/Selection_(genetic_algorithm)):
 
 - Roulette Wheel Selection: we randomly choose the solutions to "save". But it is a case driven by the fitness of each solution. What is "fitness"? It is the value that indicates how correct a solution is. The higher the fitness, the higher the chances for a solution to be "saved"
 - Rank Selection: generally towards the end of a selection all candidate solutions have similar fitness. This makes the "roulette" selection a substantially random selection. To maintain the evolutionary pressure, then it is possible to decide to eliminate the solutions with the lowest ranking
@@ -171,7 +171,7 @@ class Population {
 }
 ```
 
-** Population** has the following properties:
+**Population** has the following properties:
 
 - `members` : an array where to insert all the individuals (chromosomes) alive at that moment
 - `goal` : the sentence to be taught to the algorithm
@@ -179,7 +179,7 @@ class Population {
 
 The constructor of the class generates random chromosome for each individual of the first generation.
 
-We need a sorting function to make it easier to select the chromosomes closest to the correct solution,
+We need a sorting function to make it easier to select the chromosomes closest to the correct solution:
 
 ```js
 sort() {
