@@ -24,7 +24,7 @@ La scorsa settimana è stata abbastanza complicata e non ho avuto molto tempo pe
 
 Della Jam parlerò magari un'altra volta, oggi voglio parlare di questo:
 
-![multi-windows-experiment](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-03-10-genetic-algorithms-hello-world/ml-lite.gif)
+![ml hello world](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-03-10-genetic-algorithms-hello-world/ml-lite.gif)
 
 Lo so, lo so, non è molto spettacolare. Da fuori somiglia a una serie di caratteri a caso che tentano di scrivere l'incipit della Divina Commedia. Ed effettivamente è così, un tentativo di "insegnare" a un algoritmo genetico a scrivere. Una specie di "Hello World" per imparare qualcosa di machine learning. Come sempre ho caricato su GitHub [una demo su cui provare](https://c3demo.stranianelli.com/machine-learning/001-hello-world/demo/) e [il codice del progetto](https://github.com/el3um4s/construct-demo).
 

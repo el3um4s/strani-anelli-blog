@@ -22,7 +22,7 @@ tags:
 
 Last week was pretty complicated and I didn't have much time to experiment. But I managed to find the time to replicate a simple genetic algorithm to... write "_hello world_".
 
-![multi-windows-experiment](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-03-10-genetic-algorithms-hello-world-english/ml-lite.gif)
+![machine learning hello world](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-03-10-genetic-algorithms-hello-world-english/ml-lite.gif)
 
 It's not spectacular. It looks like a monkey trying to write the Divine Comedy by pressing random letters. And that's right: a genetic algorithm tries more or less randomly to learn to write. It's the Hello World of machine learning. As usual on GitHub you will find both [the code](https://github.com/el3um4s/construct-demo) and the [online demo](https://c3demo.stranianelli.com/machine-learning/001-hello-world/demo/).
 
