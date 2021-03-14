@@ -87,7 +87,7 @@ this.ml_onCreation_angleOfMotion = 400;
 
 I also add an `ml_Fitness` property.
 
-For the ** randomize **, ** fromDNA ** and ** calcFitness ** functions refer to the [repository on GitHub](https://github.com/el3um4s/construct-demo/blob/master/machine-learning/002-cannon/source/files/scripts/rocket.js). Let's look at `preserveExperience` instead
+For the **randomize**, **fromDNA** and **calcFitness** functions refer to the [repository on GitHub](https://github.com/el3um4s/construct-demo/blob/master/machine-learning/002-cannon/source/files/scripts/rocket.js). Let's look at `preserveExperience` instead
 
 ```js
 preserveExperience() {
