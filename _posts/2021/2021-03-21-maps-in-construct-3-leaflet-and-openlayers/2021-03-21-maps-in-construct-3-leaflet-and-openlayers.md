@@ -195,7 +195,6 @@ const style = new ol.style.Style({
 Another interesting thing is the possibility of being able to manage events such as clicking the mouse on a particular area:
 
 ```js
-
 const displayFeatureInfo = function (pixel) {
   const feature = mymap.forEachFeatureAtPixel(pixel, function (feature) {
     return feature;
