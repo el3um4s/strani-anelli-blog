@@ -20,7 +20,7 @@ tags:
 
 Era da un po' che non giocavo con le mappe. L'ultimo tentativo risale oramai a qualche anno fa. Questa settimana, complice anche alcuni messaggi diretti su Twitter, ho ripreso in mano il mio vecchio codice. E ho creato due template.
 
-![leaflet animation](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-03-19-mappe-in-construct-3/animation.gif)
+![leaflet animation](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-03-21-mappe-in-construct-3-leaflet-e-openlayers/animation.gif)
 
 Il primo usa [Leaflet](https://leafletjs.com/), una libreria abbastanza famosa per inserire mappe in una pagina html. Ma come possiamo integrare Leaflet in Construct 3? In modo tutto sommato semplice.
 
@@ -109,7 +109,7 @@ Il che non sarebbe nemmeno un problema adesso. Il problema sorgerà in futuro qu
 Per fortuna l'Internet è venuto in soccorso. Grazie ad alcuni suggerimenti su Twitter (grazie [@laurentgontier](https://twitter.com/laurentgontier) e [@jmviglino](https://twitter.com/jmviglino)) ho provato [OpenLayers](https://openlayers.org/):
 
 
-![openlayers animation](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-03-19-mappe-in-construct-3/animation-little.gif)
+![openlayers animation](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-03-21-mappe-in-construct-3-leaflet-e-openlayers/animation-little.gif)
 
 Il procedimento per integrare le mappe di OpenLayers in Construct 3 è molto simile a quello con Leaflet. Ci sono però alcune piccole differenze, a partire dai file da importare:
 
