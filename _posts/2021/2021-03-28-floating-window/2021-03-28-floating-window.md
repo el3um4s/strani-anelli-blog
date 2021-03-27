@@ -65,8 +65,14 @@ globalThis.resizeBy(deltaWidth,deltaHeight);
 
 ![floating animation](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-03-28-floating-window/animation-little.gif)
 
+
+Resta un problema: come aprire la demo online in modo da poter testare il template? Di default Chrome (e credo tutti i browser) aprono i link o nella stessa tab o in una nuova finestra. A noi però serve aprire il template in una finestra popup:
+
+```js
+window.open("https://c3demo.stranianelli.com/template/017-floating-window/demo","test", "width=256,height=256,menubar=false,toolbar=false,location=false,resizable=false,status=false")
+```
 Bene, con questo è tutto, per oggi. Come al solito il codice e la demo sono disponibili su GitHub:
 
 - [il progetto su GitHub](https://github.com/el3um4s/construct-demo)
-- [la demo online](https://c3demo.stranianelli.com/template/017-floating-window/demo)
+- <a href="https://c3demo.stranianelli.com/template/017-floating-window/demo" target="popup" onclick="window.open('https://c3demo.stranianelli.com/template/017-floating-window/demo','test', 'width=256,height=256,menubar=false,toolbar=false,location=false,resizable=false,status=false')">La demo online</a>
 - [Patreon](https://www.patreon.com/el3um4s)
