@@ -1,6 +1,6 @@
 ---
 title: "Floating Window (English)"
-published: false
+published: true
 usa_webp: true
 header:
   immagine_tipo: "jpg"
@@ -8,7 +8,7 @@ header:
   immagine_estesa: "image"
   immagine_fonte: "Photo credit: [**Samuele**](https://blog.stranianelli.com/)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2021-03-28 12:00"
+date: "2021-03-28 19:00"
 categories:
   - Construct 3
   - JavaScript
@@ -17,7 +17,7 @@ tags:
   - JavaScript
 ---
 
-This week I picked up [Electron](https://www.electronjs.org/) but something didn't work as expected. The latest updates of Construct 3, NodeJS and Electron have generated a bizarre combination: everything works on the first start, but with each subsequent launch of the program something different breaks. Now I find myself in the position of having to decide whether to publish some things that no longer concern C3. I have to think about it. Today I can talk about my latest template: **Floating Window**.
+This week I picked up [Electron](https://www.electronjs.org/) but something didn't work as I expected. The latest updates of Construct 3, NodeJS and Electron have generated a bizarre combination: everything works on the first start, but with each subsequent launch of the program something different breaks. Now I find myself in the position of having to decide whether to publish some things that no longer concern C3. I have to think about it. Today I can talk about my latest template: **Floating Window**.
 
 ![floating animation](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-03-28-floating-window-english/animation.gif)
 
