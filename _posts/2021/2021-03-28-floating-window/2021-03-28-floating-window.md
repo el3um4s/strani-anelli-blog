@@ -37,7 +37,7 @@ const y = lerp(winY, camera.y, 0.25);
 globalThis.moveTo(x, y);
 ```
 
-Allora, la funzione `lerp` serve unicamente a rendere più juicy il movimento della finestra. `globalThis.screenX` e `globalThis.screenX` permettono di ricavare la posizione della finestra del browser sullo schermo. `globalThis.moveTo(x, y);` muove la finestra nella posizione `(x, y)` dello schermo del PC.
+Allora, la funzione `lerp` serve unicamente a rendere più juicy il movimento della finestra. `globalThis.screenX` e `globalThis.screenY` permettono di ricavare la posizione della finestra del browser sullo schermo. `globalThis.moveTo(x, y);` muove la finestra nella posizione `(x, y)` dello schermo del PC.
 
 Ma cosa è [`globalThis`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/globalThis)? Diciamo che è il metodo più rapido per accedere a `Window`, ovvero il DOM della pagina web, da C3.
 
