@@ -80,7 +80,7 @@ colorBackground.type = "color";
 
 Questo è problema che ho dovuto già affrontare e che in passato ho risolto con un plugin ad hoc ([ConverterColorJS - Aioute Gao](https://github.com/el3um4s/construct-plugins-and-addons)). Ma, forse ne ho già parlato, sto valutando di abbandonare lo sviluppo di plugin specifici: oramai C3 è abbastanza maturo da poter usare direttamente codice JavaScript per risolvere la maggior parte dei problemi. E così ho fatto: ho creato una semplice funzione che accetta in ingresso un colore esadecimale e lo restituisce nel formato richiesto da C3.
 
-Su GitHub possibile vedere il [codice completo di **hexToRGBA**](https://raw.githubusercontent.com/el3um4s/construct-demo/master/template/018-geometric-draw/source/files/scripts/colorshelper.js).
+Su GitHub è possibile vedere il [codice completo di **hexToRGBA**](https://raw.githubusercontent.com/el3um4s/construct-demo/master/template/018-geometric-draw/source/files/scripts/colorshelper.js).
 
 ```js
 function hexToRGBA(hex,
