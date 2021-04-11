@@ -43,7 +43,7 @@ Starting from this idea I entered the mood _who knows if I can replicate this th
 
 Obviously I uploaded the [code on GitHub](https://github.com/el3um4s/construct-demo) and a [online demo](https://c3demo.stranianelli.com/template/018-geometric-draw/demo/).
 
-The template allows you to generate geometric designs starting from mathematical formulas. You can use the `x` and` y` variables to indicate coordinates on the canvas. If you want you can declare other variables and use them in formulas. It is also possible to combine different formulas. For example, you can use formulas such as:
+The template allows you to generate geometric designs starting from mathematical formulas. You can use the `x` and `y` variables to indicate coordinates on the canvas. If you want you can declare other variables and use them in formulas. It is also possible to combine different formulas. For example, you can use formulas such as:
 
 ```js
 (x ^ y) % 9;
@@ -61,7 +61,7 @@ Creating all this with Construct3 forced me to face some problems related to som
 
 1. it is not possible to write via JavaScript directly on the canvas
 2. it is not possible to use colors in hexadecimal format (the `#FF00FF` one)
-3. there is no `input type = "color"` control (who knows why..)
+3. there is no `input type = "color"` control (who knows why...)
 
 Let's start from this last point because it is the simplest one to solve.
 
