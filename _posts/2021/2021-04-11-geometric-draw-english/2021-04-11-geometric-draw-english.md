@@ -12,12 +12,9 @@ date: "2021-04-11 23:50"
 categories:
   - Construct 3
   - JavaScript
-  - Electron
 tags:
   - Construct 3
   - JavaScript
-  - Pomodoro
-  - Electron
 ---
 
 A few days I was intrigued by a tweet from [Martin Kleppe](https://twitter.com/aemkei/status/1378106731386040322): he explained how to draw geometric patterns starting from a simple formula: `(x ^ y)% 9` .
