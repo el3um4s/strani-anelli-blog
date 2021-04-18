@@ -191,4 +191,4 @@ As I said at the beginning, there are still some possible improvements and we co
 
 - [the project on GitHub](https://github.com/el3um4s/construct-demo)
 - [la demo online](https://c3demo.stranianelli.com/template/019-chaos-game/demo/)
-- [the online demo](https://www.patreon.com/el3um4s)
+- [Patreon](https://www.patreon.com/el3um4s)
