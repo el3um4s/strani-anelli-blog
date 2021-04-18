@@ -21,7 +21,7 @@ Grazie a [TᴀᴄᴋᴇʀTᴀᴄᴋᴇʀ 🐰](https://twitter.com/2xTacker) ho 
 
 ![animation](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-04-18-chaos-game/animation.gif)
 
-Ci sono vari modi per raggiungere questo risultato. Per esempio, TackerTacker ha realizzato [questa implementazione con C2](https://chaosgame.netlify.app/). Io ho scelto di non lavorare con la Canvas ma di usare solamente degli sprite. Oramai la tecnologia è abbastanza matura da permette di gestire decine di migliaia di elementi in una sola pagina web: perché non approfittarne? L'animazione qui sotto mostra come Construct 3 regge 50.0000 (cinquantamila) sprite in movimento:
+Ci sono vari modi per raggiungere questo risultato. Per esempio, TackerTacker ha realizzato [questa implementazione con C2](https://chaosgame.netlify.app/). Io ho scelto di non lavorare con la Canvas ma di usare solamente degli sprite. Oramai la tecnologia è abbastanza matura da permette di gestire decine di migliaia di elementi in una sola pagina web: perché non approfittarne? L'animazione qui sotto mostra come Construct 3 regge 50.000 (cinquantamila) sprite in movimento:
 
 ![animation 50k](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-04-18-chaos-game/chaos-game-test-06-50kpoints.gif)
 
@@ -47,16 +47,16 @@ if (runtime.globalVars.Rule_NotEqualPrePrevious != "-") {
 Game.generateAllPoints({quantity, vertex, nameObject, nameLayer, show, rules});
 ```
 
-Nella prima parte dichiaro alcune variabili e definisco le regolo da usare per disegnare i vari punti. L'ultima riga contiene un rimando alla funzione `generateAllPoints` presente nel modulo [`game.js`](https://github.com/el3um4s/construct-demo/blob/master/template/019-chaos-game/source/files/scripts/game.js). Anche qui penso che conn un altro po' di lavoro si potrebbe semplificare ulteriormente il codice ma per il momento mi interessa mostrare il processo che ho usato;
+Nella prima parte dichiaro alcune variabili e definisco le regolo da usare per disegnare i vari punti. L'ultima riga contiene un rimando alla funzione `generateAllPoints` presente nel modulo [`game.js`](https://github.com/el3um4s/construct-demo/blob/master/template/019-chaos-game/source/files/scripts/game.js). Anche qui penso che conn un altro po' di lavoro si potrebbe semplificare ulteriormente il codice ma per il momento mi interessa mostrare il processo che ho usato:
 
 ```js
-export function generateAllPoints({ 
-                                quantity,
-                                vertex, 
-                                nameObject, 
-                                nameLayer, 
-                                show, 
-                                rules }) {
+function generateAllPoints({ 
+          quantity,
+          vertex, 
+          nameObject, 
+          nameLayer, 
+          show, 
+          rules }) {
 
 	let x = choose(vertex).x;
 	let y = choose(vertex).y;
@@ -181,7 +181,7 @@ setRandomDestination(vertex) {
 In `setRandomDestination(vertex)` calcolo la posizione di destinazione del punto con un rapporto 1/2. Ma si possono ottenere degli effetti interessanti variando questo parametro. Per esempio con
 
 ```js
-const distanceX = (startX - randomVertex.x)*2/3*;
+const distanceX = (startX - randomVertex.x)*2/3;
 const distanceY = (startY - randomVertex.y)*2/3;
 ```
 
