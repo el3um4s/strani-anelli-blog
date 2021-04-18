@@ -115,7 +115,7 @@ runOnStartup(async  runtime =>  {
 })
 ```
 
-For a more detailed explanation, I refer to the [Construct 3 online guide] (https://www.construct.net/en/make-games/manuals/construct-3/scripting/guides/subclassing-instances).
+For a more detailed explanation, I refer to the [Construct 3 online guide](https://www.construct.net/en/make-games/manuals/construct-3/scripting/guides/subclassing-instances).
 
 Obviously it is not enough to declare the class, it is also necessary to fill it with methods useful for the purpose. `Create()` creates a new point:
 
