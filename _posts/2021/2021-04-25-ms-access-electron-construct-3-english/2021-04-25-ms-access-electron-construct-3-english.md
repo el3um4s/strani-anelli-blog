@@ -1,5 +1,5 @@
 ---
-title: "MS Access, Electron e Construct 3"
+title: "MS Access, Electron & Construct 3 (English)"
 published: true
 usa_webp: true
 header:
@@ -8,7 +8,7 @@ header:
   immagine_estesa: "image"
   immagine_fonte: "Photo credit: [**Samuele**](https://blog.stranianelli.com/)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2021-04-25 21:00"
+date: "2021-04-25 23:50"
 categories:
   - Construct 3
   - Electron
@@ -23,24 +23,26 @@ tags:
   - Database
 ---
 
-Il template di questa settimana è un po' meno curato dal punto di vista grafico. Non ho avuto il tempo, è stata una settimana molto intensa dal punto di vista lavorativo. Ma ci tenevo comunque a pubblicare qualcosa. Perché è un prototipo interessante, perché mostra alcune potenzialità di Construct 3 e perché è il mio primo test funzionante di qualcosa che voglio sviluppare nei prossimi mesi.
+This week's template is a little less beautiful from a graphic point of view. It has been a very busy week at work, but I still wanted to publish something.  It's an interesting prototype, because it shows some potential of Construct 3 and, moreover, it's my first working test of something I want to develop in the coming months.
 
-Ma di cosa si tratta? Di un semplice programma per accedere a database Microsoft Access, vedere le tabelle contenute nel database e analizzare la struttura delle stesse. Non fa nulla di più ma mi serviva per testare alcune cose assieme prima di cominciare a lavorare sul serio:
+But what is it about? A simple program to access Microsoft Access databases, see the tables contained in the database and analyze their structure. It does nothing more but I needed to test some things together before starting to work on a more complex project than usual.
 
-1. la possibilità di leggere file su disco locale in maniera semplice e intuitiva
-2. la possibilità di leggere file MDB tramite JavaScript
-3. la possibilità di creare un unico file EXE per installare il programma
-4. la possibilità di aggiornare automaticamente un'applicazione a ogni nuova release pubblicata su GitHub
+I wanted to check:
 
-Ovviamente sapevo che é possibile farlo. Non sapevo come, e quali sarebbero stati i limiti che avrei incontrato. Ma prima vediamo il risultato:
+1. the ability to read files on local disk in a simple and intuitive way
+2. the ability to read MDB files via JavaScript
+3. the ability to create a single EXE file to install the program
+4. the ability to automatically update an application with each new release published on GitHub
 
-![animation](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-04-25-ms-access-electron-construct-3/animation.gif)
+Of course I knew that it is possible to do this. I didn't know how, and what the limits I would encounter would be. This is the result:
 
-### Le impostazioni iniziali
+![animation](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-04-25-ms-access-electron-construct-3-english/animation.gif)
 
-Ho scelto di usare [ElectronJS](https://www.electronjs.org/) e [TypeScript](https://www.typescriptlang.org) per semplificare la creazione di un'app offline. Ho scelto di appoggiarmi a [node-adodb](https://www.npmjs.com/package/node-adodb) per gestire l'interrogazione dei file MDB. Infine ho deciso di usare [Construct 3](https://www.construct.net) per l'interfaccia grafica.
+### The initial settings
 
-Stabilito questo ho creato la struttura base del progetto. Quindi, da riga di comando ho cominciato a inizializzare e scaricare i vari pacchetti:
+I chose to use [Electron](https://www.electronjs.org/) and [TypeScript](https://www.typescriptlang.org) to make it easier to create an offline app. I have chosen to rely on [node-adodb](https://www.npmjs.com/package/node-adodb) to manage the query of the MDB files. Finally I decided to use [Construct 3](https://www.construct.net) for the graphical interface.
+
+After deciding this I created the basic structure of the project. So, from the command line I started to initialize and download the various packages:
 
 ```
 npm init
@@ -51,24 +53,24 @@ npm i electron-updater
 npm i node-adodb
 ```
 
-Riguardo a `node-adodb` c'è una nota importante da riportare:
+About `node-adodb` there is an important note:
 
 > The library need system support `Microsoft.Jet.OLEDB.4.0` or `Microsoft.ACE.OLEDB.12.0`, `Windows XP SP2` above support `Microsoft.Jet.OLEDB.4.0` by default, Others need to install support!
 >
 > Recommended use `Microsoft.ACE.OLEDB.12.0`, download: [Microsoft.ACE.OLEDB.12.0](https://www.microsoft.com/en-us/download/details.aspx?id=13255)
 
-### La struttura delle cartelle
+### The folders structure
 
-Dopo aver scaricato i pacchetti necessari ho stabilito come organizzare le varie cartelle del progetto:
+After downloading the packages, I established how to organize the various project folders:
 
-- src: i file typescript del programma
-- src_c3: i file di Construct 3
-- dist: i file JavaScript e i file esportati di C3
-- out: la cartella di destinazione dove salvare il file di installazione
+- src: the typescript files of the program
+- src_c3: Construct 3 files
+- dist: JavaScript files and exported C3 files
+- out: the destination folder where to save the installation file
 
 ### package.json
 
-Il passo successivo è stato configurare il `package.json` in modo da rendere possibile compilare i file TypeScript, testare il progetto e pubblicarlo su GitHub.
+The next step was to configure the `package.json` to make it possible to compile the TypeScript files, test the project and publish it on GitHub.
 
 ```json
 {
@@ -79,9 +81,9 @@ Il passo successivo è stato configurare il `package.json` in modo da rendere po
 }
 ```
 
-Comincio con le informazioni base. Nome del repository e punto d'ingresso del programma. Poiché tutti i file TS compilati finiranno nella cartella `dist` il punto di ingresso è nella cartella.
+I start with the basic information. Repository name and program entry point. Since all compiled TS files will end up in the `dist` directory the entry point is in the directory.
 
-Il numero di versione e il `productName` sono particolarmente importanti e non vanno sottovalutati. Il primo perché permetterà ad Electron di capire il numero di versione del programma installato ed eventualmente installare un aggiornamento del programma. Il nome del prodotto perché é il nome che avrà il programma quando sarà installato su un computer.
+The version number and the `productName` are important and should not be underestimated. The first because it will allow Electron to understand the version number of the program installed and possibly install a program update. The name of the product because it is the name that the program will have when it is installed on a computer.
 
 ```json
 {
@@ -94,13 +96,13 @@ Il numero di versione e il `productName` sono particolarmente importanti e non v
 }
 ```
 
-Il contenuto di `scripts` serve per semplificare il lancio dell'applicazione (quando la devo testare) e la pubblicazione su GitHub del file finale.
+The content of `scripts` makes it easy to launch the application (when I have to test it) and post the final file to GitHub
 
-Il comando `npm run start` permette di compilare i file TypeScript e di lanciare il programma.
+The command `npm run start` allows you to compile TypeScript files and launch the program.
 
-`npm run build-installer` serve per creare il file di installazione (ma non di pubblicarlo automaticamente su GitHub)
+`npm run build-installer` creates the installation file (but not  publish it on GitHub)
 
-`npm run publish` crea il file di installazione del programma e lo carica direttamente sul repository di GitHub.
+`npm run publish` creates the program installation file and upload it directly to the GitHub repository.
 
 ```json
 {
@@ -128,7 +130,7 @@ Il comando `npm run start` permette di compilare i file TypeScript e di lanciare
 }
 ```
 
-Su [electron.build](https://www.electron.build/configuration/configuration#configuration) si possono trovare le spiegazioni dettagliate sulle varie opzioni di configurazione. Ho scelto di usare come target `nsis` perché é l'unico che permette una installazione completa senza dover aver un computer connesso a internet.
+Detailed explanations on the various configuration options can be found on [electron.build](https://www.electron.build/configuration/configuration#configuration). I chose to use nsis as a target because it is the only one that allows a complete installation without having to have a computer connected to the internet.
 
 ```json
 {
@@ -144,7 +146,7 @@ Su [electron.build](https://www.electron.build/configuration/configuration#confi
 }
 ```
 
-Questo pezzetto del file di configurazione serve per gestire la pubblicazione su GitHub e configurare gli aggiornamenti automatici
+This piece of the configuration file is used to manage the publication on GitHub and configure automatic updates
 
 ```json
 {
@@ -160,11 +162,11 @@ Questo pezzetto del file di configurazione serve per gestire la pubblicazione su
 }
 ```
 
-Infine quest'ultima opzione serve per utilizzare `node-adodb` da Electron.
+Finally this last option is for using `node-adodb` from Electron.
 
 ### tsconfig.json
 
-Il secondo file importante per configurare il progetto è stato `tsconfig.json`. Qui sono inserite le istruzioni per compilare i file TypeScript in file JavaScript:
+The second important file for configuring the project is `tsconfig.json`. Here are instructions for compiling TypeScript files into JavaScript files:
 
 ```json
 "compilerOptions": {
@@ -187,19 +189,19 @@ Il secondo file importante per configurare il progetto è stato `tsconfig.json`.
 }
 ```
 
-Rimando a [aka.ms/tsconfig.json](https://www.staging-typescript.org/tsconfig) per i dettagli delle varie opzioni.
+I recommend visiting [aka.ms/tsconfig.json](https://www.staging-typescript.org/tsconfig) for details of the various options.
 
-### I file TypeScript
+### TypeScript files
 
-Ho usato 3 file TypeScript:
+I used 3 TypeScript files:
 
 - index.ts
 - connection.ts
 - listTypeFieldEnum.ts
 
-Sugli ultimi due, se a qualcuno interessa, parlerò in un altro post. Servono per gestire la connessione ai database e per spedire il risultato a Construct 3. Per il momento mi concentro su `index.ts`.
+I'll talk about the last two, if anyone cares, in another post. They are used to manage the connection to the databases and to send the result to Construct 3. For the moment I focus on `index.ts`.
 
-Per prima cosa importo i moduli che serviranno nel progetto:
+First I import the modules that will be needed in the project:
 
 ```ts
 import { app, BrowserWindow, ipcMain } from 'electron';
@@ -209,7 +211,7 @@ import * as Connection from './connection';
 import ADODB from 'node-adodb';
 ```
 
-Poi imposto l'auto updater per eseguire un controllo ogni 4 ore:
+Then I set the auto updater to check every 4 hours:
 
 ```ts
 (async () => {
@@ -222,7 +224,7 @@ Poi imposto l'auto updater per eseguire un controllo ogni 4 ore:
 })();
 ```
 
-Se viene trovato un aggiornamento Electron lo scarica e lo installa automaticamente. Dopo di ciò creo la finestra per il programma:
+If an update is found, Electron downloads and installs it automatically. After that I create the window for the program:
 
 ```ts
 const createWindow = () => {
@@ -251,7 +253,7 @@ app.on('window-all-closed', () => {
 });
 ```
 
-Bene, ora si tratta di gestire l'invio dei dati da e verso Construct 3. Per farlo è molto semplice usare:
+Then it comes to manage the sending of data to and from Construct 3. To do this it is very simple to use:
 
 ```js
 ipcMain.on('list-tables', async (event, message) => {
@@ -270,7 +272,7 @@ ipcMain.on('schema-table', async (event, message) => {
 });
 ```
 
-Invece per rendere evidente la ricerca e il download dei file di aggiornamento del programma conviene usare:
+Instead, to make the search and download of program update files evident, it is advisable to use:
 
 ```js
 function sendStatusToWindow(text: string) {
@@ -303,7 +305,7 @@ autoUpdater.on('update-downloaded', (info) => {
 
 ### Construct 3
 
-Dal punto di vista di Construct 3 invito a consultare il progetto ([access-c3.c3p](https://github.com/el3um4s/access-c3/raw/main/src_c3/c3p/access-c3.c3p)). Concettualmente, ho aggiunto un listener al plugin `FileChooser` in modo da poter ottenere la posizione su disco fisso del database e usare `ipcRenderer.send("list-tables", { name, path });` per ottenere la lista delle tabelle.
+For the details of the Construct 3 JavaScript code, I invite you to consult the project ([access-c3.c3p](https://github.com/el3um4s/access-c3/raw/main/src_c3/c3p/access-c3.c3p)). In summary, I have added a listener to the FileChooser plugin so that I can get the hard drive location of the database and use `ipcRenderer.send("list-tables", { name, path });` to get the list of tables.
 
 ```js
 function buttonChooseDatabase_EventListener() {
@@ -324,7 +326,7 @@ function handleFiles() {
 }
 ```
 
-Quando Electron risponde con la lista delle tabelle uso
+When Electron replies with the list of tables I use
 
 ```js
 ipcRenderer.on('list-tables', async (event, arg) => {
@@ -346,13 +348,13 @@ ipcRenderer.on('list-tables', async (event, arg) => {
 });
 ```
 
-Questo mi permette di mostrare a schermo i nomi delle tabelle.
+This allows me to display the names of the tables on the screen.
 
-Per il momento è tutto. Se ci fossero domande o richieste particolari scriverò una seconda parte di questo articolo. Ma il mio scopo, testare la fattibilità di un programma del genere, è stato raggiunto. Penso di sperimentare ancora su questo progetto ma non so ancora se continuare a usare C3 come interfaccia grafica. Dovrò fare ancora alcuni test.
+That's all for the moment. If there are any questions or special requests I will write a second part of this article. But my goal, to test the feasibility of such a program, has been achieved. I think I'm experimenting on this project again but I don't know yet whether to continue using C3 as a GUI. I'll have to do some more tests.
 
-Ricordo comunque che il codice di questo progetto è disponibile su GitHub:
+However, I remember that the code of this project is available on GitHub:
 
-- [Access C3 su GitHub](https://github.com/el3um4s/access-c3)
+- [Access C3 on GitHub](https://github.com/el3um4s/access-c3)
 - [access-c3.c3p](https://github.com/el3um4s/access-c3/raw/main/src_c3/c3p/access-c3.c3p)
-- [il progetto su GitHub](https://github.com/el3um4s/construct-demo)
+- [the project on GitHub - Construct Demo](https://github.com/el3um4s/construct-demo)
 - [Patreon](https://www.patreon.com/el3um4s)
