@@ -150,7 +150,6 @@ This piece of the configuration file is used to manage the publication on GitHub
 
 ```json
 {
-
   "build": {
     "extraResources": [
       {
