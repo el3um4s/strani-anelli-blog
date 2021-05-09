@@ -8,7 +8,7 @@ header:
   immagine_estesa: "image"
   immagine_fonte: "Photo credit: [**Samuele**](https://blog.stranianelli.com/)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2021-05-29 19:00"
+date: "2021-05-09 19:00"
 categories:
   - Construct 3
   - JavaScript
