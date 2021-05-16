@@ -18,7 +18,9 @@ tags:
   - Maps
 ---
 
-Durante questa settimana ho cominciato a sperimentare con [Svelte](https://svelte.dev/), un compilatore di JavaScript. Con buona probabilità lo userò molto spesso in futuro. Al momento sono però solo all'inizio, e devo capire ancora alcune cose. Oramai si sta profilando l'ipotesi, per me, di combinare assieme Electron, TypeScript, Svelte e Construct 3. Ma è ancora presto, al momento sono ancora in fase di studio. Passo perciò al progetto della settimana, un'applicazione per mostrare in tempo reale la posizione della Stazione Spaziale Internazionale (ISS):
+Durante questa settimana ho cominciato a sperimentare con [Svelte](https://svelte.dev/), un compilatore di JavaScript. Con buona probabilità lo userò molto spesso in futuro. Al momento sono però solo all'inizio, e devo capire ancora alcune cose. 
+
+Oramai si sta profilando l'ipotesi, per me, di combinare assieme Electron, TypeScript, Svelte e Construct 3. Ma è ancora presto, al momento sono ancora in fase di studio. Passo perciò al progetto della settimana, un'applicazione per mostrare in tempo reale la posizione della Stazione Spaziale Internazionale (ISS):
 
 ![animation](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-05-16-iss-tracker/animation.gif)
 
