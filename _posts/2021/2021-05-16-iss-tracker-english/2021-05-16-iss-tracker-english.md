@@ -18,7 +18,9 @@ tags:
   - Maps
 ---
 
-During this week I started experimenting with [Svelte](https://svelte.dev/), a JavaScript compiler. I will most likely use it very often in the future. At the moment, however, I am only at the beginning, and I still have to understand a few things. I would like to use Electron, TypeScript, Svelte and Construct 3 together. But it is still early, at the moment they are still being studied. So I turn to the project of the week, an application to show the position of the International Space Station (ISS) in real time:
+During this week I started experimenting with [Svelte](https://svelte.dev/), a JavaScript compiler. I will most likely use it very often in the future. At the moment, however, I am only at the beginning, and I still have to understand a few things.
+
+I would like to use Electron, TypeScript, Svelte and Construct 3 together. But it is still early, at the moment they are still being studied. So I turn to the project of the week, an application to show the position of the International Space Station (ISS) in real time:
 
 ![animation](animation.gif)
 
