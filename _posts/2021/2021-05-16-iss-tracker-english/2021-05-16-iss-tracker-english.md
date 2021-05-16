@@ -22,7 +22,7 @@ During this week I started experimenting with [Svelte](https://svelte.dev/), a J
 
 I would like to use Electron, TypeScript, Svelte and Construct 3 together. But it is still early, at the moment they are still being studied. So I turn to the project of the week, an application to show the position of the International Space Station (ISS) in real time:
 
-![animation](animation.gif)
+![animation](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-05-16-iss-tracker/animation.gif)
 
 The idea is not mine (also because there are various implementations of this project). But I have to thank [etowner](https://etowner.itch.io/), the input came from him. In short, it is a map on which to show the position of the Space Station in real time. Since the station is in orbit, and because its speed relative to the earth is high, the station icon will noticeably move.
 
