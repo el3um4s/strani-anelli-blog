@@ -59,7 +59,7 @@ Comincio con aggiungere una voce al `manifest.json`:
 ```json
 {
   "action": {
-      "default_popup": "popup.html",
+    "default_popup": "popup.html",
   }
 } 
 ```
@@ -70,16 +70,16 @@ Creo poi il file `src/popup/Popup.svelte` con il template da mostrare nella fine
 
 ```html
 <div class="popup">
-    <div class="item title center">
-        <h3>Motivational Quotes</h3>
-    </div>
-    <div class="item info center">
-        <p><em>Shows a motivational quote when you launch Construct 3.</em></p>
-    </div>
-    <hr>
-    <div class="item info">
-        <p>...info...</p>
-    </div>
+  <div class="item title center">
+    <h3>Motivational Quotes</h3>
+  </div>
+  <div class="item info center">
+    <p><em>Shows a motivational quote when you launch Construct 3.</em></p>
+  </div>
+  <hr>
+  <div class="item info">
+    <p>...info...</p>
+  </div>
 </div>
 ```
 
@@ -95,19 +95,19 @@ Per completare il popup non resta che aggiornare il file `src/App.svelte` import
 <Popup></Popup>
 
 <style>
-	:global(html,body){
-    width: 256px;
-    height: auto;
-    font-size: medium;
-		padding: 0px;
-		margin: 0px;
-		background-color: #F4ECE1;
-		color: #1F1B0F;
-	}
-	:global(body){
-		position: absolute;
-		height: auto;
-	}
+:global(html,body){
+  width: 256px;
+  height: auto;
+  font-size: medium;
+  padding: 0px;
+  margin: 0px;
+  background-color: #F4ECE1;
+  color: #1F1B0F;
+}
+:global(body){
+  position: absolute;
+  height: auto;
+}
 </style>
 ```
 
@@ -210,12 +210,12 @@ Passo quindi a `src/motivational/Motivational.svelte`:
 Anche qui sono in un file Svelte classico. C'è un'unica cosa da notare: il componente `Pane` è composto da alcuni tag ricavati dalla pagina dell'editor:
 
 ```html
-  <ui-pane>
-    <ui-caption>
-      <ui-close-button></ui-close-button>
-    </ui-caption>
-    <ui-body></ui-body> 
-  </ui-pane>
+<ui-pane>
+  <ui-caption>
+    <ui-close-button></ui-close-button>
+  </ui-caption>
+  <ui-body></ui-body> 
+</ui-pane>
 ```
 
 Perché ho scelto questa strada? Per sfruttare la gestione dei fogli di stile integrata in C3. In questo modo non devo ricreare lo stile CSS di ogni elemento. E sopratutto posso ottenere facilmente un componente che si integra con i vari temi dell'editor.
@@ -228,15 +228,15 @@ Per generare le frasi random ho usato una funzione molto semplice:
 import words from "./words.js";
 
 export default async function importQuotes(url) {
-    try {
-        const quotes =  await fetch(url);
-        const response = await quotes.json();
-        const listQuotes = response.quotes;
-        return listQuotes; 
-    } catch (error) {
-        const listQuotes = words.motivationalQuotes;
-        return listQuotes; 
-    }
+  try {
+    const quotes =  await fetch(url);
+    const response = await quotes.json();
+    const listQuotes = response.quotes;
+    return listQuotes; 
+  } catch (error) {
+    const listQuotes = words.motivationalQuotes;
+    return listQuotes; 
+  }
 };
 ```
 
