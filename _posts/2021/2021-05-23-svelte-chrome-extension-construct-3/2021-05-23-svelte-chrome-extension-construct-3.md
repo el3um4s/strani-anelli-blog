@@ -1,5 +1,5 @@
 ---
-title: "Chrome Extension, Svelte e Construct 3"
+title: "Chrome Extension, Svelte & Construct 3"
 published: true
 usa_webp: true
 header:
@@ -207,7 +207,7 @@ Passo quindi a `src/motivational/Motivational.svelte`:
 </Pane>
 ```
 
-Anche qui sono in un file Svelte classico. C'è un'unica cosa da notare: il componente `Pane` è composto da alcuni tag ricavati dalla pagina dell'editor:
+Anche questo è un normale file Svelte. C'è un'unica cosa da notare: il componente `Pane` è composto da alcuni tag ricavati dalla pagina dell'editor:
 
 ```html
 <ui-pane>
