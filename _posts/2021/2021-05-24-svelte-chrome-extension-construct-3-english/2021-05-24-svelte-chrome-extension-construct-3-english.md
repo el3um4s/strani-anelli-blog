@@ -34,7 +34,7 @@ I've never created a Chrome extension. So I started from studying the [official 
 First I downloaded a Svelte template:
 
 ```bash
-npm degit sveltejs/template chrome-extension
+npx degit sveltejs/template chrome-extension
 cd chrome-extension
 npm install
 ```
