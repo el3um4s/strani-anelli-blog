@@ -31,7 +31,7 @@ Non avendo mai creato un'estensione per Chrome sono partito dallo studio degli [
 Per prima cosa ho scaricato un template di Svelte:
 
 ```bash
-npm degit sveltejs/template chrome-extension
+npx degit sveltejs/template chrome-extension
 cd chrome-extension
 npm install
 ```
