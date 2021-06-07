@@ -13,10 +13,12 @@ categories:
   - Construct 3
   - JavaScript
   - Svelte
+  - TypeScript
 tags:
   - Construct 3
   - JavaScript
   - Svelte
+  - TypeScript
 ---
 
 Questa settimana ho completato il corso su [Svelte](https://svelte.dev/) e ho cominciato a sperimentare. Mi piacerebbe convertire questo blog e il repository dei miei template ([questo](https://github.com/el3um4s/construct-demo)) in un sito basato su [SvelteKit](https://kit.svelte.dev/). Ci sono però alcuni problemi legati alla disposizione delle cartelle nel repository. Quindi per il momento non ho ancora deciso come procedere.
@@ -151,7 +153,7 @@ In questo modo la variabile `construct3` è collegata all'iFrame del gioco e pos
 <button  on:click={spin}>Spin</button>
 ```
 
-Per mostrare il codice che ho usato ho creato un nuovo repository ([https://github.com/el3um4s/petits-chevaux](github.com/el3um4s/petits-chevaux)) e una pagina su Itch.io ([https://el3um4s.itch.io/petits-chevaux](el3um4s.itch.io/petits-chevaux)).
+Per mostrare il codice che ho usato ho creato un nuovo repository ([el3um4s/petits-chevaux](https://github.com/el3um4s/petits-chevaux)) e una pagina su [Itch.io](https://el3um4s.itch.io/petits-chevaux).
 
 Il codice del file Construct 3 è caricato anche sul solito repository di GitHub
 
