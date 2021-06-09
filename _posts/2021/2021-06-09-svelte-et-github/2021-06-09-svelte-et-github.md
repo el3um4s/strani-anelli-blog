@@ -37,7 +37,7 @@ Quindi entriamo nella cartella `my-fantastic-site`
 cd my-fantastic-site
 ```
 
-Se vogliamo possiamo anche usare TypeScript ma non è obbligatori:
+Se vogliamo possiamo anche usare TypeScript ma non è obbligatorio:
 
 ```
 node scripts/setupTypeScript.js
@@ -67,7 +67,7 @@ Dopo aver eseguito questo comando abbiamo una cartella `public` contenente il co
 npm install gh-pages --save-dev
 ```
 
-Aggiungiamo quindi uno script sul file `package.json`:
+Aggiungiamo quindi uno script nel file `package.json`:
 
 ```json
  "scripts": {
