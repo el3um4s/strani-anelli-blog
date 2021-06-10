@@ -20,7 +20,7 @@ tags:
 
 My plan for 2021 is to publish a new template for Construct 3 every 15 days. My project is to publish on github on the 15th and 30th of each month. I also want to write a summary post with my considerations. Obviously I'm already late: D
 
-My first prototype for Cosntruct 3 of 2021 is **Typo Battle**. It's a very simple game. Alphabet letters fall from above, you have to press the corresponding key on the keyboard to make them explode.
+My first prototype for Construct 3 of 2021 is **Typo Battle**. It's a very simple game. Alphabet letters fall from above, you have to press the corresponding key on the keyboard to make them explode.
 
 ![typo battle animation](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-01-21-new-template-typo-battle/typo-battle.gif)
 
