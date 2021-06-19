@@ -29,7 +29,7 @@ Come dicevo la settimana scorsa il mio scopo è ottenere un metodo semplice per 
 
 In questo post voglio riportare le basi di questo template. Servirà al me futuro per ricordare come creare un menù dinamico in Construct 3.
 
-Per prima cosa mi servono due file: [menu.js](https://raw.githubusercontent.com/el3um4s/construct-demo/master/javascript/012-menu/source/lib-menu/menu.js) e [menu.css](https://raw.githubusercontent.com/el3um4s/construct-demo/master/javascript/012-menu/source/lib-menu/menu.css). Sono due file creati compilati con Svelte e che contengono il codice necessario per gestire il menu.
+Per prima cosa mi servono due file: [menu.js](https://raw.githubusercontent.com/el3um4s/construct-demo/master/javascript/012-menu/source/lib-menu/menu.js) e [menu.css](https://raw.githubusercontent.com/el3um4s/construct-demo/master/javascript/012-menu/source/lib-menu/menu.css). Sono due file creati e compilati con Svelte: contengono il codice necessario per gestire il menu.
 
 ![animation](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-06-20-how-to-create-menu-in-c3/add-js-and-css.gif)
 
@@ -37,7 +37,7 @@ Dopo averli importati in Construct posso cominciare a impostare il progetto. Il 
 
 {% include picture img="loader.webp" ext="jpg" alt="" %}
 
-Per quanto riguarda il file JS conviene registrarlo in file con purpose "Imports for Events":
+Per quanto riguarda il file JS conviene registrarlo in un file con purpose "Imports for Events":
 
 ```js
 import * as svelte from "./menu.js";
@@ -90,7 +90,7 @@ menuSvelte.items.push({
 });
 ```
 
-Il comando `items.push(newItem)` permette di inserire un nuovo elemento nel menù. Aggetta un oggetto le cui proprietà ricalcano le colonne che saranno visualizzate nel menù. Ce ne è una nuova, però: `onClick`. Come è facilmente intuibile dal nome, serve per definire la funzione da eseguire quando clicchiamo sull'elemento.
+Il comando `items.push(newItem)` permette di inserire un nuovo elemento nel menù. Accetta un oggetto le cui proprietà ricalcano le colonne che saranno visualizzate nel menù. Ce ne è una nuova, però: `onClick`. Come è facilmente intuibile dal nome, serve per definire la funzione da eseguire quando clicchiamo sull'elemento.
 
 {% include picture img="show-menu.webp" ext="jpg" alt="" %}
 
@@ -168,7 +168,7 @@ Bene, direi che grosso modo questo è tutto. Riporto qui i link legati a questo 
 
 - [il progetto su GitHub](https://github.com/el3um4s/construct-demo)
 - [la demo online](https://c3demo.stranianelli.com/javascript/012-menu/demo/)
-- [il file c3p](https://c3demo.stranianelli.com/javascript/012-menu/source/c3p/milan-districts.c3p)
+- [il file c3p](https://c3demo.stranianelli.com/javascript/012-menu/source/c3p/menu.c3p)
 - [menu.js](https://c3demo.stranianelli.com/javascript/012-menu/source/lib-menu/menu.js)
 - [menu.css](https://c3demo.stranianelli.com/javascript/012-menu/source/lib-menu/menu.css)
 - [Patreon](https://www.patreon.com/el3um4s)
