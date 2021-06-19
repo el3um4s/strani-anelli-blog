@@ -25,13 +25,13 @@ Continua la mia esplorazione di Svelte e mi sono lasciato un po' distrarre. Uno 
 
 Come dicevo la settimana scorsa il mio scopo è ottenere un metodo semplice per creare dei menù da usare in C3. Per farlo ho creato un componente riutilizzabile con Svelte, l'ho inserito in C3 e ho creato un progetto di Construct 3 per documentarne l'uso,
 
-![animation](c3-svelte-menu-10.gif)
+![animation](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-06-20-how-to-create-menu-in-c3/c3-svelte-menu-10.gif)
 
 In questo post voglio riportare le basi di questo template. Servirà al me futuro per ricordare come creare un menù dinamico in Construct 3.
 
 Per prima cosa mi servono due file: [menu.js](https://raw.githubusercontent.com/el3um4s/construct-demo/master/javascript/012-menu/source/lib-menu/menu.js) e [menu.css](https://raw.githubusercontent.com/el3um4s/construct-demo/master/javascript/012-menu/source/lib-menu/menu.css). Sono due file creati compilati con Svelte e che contengono il codice necessario per gestire il menu.
 
-![animation](add-js-and-css.gif)
+![animation](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-06-20-how-to-create-menu-in-c3/add-js-and-css.gif)
 
 Dopo averli importati in Construct posso cominciare a impostare il progetto. Il file CSS va caricato una sola volta, all'avvio:
 
@@ -94,7 +94,7 @@ Il comando `items.push(newItem)` permette di inserire un nuovo elemento nel men�
 
 {% include picture img="show-menu.webp" ext="jpg" alt="" %}
 
-![animation](c3-svelte-menu-11.gif)
+![animation](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-06-20-how-to-create-menu-in-c3/c3-svelte-menu-11.gif)
 
 Ho implementato questi comandi:
 
@@ -162,7 +162,7 @@ e poi applicarlo al tema (in Construct 3) con una funzione simile a questa:
 
 {% include picture img="theme-json.webp" ext="jpg" alt="" %}
 
-![animation](c3-svelte-menu-12.gif)
+![animation](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-06-20-how-to-create-menu-in-c3/c3-svelte-menu-12.gif)
 
 Bene, direi che grosso modo questo è tutto. Riporto qui i link legati a questo progetto:
 
