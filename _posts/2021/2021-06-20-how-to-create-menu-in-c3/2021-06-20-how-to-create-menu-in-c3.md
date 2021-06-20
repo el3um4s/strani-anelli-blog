@@ -141,20 +141,20 @@ menuSvelte.css.themeStandard("Dark");
 ```json
 {   
 	"color-primary": "#2e257d",
-    "color-background": "#aaa8bd",
+  "color-background": "#aaa8bd",
 
-    "font-title": "Roboto, sans-serif",
-    "font-items": "Roboto, sans-serif",
+  "font-title": "Roboto, sans-serif",
+  "font-items": "Roboto, sans-serif",
     
-    "modal-background": "#0f0c45bf",
+  "modal-background": "#0f0c45bf",
 
-    "menu-border-radius": "32px 0px 32px 0px",
-    "menu-border-style": "solid",
-    "menu-border-width": "1px",
+  "menu-border-radius": "32px 0px 32px 0px",
+  "menu-border-style": "solid",
+  "menu-border-width": "1px",
 
-    "item-height": "64px",
-    "item-icon-size": "48px",
-    "item-image-size": "64px"
+  "item-height": "64px",
+  "item-icon-size": "48px",
+  "item-image-size": "64px"
 }
 ```
 
