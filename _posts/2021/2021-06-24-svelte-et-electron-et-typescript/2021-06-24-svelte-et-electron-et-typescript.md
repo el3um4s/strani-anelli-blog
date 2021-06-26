@@ -77,7 +77,7 @@ Ovviamente le cose così non vanno bene. Non solo perché mancano i file di Elec
 
 {% include picture img="image.webp" ext="jpg" alt="" %}
 
-Innanzi tutto creo una cartella `dist`: servirà per contenere i file compilati di Svelte e di Electron. I file di Svelte (quelli creati automaticamente) li sposto in `dist\www`. Creo poi il file `dev-app-update.yml`, sempre in `dist`.
+Innanzi tutto creo una cartella `dist`: servirà per contenere i file compilati di Svelte e di Electron. I file di Svelte (quelli creati automaticamente) li sposto in `dist\www`.
 
 Poi comincio a modificare la cartella `src`. Creo 2 ulteriori cartelle al suo interno: `electron` e `frontend`. Nella prima inserisco i file necessari per far funzionare Electron (per il momento solamente `index.ts` e `preload.ts`). Uso `frontend` invece per tutto quello che riguarda Svelte. Aggiungo però il file `tsconfig.json`.
 
@@ -106,15 +106,7 @@ a così:
 <script defer src='build/bundle.js'></script>
 ```
 
-In pratica ho tolto la prima barra da tutti gli url.
-
-Modifico poi il file `dist\dev-app-update.yml`. Questo file serve per testare gli aggiornamenti automatici in fase di sviluppo. Per evitare errori inserisco i riferimenti al repository GitHub dove ospito il progetto:
-
-```yml
-provider: github
-owner: el3um4s
-repo: memento-svelte-electron-typescript
-```
+In pratica ho tolto la prima barra da tutti gli url e aggiunto alcune impostazioni [CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP).
 
 Passo adesso al sezione dedicata ai file sorgenti del frontend. Qui ho creato un file `src\frontend\tsconfig.json`: il suo scopo è permetter di compilare i file TypeScript di Svelte in maniera diversa da come vengono compilati quelli di Electron (vedi [stackoverflow: How to use multiple tsconfig files in vs-code?](https://stackoverflow.com/questions/37579969/how-to-use-multiple-tsconfig-files-in-vs-code)). Inserisco questo codice:
 
@@ -460,7 +452,6 @@ In questo modo ottengo come risultato
 
 Ammetto però di non aver ancora approfondito bene questo pattern (e in generale come usare bene TypeScript per creare il file di ingresso per Electron): consiglio di leggere anche [Electron IPC Response/Request architecture with TypeScript](https://blog.logrocket.com/electron-ipc-response-request-architecture-with-typescript/) di [LogRocket](https://blog.logrocket.com/).
 
-
 L'ultimo aspetto da sistemare è l'aggiornamento automatico. Per gestirlo importo `Notification` da Electron e `autoUpdater` da `electron-updater`
 
 ```ts
@@ -490,7 +481,6 @@ autoUpdater.on("update-available", () => {
     });
 });
   
-  
 autoUpdater.on("update-downloaded", () => {
     notification = new Notification({
         title: "Svelte App",
@@ -505,6 +495,16 @@ autoUpdater.on("update-downloaded", () => {
 ```
 
 Questo mi permette di far apparire una notifica di sistema quando c'è un aggiornamento disponibile. In caso decidessi di installarlo è sufficiente cliccare sulla notifica per avviare il download. Dopo di ché, quando il download è finito cliccando sulla notifica si avvia la procedura di installazione.
+
+![test-electron-reload.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-06-24-svelte-et-electron-et-typescript/test-update.gif)
+
+Creo poi il file `dev-app-update.yml`. Questo file serve per testare gli aggiornamenti automatici in fase di sviluppo. Inserisco i riferimenti al repository GitHub dove ospito il progetto:
+
+```yml
+provider: github
+owner: el3um4s
+repo: memento-svelte-electron-typescript
+```
 
 Direi che per oggi è tutto. Ricordo il link del repository e quello del mio Patron:
 
