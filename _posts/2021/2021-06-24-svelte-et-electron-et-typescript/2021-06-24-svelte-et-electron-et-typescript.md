@@ -158,7 +158,7 @@ Configuro poi `nodemon.json` inserendo nel file:
 
 in modo da intercettare tutte le modifiche fatte ai file di Electron e poter così riavviare automaticamente Electron stesso.
 
-Un altro file da correggere è `rollup.config,js`. In genere il file creato automaticamente va bene ma in questo caso ho modificato la struttura dei files: devo assicurarmi che i vari comandi rimandino alle cartelle corrette. Quindi:
+Un altro file da correggere è `rollup.config.js`. In genere il file creato automaticamente va bene ma in questo caso ho modificato la struttura dei files: devo assicurarmi che i vari comandi rimandino alle cartelle corrette. Quindi:
 
 ```js
 export default {
