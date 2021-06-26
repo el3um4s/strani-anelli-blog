@@ -91,7 +91,7 @@ I haven't written a line of code yet. But the time has come to put my hand to th
 <link rel='stylesheet' href='/build/bundle.css'>
 
 <script defer src='/build/bundle.js'></script>
-```html
+```
  
 to this:
 
