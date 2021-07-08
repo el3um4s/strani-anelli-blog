@@ -121,7 +121,7 @@ Infine il dominio del sito. Quando eseguiremo il deploy del sito sovrascriveremo
 Bene, dopo aver fatto tutto questo siamo pronti a caricare il sito. Quindi, prima di tutto lo compiliamo
 
 ```
-run build
+npm run build
 ```
 
 Poi carichiamo sul repository il codice compilato. Io mi trovo bene con la versione desktop di GitHub ma è anche possibile farlo da riga di comando: 
