@@ -122,7 +122,7 @@ Finally, the domain of the site. When we deploy the site we will automatically o
 Well, after all this we are ready to load the site. So, first of all we compile it
 
 ```
-run build
+npm run build
 ```
 
 Then we upload the compiled code to the repository. I am fine with the desktop version of GitHub but it is also possible to do it from the command line:
