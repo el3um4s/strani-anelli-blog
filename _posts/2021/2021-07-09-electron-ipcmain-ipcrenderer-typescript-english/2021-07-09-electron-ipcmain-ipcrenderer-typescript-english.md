@@ -1,5 +1,5 @@
 ---
-title: "Electron e TypeScript: come usare ipcMain e ipcRenderer"
+title: "Electron and TypeScript: how to use ipcMain and ipcRenderer (English)"
 published: true
 usa_webp: true
 header:
@@ -8,7 +8,7 @@ header:
   immagine_estesa: "image"
   immagine_fonte: "Photo credit: [**JJ Ying**](https://unsplash.com/@jjying)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2021-07-09 20:00"
+date: "2021-07-09 22:30"
 categories:
   - TypeScript
   - Svelte
@@ -19,13 +19,13 @@ tags:
   - Electron
 ---
 
-Mentre giocavo con Electron, TypeScript ed Electron sono incappato in alcuni problemi. Nella prima versione del mio template (pubblicata nel repository [el3um4s/memento-svelte-electron-typescript](https://github.com/el3um4s/memento-svelte-electron-typescript)) mi sono accontentato di un risultato funzionante. Ma non era il risultato ottimale. Riparto quindi dal [post di qualche giorno fa](https://blog.stranianelli.com/svelte-et-electron-et-typescript-english/) riportando alcune correzioni al codice. Non so se la mia proposta sia la soluzione ottimale ma di certo mi piace di più della prima versione.
+While playing with Electron, TypeScript and Electron I ran into some problems. In the first version of my template ([el3um4s/memento-svelte-electron-typescript](https://github.com/el3um4s/memento-svelte-electron-typescript)) I settled for a working result. But it wasn't the best result. Then I modified the code by making some improvements. I don't know if my proposal is the optimal solution but for sure I like it more than the first version.
 
-Nella prima versione c'erano due o tre problemi importanti. Uno sul lato Svelte (ne parlo alla fine di questo articolo), due sul lato Electron. In soldoni tutta la logica di Electron era condensata in due soli grandi file, `index.ts` e `preload.ts`. Per di più la logica era mescolata. Usavo `preload.ts` per garantire un'interfaccia tra Svelte ed Electron ma le funzioni da eseguire erano su un altro file. `index.ts` d'altro canto si ritrovava a dover gestire sia la creazione dell'interfaccia grafica che tutte le comunicazioni da e per Svelte.
+In the first version there were some major problems. One on the Svelte side (I talk about it at the end of this article), two on the Electron side. In a nutshell, all of Electron's logic was condensed into just two large files, `index.ts` and `preload.ts`. What's more, the logic was mixed. I was using `preload.ts` to ensure an interface between Svelte and Electron but the functions were on another file. index.ts on the other hand found itself having to manage both the creation of the graphical interface and all the communications to and from Svelte.
 
-### La struttura dei file
+### The folder structure
 
-In un progetto piccolo, come è il repository che ho caricato, non è un grande problema. Ma non ci vuole molto ad aumentare la complessità generale e a creare un bel groviglio di _spaghetti code_. Ho quindi deciso di fare un passo indietro e di rendere più modulare il tutto. E invece di due soli file ne ho creati alcuni in più, ognuno con una sola mansione da svolgere:
+In a small project, such as the repository I uploaded, it's not a big deal. But it doesn't take long to add to the overall complexity and create a nice tangle of _spaghetti code_. So I decided to take a step back and make everything more modular. Instead of just two files, I created a few more, each with a single task to perform:
 
 ```
 > src
@@ -43,17 +43,17 @@ In un progetto piccolo, come è il repository che ho caricato, non è un grande 
         - IPC.ts
 ```
 
-Se a prima vista pare un aumento ingiustificato della complessità del progetto, ritengo che ne valga la pena:
+If at first glance it seems an unjustified increase in the complexity of the project, I think it is worth it:
 
-- `index.ts` continua a essere il file principale ma si occupa solo di richiamare le funzioni necessarie, non di definirle
-- `preload.ts` continua a permettere una comunicazione sicura tra `BrowserWindow` ma contiene solamente l'elenco dei canali disponibili
-- `mainWindow.ts` contiene una classe `Main` da usare per costruire una `BrowserWindow` in Electron
+- `index.ts` continues to be the main file but only takes care of calling the necessary functions, not defining them
+- `preload.ts` continues to allow secure communication between `BrowserWindow` and Electron but only contains the list of available channels
+- `mainWindow.ts` contains a `Main` class to build a `BrowserWindow` in Electron
 
-### La classe `Main`
+### The `Main` Class
 
-Tenere separata la classe `Main` mi permette di mantenere più pulito il codice dentro `index.ts`: in fin dei conti è un processo abbastanza standard.
+Keeping the `Main` class separate allows me to keep the code inside `index.ts` cleaner
 
-Mi servono per prima cosa alcuni valori di default per le impostazioni base e un costruttore
+First I need some default values for the basic settings and a constructor
 
 ```ts
 const appName = "MEMENTO - Svelte, Electron, TypeScript";
@@ -73,7 +73,7 @@ class Main {
 }
 ```
 
-Poi mi serve un metodo per creare la finestra principale del programma
+Then I need a method to create the main program window
 
 ```ts
 import { app, BrowserWindow } from 'electron';
@@ -106,7 +106,7 @@ class Main {
 }
 ```
 
-E poi alcuni metodi aggiuntivi:
+And then some additional methods:
 
 ```ts
 class Main {
@@ -126,7 +126,7 @@ class Main {
 }
 ```
 
-Adesso metto tutto assieme nel costruttore:
+Now I put it all together in the constructor:
 
 ```ts
 class Main {
@@ -146,7 +146,7 @@ class Main {
 }
 ```
 
-Se volessi potrei già fermarmi qui. Ma mi serve un'altra cosa per intercettare il momento in cui la finestra viene creata. Per farlo posso utilizzare un evento `app.on("browser-window-created", funct )` all'interno di `index.ts`. Oppure all'interno della stessa classe `Main`. Invece ho preferito usare un `EventEmitter` ([link](https://nodejs.org/api/events.html#events_class_eventemitter)) personalizzato:
+If I want I can stop here. But I need one more thing to intercept the moment when the window is created. I can use an `app.on("browser-window-created", funct )` event inside `index.ts` or within the `Main` class itself. Instead I preferred to use a custom `EventEmitter` ([link](https://nodejs.org/api/events.html#events_class_eventemitter)):
 
 ```ts
 import EventEmitter from 'events';
@@ -167,13 +167,13 @@ class Main {
 }
 ```
 
-Infine per ultima cosa esporto la classe `Main` in modo da poterla utilizzare:
+Finally I export the `Main` class so that I can use it:
 
 ```ts
 export default Main;
 ```
 
-Prima di passare alla cartella `IPC` uso la classe `Main` dentro `index.ts`
+Before moving on to the `IPC` folder, I use the `Main` class inside `index.ts`
 
 ```ts
 import Main from "./mainWindow";
@@ -185,13 +185,13 @@ main.onEvent.on("window-created", ()=> {
 });
 ```
 
-Inserisco già l'evento `main.onEvent.on("window-created", funct)`: al suo interno inserirò un le azioni da svolgere all'avvio, ovvero il codice legato a `ipcMain`, `webContents` e `autoUpdater`. Codice che ho inserito in due file distinti, `systemInfo.ts` e `updateInfo.ts`. Questi due non sono altro che due esempi di come usare il template e possono essere sostituiti, eliminati o modificati a piacere. E ovviamente è possibile usarli come base per aggiungere altre funzioni e canali.
+I already insert the `main.onEvent.on("window-created", funct)`: I will use it to define the actions to perform at startup. That is the code linked to `ipcMain`, `webContents` and `autoUpdater`. I placed the code in two different files, `systemInfo.ts` and `updateInfo.ts`. These are just two examples of how to use the template and can be replaced, deleted or modified at will. And of course you can use them as a basis to add other functions and channels.
 
-### channelsInterface, contextBridge e IPC
+### channelsInterface, contextBridge and IPC
 
-Infine i file dentro la cartella `General` servono per semplificare i file precedenti.
+The files inside the General folder serve to keep clean the previous files.
 
-`channelsInterface.ts` contiene la definizione di alcune interfacce:
+`channelsInterface.ts` contains the definition of some interfaces:
 
 ```ts
 export interface APIChannels {
@@ -205,7 +205,7 @@ export interface SendChannels {
 }
 ```
 
-Il file principe è `IPC.ts`. In questo file definisco la classe `IPC` da usare come base per il resto:
+The main file is `IPC.ts`. The `IPC` class is the basis for the inter-process communication between Electron and the HTML pages:
 
 ```ts
 import { BrowserWindow, IpcMain } from "electron";
@@ -242,26 +242,26 @@ export default class IPC {
 }
 ```
 
-`IPC` ha tre proprietà: `nameAPI`, che servirà per richiamarla dall'interno del frontend. E poi l'elenco dei canali validi.
+`IPC` has three properties. `nameAPI` is used to define the name to use to call the API from within the frontend. Then there is the list of valid channels.
 
-Rispetto alla prima versione, i canali verso Electron non sono solamente una lista di nomi ma un oggetto. A ogni chiave assegno una funzione da richiamare (lo spiego meglio tra un attimo). Ci sono solo due metodi, `get channels` e `initIpcMain`: li userò tra poco.
+Compared to the first version, the channels to Electron are not just a list of names but an object. To each key I assign a function to be called (I'll explain that in a moment). There are only two methods, `get channels` and `initIpcMain` - I'll use them in a moment.
 
-Il terzo file _generale_ contiene la definizione della funzione `generateContextBridge()`. Accetta come argomento un array di oggetti del tipo "IPC" e li usa per generare l'elenco dei canali sicuri per le comunicazioni tra Electron e Svelte.
+The third _general_ file contains the definition of the `generateContextBridge()` function. It takes as an argument an array of objects of the type `IPC` and uses them to generate the list of safe channels for communications between Electron and Svelte.
 
-Probabilmente la mia spiegazione è abbastanza confusa ma per fortuna questi file non vanno modificati.
+My explanation is probably quite confusing but luckily these files should not be changed.
 
 ### systemInfo.ts
 
-Quello che invece è più interessante capire è come usarli. Per questo ho inserito due esempio. Parto dal più semplice, `systemInfo.ts`. Questo modulo ha un unico canale aperto in uscita e in entrata e lo usa per chiedere e ottenere alcune informazioni su Electron, Node e Chrome.
+Moreover, it is more interesting to understand how to use them. That's why I included two examples. I'll start with the simplest, `systemInfo.ts`. This module has a single open channel out and in and uses it to ask and get some information about Electron, Node and Chrome.
 
-Per prima cosa importo i file di cui ho appena parlato:
+First I import the files I just talked about:
 
 ```ts
 import { SendChannels } from "./General/channelsInterface";
 import IPC from "./General/IPC";
 ```
 
-Quindi inizio a crearmi alcune variabili di supporto:
+So I start creating some supporting variables:
 
 ```ts
 const nameAPI = "systemInfo";
@@ -277,7 +277,7 @@ const validReceiveChannel: string[] = [
 ];
 ```
 
-Poi mi creo una funzione `requestSystemInfo()` da richiamare. Non è necessario che il nome sia uguale al nome del canale aperto:
+Then I create a `requestSystemInfo()` function to call. The name does not need to be the same as the open channel name:
 
 ```ts
 import { BrowserWindow } from "electron";
@@ -295,7 +295,7 @@ function requestSystemInfo(mainWindow: BrowserWindow, event: Electron.IpcMainEve
 }
 ```
 
-Infine creo una costante da esportare:
+Finally I create a constant to export:
 
 ```ts
 const systemInfo = new IPC ({
@@ -307,7 +307,7 @@ const systemInfo = new IPC ({
 export default systemInfo;
 ```
 
-Dopo aver fatto questo devo registrare i canali in `preload.ts`. Mi basta scrivere:
+After this, I need to register the channels in `preload.ts`. I just have to write:
 
 ```ts
 import { generateContextBridge } from "./IPC/General/contextBridge"
@@ -316,9 +316,7 @@ import systemInfo from "./IPC/systemInfo";
 generateContextBridge([systemInfo]);
 ```
 
-E sono a posto.
-
-Il passo successivo è di inserire in `index.ts` le funzioni necessarie per ottenere le informazioni che richiedo:
+Then I put the necessary functions in `index.ts`
 
 ```ts
 import { ipcMain } from 'electron';
@@ -335,9 +333,9 @@ main.onEvent.on("window-created", ()=> {
 
 ### updaterInfo.ts
 
-Adesso complico un po' le cose. Ricostruisco le funzioni per aggiornare automaticamente l'applicazione mantenendo tutto il codice all'interno del file `updaterInfo.ts`.
+Now things become a little more complicated. I rebuild the functions to automatically update the application while keeping all the code inside the `updaterInfo.ts` file.
 
-Quindi comincio con il creare alcune costanti di supporto:
+So I start by creating some supporting constants:
 
 ```ts
 import { SendChannels } from "./General/channelsInterface";
@@ -364,7 +362,7 @@ const validReceiveChannel: string[] = [
 ];
 ```
 
-Ma prima di creare un oggetto di classe `IPC` mi fermo un attimo e decido di estendere la classe base. Perché? Perché devo dichiarare a parte le operazioni legate all'`autoUpdater`. Quindi:
+Before creating an object of class `IPC` I stop for a moment and decide to extend the base class. Why? Because I have to declare separately the operations related to the `autoUpdater`. 
 
 ```ts
 class UpdaterInfo extends IPC {
@@ -374,7 +372,7 @@ class UpdaterInfo extends IPC {
 }
 ```
 
-Tra un attimo mostro cosa inserire in questo metodo, intanto posso però creare la costante da esportare:
+In a moment I'll show what to insert in this method, but in the meantime I can create the constant to export:
 
 ```ts
 const updaterInfo = new UpdaterInfo ({
@@ -386,7 +384,7 @@ const updaterInfo = new UpdaterInfo ({
 export default updaterInfo;
 ```
 
-Bene. Adesso definisco le funzioni chiamate dai canali registrati tramite `validSendChannel`
+Now I define functions called by registered channels via `validSendChannel`
 
 ```ts
 import { BrowserWindow, app } from "electron";
@@ -412,7 +410,7 @@ function quitAndInstall(mainWindow: BrowserWindow, event: Electron.IpcMainEvent,
 }
 ```
 
-Queste funzioni richiamano l'`autoUpdater` il quale a sua volta genera degli eventi. Creo quindi una funzione per intercettare e gestire questi eventi:
+These functions call the `autoUpdater` which generates events. So I create a function to intercept and manage these events:
 
 ```ts
 function initAutoUpdater(autoUpdater: AppUpdater, mainWindow: BrowserWindow) {
@@ -440,7 +438,7 @@ function initAutoUpdater(autoUpdater: AppUpdater, mainWindow: BrowserWindow) {
 }
 ```
 
-Con questa funzione in mano posso quindi completare il metodo all'interno della classe `UpdaterInfo`:
+With this function, then, I complete the method inside the `UpdaterInfo` class:
 
  ```ts
 import { AppUpdater, } from "electron-updater";
@@ -452,9 +450,9 @@ class UpdaterInfo extends IPC {
 }
  ```
 
-### index.ts e preload.ts
+### index.ts and preload.ts
 
-Dopo aver finito con `updaterInfo.ts` posso finalmente completare il file `preload.ts`:
+After finishing with `updaterInfo.ts` I finally complete the `preload.ts` file:
 
 ```ts
 import { generateContextBridge } from "./IPC/General/contextBridge"
@@ -465,7 +463,7 @@ import updaterInfo from './IPC/updaterInfo';
 generateContextBridge([systemInfo, updaterInfo]);
 ```
 
-Ho anche tutti gli elementi che mi servono per completare `index.ts`:
+Also, I have all the elements I need to complete `index.ts`:
 
 ```ts
 import { ipcMain } from 'electron';
@@ -487,11 +485,11 @@ main.onEvent.on("window-created", ()=> {
 });
 ```
 
-Con questo ho concluso la parte dedicata ad Electron
+With this I concluded the part dedicated to Electron.
 
 ### Svelte
 
-Restano giusto due cosette da sistemare lato Svelte. Nella prima versione del template inserivo i file `index.html`, `global.css` e `favicon.png` nella cartella `dist/www`. Ha però più senso dedicare la cartella `dist` esclusivamente ai file generati da Svelte e da TypeScript. Di conseguenza sposto questi tre file nella cartella `src/frontend/www`:
+There are just two things left to fix on the Svelte side. In the first version I inserted the `index.html`, `global.css` and `favicon.png` files in the `dist/www` folder. However, it makes more sense to dedicate the dist folder exclusively to files generated by Svelte and TypeScript. I move these three files to the `src/frontend/www` folder:
 
 ```
 > src
@@ -510,15 +508,15 @@ Restano giusto due cosette da sistemare lato Svelte. Nella prima versione del te
             - index.html
 ```
 
-Resta però il problema di fare arrivare una copia di questi file in `dist/www` al momento della compilazione. Per fortuna è possibile usare [rollup-plugin-copy](https://www.npmjs.com/package/rollup-plugin-copy) per automatizzare questa operazione.
+However, the problem is copying these files in `dist/www` at the time of compilation. Fortunately, you can use [rollup-plugin-copy](https://www.npmjs.com/package/rollup-plugin-copy) to automate this.
 
-Da riga di comando digito:
+In the command line:
 
 ```bash
 npm i rollup-plugin-copy
 ```
 
-Poi modifico il file `rollup.config.js` aggiungendo:
+Then I edit the `rollup.config.js` file by adding:
 
 ```js
 import copy from 'rollup-plugin-copy';
@@ -534,9 +532,9 @@ export default {
 }
 ```
 
-Restano infine da aggiornare le funzioni chiamate dai componenti
+Finally, I update the functions called by the Svelte components
 
-In `InfoElectron.svelte`
+`InfoElectron.svelte`
 
 ```js
 globalThis.api.send("requestSystemInfo", null);
@@ -547,7 +545,7 @@ globalThis.api.receive("getSystemInfo", (data) => {
 });
 ```
 
-diventa
+becomes
 
 ```js
 globalThis.api.systemInfo.send("requestSystemInfo", null);
@@ -558,10 +556,9 @@ globalThis.api.systemInfo.receive("getSystemInfo", (data) => {
 });
 ```
 
-Modifico in maniera simile le funzioni all'interno di `Version.svelte`: `globalThis.api.send(...)` e `globalThis.api.receive(...)` diventano `globalThis.api.updaterInfo.send(...)` e `globalThis.api.updaterInfo.receive(...)`.
+I modify the functions inside `Version.svelte` in a similar way: `globalThis.api.send(...)` and `globalThis.api.receive(...)` become `globalThis.api.updaterInfo.send(...)` snd `globalThis.api.updaterInfo.receive(...)`.
 
-
-Direi che per oggi è tutto. Ricordo il link del repository e quello del mio Patron:
+That's all for today.
 
 - [MEMENTO - Svelte, Electron & TypeScript](https://github.com/el3um4s/memento-svelte-electron-typescript)
 - [Patreon](https://www.patreon.com/el3um4s)
