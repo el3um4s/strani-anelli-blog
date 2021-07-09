@@ -556,7 +556,7 @@ globalThis.api.systemInfo.receive("getSystemInfo", (data) => {
 });
 ```
 
-I modify the functions inside `Version.svelte` in a similar way: `globalThis.api.send(...)` and `globalThis.api.receive(...)` become `globalThis.api.updaterInfo.send(...)` snd `globalThis.api.updaterInfo.receive(...)`.
+I modify the functions inside `Version.svelte` in a similar way: `globalThis.api.send(...)` and `globalThis.api.receive(...)` become `globalThis.api.updaterInfo.send(...)` and `globalThis.api.updaterInfo.receive(...)`.
 
 That's all for today.
 
