@@ -23,8 +23,7 @@ Il mio progetto di creare 3 template per Svelte è quasi giunto alla conclusione
 
 Perché non è necessario usare SvelteKit con Electron. Si possono ottenere gli stessi risultati con Svelte, e con meno complicazioni. Ma la mia intenzione è leggermente diversa. Mi piacerebbe rendere un po' più accattivante il sito con i miei esperimenti ([c3demo.stranianelli.com](https://c3demo.stranianelli.com/)) e nel contempo usare lo stesso codice per creare un'app offline, magari da pubblicare su Itch.io. Non voglio però perdere tutti i link e i collegamenti che ho già creato. Penso di poter fare questo usando SvelteKit.
 
-![showcase-c3-projects.gif](https://github.com/el3um4s/strani-anelli-blog/blob/master/_posts/2021/2021-07-18-sveltekit-and-electron/showcase-c3-projects.gif)
-
+![showcase-c3-projects.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-07-18-sveltekit-and-electron/showcase-c3-projects.gif)
 
 Ma questo riguarda il (spero prossimo) futuro. Oggi voglio appuntarmi alcune cose su come integrare SvelteKit con Electron e TypeScript. Parto dalla struttura dei file, che è leggermente diversa dall'altro template:
 
@@ -77,7 +76,7 @@ npm install
 
 In questo modo tengo lo sviluppo del frontend separato da Electron. Electron, d'altro canto, è praticamente identico al progetto precedente. L'unica differenza è nell'aggiunta della possibilità di avere uno splash screen al momento dell'avvio:
 
-![splashscreen.gif](https://github.com/el3um4s/strani-anelli-blog/blob/master/_posts/2021/2021-07-18-sveltekit-and-electron/svelte-kit-04-splashscreen.gif)
+![splashscreen.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-07-18-sveltekit-and-electron/svelte-kit-04-splashscreen.gif)
 
 Un'altra modifica è l'aggiunta della classe `configureDev.ts` in modo da semplificare lo sviluppo dell'applicazione. In pratica posso aggiungere sul file `index.ts` il codice seguente:
 
@@ -113,7 +112,7 @@ const loadURL = serve({ directory: "dist/www" });
 loadURL(mainWindow)
 ```
 
-![splashscreen.gif](https://github.com/el3um4s/strani-anelli-blog/blob/master/_posts/2021/2021-07-18-sveltekit-and-electron/svelte-kit-05-sveltekit.gif)
+![splashscreen.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-07-18-sveltekit-and-electron/svelte-kit-05-sveltekit.gif)
 
 Oltre a richiamare direttamente le varie pagine HTML generate da SvelteKit posso anche usare una specie di mini-router personalizzato. È sufficiente [`<svelte:component>`](https://svelte.dev/docs#svelte_component):
 
@@ -130,11 +129,11 @@ let page = PageA;
 <svelte:component this={page} />
 ```
 
-![rendere.gif](https://github.com/el3um4s/strani-anelli-blog/blob/master/_posts/2021/2021-07-18-sveltekit-and-electron/svelte-kit-07-renderer.gif)
+![rendere.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-07-18-sveltekit-and-electron/svelte-kit-07-renderer.gif)
 
 Infine, nel template ho aggiunto la possibilità di salvare gli item della sezione "To Do" direttamente su disco. Non è un aspetto fondamentale ma serve a me per ricordarmi come usare l'[API fs di NodeJs](https://nodejs.org/api/fs.html)
 
-![to do](https://github.com/el3um4s/strani-anelli-blog/blob/master/_posts/2021/2021-07-18-sveltekit-and-electron/svelte-kit-08-todos.gif)
+![to do](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-07-18-sveltekit-and-electron/svelte-kit-08-todos.gif)
 
 Per oggi è tutto. Lo so che questo post è meno tecnico rispetto gli ultimi ma tutto il codice è disponibile su GitHub:
 
