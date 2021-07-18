@@ -137,7 +137,7 @@ Infine, nel template ho aggiunto la possibilità di salvare gli item della sezio
 
 Per oggi è tutto. Lo so che questo post è meno tecnico rispetto gli ultimi ma tutto il codice è disponibile su GitHub:
 
-- [MEMENTO - Svelte, Electron & TypeScript](https://github.com/el3um4s/memento-svelte-electron-typescript)
+- [MEMENTO - Svelte, Electron & TypeScript](https://github.com/el3um4s/memento-sveltekit-electron-typescript)
 
 Ricordo inoltre l'indirizzo del mio Patreon:
 
