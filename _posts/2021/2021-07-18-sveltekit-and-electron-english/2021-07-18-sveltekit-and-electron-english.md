@@ -139,7 +139,7 @@ Finally, I added the possibility to save the items of the "To Do" section direct
 
 I know this post is less technical than the last ones but all the code is available on GitHub:
 
-- [MEMENTO - Svelte, Electron & TypeScript](https://github.com/el3um4s/memento-svelte-electron-typescript)
+- [MEMENTO - Svelte, Electron & TypeScript](https://github.com/el3um4s/memento-sveltekit-electron-typescript)
 
 And this is Patron's address
 
