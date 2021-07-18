@@ -97,7 +97,7 @@ const windowSettings = {
 let main = new Main(windowSettings, developerOptions);
 ```
 
-By modifying the various options I can use the command to use the template in various scenarios
+By modifying the various options I can use the command
 
 ```bash
 nodemon
