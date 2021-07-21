@@ -115,7 +115,7 @@ Now there are some details to fix. First, we need to make sure that the `.gitign
 # /public/build/
 ```
 
-The second thing is related to how GitHub Pages works: it works through Jekyll. Generally it does not give particular problems but I have noticed that it does not correctly read the directories that begin with the underscore character (`_`). It is therefore convenient to disable it by creating an empty file named `.nojekill`. We also put this file in the `public` folder.
+The second thing is related to how GitHub Pages works: it works through Jekyll. Generally it does not give particular problems but I have noticed that it does not correctly read the directories that begin with the underscore character (`_`). It is therefore convenient to disable it by creating an empty file named `.nojekyll`. We also put this file in the `public` folder.
 
 Finally, the domain of the site. When we deploy the site we will automatically overwrite all the contents of the `gh-pages` branch including the `CNAME` file. If we are interested in using a specific domain then it is better to add the file to the `public` folder.
 
