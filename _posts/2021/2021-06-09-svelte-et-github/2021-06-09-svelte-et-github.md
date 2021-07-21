@@ -114,7 +114,7 @@ Adesso ci sono alcuni dettagli da sistemare. Il primo, assicurarsi che il file `
 # /public/build/
 ```
 
-La seconda cosa è legata al funzionamento di GitHub Pages: funziona tramite Jekyll. In genere non dà particolari problemi ma ho notato che non legge correttamente le cartelle che cominciano con il carattere underscore (`_`). Conviene quindi disabilitarlo creando un file vuoto dal nome `.nojekill`. Inseriamo anche questo file nella cartella `public`.
+La seconda cosa è legata al funzionamento di GitHub Pages: funziona tramite Jekyll. In genere non dà particolari problemi ma ho notato che non legge correttamente le cartelle che cominciano con il carattere underscore (`_`). Conviene quindi disabilitarlo creando un file vuoto dal nome `.nojekyll`. Inseriamo anche questo file nella cartella `public`.
 
 Infine il dominio del sito. Quando eseguiremo il deploy del sito sovrascriveremo automaticamente tutto il contenuto della branch `gh-pages` compreso il file `CNAME`. Se ci interessa usare un dominio specifico conviene allora aggiungere il file alla cartella `public`.
 
