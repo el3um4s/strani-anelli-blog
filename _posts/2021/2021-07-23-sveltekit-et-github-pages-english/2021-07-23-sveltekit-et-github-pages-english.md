@@ -247,7 +247,7 @@ title: Hello World
 Hi!
 ```
 
-After running `npm run dev again` I can see the result at `http://localhost:3000/blog/hello-world`
+After running `npm run dev` again I can see the result at `http://localhost:3000/blog/hello-world`
 
 The interesting thing is that you can use Svelte inside the file. For example, I can set the page title with:
 
