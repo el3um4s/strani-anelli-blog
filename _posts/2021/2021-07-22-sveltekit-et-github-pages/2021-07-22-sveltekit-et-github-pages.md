@@ -19,9 +19,7 @@ tags:
   - Electron
 ---
 
-Era da qualche settimane che volevo scrivere un nuovo articolo su come usare Svelte con GitHub Pages. Devo ammettere che lo sprone sono state alcune mail con richieste di chiarimenti sul mio [post precedente](https://blog.stranianelli.com/svelte-et-github/). Aggiungo quindi un altro tassello alla mia esplorazione di Svelte parlando di come penso sia possibile usare SvelteKit con GitHub Pages.
-
-Tengo sempre la forma _diario di viaggio_: riporto qui i passaggi che sto compiendo, sperando sia sufficiente per riprodurre in futuro lo stesso risultato.
+Ho aspettato qualche settimana prima di scrivere un nuovo articolo su come usare Svelte con GitHub Pages. Oggi mi interessa testare SvelteKit. Questo post avrà la forma di un diario di viaggio: riporto i vari passaggi man mano che li faccio. Sono degli appunti, più che una guida.
 
 ### SvelteKit
 
@@ -120,7 +118,7 @@ Imposto come origine del sito la branch `gh-pages` e, in caso, imposto un domini
 
 Mi servono poi altri 2 file, entrambi da inserire nella cartella `static`:
 
-- `.nojekyll`, per evitare che sia Jekyll a gestire le pagine create (see [Bypassing Jekyll on GitHub Pages](https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/))
+- `.nojekyll`, per evitare che sia Jekyll a gestire le pagine create (vedi [Bypassing Jekyll on GitHub Pages](https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/))
 - `CNAME`, per permette a GitHub Pages di usare il dominio personalizzato che ho impostato.
 
 Il primo file, `.nojekyll` è un file vuoto. Basta crearlo e non scriverci dentro nulla.
@@ -206,7 +204,7 @@ const config = {
 export default config;
 ```
 
-Il file `svelte.config.js` viene modificato in modo da gestire il markdown:
+Modifico `svelte.config.js` in modo da gestire il markdown:
 
 ```js
 import {
@@ -269,7 +267,6 @@ e usare dei componenti definiti altrove:
 <script>
  <img src="image.jpg" />
 </script>
-
 ```
 
 In alternativa si possono inserire in una cartella dentro `lib` e poi importarle come componenti:
@@ -358,7 +355,7 @@ Per inserire un menù di sopra ogni pagina del blog.
 
 ### Highlighting
 
-Un altro aspetto da sistemare riguarda il codice. O, meglio, come appare il codice. `mdsvx` ha la possibilità di applicare degli stili in maniera quasi automatica. Su questo punto non ho trovato molte indicazioni chiare. Per me ha funzionato scaricare uno stile da [prismjs](https://prismjs.com/). Poi ho copiato il file css (che ho chiamato prism.css) nella cartella `static`. Infine ho aggiunto un riferimento al foglio di stile al file `src\app.html`:
+Un altro aspetto da sistemare riguarda il codice. O, meglio, come appare il codice. `mdsvx` ha la possibilità di applicare degli stili in maniera quasi automatica. Su questo punto non ho trovato molte indicazioni chiare. Per me ha funzionato scaricare uno stile da [prismjs](https://prismjs.com/). Poi ho copiato il file css (che ho chiamato `prism.css`) nella cartella `static`. Infine ho aggiunto un riferimento al foglio di stile al file `src\app.html`:
 
 ```html
 <link href="prism.css" rel="stylesheet" />
