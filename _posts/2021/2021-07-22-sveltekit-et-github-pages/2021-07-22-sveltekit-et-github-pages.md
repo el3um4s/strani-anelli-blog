@@ -11,12 +11,12 @@ header:
 date: "2021-07-22 15:00"
 categories:
   - TypeScript
-  - Svelte
-  - Electron
+  - SvelteKit
+  - GitHub Pages
 tags:
   - TypeScript
-  - Svelte
-  - Electron
+  - SvelteKit
+  - GitHub Pages
 ---
 
 Ho aspettato qualche settimana prima di scrivere un nuovo articolo su come usare Svelte con GitHub Pages. Oggi mi interessa testare SvelteKit. Questo post avrà la forma di un diario di viaggio: riporto i vari passaggi man mano che li faccio. Sono degli appunti, più che una guida.
