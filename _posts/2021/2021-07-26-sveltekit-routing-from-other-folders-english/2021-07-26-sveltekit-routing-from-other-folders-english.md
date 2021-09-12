@@ -44,7 +44,7 @@ Before starting a few links:
 - [Sveltekit Markdown Blog](https://www.youtube.com/playlist?list=PLm_Qt4aKpfKgonq1zwaCS6kOD-nbOKx7V)
 
 
-The trick is to "map" all blog posts and keep them as "modules". Then I use [Vite](https://vitejs.dev/) to dynamically import the modules into the blog. To test I don't create a new repository. I continue modifying the [MEMENTO SvelteKit & GitHub Pages](https://github.com/el3um4s/memento-sveltekit-and-github-pages): I add a `src/news` folder in which to insert the various posts.
+The trick is to "map" all blog posts and keep them as "modules". Then I use [Vite](https://vitejs.dev/) to dynamically import the modules into the blog. To test I don't create a new repository. I continue modifying the [MEMENTO SvelteKit & GitHub Pages](https://github.com/el3um4s/memento-sveltekit-and-github-pages): I add a `src/news` folder to insert the various posts.
 
 I use a structure similar to the one I will need in my blog. So the posts will be divided by year but not by month. Each post will stay in a folder whose first few characters represent the publication date. Inside the folder I will put the images I will need and an `index.md` file with the post. I think in the future I will have to add the ability to use markdown files with other names. That's enough for the moment.
 
@@ -64,7 +64,7 @@ First, I need the list of all markdown files contained in the `news` folder. I u
 const allPosts = import.meta.globEager(`../news/**/*.md`);
 ```
 
-With this code I get all the `md` files as modules. Then I go through every post I have found and I extract some data
+With this code I get all the `md` files as modules. Then I go through every post I've just found and I extract some data
 
 ``` js
 for (let path in allPosts) {
@@ -160,7 +160,7 @@ And I change the html code:
 
 ### [slug].svelte
 
-Once I have fixed the home page, I have to understand how to access the various posts using a simplified slug. I need a [dynamic parameter](https://kit.svelte.dev/docs#routing-pages). So I create the `src/routes/[slug].svelte` component.
+Once I fix the home page, I have to understand how to access the various posts using a simplified slug. I need a [dynamic parameter](https://kit.svelte.dev/docs#routing-pages). So I create the `src/routes/[slug].svelte` component.
 
 I have to import the various posts. But this time I also import the modules of the various posts:
 
