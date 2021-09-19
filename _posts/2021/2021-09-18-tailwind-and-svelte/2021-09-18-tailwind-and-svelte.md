@@ -1,5 +1,5 @@
 ---
-title: "Tailwind CSS and Svelte"
+title: "Tailwind CSS & Svelte"
 published: true
 usa_webp: true
 header:
@@ -21,7 +21,7 @@ tags:
 
 Come dicevo già qualche giorno fa ho deciso di concentrarmi su alcuni progetti più complessi. Il primo è "GEST - Dashboard". Nome abbastanza brutto, lo ammetto, ma farò in tempo a cambiarlo più avanti. Mi serve uno strumento per aprire su pc offline delle applicazioni web. Nella mia testa ogni applicazione web sarà una cartella contenente tutti i file (oppure un file compresso, non ho ancora deciso) e verrà visualizzata in una finestra. Userò Electron in combinazione con Svelte e Tailwind. Ci sono alcuni problemi interessanti che sto incontrando. Uno di questi riguarda proprio come integrare TailwindCSS con Svelte.
 
-In rete ho trovato iù tutorial ma non tutti aggiornati. Ce n'è però uno ben fatto, di [sarioglu](https://dev.to/sarioglu): [Using Svelte with Tailwindcss - A better approach](https://dev.to/sarioglu/using-svelte-with-tailwindcss-a-better-approach-47ph). Inoltre vale anche la pena di dare un'occhiata al repository [dionysiusmarquis/svelte-tailwind-template](https://github.com/dionysiusmarquis/svelte-tailwind-template) Mi sono ispirato molto a questo pezzo, riporto qui i passaggi che ho fatto io e che paiono funzionare.
+In rete ho trovato alcuni tutorial ma non tutti sono aggiornati. Ce n'è però uno ben fatto, di [sarioglu](https://dev.to/sarioglu): [Using Svelte with Tailwindcss - A better approach](https://dev.to/sarioglu/using-svelte-with-tailwindcss-a-better-approach-47ph). Inoltre vale anche la pena di dare un'occhiata al repository [dionysiusmarquis/svelte-tailwind-template](https://github.com/dionysiusmarquis/svelte-tailwind-template) Mi sono ispirato molto a questo pezzo, riporto qui i passaggi che ho fatto io e che paiono funzionare.
 
 Parto dal mio repository [MEMENTO - Svelte Electron Typescript](https://github.com/el3um4s/memento-svelte-electron-typescript). Per prima cosa controllo quali pacchetti vanno aggiornati dall'ultima volta che ci ho lavorato:
 
