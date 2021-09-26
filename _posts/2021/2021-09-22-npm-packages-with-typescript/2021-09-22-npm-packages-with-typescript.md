@@ -19,7 +19,7 @@ tags:
   - TypeScript
 ---
 
-Man mano che faccio i miei esperimenti mi sto accorgendo di avere alcuni pezzi di codice ripetuti spesso. Francamente inizia ad essere complicato tenere sincronizzato tutto. Ho deciso perciò di cominciare a centralizzare su [NPM](https://www.npmjs.com/) alcune funzioni che uso di puù. Ma come posso creare un package NPM usando TypeScript? Beh, ho dovuto unire un po' di guide e fare un po' di prove. Questi sono i passaggi che ho seguito.
+Man mano che faccio i miei esperimenti mi sto accorgendo di avere alcuni pezzi di codice ripetuti spesso. Francamente inizia ad essere complicato tenere sincronizzato tutto. Ho deciso perciò di cominciare a centralizzare su [NPM](https://www.npmjs.com/) alcune funzioni che uso di più. Ma come posso creare un package NPM usando TypeScript? Beh, ho dovuto unire un po' di guide e fare un po' di prove. Questi sono i passaggi che ho seguito.
 
 ### Inizializzo il pacchetto e installo TypeScript
 
