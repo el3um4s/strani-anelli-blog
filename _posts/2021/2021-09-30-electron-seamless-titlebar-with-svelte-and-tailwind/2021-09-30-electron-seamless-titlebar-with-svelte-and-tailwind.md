@@ -173,7 +173,7 @@ Adesso la finestra si può muovere. Ma mi interessa anche poterla chiudere, ridu
 </style>
 ```
 
-Imposto l'area dei pulsanti come `no-drag` per rendere più semplice cliccare sui pulsanti stessi. E a proposito di pulsanti, nel codice sopra ho usato delle scritte ma forse è meglio usare delle icone. Tailwind permette di usare facilemnte le icone di [heroicons](https://heroicons.com/). Ne approfitto e creo alcuni componenti Svelte per visualizzare le icone. Questo, per esempio, è il componente `IconClose.svelte`:
+Imposto l'area dei pulsanti come `no-drag` per rendere più semplice cliccare sui pulsanti stessi. E a proposito di pulsanti, nel codice sopra ho usato delle scritte ma forse è meglio usare delle icone. Tailwind permette di usare facilmente le icone di [heroicons](https://heroicons.com/). Ne approfitto e creo alcuni componenti Svelte per visualizzare le icone. Questo, per esempio, è il componente `IconClose.svelte`:
 
 ```html
 <script lang="ts">
