@@ -51,7 +51,7 @@ let window = new BrowserWindow({...settings})
 
 For aesthetic reasons I add some basic styles to the `tailwind.pcss` file:
 
-```pcss
+```css
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
@@ -113,6 +113,7 @@ Then I add the component to `App.svelte`:
 
 Obviously this does not cause any visible changes. I need to add some styles to my component:
 
+```html
 <style lang="postcss">
   header {
     @apply block fixed w-full h-8 p-1 bg-gray-50 text-red-900 font-bold;
@@ -123,6 +124,7 @@ Obviously this does not cause any visible changes. I need to add some styles to 
     height: calc(100% - theme("spacing.8"));
   }
 </style>
+```
 
 I set the header height to 32px using Tailwind's `h-8` class and set the underlying page height accordingly:
 

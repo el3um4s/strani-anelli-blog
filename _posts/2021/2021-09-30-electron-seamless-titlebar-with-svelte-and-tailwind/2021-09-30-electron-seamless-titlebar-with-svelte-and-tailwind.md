@@ -50,7 +50,7 @@ let window = new BrowserWindow({...settings})
 
 Per questioni estetiche aggiungo alcuni stili base al file `tailwind.pcss`: 
 
-```pcss
+```css
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
@@ -112,6 +112,7 @@ Aggiungo quindi il componente a `App.svelte`:
 
 Ovviamente questo non provoca nessun cambiamento tangibile alla finestra. Devo aggiungere alcuni stili al mio componente:
 
+```html
 <style lang="postcss">
   header {
     @apply block fixed w-full h-8 p-1 bg-gray-50 text-red-900 font-bold;
@@ -122,6 +123,7 @@ Ovviamente questo non provoca nessun cambiamento tangibile alla finestra. Devo a
     height: calc(100% - theme("spacing.8"));
   }
 </style>
+```
 
 Fisso l'altezza dell'header a 32px usando la classe `h-8` di Tailwind e imposto di conseguenza l'altezza della pagina sottostante:
 
