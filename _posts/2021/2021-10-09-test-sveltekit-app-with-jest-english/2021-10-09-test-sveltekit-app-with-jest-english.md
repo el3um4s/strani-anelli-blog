@@ -52,7 +52,7 @@ npm run dev -- --open
 
 Good. So far the easy part. Now the fun begins.
 
-### Installo Jest
+### Install Jest
 
 As always, I searched the internet. There are many interesting posts
 
