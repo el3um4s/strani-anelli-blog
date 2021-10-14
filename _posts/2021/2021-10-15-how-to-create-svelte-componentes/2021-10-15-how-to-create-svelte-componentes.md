@@ -106,13 +106,13 @@ Tutto molto bello e molto veloce. Ma ci possono essere cose che non vanno subito
 
 Non è la prima volta che mi capita. Per risolvere questo problema ho dovuto testare più volte il pacchetto creato da SvelteKit. Una possibilità è di caricarlo ogni volta online e poi riscaricarlo per testarlo. L'alternativa è usare [`npm-link`](https://docs.npmjs.com/cli/v7/commands/npm-link/). In pratica posso collegare un pacchetto salvato sul mio computer e usarlo come origine per un altro progetto.
 
-Ci sono due comandi da digitare. Il primo nella cartella dove c'è il codice del pacchatto (nel mio caso in `package`):
+Ci sono due comandi da digitare. Il primo nella cartella dove c'è il codice del pacchetto (nel mio caso in `package`):
 
 ```bash
 npm link
 ```
 
-Il secondo comando è nel progetto dove intendo usare il mio pacchetto. Invece di usare `npm installe name-package` uso il comando:
+Il secondo comando è nel progetto dove intendo usare il mio pacchetto. Invece di usare `npm install name-package` uso il comando:
 
 ```bash
 npm link name-package
