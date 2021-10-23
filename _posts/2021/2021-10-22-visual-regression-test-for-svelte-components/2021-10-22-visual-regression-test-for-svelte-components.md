@@ -1,6 +1,6 @@
 ---
 title: "Svelte e Visual Regression Test"
-published: false
+published: true
 usa_webp: true
 header:
   immagine_tipo: "jpg"
@@ -17,7 +17,6 @@ categories:
   - SvelteKit
   - NPM
   - Template
-  - Puppeteer
 tags:
   - Svelte
   - TypeScript
@@ -26,10 +25,9 @@ tags:
   - SvelteKit
   - NPM
   - Template
-  - Puppeteer
 ---
 
-Ammetto di trovarmi sempre più a mio agio con lo sviluppo guidato dai test (che quelli bravi chiamano TDD - [Test-driven development](https://en.wikipedia.org/wiki/Test-driven_development)). Anche perché man mano che sorgono i problemi so dove andare a cercarli. Ovviamente sconto ancora una certa inesperienza. E penso di pagare anche una certa ingenuità. Un problema che mi ha fatto sbattere la testa è legato alle modifiche non volute dell'aspetto grafico di una pagina web. Per risolvere questo problema ho dovuto imparare come eseguire dei Visual Regression Test.
+Ammetto di trovarmi sempre più a mio agio con lo sviluppo guidato dai test (TDD - [Test-driven development](https://en.wikipedia.org/wiki/Test-driven_development)). Anche perché man mano che sorgono i problemi so dove andare a cercarli. Ovviamente sconto ancora una certa inesperienza. E penso di pagare anche una certa ingenuità. Un problema che mi ha fatto sbattere la testa è legato alle modifiche non volute dell'aspetto grafico di una pagina web. Per risolvere questo problema ho dovuto imparare come eseguire dei Visual Regression Test.
 
 ### Scelgo che strumenti usare
 
@@ -172,3 +170,130 @@ Questa volta ripetendo il test `npm run test:e2e` non ottengo errori.
 
 ### Creo un test personalizzato
 
+Ovviamente questo test è inutile: serve solo a me per capire come creare qualcosa di utile. Creo una pagina `src/routes/test.svelte` dedicata ai test:
+
+```html
+<script lang="ts">
+	import GridColors from '$lib/components/GridColors.svelte';
+	import { stringToColorStyle } from '../lib/functions/ChromaColors';
+
+	const settings = {
+		firstColor: 'khaki',
+		secondColor: 'teal',
+		steps: 9
+	};
+
+	settings.firstColor = stringToColorStyle(settings.firstColor).hex;
+	settings.secondColor = stringToColorStyle(settings.secondColor).hex;
+
+	let borderColor = 'orange';
+
+	$: settings.firstColor = stringToColorStyle(settings.firstColor).hex;
+	$: settings.secondColor = stringToColorStyle(settings.secondColor).hex;
+
+	const changeBorderColor = () => (borderColor = borderColor === 'orange' ? 'green' : 'orange');
+	const changeFirstColor = () =>
+		(settings.firstColor =
+			settings.firstColor === stringToColorStyle('khaki').hex ? 'tomato' : 'khaki');
+	const changeSecondColor = () =>
+		(settings.secondColor =
+			settings.secondColor === stringToColorStyle('teal').hex ? 'dimgray' : 'teal');
+	const reset = () => {
+		settings.firstColor = 'khaki';
+		settings.secondColor = 'teal';
+		settings.steps = 9;
+	};
+</script>
+
+<main>
+	<h1>Visual Regression Test</h1>
+	<p>Use this page to test component graphics changes</p>
+	<div id="grid-colors">
+		<GridColors {...settings} --border-color={borderColor} />
+	</div>
+
+	<section>
+		<button id="change-border-color" on:click={changeBorderColor}>Change border color</button>
+		<button id="change-first-color" on:click={changeFirstColor}>Change first color</button>
+		<button id="change-second-color" on:click={changeSecondColor}>Change second color</button>
+
+		<div>
+			<span>Steps:</span>
+			{#each Array(23) as array, i}
+				<label>
+					<input type="radio" bind:group={settings.steps} value={i + 2} />
+					{i + 2}
+				</label>
+			{/each}
+		</div>
+
+		<button id="reset" on:click={reset}>Reset</button>
+	</section>
+</main>
+
+<style lang="postcss">
+	#grid-colors { @apply mb-2 mt-2; }
+
+	main { @apply overflow-y-auto; }
+
+	section { @apply flex flex-col space-y-1; }
+</style>
+```
+
+Ho inserivo vari pulsanti e controlli per testare il mio componente in varie situazioni. Modifico il file `e2e.test.ts` in modo da fare riferimento alla pagina con i test:
+
+```ts
+import { Browser, chromium } from 'playwright';
+
+describe('visual regression test', () => {
+    let browser: Browser;
+
+    beforeAll(async () => {
+      browser = await chromium.launch();
+    });
+    afterAll(async () => {
+      await browser.close();
+    });
+
+    test("test page", async () => {
+        const page = await browser.newPage();
+        await page.goto('http://localhost:3000/test');
+        const image = await page.screenshot();
+        expect(image).toMatchImageSnapshot();
+    })
+})
+```
+
+Ed eseguo il test con il comando `npm run test:e2e`.
+
+Non mi interessa uno screenshot statico, mi interessa vedere cosa succede quando modifico i vari parametri. Aggiungo quindi un'azione per cliccare automaticamente su vari pulsanti, registrare lo schermo e poi confrontare il risultato:
+
+```ts
+test("test page", async () => {
+	const page = await browser.newPage();
+	await page.goto('http://localhost:3000/test');
+
+	const image = await page.screenshot();
+	expect(image).toMatchImageSnapshot();
+
+	await page.click('text=Change border color');
+	let changeBorder = await page.screenshot();
+	expect(changeBorder).toMatchImageSnapshot();
+	await page.click('text=Change border color');
+
+	changeBorder = await page.screenshot();
+	expect(changeBorder).toMatchImageSnapshot();
+})
+```
+
+Creo in maniera simile i test per tutti i pulsanti e i controlli.
+
+Dopo aver sistemato i test posso tornare a modificare il codice. La cosa bella è che sbaglio qualcosa, o se succede qualcosa di non previsto, posso avere un warning e accorgermi rapidamente che qualcosa non funziona:
+
+{% include picture img="regression-test-5.webp" ext="jpg" alt="" %}
+
+Un'altra cosa interessante è che gli screenshot danno una buona idea delle caratteristiche del componente e valgono quasi come documentazione:
+
+{% include picture img="regression-test-6.webp" ext="jpg" alt="" %}
+
+Questo è tutto, per il momento. Come al solito è possibile vedere il codice del repository all'indirizzo [el3um4s/svelte-component-package-starter](https://github.com/el3um4s/svelte-component-package-starter).
