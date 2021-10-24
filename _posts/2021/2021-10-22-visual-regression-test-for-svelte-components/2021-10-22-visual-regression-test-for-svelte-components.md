@@ -51,14 +51,6 @@ Per un uso base non mi serve altro ma preferisco continuare a usare [Jest](https
 npm i --save-dev jest-image-snapshot @types/jest-image-snapshot
 ```
 
-
-
-Ho trovato utile anche il post [Using Jest with Playwright](https://playwright.tech/blog/using-jest-with-playwright) di Max Schmitt. Installo quindi [jest-playwright-preset](https://github.com/playwright-community/jest-playwright):
-
-```bash
-npm install -D jest jest-playwright-preset
-```
-
 ### Metto in ordine i test vecchi
 
 È buona pratica tenere separati i test e2e (End to End). Quindi modifico leggermente la struttura del mio template e creo le due cartelle `src/__tests__/unit` e `src/__tests__/e2e`:
