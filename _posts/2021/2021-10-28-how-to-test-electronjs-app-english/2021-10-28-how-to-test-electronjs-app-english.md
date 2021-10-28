@@ -1,6 +1,6 @@
 ---
 title: "How to Test Electron Apps"
-published: false
+published: true
 usa_webp: true
 header:
   immagine_tipo: "jpg"
@@ -21,7 +21,7 @@ tags:
   - Playwright
 ---
 
-In my last posts I talked about how to test Svelte components and NPM packages. My journey is not over. I have yet to figure out how to test Electron applications.
+In my last posts I talked about how to test Svelte components and NPM packages. My journey is not over. I have still to figure out how to test Electron applications.
 
 ### The tools available
 
@@ -59,7 +59,7 @@ import { _electron as electron } from "playwright";
 import { test, expect } from "@playwright/test";
 ```
 
-The test I have to write is asynchronous: Electron opening is not always immediate so I have to make sure to perform the various operations only when they are actually possible. The first thing to do is to start Electron:
+The test I have to write is asynchronous: Electron opening is not always immediate so I want to be sure to perform the various operations only when they are actually possible. The first thing to do is to start Electron:
 
 ```ts
 test("Launch electron app", async () => {
