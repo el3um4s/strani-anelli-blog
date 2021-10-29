@@ -25,7 +25,6 @@ I waited a few weeks before writing a new article about how to use Svelte with G
 
 First I create a new project based on [SvelteKit](https://kit.svelte.dev/) by typing:
 
-
 ```bash
 npm init svelte@next my-app
 ```
@@ -37,7 +36,6 @@ npm i
 ```
 
 To simplify publishing on GitHub Pages I use [gh-pages](https://www.npmjs.com/package/gh-pages) once again:
-
 
 ```bash
 npm install gh-pages --save-dev
@@ -53,28 +51,9 @@ I add the script on `package.json`:
 
 And then I create the `gh-pages.js` file:
 
-```js
-import { publish } from 'gh-pages';
-
-publish(
- 'build', // path to public directory
- {
-  branch: 'gh-pages',
-  repo: 'https://github.com/el3um4s/memento-sveltekit-and-github-pages.git', // Update to point to your repository
-  user: {
-   name: 'Samuele de Tomasi', // update to use your name
-   email: 'samuele@stranianelli.com' // Update to use your email
-  },
-  dotfiles: true
-  },
-  () => {
-   console.log('Deploy Complete!');
-  }
-);
-```
+<script src="https://gist.github.com/el3um4s/2d3a9bd9adae78d3db8c5a4d6e8fbe98.js"></script>
 
 To publish on GitHub I need the [adapter-static](https://www.npmjs.com/package/@sveltejs/adapter-static):
-
 
 ```bash
 npm i -D @sveltejs/adapter-static@next
@@ -82,29 +61,7 @@ npm i -D @sveltejs/adapter-static@next
 
 So, I update the `svelte.config.js` file
 
-```js
-import preprocess from 'svelte-preprocess';
-import adapter from '@sveltejs/adapter-static';
-
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
- // Consult https://github.com/sveltejs/svelte-preprocess
- // for more information about preprocessors
- preprocess: preprocess(),
-
- kit: {
- // hydrate the <div id="svelte"> element in src/app.html
-  target: '#svelte',
-  adapter: adapter({
-    pages: 'build',
-    assets: 'build',
-    fallback: null
-  })
- }
-};
-
-export default config;
-```
+<script src="https://gist.github.com/el3um4s/f6b863d32a68941b6a620f7e2fc65862.js"></script>
 
 If I run the command
 
@@ -126,7 +83,6 @@ Then I need 2 more files, both in the `static` folder:
 `.nojekyll` is an empty file. Create it and don't write anything in it.
 
 `CNAME` contains only one line: the domain name, in this format:
-
 
 ```bash
 test.stranianelli.com
@@ -186,7 +142,6 @@ npm i -D mdsvex
 
 and in succession I use [svelte-add/mdsvex](https://github.com/svelte-add/mdsvex):
 
-
 ```bash
 npx svelte-add@latest mdsvex
 ```
@@ -195,14 +150,14 @@ npx svelte-add@latest mdsvex
 
 ```js
 const config = {
-  "extensions": [".svelte.md", ".md", ".svx"],
+  extensions: [".svelte.md", ".md", ".svx"],
 
-  "smartypants": {
-    "dashes": "oldschool"
+  smartypants: {
+    dashes: "oldschool",
   },
 
-  "remarkPlugins": [],
-  "rehypePlugins": []
+  remarkPlugins: [],
+  rehypePlugins: [],
 };
 
 export default config;
@@ -211,26 +166,24 @@ export default config;
 I change `svelte.config.js` to handle the markdown:
 
 ```js
-import {
- mdsvex
-} from "mdsvex";
+import { mdsvex } from "mdsvex";
 import mdsvexConfig from "./mdsvex.config.js";
-import preprocess from 'svelte-preprocess';
-import adapter from '@sveltejs/adapter-static';
+import preprocess from "svelte-preprocess";
+import adapter from "@sveltejs/adapter-static";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
- "extensions": [".svelte", ...mdsvexConfig.extensions],
+  extensions: [".svelte", ...mdsvexConfig.extensions],
   preprocess: [preprocess(), mdsvex(mdsvexConfig)],
 
   kit: {
-   target: '#svelte',
-   adapter: adapter({
-	pages: 'build',
-	assets: 'build',
-	fallback: null
-   })
-  }
+    target: "#svelte",
+    adapter: adapter({
+      pages: "build",
+      assets: "build",
+      fallback: null,
+    }),
+  },
 };
 
 export default config;
@@ -269,7 +222,7 @@ Image management is a bit more complicated. I still don't know which is the best
 
 ```html
 <script>
- <img src="image.jpg" />
+  <img src="image.jpg" />;
 </script>
 ```
 
@@ -277,10 +230,10 @@ Otherwise, I can put them in a folder inside `lib` and then import them as compo
 
 ```html
 <script>
- import ImageSrc from "$lib/assets/drums.png";
+  import ImageSrc from "$lib/assets/drums.png";
 </script>
 
-<img src={ImageSrc} />
+<img src="{ImageSrc}" />
 ```
 
 ### Create a post index
@@ -291,7 +244,7 @@ I start by importing an array with a reference to all `.md` files in the folder:
 
 ```html
 <script context="module">
- const allPosts = import.meta.glob("./**/*.md");
+  const allPosts = import.meta.glob("./**/*.md");
 </script>
 ```
 
@@ -302,15 +255,15 @@ I extract the information I need from that array:
 
 ```html
 <script context="module">
- const allPosts = import.meta.glob("./**/*.md");
- let body = [];
- for (let path in allPosts) {
-  body.push(
-   allPosts[path]().then( ({metadata}) => {
-    return { path, metadata}
-   })
-  );  
- }
+  const allPosts = import.meta.glob("./**/*.md");
+  let body = [];
+  for (let path in allPosts) {
+   body.push(
+    allPosts[path]().then( ({metadata}) => {
+     return { path, metadata}
+    })
+   );
+  }
 </script>
 ```
 
@@ -318,13 +271,13 @@ Finally I pass to the component what I need to create the index:
 
 ```html
 <script context="module">
-// ...
- export async function load() {
-  const posts = await Promise.all(body);
-   return {
-    props: {posts}
-   }
- }
+  // ...
+  export async function load() {
+    const posts = await Promise.all(body);
+    return {
+      props: { posts },
+    };
+  }
 </script>
 ```
 
@@ -350,9 +303,9 @@ The rest of the component is quite simple:
 
 ```html
 <nav>
-    <a sveltekit:prefetch href="./">Blog</a>
-	<a sveltekit:prefetch href="../about">About</a>
-    <a sveltekit:prefetch href="../">Home</a>
+  <a sveltekit:prefetch href="./">Blog</a>
+  <a sveltekit:prefetch href="../about">About</a>
+  <a sveltekit:prefetch href="../">Home</a>
 </nav>
 
 <slot></slot>
@@ -372,7 +325,7 @@ Or I can insert in the layout:
 
 ```html
 <svelte:head>
-    <link href="prism.css" rel="stylesheet" />
+  <link href="prism.css" rel="stylesheet" />
 </svelte:head>
 ```
 
@@ -432,8 +385,8 @@ and then I use it in the layout:
 
 ```html
 <script>
-  import PageTransition from "$lib/PageTransition.svelte"
-  export let key
+  import PageTransition from "$lib/PageTransition.svelte";
+  export let key;
 </script>
 
 <script context="module">
@@ -441,7 +394,7 @@ and then I use it in the layout:
     props: {
       key: page.path,
     },
-  })
+  });
 </script>
 
 <div>
@@ -450,7 +403,7 @@ and then I use it in the layout:
     <a href="/about">About</a>
   </nav>
 
-<PageTransition refresh={key}>
+  <PageTransition refresh="{key}">
     <slot />
   </PageTransition>
 </div>
