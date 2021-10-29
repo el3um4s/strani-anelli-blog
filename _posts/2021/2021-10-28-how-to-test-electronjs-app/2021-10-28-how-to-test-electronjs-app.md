@@ -39,12 +39,7 @@ npm i -D playwright @playwright/test
 
 Poiché mi interessa testare solamente Electron non installo gli altri browser (non uso `npx playwright install` perché non mi serve). Però aggiungo uno script a `package.json`:
 
-```json
-"scripts": {
-	//...
-	"test": "npx playwright test"
-}
-```
+<script src="https://gist.github.com/el3um4s/ca5415e2d4db9121a5bcb4f52fa8dd33.js"></script>
 
 ### Creo il primo test: Electron si avvia
 
