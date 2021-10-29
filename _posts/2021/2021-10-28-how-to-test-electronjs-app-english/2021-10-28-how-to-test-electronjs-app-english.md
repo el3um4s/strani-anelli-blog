@@ -39,12 +39,7 @@ npm i -D playwright @playwright/test
 
 Since I'm only interested in testing Electron I don't install the other browsers (I don't use `npx playwright install` because I don't need it). But I add a script to `package.json`:
 
-```json
-"scripts": {
-	//...
-	"test": "npx playwright test"
-}
-```
+<script src="https://gist.github.com/el3um4s/ca5415e2d4db9121a5bcb4f52fa8dd33.js"></script>
 
 ### Create the first test: Electron starts
 
@@ -54,97 +49,27 @@ Reading the Playwright documentation, I can find two experimental classes: [Elec
 
 I also need the [Test](https://playwright.dev/docs/api/class-test/) class, to run the various tests and indicate what I expect to achieve.
 
-```ts
-import { _electron as electron } from "playwright";
-import { test, expect } from "@playwright/test";
-```
+<script src="https://gist.github.com/el3um4s/904abdc16f86a72111d204a320f148f5.js"></script>
 
 The test I have to write is asynchronous: Electron opening is not always immediate so I want to be sure to perform the various operations only when they are actually possible. The first thing to do is to start Electron:
 
-```ts
-test("Launch electron app", async () => {
-  const electronApp = await electron.launch({ args: ["."] });
-});
-```
+<script src="https://gist.github.com/el3um4s/58467e244c10275479ad931c02e744e0.js"></script>
 
 After starting the app, check if there is a visible window. I use [electronApplication.evaluate(pageFunction[, arg])](https://playwright.dev/docs/api/class-electronapplication#electron-application-evaluate)
 
-```ts
-const windowState = await electronApp.evaluate(async ({ BrowserWindow }) => {
-  const mainWindow = BrowserWindow.getAllWindows()[0];
-
-  const getState = () => ({
-    isVisible: mainWindow.isVisible(),
-    isDevToolsOpened: mainWindow.webContents.isDevToolsOpened(),
-    isCrashed: mainWindow.webContents.isCrashed(),
-  });
-
-  return new Promise((resolve) => {
-    if (mainWindow.isVisible()) {
-      resolve(getState());
-    } else {
-      mainWindow.once("ready-to-show", () =>
-        setTimeout(() => resolve(getState()), 0)
-      );
-    }
-  });
-});
-```
+<script src="https://gist.github.com/el3um4s/64990fcd4c3dcd5f3f4e1c8be4d428b7.js"></script>
 
 This way I end up with a `windowState` object containing the state of the Electron window. I expect the window to be visible, the development window to be closed and the app not to crash. Translated into code:
 
-```ts
-expect(windowState.isVisible).toBeTruthy();
-expect(windowState.isDevToolsOpened).toBeFalsy();
-expect(windowState.isCrashed).toBeFalsy();
-```
+<script src="https://gist.github.com/el3um4s/d423ef55326ef6310b2e8ce66833f9e3.js"></script>
 
 To finish after running the tests I close Electron:
 
-```ts
-await electronApp.close();
-```
+<script src="https://gist.github.com/el3um4s/3e1f0fce9a06a4206bea218df568df6d.js"></script>
 
 Now I put it all together and this is my first test:
 
-```ts
-import { _electron as electron } from "playwright";
-import { test, expect } from "@playwright/test";
-
-test("Launch electron app", async () => {
-  const electronApp = await electron.launch({ args: ["."] });
-
-  const windowState: {
-    isVisible: boolean;
-    isDevToolsOpened: boolean;
-    isCrashed: boolean;
-  } = await electronApp.evaluate(async ({ BrowserWindow }) => {
-    const mainWindow = BrowserWindow.getAllWindows()[0];
-
-    const getState = () => ({
-      isVisible: mainWindow.isVisible(),
-      isDevToolsOpened: mainWindow.webContents.isDevToolsOpened(),
-      isCrashed: mainWindow.webContents.isCrashed(),
-    });
-
-    return new Promise((resolve) => {
-      if (mainWindow.isVisible()) {
-        resolve(getState());
-      } else {
-        mainWindow.once("ready-to-show", () =>
-          setTimeout(() => resolve(getState()), 0)
-        );
-      }
-    });
-  });
-
-  expect(windowState.isVisible).toBeTruthy();
-  expect(windowState.isDevToolsOpened).toBeFalsy();
-  expect(windowState.isCrashed).toBeFalsy();
-
-  await electronApp.close();
-});
-```
+<script src="https://gist.github.com/el3um4s/9bc6fc06d8726ea9aabb7f570e0332b9.js"></script>
 
 To run it I use the command:
 
@@ -156,118 +81,43 @@ npm run test
 
 Well, the app starts up. The next check is the content. Since I will be running multiple tests in sequence on the same page I use `test.describe`
 
-```ts
-test.describe("Check Man Page", async () => {
-  let electronApp: ElectronApplication;
-  let firstWindow: Page;
-
-  test.beforeAll(async () => {
-    electronApp = await electron.launch({ args: ["."] });
-    firstWindow = await electronApp.firstWindow();
-  });
-
-  // ...
-
-  test.afterAll(async () => {
-    await electronApp.close();
-  });
-});
-```
+<script src="https://gist.github.com/el3um4s/615c5a669d50aa1572d9cb733e13db71.js"></script>
 
 I can interact with the various elements of the page and check their HTML code. For example, I can make sure what the page title is:
 
-```ts
-test("Check title", async () => {
-  const title = await firstWindow.title();
-  expect(title).toBe("MEMENTO - Svelte, TailwindCSS, Electron and TypeScript");
-});
-```
+<script src="https://gist.github.com/el3um4s/164a153b7097ca53ecd4904e12721bbd.js"></script>
 
 Or I can check that the version number of the app is actually displayed:
 
-```ts
-test("Check version number: APP", async () => {
-  const versionNumberApp = await firstWindow.innerText(
-    "data-testid=version-number-app"
-  );
-  expect(versionNumberApp).not.toBe("-");
-  const isValidNumberApp = semver.valid(semver.coerce(versionNumberApp));
-  expect(semver.valid(isValidNumberApp)).not.toBeNull();
-});
-```
+<script src="https://gist.github.com/el3um4s/98475c5449875b0a298c70bb2eb97a0e.js"></script>
 
 ### Check the graphics
 
 Beyond the content, a useful thing is the ability to check the look and feel of Electron. To do this I have to take screenshots of the window and compare them with a reference image.
 
-```ts
-test("Check Screenshot", async () => {
-  await firstWindow.screenshot({ path: "tests/screenshot/firstWindow.png" });
-  expect(await firstWindow.screenshot()).toMatchSnapshot("firstWindow.png");
-});
-```
+<script src="https://gist.github.com/el3um4s/ae44bf6004c2673e770d3a96c5594ab0.js"></script>
 
 Every time I run the test Playwright compares the screenshot of the window (saved in `tests/screenshot/firstWindow.png`) with the reference one. The reference image is created at the first start of the test and is immutable unless you explicitly indicate that you want to update it.
 
 I add a script to `package.json` to change the reference images:
 
-```json
-"scripts": {
-	//...
-	"test:update-screenshot": "npx playwright test --update-snapshots"
-}
-```
+<script src="https://gist.github.com/el3um4s/2037cd67cd89ec88948c647119775551.js"></script>
 
 ### Customize Playwright
 
 I can configure the overall behavior of Playwright by creating a `playwright.config.ts` file. I'm interested in customizing the sensitivity of `toMatchSnapshot`, so I write:
 
-```ts
-import { PlaywrightTestConfig } from "@playwright/test";
-
-const config: PlaywrightTestConfig = {
-  testDir: "./tests",
-  expect: {
-    toMatchSnapshot: { threshold: 0.2 },
-  },
-};
-
-export default config;
-```
+<script src="https://gist.github.com/el3um4s/f8b1f510ff9770c962e835ba0a3c3c0d.js"></script>
 
 ### Record the tests
 
 Another useful function of Playwright is the ability to record the various tests and play them on the screen. It can be used to check the behavior of the application and above all to understand what is not working. I need the [Tracing](https://playwright.dev/docs/api/class-tracing) class. With `start` and `stop` I can control the recording:
 
-```ts
-let context: BrowserContext;
-
-test.beforeAll(async () => {
-  electronApp = await electron.launch({ args: ["."] });
-  context = electronApp.context();
-  await context.tracing.start({ screenshots: true, snapshots: true });
-  firstWindow = await electronApp.firstWindow();
-
-  await firstWindow.screenshot({ path: "tests/screenshot/firstWindow.png" });
-  expect(await firstWindow.screenshot()).toMatchSnapshot("firstWindow.png");
-});
-
-// ...
-
-test.afterAll(async () => {
-  await context.tracing.stop({ path: "tests/tracing/trace.zip" });
-  await electronApp.close();
-});
-```
+<script src="https://gist.github.com/el3um4s/d16111e7d2112963f38dba7ca76c3577.js"></script>
 
 The recording is saved in a `zip` file. To be able to open it easily I add a script to `package.json`:
 
-```json
-"scripts": {
-	// ...
-	"test:show-trace": "npx playwright show-trace tests/tracing/trace.zip"
-}
-```
+<script src="https://gist.github.com/el3um4s/4a4ac6a918fb1d74eb6c04e5bb5a5f32.js"></script>
 
 ### Useful links
 
