@@ -73,17 +73,11 @@ Dopo aver avviato l'app intercetto se esiste una finestra visibile. Per farlo us
 
 In questo modo mi ritrovo con un oggetto `windowState` contenente lo stato della finestra di Electron. Quello che mi aspetto è che la finestra si visibile, la finestra di sviluppo sia chiusa e che l'app non sia in crash. Tradotto in codice:
 
-```ts
-expect(windowState.isVisible).toBeTruthy();
-expect(windowState.isDevToolsOpened).toBeFalsy();
-expect(windowState.isCrashed).toBeFalsy();
-```
+<script src="https://gist.github.com/el3um4s/d423ef55326ef6310b2e8ce66833f9e3.js"></script>
 
 Per finire dopo aver eseguito i test chiudo Electron:
 
-```ts
-await electronApp.close();
-```
+<script src="https://gist.github.com/el3um4s/3e1f0fce9a06a4206bea218df568df6d.js"></script>
 
 Adesso metto tutto assieme e questo è il mio primo test:
 
