@@ -51,25 +51,7 @@ Aggiungo lo script su `package.json`:
 
 E quindi creo il file gh-pages.js:
 
-```js
-import { publish } from 'gh-pages';
-
-publish(
- 'build', // path to public directory
- {
-  branch: 'gh-pages',
-  repo: 'https://github.com/el3um4s/memento-sveltekit-and-github-pages.git', // Update to point to your repository
-  user: {
-   name: 'Samuele de Tomasi', // update to use your name
-   email: 'samuele@stranianelli.com' // Update to use your email
-  },
-  dotfiles: true
-  },
-  () => {
-   console.log('Deploy Complete!');
-  }
-);
-```
+<script src="https://gist.github.com/el3um4s/2d3a9bd9adae78d3db8c5a4d6e8fbe98.js"></script>
 
 Per pubblicare su GitHub mi serve l'[adapter-static](https://www.npmjs.com/package/@sveltejs/adapter-static):
 
@@ -80,25 +62,25 @@ npm i -D @sveltejs/adapter-static@next
 Aggiorno quindi il file `svelte.config.js`
 
 ```js
-import preprocess from 'svelte-preprocess';
-import adapter from '@sveltejs/adapter-static';
+import preprocess from "svelte-preprocess";
+import adapter from "@sveltejs/adapter-static";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
- // Consult https://github.com/sveltejs/svelte-preprocess
- // for more information about preprocessors
- preprocess: preprocess(),
+  // Consult https://github.com/sveltejs/svelte-preprocess
+  // for more information about preprocessors
+  preprocess: preprocess(),
 
- kit: {
- // hydrate the <div id="svelte"> element in src/app.html
-  target: '#svelte',
-  adapter: adapter({
-  // default options are shown
-   pages: 'build',
-   assets: 'build',
-   fallback: null
-  })
- }
+  kit: {
+    // hydrate the <div id="svelte"> element in src/app.html
+    target: "#svelte",
+    adapter: adapter({
+      // default options are shown
+      pages: "build",
+      assets: "build",
+      fallback: null,
+    }),
+  },
 };
 
 export default config;
@@ -191,14 +173,14 @@ npx svelte-add@latest mdsvex
 
 ```js
 const config = {
-  "extensions": [".svelte.md", ".md", ".svx"],
+  extensions: [".svelte.md", ".md", ".svx"],
 
-  "smartypants": {
-    "dashes": "oldschool"
+  smartypants: {
+    dashes: "oldschool",
   },
 
-  "remarkPlugins": [],
-  "rehypePlugins": []
+  remarkPlugins: [],
+  rehypePlugins: [],
 };
 
 export default config;
@@ -207,26 +189,24 @@ export default config;
 Modifico `svelte.config.js` in modo da gestire il markdown:
 
 ```js
-import {
- mdsvex
-} from "mdsvex";
+import { mdsvex } from "mdsvex";
 import mdsvexConfig from "./mdsvex.config.js";
-import preprocess from 'svelte-preprocess';
-import adapter from '@sveltejs/adapter-static';
+import preprocess from "svelte-preprocess";
+import adapter from "@sveltejs/adapter-static";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
- "extensions": [".svelte", ...mdsvexConfig.extensions],
+  extensions: [".svelte", ...mdsvexConfig.extensions],
   preprocess: [preprocess(), mdsvex(mdsvexConfig)],
 
   kit: {
-   target: '#svelte',
-   adapter: adapter({
-	pages: 'build',
-	assets: 'build',
-	fallback: null
-   })
-  }
+    target: "#svelte",
+    adapter: adapter({
+      pages: "build",
+      assets: "build",
+      fallback: null,
+    }),
+  },
 };
 
 export default config;
@@ -265,7 +245,7 @@ e usare dei componenti definiti altrove:
 
 ```html
 <script>
- <img src="image.jpg" />
+  <img src="image.jpg" />;
 </script>
 ```
 
@@ -273,10 +253,10 @@ In alternativa si possono inserire in una cartella dentro `lib` e poi importarle
 
 ```html
 <script>
- import ImageSrc from "$lib/assets/drums.png";
+  import ImageSrc from "$lib/assets/drums.png";
 </script>
 
-<img src={ImageSrc} />
+<img src="{ImageSrc}" />
 ```
 
 ### Creare un indice dei post
@@ -287,7 +267,7 @@ Comincio con l'importare nel componente un array con un riferimento a tutti file
 
 ```html
 <script context="module">
- const allPosts = import.meta.glob("./**/*.md");
+  const allPosts = import.meta.glob("./**/*.md");
 </script>
 ```
 
@@ -295,15 +275,15 @@ Estraggo da quell'array le informazioni che mi servono: `path`, ovvero la posizi
 
 ```html
 <script context="module">
- const allPosts = import.meta.glob("./**/*.md");
- let body = [];
- for (let path in allPosts) {
-  body.push(
-   allPosts[path]().then( ({metadata}) => {
-    return { path, metadata}
-   })
-  );  
- }
+  const allPosts = import.meta.glob("./**/*.md");
+  let body = [];
+  for (let path in allPosts) {
+   body.push(
+    allPosts[path]().then( ({metadata}) => {
+     return { path, metadata}
+    })
+   );
+  }
 </script>
 ```
 
@@ -311,13 +291,13 @@ Infine passo al componente quello che mi serve per creare l'indice:
 
 ```html
 <script context="module">
-// ...
- export async function load() {
-  const posts = await Promise.all(body);
-   return {
-    props: {posts}
-   }
- }
+  // ...
+  export async function load() {
+    const posts = await Promise.all(body);
+    return {
+      props: { posts },
+    };
+  }
 </script>
 ```
 
@@ -343,9 +323,9 @@ Un'altra funzione interessante sono i [layouts](https://kit.svelte.dev/docs#layo
 
 ```html
 <nav>
-    <a sveltekit:prefetch href="./">Blog</a>
-	<a sveltekit:prefetch href="../about">About</a>
-    <a sveltekit:prefetch href="../">Home</a>
+  <a sveltekit:prefetch href="./">Blog</a>
+  <a sveltekit:prefetch href="../about">About</a>
+  <a sveltekit:prefetch href="../">Home</a>
 </nav>
 
 <slot></slot>
@@ -365,7 +345,7 @@ In alternativa posso inserire nel layout:
 
 ```html
 <svelte:head>
-    <link href="prism.css" rel="stylesheet" />
+  <link href="prism.css" rel="stylesheet" />
 </svelte:head>
 ```
 
@@ -425,8 +405,8 @@ e poi lo uso nel layout:
 
 ```html
 <script>
-  import PageTransition from "$lib/PageTransition.svelte"
-  export let key
+  import PageTransition from "$lib/PageTransition.svelte";
+  export let key;
 </script>
 
 <script context="module">
@@ -434,7 +414,7 @@ e poi lo uso nel layout:
     props: {
       key: page.path,
     },
-  })
+  });
 </script>
 
 <div>
@@ -443,7 +423,7 @@ e poi lo uso nel layout:
     <a href="/about">About</a>
   </nav>
 
-<PageTransition refresh={key}>
+  <PageTransition refresh="{key}">
     <slot />
   </PageTransition>
 </div>
