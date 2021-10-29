@@ -113,12 +113,7 @@ Ogni volta che eseguo il test Playwright confronta lo screenshot della finestra 
 
 Per cambiare le immagini di riferimento aggiungo uno script a `package.json`:
 
-```json
-"scripts": {
-	//...
-	"test:update-screenshot": "npx playwright test --update-snapshots"
-}
-```
+<script src="https://gist.github.com/el3um4s/2037cd67cd89ec88948c647119775551.js"></script>
 
 ### Personalizzo Playwright
 
@@ -134,12 +129,7 @@ Un'altra funzione utile di Playwright è la possibilità di registra i vari test
 
 La registrazione viene salvata in un file `zip`. Per poterlo aprire con semplicità aggiungo uno script a `package.json`:
 
-```json
-"scripts": {
-	// ...
-	"test:show-trace": "npx playwright show-trace tests/tracing/trace.zip"
-}
-```
+<script src="https://gist.github.com/el3um4s/4a4ac6a918fb1d74eb6c04e5bb5a5f32.js"></script>
 
 ### Link utili
 
