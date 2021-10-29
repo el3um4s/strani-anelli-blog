@@ -49,18 +49,11 @@ Spulciando nella documentazione di Playwright saltano fuori due classi speriment
 
 Mi serve inoltre la classe [Test](https://playwright.dev/docs/api/class-test/), per eseguire i vari test e indicare cosa mi aspetto di ottenere.
 
-```ts
-import { _electron as electron } from "playwright";
-import { test, expect } from "@playwright/test";
-```
+<script src="https://gist.github.com/el3um4s/904abdc16f86a72111d204a320f148f5.js"></script>
 
 Il test che devo scrivere è asincrono: l'apertura di Electron non è sempre immediata quindi devo assicurarmi di eseguire le varie operazioni solo quando sono effettivamente possibili. La prima cosa da fare è avviare Electron:
 
-```ts
-test("Launch electron app", async () => {
-  const electronApp = await electron.launch({ args: ["."] });
-});
-```
+<script src="https://gist.github.com/el3um4s/58467e244c10275479ad931c02e744e0.js"></script>
 
 Dopo aver avviato l'app intercetto se esiste una finestra visibile. Per farlo uso [electronApplication.evaluate(pageFunction[, arg])](https://playwright.dev/docs/api/class-electronapplication#electron-application-evaluate)
 
