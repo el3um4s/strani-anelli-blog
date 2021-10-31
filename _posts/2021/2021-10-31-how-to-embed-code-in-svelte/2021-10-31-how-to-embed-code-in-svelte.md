@@ -1,5 +1,5 @@
 ---
-title: "Come Mostrare Codice in Svelte"
+title: "4 Modi per Mostrare Codice in Svelte"
 published: true
 usa_webp: true
 header:
@@ -19,9 +19,9 @@ tags:
   - Components
 ---
 
-Prima o poi dovrò decidermi a riscrivere completamente il codice del mio blog. Due anni fa sono passato da WordPress a Jekyll: è stata una buona scelta. Ma più approfondisco [Svelte](https://svelte.dev/) più sono curioso di vedere cosa posso tirare fuori. L'ultima cosa su cui mi sono appassionato è sul come mostrare snippet di codice in Svelte. Con mio stupore non pare un argomento molto approfondito, ma penso di aver trovato 3 modi che possono fare al mio caso.
+Prima o poi dovrò decidermi a riscrivere completamente il codice del mio blog. Due anni fa sono passato da WordPress a Jekyll: è stata una buona scelta. Ma più approfondisco [Svelte](https://svelte.dev/) più sono curioso di vedere cosa posso tirare fuori. L'ultima cosa su cui mi sono appassionato è sul come mostrare snippet di codice in Svelte. Con mio stupore non pare un argomento molto approfondito, ma penso di aver trovato 4 modi che possono fare al mio caso.
 
-### Prismjs e Svelte
+### PrismJS e Svelte
 
 Il primo metodo prevede di usare [Prismjs](https://prismjs.com/) direttamente in una pagina in formato Markdown. Come esempio uso il mio template [MEMENTO - SvelteKit & GitHub Pages](https://github.com/el3um4s/memento-sveltekit-and-github-pages). In questo progetto le pagine del blog sono dei file `md` (markdown). Ogni pagina nella cartella `blog` è per l'appunto un post di un ipotetico blog. E la scrittura del codice avviene usando quello che viene chiamato `code fencing`:
 
