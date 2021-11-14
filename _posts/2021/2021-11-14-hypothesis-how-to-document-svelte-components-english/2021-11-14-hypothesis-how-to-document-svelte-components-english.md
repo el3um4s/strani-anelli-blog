@@ -29,21 +29,20 @@ For the past two weeks, I have focused on how to quickly create documentation fo
 
 ### The steps
 
-I investigated a few streets, and they mostly turned out to be dead ends. The first attempt was to use [svelte.parse](https://svelte.dev/docs#svelte_parse) - it doesn't serve my purpose. The second attempt was to try some JavaScript parsers, starting with [acorn](https://github.com/acornjs/acorn). Another hole in the water: they are tools too big for my goal. I therefore had to concentrate on starting from a lower level. In order to have Svelte self-document I have to:
+I investigated a few streets, and they mostly turned out to be dead ends. The first attempt was to use [svelte.parse](https://svelte.dev/docs#svelte_parse) - it doesn't serve my purpose. The second attempt was to try some JavaScript parsers, starting with [acorn](https://github.com/acornjs/acorn). Another hole in the water: these tools are too big for my goal. I therefore had to concentrate on starting from a lower level. In order to have Svelte self-document I have to:
 
 1. read the Svelte components not yet compiled, that is the raw **.svelte** files
-2. leggere i componenti Svelte non ancora compilati, ovvero i file raw **.svelte**
-3. extract the information I need:
+2. extract the information I need:
    - the **props**, with their name, type and default value
    - the **actions** that can be performed; in this case the name is enough, if it is self-explanatory enough
    - the **slot** names that can be used
    - and, but I'm not entirely sure, the **css variables** used by the component
-4. save this information in a **json** file
+3. save this information in a **json** file
    - do it automatically, so you don't have to remember it
-5. import this information into Svelte
-6. use a specific component to read the information and display it automatically
+4. import this information into Svelte
+5. use a specific component to read the information and display it automatically
 
-Since information about a component only changes during development it's not a problem if the setup takes a couple of steps. If it's all automated, I can concentrate on the development itself without worrying about the details.
+Since information about a component only changes during development it's not a problem if the setup takes a couple of steps. If everything is automated, I can concentrate on the development itself without worrying about the details.
 
 ### The general structure
 
@@ -80,7 +79,7 @@ The next step is to extract the types of the variables. In this case the regex I
 
 <script src="https://gist.github.com/el3um4s/e830fcf2f1b0abc4a6f30c73c13ae979.js"></script>
 
-Getting the default value of the variables is a little more complex. I can't use a regex expression, there are too many possible ambiguous cases. I can use a trick thanks to a choice I made at the beginning, when I saved each let variable as an element of an array. In this way I can consider as default value everything that appears between the equal symbol (`=`) and the last character of the string (which should be the semicolon `;`).
+Getting the default value of the variables is more complex. I can't use a regex expression, there are too many possible ambiguous cases. I can use a trick thanks to a choice I made at the beginning, when I saved each let variable as an element of an array. In this way I can consider as default value everything that appears between the equal symbol (`=`) and the last character of the string (which should be the semicolon `;`).
 
 <script src="https://gist.github.com/el3um4s/30dec60df01c35c82c6d6caae48e9576.js"></script>
 
