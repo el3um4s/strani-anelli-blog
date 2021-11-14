@@ -8,7 +8,7 @@ header:
   immagine_estesa: "image"
   immagine_fonte: "Photo credit: [**Sigmund**](https://unsplash.com/@sigmund)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2021-11-14 10:00"
+date: "2021-11-14 11:00"
 categories:
   - Svelte
   - SvelteKit
@@ -93,7 +93,7 @@ L'unico caso ambiguo possibile è quando il valore predefinito è una stringa: g
 
 ### Creo un oggetto
 
-Adesso che ho tutti i vari pezzetti posso cominciare a mettere insieme il tutto. Mi conviene creare una funzione che ricavi `name`, `type` e `defaulValue` in un solo colpo:
+Adesso che ho tutti i vari pezzetti posso cominciare a mettere insieme il tutto. Mi conviene creare una funzione che ricavi `name`, `type` e `defaultValue` in un solo colpo:
 
 <script src="https://gist.github.com/el3um4s/289938f3cb5ebe1b05995172a5f2c6ad.js"></script>
 
