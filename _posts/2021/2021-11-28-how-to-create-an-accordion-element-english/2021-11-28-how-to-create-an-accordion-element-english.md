@@ -23,7 +23,7 @@ tags:
 
 Sooner or later I will have to find the time to report what I am learning in these months. For example, that it is very difficult to predict how long it will take to complete a task.
 
-My last idea (creating an automatic system to document Svelte components) is longer than I expected. The technique is not very complicated but there are many details that I had not foreseen. Also my desire to understand how things work is leading me to take a long time to recreate some basic elements. The last in chronological order is the **accordion**: an element that you can be open and close with a click.
+My last idea (creating an automatic system to document Svelte components) is longer than I expected. The technique is not very complicated but there are too many details that I had not foreseen. Also my desire to understand how things work is leading me to take a long time to recreate some basic elements. The last in chronological order is the **accordion**: an element that you can be open and close with a click.
 
 ### What I want to build
 
