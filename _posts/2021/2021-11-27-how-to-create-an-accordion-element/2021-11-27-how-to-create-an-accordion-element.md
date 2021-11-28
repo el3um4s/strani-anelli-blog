@@ -66,9 +66,9 @@ Svelte permette di nascondere e visualizzare un elemento della pagina in maniera
 
 {% include picture img="accordion-05.webp" ext="jpg" alt="" %}
 
-### Aggiungo un'icona ruotante
+### Aggiungiamo un'icona ruotante
 
-Ma quello che serve a me è un modo per aprire con un click l'elemento. Per farlo mi serve un pulsante e, possibilmente, un'animazione per evidenziare il click. Il modo più elegante che ho trovato mi è stato suggerito da un video di [Johnny Magrippis](https://magrippis.com/)([How to: Svelte Hamburger Menu Animation 🍔](https://www.youtube.com/watch?v=fWzKPUUQdQY&t=3s)). Consiglio di guardare il video, anche perché é abbastanza veloce. In ogni caso, per cominciare mi serve un altro componente, `ChevronRight.svelte`, in cui inserisco un'immagine `svg`:
+Ma quello che serve a me è un modo per aprire con un click l'elemento. Per farlo mi serve un pulsante e, possibilmente, un'animazione per evidenziare il click. Il modo più elegante che ho trovato mi è stato suggerito da un video di [Johnny Magrippis](https://magrippis.com/) ([How to: Svelte Hamburger Menu Animation 🍔](https://www.youtube.com/watch?v=fWzKPUUQdQY)). Consiglio di guardare il video, anche perché é abbastanza veloce. In ogni caso, per cominciare mi serve un altro componente, `Chevron.svelte`, in cui inserisco un'immagine `svg`:
 
 <script src="https://gist.github.com/el3um4s/a9803acb87f1027a836679544a656d57.js"></script>
 
@@ -90,7 +90,7 @@ Uso il prop `open` anche come classe CSS. In questo modo quando l'elemento è ap
 
 ### Aggiungiamo un'azione al componente
 
-Adesso che l'icona fa il suo dovere posso tornare al componente principale e inserire un'azione controllare direttamente il suo stato:
+Adesso che l'icona fa il suo dovere posso tornare al componente principale e inserire un'azione per controllarne lo stato:
 
 <script src="https://gist.github.com/el3um4s/73e14a761de4a3a24718b9784a7fe347.js"></script>
 
