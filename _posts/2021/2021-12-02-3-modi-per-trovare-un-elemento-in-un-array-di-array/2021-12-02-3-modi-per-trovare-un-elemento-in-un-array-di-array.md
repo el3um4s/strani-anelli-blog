@@ -41,7 +41,7 @@ In pratica si tratta di risolvere un problema di ricerca in un array di array, o
 
 <script src="https://gist.github.com/el3um4s/992920a21fb0287ded411343889c764b.js"></script>
 
-mi aspetto di trovare un la renna Rudolf alle coordinate `(3, 2)`.
+mi aspetto di trovare la renna Rudolf alle coordinate `(3, 2)`.
 
 Invece in una "foresta" di questo tipo:
 
@@ -51,7 +51,7 @@ otterrò delle coordinate negative, `(-1, -1)`.
 
 ### Come trovare un elemento in una matrice: forEach
 
-Il problema in sè è abbastanza semplice. Lo possiamo risolvere in più modi. Il primo, forse quello più intuitivo, è di scorrere ogni riga della foresta alla ricerca di Rudolph:
+Il problema in sè è abbastanza semplice. Lo possiamo risolvere in più modi. Il primo, forse quello più intuitivo, è di scorrere ogni riga della foresta alla ricerca di Rudolf:
 
 <script src="https://gist.github.com/el3um4s/a9f9f9cb35165a7146a45e2b3011368b.js"></script>
 
@@ -95,7 +95,7 @@ E creo delle funzioni per cercare Rudolf in sequenza in ognuna delle foreste:
 
 <script src="https://gist.github.com/el3um4s/9ae689e3ada8dd3ae227409940649680.js"></script>
 
-Infine eseguo un po' di test e li mostro a schermo di
+Infine eseguo un po' di test
 
 <script src="https://gist.github.com/el3um4s/6786197b1486a8ac11afffc917ee1490.js"></script>
 
