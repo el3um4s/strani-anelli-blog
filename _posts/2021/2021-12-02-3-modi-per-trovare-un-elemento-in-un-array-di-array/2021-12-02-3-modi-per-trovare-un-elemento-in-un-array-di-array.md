@@ -87,7 +87,7 @@ Creo una funzione da usare per calcolare il tempo di esecuzione di una singola f
 
 <script src="https://gist.github.com/el3um4s/a0f7f4515d2128e3102dffa3bbc37870.js"></script>
 
-Poi creo un set di foreste casuali in cui cercare la renna. Penso che un campione di 1.000
+Poi creo un set di foreste casuali in cui cercare la renna. Penso che un campione di 1.000.000 di foreste sia sufficiente per i miei test
 
 <script src="https://gist.github.com/el3um4s/facb059b57e99f32a6f57d7b5d3b4038.js"></script>
 
