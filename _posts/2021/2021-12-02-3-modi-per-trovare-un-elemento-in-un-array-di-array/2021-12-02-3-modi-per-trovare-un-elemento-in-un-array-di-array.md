@@ -39,27 +39,13 @@ Now, Santa 🎅 needs YOUR help to find him.
 
 In pratica si tratta di risolvere un problema di ricerca in un array di array, ovvero trovare le coordinate di un elemento in una matrice bidimensionale. Per capirci, se ho una matrice di questo tipo:
 
-```js
-const forest = [
-  ["  ", "🌲", "🌲", "🌲"],
-  ["🌲", "🌲", "🌲", "🌲"],
-  ["🌲", "🌲", "🌲", "🦌"],
-  ["🌲", "🌲", "🌲", "🌲"],
-];
-```
+<script src="https://gist.github.com/el3um4s/992920a21fb0287ded411343889c764b.js"></script>
 
 mi aspetto di trovare un la renna Rudolf alle coordinate `(3, 2)`.
 
 Invece in una "foresta" di questo tipo:
 
-```js
-const forest = [
-  ["🌲", "🌲", "🌲", "🌲"],
-  ["🌲", "🌲", "🌲", "🌲"],
-  ["🌲", "🌲", "🌲", "🌲"],
-  ["🌲", "🌲", "🌲", "🌲"],
-];
-```
+<script src="https://gist.github.com/el3um4s/0063b6aaafeb3f2a44ab527d2c400b67.js"></script>
 
 otterrò delle coordinate negative, `(-1, -1)`.
 
@@ -67,26 +53,7 @@ otterrò delle coordinate negative, `(-1, -1)`.
 
 Il problema in sè è abbastanza semplice. Lo possiamo risolvere in più modi. Il primo, forse quello più intuitivo, è di scorrere ogni riga della foresta alla ricerca di Rudolph:
 
-```ts
-import type { Forest } from "./typeForest";
-
-const findRudolf = (forest: Forest) => {
-  const result = {
-    col: -1,
-    row: -1,
-  };
-
-  forest.forEach((row, index) => {
-    const rudolfPosition = row.indexOf("🦌");
-    if (rudolfPosition > -1) {
-      result.row = index;
-      result.col = rudolfPosition;
-    }
-  });
-
-  return result;
-};
-```
+<script src="https://gist.github.com/el3um4s/a9f9f9cb35165a7146a45e2b3011368b.js"></script>
 
 Il metodo [Array.prototype.forEach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) esegue lo stesso codice per ogni elemento di un array. Il codice è semplicemente una ricerca dell'indice in cui si trova Rudolf (🦌) usando [indexOf](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf). Se l'indice è negativo Rudolf non è in quella riga. Se invece otteniamo un indice positivo allora abbiamo trovato sia la riga che la colonna dove andarlo a recuperare.
 
@@ -98,26 +65,7 @@ Per risolvere questo problema ho deciso di usare un altro metodo, [Array.prototy
 
 Riscrivo quindi il codice:
 
-```ts
-import type { Forest } from "./typeForest";
-
-const findRudolf = (forest: Forest) => {
-  let col = -1;
-  let row = -1;
-
-  const found = forest.some((r, index) => {
-    row = index;
-    col = r.indexOf("🦌");
-    return col > -1;
-  });
-
-  row = found ? row : -1;
-  return {
-    col,
-    row,
-  };
-};
-```
+<script src="https://gist.github.com/el3um4s/8e25ac51a92319f52bf68a513ff165a0.js"></script>
 
 In questo caso salvo ogni volta il valore delle coordinate controllate in due variabili, `col` e `row`. Però mi salvo anche una variabile aggiuntiva, `found`, da usare come riferimento per sapere se sono riuscito o meno a trovare Rudolf. Esegui quindi il ciclo per ogni elemento della foresta e lo interrompo quando `r.indexOf("🦌") > -1`, ovvero quando ho trovato il valore "🦌" nell'array.
 
@@ -127,22 +75,7 @@ Tutto questo è molto bello ma non sono ancora soddisfatto. Mi piacerebbe riusci
 
 Traducendo in codice:
 
-```ts
-import type { Forest } from "./typeForest";
-
-const findRudolf = (forest: Forest) => {
-  const forestCols = forest[0].length;
-  const rudolfPosition = forest.flat().indexOf("🦌");
-  const row =
-    rudolfPosition > -1 ? Math.floor(rudolfPosition / forestCols) : -1;
-  const col = rudolfPosition > -1 ? rudolfPosition - row * forestCols : -1;
-
-  return {
-    col,
-    row,
-  };
-};
-```
+<script src="https://gist.github.com/el3um4s/b022a62dda708f08afd28343764f3eec.js"></script>
 
 ### Ok, ma qual è il metodo migliore?
 
@@ -152,88 +85,19 @@ Per rispondere a questa domanda sono andato a cercare un qualche metodo furbo pe
 
 Creo una funzione da usare per calcolare il tempo di esecuzione di una singola funzione:
 
-```ts
-function perfDate(message: string, callback: Function, loops: number) {
-  const startTime = Date.now();
-
-  let i = loops;
-  while (i) {
-    callback();
-    i = i - 1;
-  }
-
-  const endTime = Date.now();
-  const elapsed = endTime - startTime;
-
-  return {
-    testName: message,
-    loops,
-    elapsed,
-    startTime,
-    endTime,
-  };
-}
-```
+<script src="https://gist.github.com/el3um4s/a0f7f4515d2128e3102dffa3bbc37870.js"></script>
 
 Poi creo un set di foreste casuali in cui cercare la renna. Penso che un campione di 1.000
 
-```ts
-const tree = "🌲";
-const rudolf = "🦌";
-const forests: Array<Forest> = createMultipleForests(1000000);
-
-function createMultipleForests(n: number): Array<Forest> {
-  const forests = new Array<Forest>(n);
-  forests.forEach((f) =>
-    createForest(getRandomInt(10, 1000000), getRandomInt(10, 1000000))
-  );
-  return forests;
-}
-
-function createForest(col: number, row: number): Forest {
-  const arrayTrees = new Array(col).fill(tree);
-  const forest: Forest = new Array(row).fill(arrayTrees);
-  const r = getRandomInt(0, row);
-  const c = getRandomInt(0, col);
-  if (Math.random() > 0.1) {
-    forest[r][c] = rudolf;
-  }
-  return forest;
-}
-
-function getRandomInt(min: number, max: number): number {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min) + min);
-}
-```
+<script src="https://gist.github.com/el3um4s/facb059b57e99f32a6f57d7b5d3b4038.js"></script>
 
 E creo delle funzioni per cercare Rudolf in sequenza in ognuna delle foreste:
 
-```ts
-import findRudolf_forEach from "./solution-1";
-import findRudolf_some from "./solution-2";
-import findRudolf_flat from "./solution-3";
-
-const a = () => forests.forEach((f) => findRudolf_forEach(f));
-const b = () => forests.forEach((f) => findRudolf_some(f));
-const c = () => forests.forEach((f) => findRudolf_flat(f));
-```
+<script src="https://gist.github.com/el3um4s/9ae689e3ada8dd3ae227409940649680.js"></script>
 
 Infine eseguo un po' di test e li mostro a schermo di
 
-```ts
-const args = process.argv.slice(2);
-const l: number = parseInt(args[0]);
-
-const resultGeneral = [];
-
-resultGeneral.push(perfDate("forEach", a, l));
-resultGeneral.push(perfDate("some", b, l));
-resultGeneral.push(perfDate("flat", c, l));
-
-console.table(resultGeneral);
-```
+<script src="https://gist.github.com/el3um4s/6786197b1486a8ac11afffc917ee1490.js"></script>
 
 Eseguendo i test ottengo qualcosa di simile a questo:
 
@@ -241,15 +105,7 @@ Eseguendo i test ottengo qualcosa di simile a questo:
 
 A occhio non pare esserci una predominanza netta di un metodo su un altro. Però per curiosità decido di salvare i valori dei test in un file e provare a vedere se i crudi numeri possono essere d'aiuto. Installo un pacchetto aggiuntivo, [jsonexport](https://www.npmjs.com/package/jsonexport) per aiutarmi con la conversione della variabile `resultGeneral` e creo un file csv:
 
-```ts
-import fs from "fs";
-import jsonexport from "jsonexport";
-
-jsonexport(resultGeneral, function (err: Error, csv: string) {
-  if (err) return console.error(err);
-  fs.writeFileSync("day-1.csv", csv);
-});
-```
+<script src="https://gist.github.com/el3um4s/8d15d9730a1a7fdb76234d4b98e5dcdb.js"></script>
 
 Dopo aver importato i risultati in Excel ottengo questo grafico:
 
