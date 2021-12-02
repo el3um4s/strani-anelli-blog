@@ -21,7 +21,7 @@ tags:
   - performance
 ---
 
-Whenever Christmas approaches, my wife begins her _Bead Advent Calendar_. It's something I've always envied her, her constancy and perseverance. On her advice I decided to try something similar too. Obviously not linked to the world of handcrafted jewelry (it would be a disaster) but linked to coding. Luckily YouTube recommended this video by [Marc Backes](https://www.youtube.com/c/MarcBackesCodes) to me. I like his idea for the **[Dev Advent Calendar 2021](https://github.com/devadvent/readme)**:
+Whenever Christmas approaches, my wife begins her _Beads Advent Calendar_. It's something I've always envied her, her constancy and perseverance. On her advice I decided to try something similar too. Obviously not linked to the world of handcrafted jewelry (it would be a disaster) but linked to coding. Luckily YouTube recommended this video by [Marc Backes](https://www.youtube.com/c/MarcBackesCodes) to me. I like his idea for the **[Dev Advent Calendar 2021](https://github.com/devadvent/readme)**:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AmtkdsTcHTo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -65,11 +65,11 @@ So I rewrite the code:
 
 <script src="https://gist.github.com/el3um4s/8e25ac51a92319f52bf68a513ff165a0.js"></script>
 
-I save the coordinate value in two variables, `col` and `row`. But I also save an additional variable, `found`, to be used as a reference to find out whether or not I was able to find Rudolf. I then loop for each element in the forest and break it when `r.indexOf("🦌") > -1`, which is when I have found the value "🦌" in the array.
+I save the coordinate value in two variables, `col` and `row`. But I also save an additional variable, `found`, to be used as a reference to find out whether or not I was able to find Rudolf. Then I loop for each element in the forest and break it when `r.indexOf("🦌") > -1`, which is when I have found the value "🦌" in the array.
 
 ### Use flat() to find an element in an array
 
-All this is very nice but I am still not satisfied. I'd like to be able to avoid both `forEach()` and `some()`. So I decided to try another way. The basic assumption is that the forest is made up of rows all of the same size. If so then I can transform the two dimensional array into a one dimensional array. Then I use `indexOf("🦌")` to find Rudolf's position. Finally I convert that index into a pair of two-dimensional coordinates. At the basis of all this reasoning is the [Array.prototype.flat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) method. The `flat()` method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+Everything is very nice but I am not satisfied yet. I'd like to be able to avoid both `forEach()` and `some()`. So I decided to try another way. The basic assumption is that the forest is made up of rows all of the same size. If so then I can transform the two dimensional array into a one dimensional array. Then I use `indexOf("🦌")` to find Rudolf's position. Finally I convert that index into a pair of two-dimensional coordinates. At the basis of all this reasoning is the [Array.prototype.flat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) method. The `flat()` method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
 
 Translating into code:
 
@@ -79,7 +79,7 @@ Translating into code:
 
 At this point I asked myself: well, I have three methods to find an element in a two-dimensional array, but what is the most efficient method?
 
-To answer this question, I went looking for some clever method to measure the performance of a function. The best method is the most common: record the time it takes for various functions to perform the same operation many times and compare them. In my research I have found some very informative readings. I recommend reading this post by Zell Liew, [Testing JavaScript Performance](https://zellwk.com/blog/performance-now/).
+To answer this question, I went looking for some clever methods to measure the performance of a function. The best method is the most common: record the time it takes for various functions to perform the same operation many times and compare them. In my research I have found some very informative readings. I recommend reading this post by Zell Liew, [Testing JavaScript Performance](https://zellwk.com/blog/performance-now/).
 
 I create a function to use to calculate the execution time of a single function:
 
