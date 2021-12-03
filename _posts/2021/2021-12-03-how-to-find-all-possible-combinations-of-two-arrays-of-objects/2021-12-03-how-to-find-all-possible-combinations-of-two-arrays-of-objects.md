@@ -31,128 +31,56 @@ I immediately tackle the problem of sorting. Why? Because I suspect it's quicker
 
 Before starting I recommend reading a post from [Javascript Tutorial: Sorting Array Elements](https://www.javascripttutorial.net/javascript-array-sort/). And, of course, the documentation of the [Array.prototype.sort()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) method.
 
-```js
-drinks.sort((a, b) => {
-  if (a.name < b.name) {
-    return -1;
-  } else if (a.name > b.name) {
-    return 1;
-  }
-
-  return 0;
-});
-```
+<script src="https://gist.github.com/el3um4s/4eb1766d86a7c2f93731ccc74baa07d6.js"></script>
 
 The first step is to directly sort the drink list based on the "name" property. So I check if the name of one comes before the name of the other based on the alphabet.
 
 The first problem that may arise concerns the difference between upper and lower case letters. If it is not difficult for us humans to understand that `a === A` for Javascript there are some problems. It is therefore convenient to convert all names to uppercase (or lowercase) letters.
 
-```js
-drinks.sort((a, b) => {
-  if (a.name.toUpperCase() < b.name.toUpperCase()) {
-    return -1;
-  } else if (a.name > b.name) {
-    return 1;
-  }
-
-  return 0;
-});
-```
+<script src="https://gist.github.com/el3um4s/fc94b6dee0ca494dfc7bdf165b2c72b1.js"></script>
 
 Fine, but this way I'm going to change the menu itself. After that it will be difficult to get a menu with the names written correctly. To solve the problem I don't directly modify the array but I copy the names in some variables:
 
-```js
-drinks.sort((a, b) => {
-  const nameA = a.name.toUpperCase();
-  const nameB = b.name.toUpperCase();
-
-  if (nameA < nameB) {
-    return -1;
-  } else if (nameB > nameA) {
-    return 1;
-  }
-
-  return 0;
-});
-```
+<script src="https://gist.github.com/el3um4s/e35cd7caa4b06bd79382d035cbb9535d.js"></script>
 
 There is another problem: the `sort()` method directly modifies the order of the original array. Personally I prefer to leave everything unchanged. I follow [Ramon Balthazar](https://stackoverflow.com/questions/30431304/functional-non-destructive-array-sort)'s advice: use `shuffledArray.slice().sort()`. This way I get a new array without changing the original one:
 
-```js
-const sortedDrinks = drinks.slice().sort((a, b) => {
-  const nameA = a.name.toUpperCase();
-  const nameB = b.name.toUpperCase();
-
-  if (nameA < nameB) {
-    return -1;
-  } else if (nameB > nameA) {
-    return 1;
-  }
-
-  return 0;
-});
-```
+<script src="https://gist.github.com/el3um4s/a37aabd1465c2800d22168f3f73cd2e8.js"></script>
 
 ### Sort an array of objects: numerical order
 
 After you have sorted your drinks, it's time to move on to the various custom flavors. Instinctively I can think of using a similar function, replacing the `name` property with the `price` property:
 
-```js
-const sortedFlavors = flavors.slice().sort((a, b) => a.price - b.price);
-```
+<script src="https://gist.github.com/el3um4s/642e05ee9ab1796d6a3efecb06654b26.js"></script>
 
 However, there is a particular case that is missing from this list of ingredients: the drink without extra flavor.
 
 I think the quickest way to deal with this case is to add the "flavor: undefined" with price `0` to the list. I add it to the beginning of the sorted list with the [unshift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift) method
 
-```js
-sortedFlavors.unshift({
-  name: undefined,
-  price: 0,
-});
-```
+<script src="https://gist.github.com/el3um4s/535238a748dd8b580ca27c5f2f6452c0.js"></script>
 
 ### Combining drinks and flavors on a menu
 
 Now that I have two sorted arrays (`sortedDrinks` and `sortedFlavors`) I can start combining ingredients and flavors. I could use two nested for loops. Or use the [map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) method:
 
-```js
-const result = sortedDrinks.map((drink) => {
-  return sortedFlavors.map(flavor => {
-      return {
-          drink: drink.name,
-          flavor: flavor.name,
-          price: drink.price + flavor.price
-      }
-    }
-  );
-```
+<script src="https://gist.github.com/el3um4s/ab16f075071f962332a57d26d8155cf3.js"></script>
 
 But there is a problem: the result is an array containing several arrays, one for each drink. The puzzle requires an array like this:
 
-```js
-const result = [
-  { drink: "Latte", flavor: undefined, price: 3 },
-  { drink: "Latte", flavor: "Cinnamon", price: 4 },
-  { drink: "Latte", flavor: "Peppermint", price: 5 },
-  { drink: "Macchiato", flavor: undefined, price: 10 },
-  { drink: "Macchiato", flavor: "Cinnamon", price: 11 },
-  { drink: "Macchiato", flavor: "Peppermint", price: 12 },
-];
-```
+<script src="https://gist.github.com/el3um4s/39a6e3f078a29875311b1ebb413e82eb.js"></script>
 
 I can use the `flat()` or [Array.prototype.flatMap()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap) method:
 
 ```js
 const result = sortedDrinks.flatMap((drink) => {
-  return sortedFlavors.map(flavor => {
-      return {
-          drink: drink.name,
-          flavor: flavor.name,
-          price: drink.price + flavor.price
-      }
-    }
-  );
+  return sortedFlavors.map((flavor) => {
+    return {
+      drink: drink.name,
+      flavor: flavor.name,
+      price: drink.price + flavor.price,
+    };
+  });
+});
 ```
 
 Well, Santa's elves can be satisfied. Through this solution they can finally order what they want from a convenient menu. Now the time has come for me to drink a nice hot herbal tea.
