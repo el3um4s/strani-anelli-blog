@@ -118,14 +118,14 @@ Adesso che ho due array ordinati (`sortedDrinks` e `sortedFlavors`) posso cominc
 
 ```js
 const result = sortedDrinks.map((drink) => {
-  return sortedFlavors.map(flavor => {
-      return {
-          drink: drink.name,
-          flavor: flavor.name,
-          price: drink.price + flavor.price
-      }
-    }
-  );
+  return sortedFlavors.map((flavor) => {
+    return {
+      drink: drink.name,
+      flavor: flavor.name,
+      price: drink.price + flavor.price,
+    };
+  });
+});
 ```
 
 C'è però un problema: il risultato è un array contenente diversi arrays, uno per ogni bevanda. Il puzzle richiede un array di questo tipo:
@@ -145,14 +145,14 @@ Posso usare il metodo `flat()` su `result`. Oppure posso usare [Array.prototype.
 
 ```js
 const result = sortedDrinks.flatMap((drink) => {
-  return sortedFlavors.map(flavor => {
-      return {
-          drink: drink.name,
-          flavor: flavor.name,
-          price: drink.price + flavor.price
-      }
-    }
-  );
+  return sortedFlavors.map((flavor) => {
+    return {
+      drink: drink.name,
+      flavor: flavor.name,
+      price: drink.price + flavor.price,
+    };
+  });
+});
 ```
 
 Bene, direi che gli elfi di Babbo Natale possono essere soddisfatti. Tramite questa soluzione possono finalmente ordinare quello di cui hanno voglia da un comodo menù. Spero solamente che non salti loro in testa qualche richiesta aggiuntiva: adesso è giunto anche per me il momento di bere una bella tisana calda.
