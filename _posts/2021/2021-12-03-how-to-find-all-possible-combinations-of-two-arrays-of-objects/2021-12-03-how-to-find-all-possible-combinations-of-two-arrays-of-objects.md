@@ -71,16 +71,6 @@ But there is a problem: the result is an array containing several arrays, one fo
 
 I can use the `flat()` or [Array.prototype.flatMap()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap) method:
 
-```js
-const result = sortedDrinks.flatMap((drink) => {
-  return sortedFlavors.map((flavor) => {
-    return {
-      drink: drink.name,
-      flavor: flavor.name,
-      price: drink.price + flavor.price,
-    };
-  });
-});
-```
+<script src="https://gist.github.com/el3um4s/49ff339f8018aaa5985cb6a0e5392100.js"></script>
 
 Well, Santa's elves can be satisfied. Through this solution they can finally order what they want from a convenient menu. Now the time has come for me to drink a nice hot herbal tea.
