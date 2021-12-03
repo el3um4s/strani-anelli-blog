@@ -41,8 +41,6 @@ It is a search problem in an array of arrays. In other words I have to find coor
 
 <script src="https://gist.github.com/el3um4s/992920a21fb0287ded411343889c764b.js"></script>
 
-I expect to find Rudolf the reindeer at coordinates `(3, 2)`.
-
 Instead in such a "forest" I will get negative coordinates, `(-1, -1)`:
 
 <script src="https://gist.github.com/el3um4s/0063b6aaafeb3f2a44ab527d2c400b67.js"></script>
