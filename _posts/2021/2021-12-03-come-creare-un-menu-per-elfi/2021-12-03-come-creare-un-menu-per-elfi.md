@@ -128,7 +128,7 @@ const result = sortedDrinks.map((drink) => {
   );
 ```
 
-C'è però un problema: il risultato è un array contente diversi arrays, uno per ogni bevanda. Il puzzle richiede un array di questo tipo:
+C'è però un problema: il risultato è un array contenente diversi arrays, uno per ogni bevanda. Il puzzle richiede un array di questo tipo:
 
 ```js
 const result = [
