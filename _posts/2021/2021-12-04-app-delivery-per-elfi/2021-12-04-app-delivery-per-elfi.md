@@ -19,7 +19,7 @@ tags:
   - regex
 ---
 
-Giorno tre del mio [Dev Advent Calendar 2021](https://github.com/devadvent/readme) e nuovo puzzle da risolvere. Gli elfi di Babbo Natale ci hanno preso gusto con il caffè e hanno deciso di fare il grande passo: voglio buttarsi nel mondo del food delivery. Per prima cosa devono sistemare il sito della caffetteria aggiungendo un'API in grado di gestire gli ordini. E indovinate un po' a chi tocca?
+Giorno tre del mio [Dev Advent Calendar 2021](https://github.com/devadvent/readme) e nuovo puzzle da risolvere. Gli elfi di Babbo Natale ci hanno preso gusto con il caffè e hanno deciso di fare il grande passo: vogliono buttarsi nel mondo del food delivery. Per prima cosa devono sistemare il sito della caffetteria aggiungendo un'API in grado di gestire gli ordini. E indovinate un po' a chi tocca?
 
 ### Il problema: Elf Coffee Shop API 🧝🥤
 
@@ -27,17 +27,7 @@ Giorno tre del mio [Dev Advent Calendar 2021](https://github.com/devadvent/readm
 
 Il puzzle di oggi a prima vista è un po' più complesso dei precedenti. Ma può essere facilmente scomposto in due diversi sotto problemi. Il primo è un semplice problema di aggiunta di proprietà ad un oggetto javascript. Il secondo richiede invece di giocare con le regular expressions. E a parer mio è anche la parte più divertente. Ma andiamo con ordine e cominciamo dall'inizio.
 
-```js
-import { slugify } from "./helpers";
-
-const prepareForAPI = (menu) => {
-  return menu.map((item) => {
-    item.name = (item.flavor ? item.flavor + " " : "") + item.drink;
-    item.slug = slugify(item.name);
-    return item;
-  });
-};
-```
+<script src="https://gist.github.com/el3um4s/bdc1d1b694a3749ceebe61a0e44e7c3d.js"></script>
 
 Punto. Uso il metodo [map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) per scorrere ogni elemento del menu e aggiungo semplicemente le proprietà che mancano. Adesso non rimane che sistemare la funzione `slugify`.
 
@@ -57,16 +47,6 @@ Il passo successivo è sostituire tutti gli spazi con dei trattini. Posso usare 
 
 Mettendo tutto insieme la funzione `slugify` diventa così:
 
-```js
-const slugify = (text) => {
-  return text
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/\p{Diacritic}/gu, "")
-    .replace(/[^a-zA-Z0-9_\s-]/gu, " ")
-    .trim()
-    .replace(/\s+/gu, "-");
-};
-```
+<script src="https://gist.github.com/el3um4s/9a977540aa4dab15bec000960b238ed8.js"></script>
 
 Bene, e anche per oggi è fatta. Adesso non rimane che aspettare il puzzle di domani.
