@@ -35,6 +35,6 @@ There is, however, one interesting thing. I renamed the variables during the obj
 
 <script src="https://gist.github.com/el3um4s/682560a340ab2687e9dcb753c33652f6.js"></script>
 
-The example above is not mine, it is from [Paul Vaneveld](https://medium.com/@paul.vaneveld). I found it in an interesting article published on Medium: [7 Little-Known Techniques to Improve Your JavaScript]([7 Little-Known Techniques to Improve Your JavaScript](https://javascript.plainenglish.io/7-little-known-techniques-to-improve-your-javascript-20a9e870a5fe)).
+The example above is not mine, it is from [Paul Vaneveld](https://medium.com/@paul.vaneveld). I found it in an interesting article published on Medium: [7 Little-Known Techniques to Improve Your JavaScript](https://javascript.plainenglish.io/7-little-known-techniques-to-improve-your-javascript-20a9e870a5fe).
 
 Well, that's all for today.

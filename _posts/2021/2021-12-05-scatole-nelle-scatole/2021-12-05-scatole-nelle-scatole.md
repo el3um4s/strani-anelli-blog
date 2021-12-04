@@ -35,6 +35,6 @@ C'è però una cosa interessante. Ho rinominato le variabili durante l'operazion
 
 <script src="https://gist.github.com/el3um4s/682560a340ab2687e9dcb753c33652f6.js"></script>
 
-L'esempio qui sopra non è mio, è di [Paul Vaneveld](https://medium.com/@paul.vaneveld). L'ho trovato in articolo interessante pubblicato su Medium: [7 Little-Known Techniques to Improve Your JavaScript]([7 Little-Known Techniques to Improve Your JavaScript](https://javascript.plainenglish.io/7-little-known-techniques-to-improve-your-javascript-20a9e870a5fe)).
+L'esempio qui sopra non è mio, è di [Paul Vaneveld](https://medium.com/@paul.vaneveld). L'ho trovato in articolo interessante pubblicato su Medium: [7 Little-Known Techniques to Improve Your JavaScript](https://javascript.plainenglish.io/7-little-known-techniques-to-improve-your-javascript-20a9e870a5fe).
 
 Bene, per oggi direi che è tutto.
