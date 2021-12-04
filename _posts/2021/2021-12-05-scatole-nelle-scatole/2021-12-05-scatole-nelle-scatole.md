@@ -6,7 +6,7 @@ header:
   immagine_tipo: "jpg"
   miniatura: "image"
   immagine_estesa: "image"
-  immagine_fonte: "Photo credit: [**Jesse Ramirez**](https://unsplash.com/@jesseramirezla)"
+  immagine_fonte: "Photo credit: [**Jackie Zhao**](https://unsplash.com/@jiaweizhao)"
   overlay_filter: rgba(79, 79, 79, 0.5)
 date: "2021-12-05 12:00"
 categories:
