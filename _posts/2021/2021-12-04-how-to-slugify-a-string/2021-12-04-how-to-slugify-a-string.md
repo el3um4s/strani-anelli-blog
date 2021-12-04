@@ -45,8 +45,6 @@ In fact, to replace all alphanumeric characters (including emojis) I can use the
 
 The next step is to replace all spaces with dashes. I can use `.replace(/\s+/gu, "-")` to turn each sequence of spaces into a single dash.
 
-Putting it all together the slugify function becomes like this:
-
 I put it all together and I get the `slugify` function:
 
 <script src="https://gist.github.com/el3um4s/9a977540aa4dab15bec000960b238ed8.js"></script>
