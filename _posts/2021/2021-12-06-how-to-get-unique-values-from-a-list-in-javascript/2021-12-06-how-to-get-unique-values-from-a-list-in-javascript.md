@@ -23,11 +23,11 @@ Finally the elves have put aside their business ambitions and are back to their 
 
 {% include picture img="cover.webp" ext="jpg" alt="" %}
 
-Today's problem can be broken down into two distinct parts. The first involves the creation of a Universally Unique IDentifier (UUID). The second is related to the manipulation of arrays from which to extract n random and non-repeated elements. Or, in other words, how to get unique values from a list in JavaScript.
+Today's problem can be broken down into two distinct parts. The first involves the creation of a Universally Unique IDentifier (UUID). The second is related to the manipulation of arrays from which to select "n" random and non-repeated items. Or, in other words, how to get unique values from a list in JavaScript.
 
 ### JavaScript function to create a UUID identifier
 
-I didn't follow [Marc Backes](https://twitter.com/themarcba)' advice. The suggestion was to use the [uuid](https://www.npmjs.com/package/uuid) package to generate unique codes. For a "real" project I probably would have done this. But I decided instead to create a standalone function to achieve the same result. To do this I followed the suggestions of an exercise page from [w3resource](https://www.w3resource.com/javascript-exercises/javascript-math-exercise-23.php):
+I didn't follow [Marc Backes](https://twitter.com/themarcba)' advice. The suggestion was to use the [uuid](https://www.npmjs.com/package/uuid) package to generate unique codes. For a "real" project I probably would have done this. Instead, I decided to create a standalone function to achieve the same result. To do this I followed the suggestions of an exercise page from [w3resource](https://www.w3resource.com/javascript-exercises/javascript-math-exercise-23.php):
 
 ```js
 function create_UUID() {
@@ -46,7 +46,7 @@ Basically I generated a sequence of random numbers starting from a date. I used 
 
 The second problem concerns choosing an unknown quantity of elements from an array. There are various ways of dealing with this situation. Many solutions involve using some form of a `for loop`.
 
-Il secondo problema riguarda la scelta di una quantità non nota a priori di elementi da un array. Ci sono vari modi per affrontare questa situazione, molti prevedono l'utilizzo di una qualche forma di `ciclo for`. However, I am increasingly convinced that I can reduce the complexity of my code by avoiding loops as much as possible. I didn't have time to verify my hypothesis, maybe I'll come back to it in the future.
+However, I am increasingly convinced that I can reduce the complexity of my code by avoiding loops as much as possible. I didn't have time to verify my hypothesis, maybe I'll come back to it in the future.
 
 What do I want to do? Well, since I start from an array containing all the elements I need, I just need to mix the order of the various elements to get a new array. Then from this array I extract the first n elements.
 
@@ -104,4 +104,4 @@ function createRandomArray(list, count = 3) {
 }
 ```
 
-That's all for today's problem. But before saying goodbye, I want to give a little consideration. When I decided to participate in this **Dev Advent Calendar** I didn't know how difficult the questions would be. The puzzles are fast. Writing these post less. But I find it very instructive to report what I am learning. I realize that I have never spent time on these kinds of problems, and in some cases I have always considered them beyond my abilities. I also like the presence of tests: the possibility to test code in real time is very useful. In the future I will have to look for other contests like this.
+That's all for today's problem. But before saying goodbye, I want to give a little consideration. When I decided to participate in this **Dev Advent Calendar** I didn't know how difficult the questions would be. The puzzles are fast. Writing these post less. But I find it very instructive to report what I am learning. I realize that I have never spent time on this kind of problems, and in some cases I have always considered them beyond my abilities. I also like the presence of tests: the possibility to test code in real time is very useful. In the future I will have to look for other contests like this.
