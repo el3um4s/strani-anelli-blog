@@ -1,5 +1,5 @@
 ---
-title: "How To Find The Sum of an Array of Bbjects in JavaScript"
+title: "How To Find The Sum of an Array of Objects in JavaScript"
 published: true
 usa_webp: true
 header:
