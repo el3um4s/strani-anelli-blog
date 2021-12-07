@@ -31,8 +31,6 @@ Questa volta non ho seguito i consigli di [Marc Backes](https://twitter.com/them
 
 <script src="https://gist.github.com/el3um4s/419cfa8760850ce799b392b51c41257f.js"></script>
 
-```
-
 In pratica ho generato una sequenza di numeri casuali a partire da una data. Ho usato una stringa di caratteri come template per assicurare un formato univoco. In questo modo posso facilmente generare un codice univoco senza bisogno di dipendenze esterne.
 
 ### Scegliere n elementi casuali da un array
@@ -56,4 +54,7 @@ Dopo aver scritto le due funzioni è abbastanza semplice risolvere il puzzle di 
 <script src="https://gist.github.com/el3um4s/43713053c9004ea21183c6f7f5814ed3.js"></script>
 
 Per il problema di oggi è tutto. Però prima di salutarci voglio riportare una piccola considerazione. Quando ho deciso di partecipare a questo **Dev Advent Calendar** non avevo ben chiaro cosa avrebbe comportato in termini di tempo e di energie. I puzzle sono effettivamente abbastanza veloci. Lo è un po' meno la scrittura di questo diario di viaggio. Ma trovo molto istruttivo riportare quello che sto apprendendo. Mi rendo conto di non aver mai dedicato del tempo a questo genere di problemi, e in alcuni casi li ho sempre considerati al di là delle mie capacità. La possibilità di testare il codice in tempo reale è molto utile. In futuro dovrò cercare altri contest di questo tipo.
+
+```
+
 ```
