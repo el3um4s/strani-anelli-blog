@@ -29,49 +29,19 @@ Problem # 6 in [Dev Advent Calendar 🎅](https://github.com/devadvent/puzzle-6)
 
 Ok, maybe it is better to give an example. This is a child's card:
 
-```json
-{
-  "name": "Fitzgerald Ashley",
-  "events": [
-    { "name": "Stole candy from the candy drawer", "effect": -10 },
-    { "name": "Cheated on homework", "effect": -30 },
-    { "name": "Pushed someone at school", "effect": -15 },
-    { "name": "Helped a classmate with their homework", "effect": 10 },
-    { "name": "Helped their sibling with homework", "effect": 25 },
-    {
-      "name": "Helped an elderly person cross the street",
-      "effect": 30
-    },
-    {
-      "name": "Told the truth even if it would get them in trouble",
-      "effect": 30
-    }
-  ]
-}
-```
+<script src="https://gist.github.com/el3um4s/74d5280b8e19b9a9992446e6793451d8.js"></script>
 
 Each child has a matched list of actions, some good, some not. Each action corresponds to a value. The sum of the values of each action is used to calculate a score:
 
-```js
-const score = -10 + -30 + -15 + 10 + 25 + 30 + 30;
-```
+<script src="https://gist.github.com/el3um4s/469ac6a9b58895eb932cf6e9ba606d4b.js"></script>
 
 In this case the score is positive, consequently the child deserves a prize:
 
-```js
-function findOutIfNaughtyOrNice(score) {
-  return score < 0 ? "naughty" : "nice";
-}
-```
+<script src="https://gist.github.com/el3um4s/97c7cf6c2bd51dc3af1bb1f76a332967.js"></script>
 
 All easy and simple as long as it is a single element. But what if we have hundreds, thousands, millions of children to bring gifts to? Well, Santa certainly can't keep doing everything by hand. Fortunately, there is a method that is right for us, the [Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
 
-```js
-export const findOutIfNaughtyOrNice = (kid) => {
-  const value = kid.events.reduce((prev, curr) => prev + curr.effect, 0);
-  return value < 0 ? "naughty" : "nice";
-};
-```
+<script src="https://gist.github.com/el3um4s/9e17f8411e5f373918038b7fa7cbec65.js"></script>
 
 `reduce()` iterates through all elements of an array and performs some operations for each element. The result of each operation is added to the previous result. This way I can calculate the sum of all effects.
 
@@ -81,19 +51,11 @@ The other part of the problem is a direct consequence of the first. After having
 
 In the first we only put the children to bring the gifts to:
 
-```js
-export const getNiceKids = (kids) => {
-  return kids.filter((kid) => findOutIfNaughtyOrNice(kid) === "nice");
-};
-```
+<script src="https://gist.github.com/el3um4s/be2832e587b6b2e7240ff9306275dbdd.js"></script>
 
 In the second instead we put the others:
 
-```js
-export const getNaughtyKids = (kids) => {
-  return kids.filter((kid) => findOutIfNaughtyOrNice(kid) === "naughty");
-};
-```
+<script src="https://gist.github.com/el3um4s/fb9df92ae724d276480266795fde3b32.js"></script>
 
 In both cases I used the [Array.prototype.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method to get only the required children from the list.
 
@@ -101,29 +63,17 @@ In both cases I used the [Array.prototype.filter()](https://developer.mozilla.or
 
 A single note to conclude. The very first thing to do is to import the list of children into the program. The list is in `json` format so it requires special treatment. There are various ways to do this. One requires the use of the [Node.js fs (filesystem) api](https://nodejs.org/api/fs.html):
 
-```js
-const fs = require("fs");
-
-let rawdata = fs.readFileSync("../data/sampleData.json");
-let kids = JSON.parse(rawdata);
-console.log(kids);
-```
+<script src="https://gist.github.com/el3um4s/6b7a5491249fd850aac3cf2ea7a1e1eb.js"></script>
 
 However, it is a cumbersome way to do a simple thing.
 
 The second method requires some [experimental functions of Node.js](https://nodejs.medium.com/announcing-a-new-experimental-modules-1be8d2d6c2ff). To activate them I had to modify the `package.json` file by adding `-experimental-json-modules`:
 
-```json
-  "scripts": {
-    "dev": "nodemon --experimental-json-modules src/index.js --experimental-modules --ignore 'src/data/*.json'",
-  },
-```
+<script src="https://gist.github.com/el3um4s/b9791da4c5728a8cd6c0176571b9ad4f.js"></script>
 
 Then in the `naughtyOrNice.js` file I imported the file as a JavaScript object:
 
-```js
-import kids from "../data/sampleData.json";
-```
+<script src="https://gist.github.com/el3um4s/d15c8a076a3aca9398d49016b4c96656.js"></script>
 
 It works and is elegant.
 
@@ -131,8 +81,6 @@ In futuro probabilmente non sarà necessario usare `--experimental-json-modules`
 
 In the future, you probably won't need to use `--experimental-json-modules`. There is an interesting proposal, [tc39/proposal-json-modules](https://github.com/tc39/proposal-json-modules), in stage 3, which will allow you to import JSON modules in JavaScript. In this case the syntax will be like this:
 
-```js
-import kids from "../data/sampleData.json" assert { type: "json" };
-```
+<script src="https://gist.github.com/el3um4s/669f4d3c748bd1fbc29efa195ab9c749.js"></script>
 
 Well, that's all for today.
