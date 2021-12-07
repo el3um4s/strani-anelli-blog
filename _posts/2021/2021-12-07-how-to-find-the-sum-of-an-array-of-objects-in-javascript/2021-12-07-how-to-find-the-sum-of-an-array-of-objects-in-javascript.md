@@ -77,8 +77,6 @@ Then in the `naughtyOrNice.js` file I imported the file as a JavaScript object:
 
 It works and is elegant.
 
-In futuro probabilmente non sarà necessario usare `--experimental-json-modules`. C'è una proposta interessante, [tc39/proposal-json-modules](https://github.com/tc39/proposal-json-modules), giunta oramai allo stage 3, che permetterà di avere nativamente in JavaScript la possibilità di importare moduli JSON. In questo caso la sintassi sarà così:
-
 In the future, you probably won't need to use `--experimental-json-modules`. There is an interesting proposal, [tc39/proposal-json-modules](https://github.com/tc39/proposal-json-modules), in stage 3, which will allow you to import JSON modules in JavaScript. In this case the syntax will be like this:
 
 <script src="https://gist.github.com/el3um4s/669f4d3c748bd1fbc29efa195ab9c749.js"></script>
