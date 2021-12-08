@@ -69,11 +69,11 @@ Poi decido di accoppiare a due a due i vari nomi in base alla loro posizione nel
 
 ```js
 const santa = [
-  {name: list[0], secretSanta: list[1]},
-  {name: list[1], secretSanta: list[2]}
-  {name: list[2], secretSanta: list[3]}
-  {name: list[3], secretSanta: list[0]}
-]
+  { name: list[0], secretSanta: list[1] },
+  { name: list[1], secretSanta: list[2] },
+  { name: list[2], secretSanta: list[3] },
+  { name: list[3], secretSanta: list[0] },
+];
 ```
 
 In questo modo sono sicuro che ogni nome avrà un compagno diverso.

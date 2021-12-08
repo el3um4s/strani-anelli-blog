@@ -37,67 +37,28 @@ The puzzle can be solved quickly using array methods. But let's go in order. The
 
 First, if there are two elves with the same name I have to get an error. In this case, the text of the quiz already contains a hint:
 
-```js
-export const hasDuplicates = (arr) => {
-  return new Set(arr).size !== arr.length;
-};
-```
+<script src="https://gist.github.com/el3um4s/8ce82b42f73d57a8398ba697abb1c219.js"></script>
 
 So I just have to write a simple condition:
 
-```js
-export const assignNames = (names) => {
-  if (hasDuplicates(names)) {
-    throw new Error("DUPLICATE_NAMES");
-  }
-  return [];
-};
-```
+<script src="https://gist.github.com/el3um4s/4e15ee22ddeb1baaf5606752c45000b0.js"></script>
 
 The second and third conditions can be solved together. I have to give each name a Secret Santa. And an elf cannot be his own Secret Santa.
 
 To solve this first I mix the hat, sorry, the array with the names of the participants:
 
-```js
-const shuffleArray = (arr) => arr.sort(() => Math.random() - 0.5);
-const list = shuffleArray(names);
-```
+<script src="https://gist.github.com/el3um4s/c62467a808bc250be9705922029de625.js"></script>
 
 Then I decide to pair the various names in pairs based on their position in the array. In practice I create pairs like this:
 
-```js
-const santa = [
-  {name: list[0], secretSanta: list[1]},
-  {name: list[1], secretSanta: list[2]}
-  {name: list[2], secretSanta: list[3]}
-  {name: list[3], secretSanta: list[0]}
-]
-```
+<script src="https://gist.github.com/el3um4s/78f268bb8b7ba07780b96c1fb162f4d9.js"></script>
 
 Using this technique I am sure that each elf will have a different companion.
 
 The complete code of my solution is simply this:
 
 ```js
-const hasDuplicates = (arr) => new Set(arr).size !== arr.length;
-
-const shuffleArray = (arr) => arr.sort(() => Math.random() - 0.5);
-
-export const assignNames = (names) => {
-  if (hasDuplicates(names)) {
-    throw new Error("DUPLICATE_NAMES");
-  }
-
-  const list = shuffleArray(names);
-
-  return list.map((name, index, array) => {
-    const secretSanta = array[index + 1] ? array[index + 1] : array[0];
-    return {
-      name,
-      secretSanta,
-    };
-  });
-};
+<script src="https://gist.github.com/el3um4s/a8dc48eca578f6408e4bedd6fad9c7a6.js"></script>
 ```
 
 Well, today's problem is solved.
