@@ -57,9 +57,7 @@ Using this technique I am sure that each elf will have a different companion.
 
 The complete code of my solution is simply this:
 
-```js
 <script src="https://gist.github.com/el3um4s/a8dc48eca578f6408e4bedd6fad9c7a6.js"></script>
-```
 
 Well, today's problem is solved.
 
