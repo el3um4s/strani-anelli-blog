@@ -1,5 +1,5 @@
 ---
-title: "Come usare JavaScript per scegliere nomi da una lista"
+title: "Come trovare una parola a cui mancano delle lettere"
 published: true
 usa_webp: true
 header:
