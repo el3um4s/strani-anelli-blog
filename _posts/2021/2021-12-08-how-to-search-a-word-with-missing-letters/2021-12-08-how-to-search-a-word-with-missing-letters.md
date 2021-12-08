@@ -27,39 +27,23 @@ Today's problem, Issue 7 of the [Dev Advent Calendar 🎅](https://github.com/de
 
 I begin with the solution:
 
-```js
-import { default as names } from "../data/names.js";
-
-export const matchedNames = (smudgedName) => {
-  const nameWithRegex = smudgedName.replace(/#/gu, ".");
-  const regex = new RegExp(`^${nameWithRegex}$`, "gu");
-
-  return names.filter((name) => name.search(regex) > -1);
-};
-```
+<script src="https://gist.github.com/el3um4s/d7a66ba974263bdc60eaf1d1be327b92.js"></script>
 
 The first step is to try various combinations of regex and see which one is best suited to the problem. To do this I use [regex101](https://regex101.com/) and do some manual tests. After identifying the right rule, I create the regular expression.
 
 There are two ways. What I've used so far is like this:
 
-```js
-const re = /hello/gu;
-```
+<script src="https://gist.github.com/el3um4s/5c8ab68236d9e94039ed301bb9ac5ef8.js"></script>
 
 It is generally the best solution because it is the most efficient. However, it assumes that you always use the same rule. This is not the case today. I need to create a different regex for each name to check. I therefore use:
 
-```js
-const nameWithRegex = "hello";
-const re = new RegExp(nameWithRegex, "gu");
-```
+<script src="https://gist.github.com/el3um4s/4f5e4f6fabd59ab5282d0a5dea11f3fa.js"></script>
 
 Of course this code only works if I want to search for the word `hello`.
 
 First I replace the `#` character with the `.` character. Why? Because the period, in the regex, indicates any single character. This way I can transform `h#ello` into the string `h.ello`. Then I'll use `h.ello` in the next step.
 
-```js
-const nameWithRegex = smudgedName.replace(/#/gu, ".");
-```
+<script src="https://gist.github.com/el3um4s/389048965b60ba0b7b5f33a33b83ac37.js"></script>
 
 The next step changes based on the source of the data. In our case, each name is a single word. I can therefore assume that the comparison takes place between complete strings. So I add two commands:
 
@@ -68,17 +52,13 @@ The next step changes based on the source of the data. In our case, each name is
 
 This way I make sure that `patt.` only returns `patty` and `patti` but not `patterson`.
 
-```js
-const regex = new RegExp(`^${nameWithRegex}$`, "gu");
-```
+<script src="https://gist.github.com/el3um4s/42d80a692cec8b4cb5d6e6d986cd343c.js"></script>
 
 After finding the regex to use, all that remains is to use it. The problem is, I can't use [RegExp.prototype.test()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test). `test()` always restarts the search from the last index found. This generates bugs: without code testing I would have had a lot of trouble catching this.
 
 Consequently I decided to use [String.prototype.search()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search): this method always starts the search from position 0, and that's exactly what I need.
 
-```js
-return names.filter((name) => name.search(regex) > -1);
-```
+<script src="https://gist.github.com/el3um4s/46f1d6bc12fbc2027158edba3db16927.js"></script>
 
 That's all
 
