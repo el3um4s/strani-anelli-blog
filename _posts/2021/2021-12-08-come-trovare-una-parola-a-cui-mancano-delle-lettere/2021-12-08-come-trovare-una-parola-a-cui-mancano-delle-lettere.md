@@ -63,7 +63,7 @@ const nameWithRegex = smudgedName.replace(/#/gu, ".");
 
 Il passaggio successivo richiede osservare com'è la lista dei nomi. Poiché si tratta di un array ogni nome è a se stante. Posso quindi dare per scontato che il confronto avvenga tra stringhe complete. Aggiungo quindi due comandi:
 
-- `^` indica che il patter da trovare è all'inizio della stringa
+- `^` indica che il pattern da trovare è all'inizio della stringa
 - `$` indica che dopo l'ultimo carattere del pattern non c'è più nulla.
 
 In questo modo mi assicuro che `patt.` restituisca solamente `patty` e `patti` ma non `patterson`.
@@ -74,7 +74,7 @@ const regex = new RegExp(`^${nameWithRegex}$`, "gu");
 
 Dopo aver trovato la regex da usare non resta che usarla effettivamente. Il problema è che non posso cavarmela con [RegExp.prototype.test()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test). Il problema è che `test()` fa ricominciare la ricerca sempre dall'ultimi risultato trovato. Questo genera dei bug: credo che senza i test sul codice avrei avuto molte difficoltà a comprendere questo inghippo.
 
-Di conseguenza ho deciso di usare [String.prototype.search()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search): questo metodo fa partire la ricerca sempre dalla posizione `0`, ed è esattamente quello che serve a me. Sono
+Di conseguenza ho deciso di usare [String.prototype.search()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search): questo metodo fa partire la ricerca sempre dalla posizione `0`, ed è esattamente quello che serve a me.
 
 ```js
 return names.filter((name) => name.search(regex) > -1);
