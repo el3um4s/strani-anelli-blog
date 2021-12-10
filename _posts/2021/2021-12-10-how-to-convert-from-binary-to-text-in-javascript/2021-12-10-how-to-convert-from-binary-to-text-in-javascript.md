@@ -40,40 +40,15 @@ There are rules for converting a number from one base to another. JavaScript pro
 
 Let's take an example:
 
-```js
-parseInt("101010", 2); // 42
-parseInt("101010", 3); // 273
-parseInt("101010", 4); // 1092
-parseInt("101010", 5); // 3255
-
-parseInt(101010, 2); // 42
-parseInt(1120, 3); // 42
-parseInt(222, 4); // 42
-parseInt(132, 5); // 1092
-```
+<script src="https://gist.github.com/el3um4s/62a54c1154945c340d6c9b17a2dd1c08.js"></script>
 
 If, on the other hand, I want to do the reverse process, convert a decimal number into one of a different base, I can use the [Object.prototype.toString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) method. I found that I always used it to convert a string to a number by implying that the number was base 10. This method takes a numeric argument. The argument indicates the conversion basis. In practice, to write the example above I used this code:
 
-```js
-let x = 42;
-
-for (let b = 2; b <= 10; b++) {
-  console.table(b, x.toString(b));
-}
-```
+<script src="https://gist.github.com/el3um4s/5521cee8b154c736ea1fc7be7babef2b.js"></script>
 
 This is the result:
 
-```js
-3  '1120'
-4  '222'
-5  '132'
-6  '110'
-7  '60'
-8  '52'
-9  '46'
-10 '42'
-```
+<script src="https://gist.github.com/el3um4s/041ca124d9fbdc467a3f703cc03dca41.js"></script>
 
 ### Convert a number to text
 
@@ -81,49 +56,21 @@ After solving the problem of converting numbers from one base to another, the qu
 
 Long story short, each number between `0` and `65535` represents a distinct character. The `fromCharCode()` method allows you to convert a number into the corresponding character. Its inverse is the [String.prototype.charCodeAt()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt) method: it converts a character into a number code. So just to play I can write this:
 
-```js
-let a = "a".charCodeAt(); // 97
-
-for (let n = 0; n < 5; n++, a++) {
-  console.log(String.fromCharCode(a));
-}
-
-// a
-// b
-// c
-// d
-// e
-
-console.log(String.fromCharCode(a + 11, a + 12, a + 13, a + 14));
-// qrst
-```
+<script src="https://gist.github.com/el3um4s/0e632e20491b4378d4ca45fbef0869bd.js"></script>
 
 ### Decode a text in binary
 
-I have all the tools I need to solve the quiz. The only additional difficulty is the format of the data: it is stored in a `message.data` file which is read as a multiline string. I create an array using [String.prototype.split()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split). I have to use a regular expression to indicate the newline character because it is different on Windows (which I use) and on Linux (used by GitHub to verify the correctness of the solution).
+I have all the tools I need to solve the quiz. The only additional difficulty is the format of the data: it is stored in a `message.data` file which is read as a multiline string.
 
-Creo un array usando [String.prototype.split()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) e mettendo come argomento i caratteri che indicano una nuova linea come regular expressions (`/\r?\n/`). Devo usare una regular expression perché i caratteri sono diversi su Windows (che uso io) e su Linux (usato da GitHub per verificare la correttezza della soluzione).
+I create an array using [String.prototype.split()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split). I have to use a regular expression to indicate the newline character because it is different on Windows (which I use) and on Linux (used by GitHub to verify the correctness of the solution).
 
 I get a function like this:
 
-```js
-export const decode = (input) => {
-  return input
-    .split(/\r?\n/)
-    .map((line) => String.fromCharCode(parseInt(line, 2)))
-    .join("");
-};
-```
+<script src="https://gist.github.com/el3um4s/33938b88e3c2639084d23276e6670ec8.js"></script>
 
 Alternatively I can get the same result with a similar function:
 
-```js
-export const decode = (input) => {
-  return String.fromCharCode(
-    ...input.split(/\r?\n/).map((n) => parseInt(n, 2))
-  );
-};
-```
+<script src="https://gist.github.com/el3um4s/46493f8d57bc35a4e04f3366cf12bbc8.js"></script>
 
 ### A few links
 
