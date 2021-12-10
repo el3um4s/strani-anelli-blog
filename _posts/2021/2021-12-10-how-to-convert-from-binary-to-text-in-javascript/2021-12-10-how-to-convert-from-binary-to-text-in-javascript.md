@@ -29,7 +29,7 @@ Today's problem, issue 9 of the [Dev Advent Calendar 🎅](https://github.com/de
 
 ### Convert numbers to different bases
 
-In a double number the digits range from `0` to` 1` and nothing more. They are only two but they are everything. Starting from a sequence of zeros and ones we can make computers, the internet, everything. Also write messages. We are not used to reading binary numbers and this complicates things a bit. We have to convert the various sequences into a number system that we handle better, generally the decimal one.
+In a binary number the digits range from `0` to `1` and nothing more. They are only two but they are everything. Starting from a sequence of zeros and ones we can make computers, the internet, everything. Also write messages. We are not used to reading binary numbers and this complicates things a bit. We have to convert the various sequences into a number system that we handle better, generally the decimal one.
 
 There are rules for converting a number from one base to another. JavaScript provides the [parseInt()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt) method. This method takes two arguments:
 
