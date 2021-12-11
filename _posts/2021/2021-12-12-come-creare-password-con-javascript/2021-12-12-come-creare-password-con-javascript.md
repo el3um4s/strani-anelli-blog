@@ -17,7 +17,7 @@ tags:
   - javascript
 ---
 
-Il Polo Nord ha seri problemi di sicurezza. Prima [Babbo Natale che perde il codice dei messaggi](https://el3um4s.medium.com/how-to-convert-from-binary-to-text-in-javascript-and-viceversa-b617d9044436), adesso il l'elfo responsabile delle chiavi si è accorto che ce ne sono molte identiche. È ora di cambiare tutte le serrature. Ma questa volta invece delle chiavi si useranno delle password. Di lunghezza e difficoltà diverse a seconda del livello di sicurezza che serve.
+Il Polo Nord ha seri problemi di sicurezza. Prima [Babbo Natale che perde il codice dei messaggi](https://el3um4s.medium.com/how-to-convert-from-binary-to-text-in-javascript-and-viceversa-b617d9044436), adesso l'elfo responsabile delle chiavi si è accorto che ce ne sono molte identiche. È ora di cambiare tutte le serrature. Ma questa volta invece delle chiavi si useranno delle password. Di lunghezza e difficoltà diverse a seconda del livello di sicurezza che serve.
 
 ### Il problema: Keeping Secrets Safe 🔑
 
@@ -79,7 +79,7 @@ const OPTIONS = {
 };
 ```
 
-Creo una funzione di supporto per scegliere una lettera a caso da una parola, ovvero da una string,
+Creo una funzione di supporto per scegliere una lettera a caso da una parola, ovvero da una string.
 
 ```js
 const randomChar = (string) =>
