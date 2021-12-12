@@ -44,7 +44,7 @@ Riassumendo, le linked list sono una collezione di oggetti, ognuno proprietà de
 
 {% include picture img="singly-linked-list.webp" ext="jpg" alt="" %}
 
-In patrica sono oggetti fatti così:
+In pratica sono oggetti fatti così:
 
 ```js
 const mario = {
@@ -96,9 +96,9 @@ export const iterateList = (start) => {
 };
 ```
 
-Questo codice è la base sui cui posso costruire la mia soluzione al problema del giorno. E sospetto anche di tutti gli altri metodi legati alle linked list.
+Questo codice è la base su cui posso costruire la mia soluzione al problema del giorno. E sospetto anche di tutti gli altri metodi legati alle linked list.
 
-### Filtrare elementi in una lista Lista_concatenata
+### Filtrare elementi in una lista lista concatenata
 
 Per rendere utile la lista, e per risolvere il puzzle, devo aggiungere un altro paio di argomenti alla funzione `iterateList`. Per cominciare scorrere la lista senza fare nulla è inutile. Aggiungo quindi l'argomento `actionFn`
 
@@ -126,7 +126,7 @@ export const iterateList = (start, actionFn, filterFn) => {
 };
 ```
 
-Questo è tutto quello che mi serve sapere per risolvere il problema. Il code completo della mia soluzione, dopo aver rinominato le variabili per semplificare, la lettura è questo:
+Questo è tutto quello che mi serve sapere per risolvere il problema. Il code completo della mia soluzione, dopo aver rinominato le variabili per semplificare, è questo:
 
 ```js
 const DAY_IN_MILLISECONDS = 1000 * 60 * 60 * 24;
