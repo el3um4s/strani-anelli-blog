@@ -35,7 +35,7 @@ La domanda successiva è: ogni quanto? Questo non lo so. Sicuramente almeno una 
 
 {% include picture img="gest-dashboard-01.webp" ext="jpg" alt="" %}
 
-Questi tre mesi, e credo anche i prossimi, sono stati caratterizzati dal tornare indietro. Ho cominciato a lavorare sul progetto `gest-dahsboard` e mi scontrato con tutti i miei limiti.
+Questi tre mesi, e credo anche i prossimi, sono stati caratterizzati dal tornare indietro. Ho cominciato a lavorare sul progetto `gest-dashboard` e mi sono scontrato con molti dei miei limiti.
 
 L'idea del progetto è creare un'applicazione Electron in grado di aprire delle cartelle su PC e leggerle come se fossero su un server.
 
@@ -53,7 +53,7 @@ Il vantaggio, per me, è che in questo modo non devo creare un programma con Ele
 
 So bene che si tratta di un'esigenza assolutamente particolare, e probabilmente si rivelerà un mero esercizio di stile. Ma non è un problema semplice, non per me.
 
-Nell'affrontare tutto questo mi sono accorto delle lacune nella conoscenza della programmazione. Lacune date dalla mancanza di una formazione accademica. In altre parole, mi mancano le basi. Di conseguenza ho dovuto ingegnarmi per costruirmele queste basi.
+Nell'affrontare tutto questo mi sono accorto delle mie lacune. Lacune date dalla mancanza di una formazione accademica. In altre parole, mi mancano le basi. Di conseguenza ho dovuto ingegnarmi per costruirmele.
 
 ### Capire come funziona Electron
 
@@ -103,13 +103,13 @@ Inutile dire che sia sul blog che su Medium ci sono anche altri articoli su ques
 
 {% include picture img="document.webp" ext="jpg" alt="" %}
 
-Il problema successivo è un classico: sto scrivendo molto codice, a volte in maniera non del tutto chiara. A volte è proprio un problema di codice scritto in diversi momenti, codice che si aggroviglia e diventa complicato da leggere, da modificare, da correggere e da migliorare. Ho affrontato questo rompicapo da più lati. Da un lato ho cercato di tenere il codice il più pulito possibile, continuando a fare dei refractoring delle funzioni, dei metodi, delle variabili e della struttura stessa del codice.
+Il problema successivo è un classico: sto scrivendo molto codice, a volte in maniera non del tutto chiara. A volte il codice si aggroviglia e diventa complicato da leggere, da modificare, da correggere e da migliorare. Ho affrontato questo rompicapo da più lati. Ho provato a tenere il codice il più pulito possibile, continuando a fare dei refractoring delle funzioni, dei metodi, delle variabili e della struttura stessa del codice.
 
 Ho poi scoperto l'importanza dei test continui. Non solo come strumento per verificare la correttezza del codice ma anche per capire come funziona. In fin dei conti, da programmatore seppur dilettante, i test si sono rivelati la miglior documentazione possibile. Da un lato mostrano come funziona una data parte di un'applicazione, dall'altra mostra quale risultato aspettarsi. Dei buoni test servono anche per mostrare tutti i casi limite, magari quelli a cui non ci penseresti mai ma che quando si presentano creano problemi a non finire.
 
-Ma poi c'è l'aspetto di come documentare ad altri il funzionamento di un modulo o di un componente. E con altri intendo anche il me del futuro, seppur prossimo. Questo è stato un grattacapo non da poco e mi ha portato via molto tempo. Forse addirittura troppo tempo.
+Ma poi c'è l'aspetto di come documentare ad altri il funzionamento di un modulo o di un componente. E con altri intendo anche il me del futuro. Risolvere questo mi ha portato via molto tempo. Forse addirittura troppo tempo.
 
-Su questo ho scritto solamente un post, anche se conto di aggiornarlo e magari implementarlo tra non molto con una seconda parte:
+Non ho scritto molto su come documentare il codice, solamente un articolo. Conto però di scrivere una seconda parte tra qualche tempo:
 
 - blog: [How to Document Svelte Components](https://blog.stranianelli.com/hypothesis-how-to-document-svelte-components-english/)
 - medium: [How to Document Svelte Components](https://betterprogramming.pub/how-to-document-svelte-components-ab504661a6fc)
@@ -146,7 +146,7 @@ La seconda invece è su Svelte, SvelteKit e in parte anche su TailwindCSS:
 
 - medium: [Svelte & SvelteKit](https://el3um4s.medium.com/list/svelte-sveltekit-bf5be8834fbf)
 
-Ma perché ho cominciato a ripubblicare su Medium. Per alcune ragioni, forse in parte contraddittorie.
+Ma perché ho cominciato a ripubblicare su Medium? Per diversi motivi, in parte contraddittori.
 
 Innanzi tutto perché ho scoperto che è abbastanza veloce importare i miei post su Medium. Quindi provare mi ha richiesto un investimento di tempo tutto sommato limitato.
 
@@ -156,7 +156,9 @@ La terza ragione è legata al futuro. Ho in testa di riscrivere il codice alla b
 
 {% include picture img="income-medium.webp" ext="jpg" alt="" %}
 
-Infine, ero curioso di vedere come avrebbero reso dal punto di vista monetario i miei articoli. Su questo è presto per fare un ragionamento ma ci sono alcuni aspetti interessanti. La cosa interessante è che alcuni pezzi hanno una buona rispondenza: sono letti da più di qualche unità, e questo mi inorgoglisce. E lo so che è una cosa di vanità, ma che ci volete fare?
+Infine, ero curioso di vedere come avrebbero reso dal punto di vista monetario i miei articoli. Su questo è presto per fare un ragionamento ma ci sono alcuni aspetti interessanti. E poi mi piace vedere il numero delle views crescere. È una questione di vanità, credo, ma lasciatemi questo zuccherino.
+
+{% include picture img="medium-stats.webp" ext="jpg" alt="" %}
 
 ### I prossimi passi
 
@@ -164,6 +166,6 @@ Infine, ero curioso di vedere come avrebbero reso dal punto di vista monetario i
 
 Detto questo, quali sono i prossimi passi da fare? Beh, innanzitutto finire di sistemare il componente per documentare i componenti. Che frase ricorsiva.
 
-Poi, fatto questo, devo tornare sul progetto `gest-dahsboard`. Voglio far un test, studiando questo repository [AshleyScirra/servefolder.dev](https://github.com/AshleyScirra/servefolder.dev). Potrebbe essere la soluzione giusta al mio problema ma è presto per dirlo.
+Poi, fatto questo, devo tornare sul progetto `gest-dashboard`. Voglio far un test, studiando questo repository: [AshleyScirra/servefolder.dev](https://github.com/AshleyScirra/servefolder.dev). Potrebbe essere la soluzione giusta al mio problema ma è presto per dirlo.
 
 Poi ho altre idee ma direi che se tra un mese ho finito con questi due sarò più che soddisfatto.
