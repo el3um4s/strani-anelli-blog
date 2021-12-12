@@ -27,7 +27,7 @@ Why?
 
 Because my articles are nothing more than my travel diary. They are my notes and my considerations. My findings and my mistakes. They are used to keep track of what I learn, to be able to find it in the future and to share it with those who find themselves facing the same problems.
 
-So I have to decide what to do. I think the best thing is to regularly post updates on my various projects. And post links to articles on my blog (and Medium - but I'll come back to that in a moment). That way I can avoid filling Patreon with illegible posts. I can also avoid turning it into a page with only links to my blog. I can also, and that's what I like best, use this space as an excuse to make a point about how my project is progressing. And I can talk about my difficulties.
+So I have to decide what to do. I think the best thing is to regularly post updates on my various projects. And post links to articles on my blog (and Medium - but I'll come back to that in a moment). That way I can avoid filling Patreon with illegible posts. I can also avoid turning it into a page with only links to my blog. I can also use this space as an excuse to make a point about how my project is progressing, too and that's what I like best. And I can talk about my difficulties.
 
 The next question is: how often? I do not know this. Definitely at least once a month. Maybe two.
 
@@ -73,7 +73,7 @@ While these are the links on Medium:
 - [How to Test Electron Apps](https://betterprogramming.pub/how-to-test-electron-apps-1e8eb0078d7b)
 - [Electron seamless titlebar with Svelte and Tailwind](https://el3um4s.medium.com/electron-seamless-titlebar-with-svelte-and-tailwind-bd4d53d81c67)
 
-These articles are not enough to understand how to create an app with Electron. They present some of the problems I have had to face. I have written others, and I plan to write more on this topic in the future.
+These articles are not enough to understand how to create an app with Electron. They show some of the problems I had to face. I have written others, and I plan to write more on this topic in the future.
 
 ### How to create Web Components
 
@@ -97,7 +97,7 @@ I wanted to learn more about how to create a Svelte component:
 - blog: [How to create and publish Svelte components](https://blog.stranianelli.com/how-to-create-svelte-componentes-english/)
 - medium: [How to create and publish Svelte components](https://el3um4s.medium.com/how-to-create-and-publish-svelte-components-e770f1e94435)
 
-On the blog and on Medium there are others articles on this topic.
+On the blog and on Medium there are other articles on this topic.
 
 ### How to document the code
 
@@ -105,7 +105,7 @@ On the blog and on Medium there are others articles on this topic.
 
 The next problem is a classic: I'm writing a lot of code, sometimes not entirely clear. Sometimes the code gets tangled and complicated to read, modify, fix and improve. I have approached this puzzle from multiple sides. I tried to keep the code as clean as possible, continuing to refract the functions, methods, variables and structure of the code itself.
 
-I then discovered the importance of continuous testing. Not only as a tool to verify the correctness of the code but also to understand how it works. After all, as an amateur programmer, the tests turned out to be the best documentation possible. On the one hand they show how a given part of an application works, on the other hand it shows what result to expect. Good tests are also used to show all the borderline cases, perhaps those you would never think about but which when they arise create endless problems.
+Then I discovered the importance of continuous testing. Not only as a tool to verify the correctness of the code but also to understand how it works. After all, as an amateur programmer, the tests turned out to be the best documentation possible. On the one hand they show how a given part of an application works, on the other hand it shows what result to expect. Good tests are also used to show all the borderline cases, perhaps those you would never think about but which when they arise create endless problems.
 
 But then there is the aspect of how to document the operation of a module or component to others. Solving this took me a long time. Maybe even too long.
 
@@ -120,7 +120,7 @@ Creating this component forced me to go a little deeper with how Svelte works. I
 
 {% include picture img="dev-advent.webp" ext="jpg" alt="" %}
 
-Programming in your free time can sometimes be exhausting, especially when you feel like you're not making progress. It's an important passion for me, but there are times when it's hard to find the motivation to keep going. Over time I have learned that the best way to deal with this situation is to impose something on me.
+Programming in your free time sometimes is exhausting, especially when you feel like you're not making progress. It's an important passion for me, but there are times when it's hard to find the motivation to keep going. Over time I have learned that the best way to deal with this situation is to impose something on me.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AmtkdsTcHTo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
