@@ -1,6 +1,6 @@
 ---
 title: "Tailwind CSS & Svelte"
-published: true
+published: false
 usa_webp: true
 header:
   immagine_tipo: "jpg"
@@ -19,15 +19,10 @@ tags:
   - TailwindCSS
 ---
 
-
 https://medium.com/weekly-webtips/functional-try-catch-in-javascript-8b9923c3e395
 
-  devo unire questo:
-    - https://github.com/coderaiser/try-to-catch  - per async functions
-    - https://github.com/coderaiser/try-catch - per funzioni normali
-  da guardare anche:
-    - https://github.com/riophae/better-try-catch
-
+devo unire questo: - https://github.com/coderaiser/try-to-catch - per async functions - https://github.com/coderaiser/try-catch - per funzioni normali
+da guardare anche: - https://github.com/riophae/better-try-catch
 
 Come dicevo già qualche giorno fa ho deciso di concentrarmi su alcuni progetti più complessi. Il primo è "GEST - Dashboard". Nome abbastanza brutto, lo ammetto, ma farò in tempo a cambiarlo più avanti. Mi serve uno strumento per aprire su pc offline delle applicazioni web. Nella mia testa ogni applicazione web sarà una cartella contenente tutti i file (oppure un file compresso, non ho ancora deciso) e verrà visualizzata in una finestra. Userò Electron in combinazione con Svelte e Tailwind. Ci sono alcuni problemi interessanti che sto incontrando. Uno di questi riguarda proprio come integrare TailwindCSS con Svelte.
 
@@ -75,8 +70,8 @@ let window = new BrowserWindow({
     nodeIntegration: false,
     contextIsolation: true,
     nativeWindowOpen: true,
-    preload: path.join(__dirname, "preload.js")
-  }
+    preload: path.join(__dirname, "preload.js"),
+  },
 });
 //...
 ```
@@ -108,23 +103,23 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-}
+};
 ```
 
 **postcss.config.js**:
 
 ```js
-const plugins = [require('tailwindcss')]
+const plugins = [require("tailwindcss")];
 module.exports = {
-  plugins
-}
+  plugins,
+};
 ```
 
 Devo poi configurare **rollup** per poter gestire i file PostCSS. Modifico quindi `rollup.config.js` aggiungendo:
 
 ```js
 //...
-import postcss from 'rollup-plugin-postcss';
+import postcss from "rollup-plugin-postcss";
 
 //...
 
@@ -133,17 +128,17 @@ export default {
   plugins: [
     //...
     // To be able to import css files inside svelte `<script>`
-    postcss({ extract: 'base.css' }),
+    postcss({ extract: "base.css" }),
     //...
-  ]
+  ],
   //...
-}
+};
 ```
 
 Questo mi permette di generare un file `base.css` dedicato a Tailwind. Devo però dire al file `index.html` dove trovarlo. Aggiungo quindi al file html principale questa riga:
 
 ```html
-<link rel='stylesheet' href='build/base.css'>
+<link rel="stylesheet" href="build/base.css" />
 ```
 
 Manca ancora una cosa da aggiungere nel progetto: qualche stile di TailwindCSS. Comincio con il creare un file `css/tailwind.pcss`. Uso un file separato per velocizzare i test in fase di scrittura delle componenti grafiche.
@@ -174,7 +169,7 @@ Importo quindi il file in `App.svelte`:
 
 ```html
 <script>
-  import './css/tailwind.pcss'
+  import "./css/tailwind.pcss";
 </script>
 ```
 
@@ -182,7 +177,9 @@ Adesso posso usare Tailwind, per esempio aggiungendo la classe `btn-orange` ai l
 
 ```html
 <p>
-  Visit the <a href="https://svelte.dev/tutorial" class="btn-orange">Svelte tutorial</a> to learn how to build Svelte apps.
+  Visit the
+  <a href="https://svelte.dev/tutorial" class="btn-orange">Svelte tutorial</a>
+  to learn how to build Svelte apps.
 </p>
 ```
 
