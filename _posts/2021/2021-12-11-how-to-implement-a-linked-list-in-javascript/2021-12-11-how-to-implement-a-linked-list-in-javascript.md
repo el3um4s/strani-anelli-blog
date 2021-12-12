@@ -19,7 +19,7 @@ tags:
 
 It's cold in the North Pole. I don't understand why Santa Claus insists on spending most of the year there. But so it is, and we have to deal with it. Problems are not lacking. After the name tags damaged by the snow today there was another accident. Someone forgot to check the revision date of the gift train wagons. Obviously the train left late.
 
-### The puzzle: Train maintenance 🚂
+### The puzzle: Train Maintenance 🚂
 
 {% include picture img="cover.webp" ext="jpg" alt="" %}
 
@@ -46,38 +46,13 @@ In summary, linked lists are a collection of objects, each property of the previ
 
 They are objects made like this:
 
-```js
-const mario = {
-  name: "Mario",
-  next: john,
-};
-
-const john = {
-  name: "John",
-  next: luigi,
-};
-
-const luigi = {
-  name: "Luigi",
-  next: null,
-};
-```
+<script src="https://gist.github.com/el3um4s/37c6256296bf4cdc0368150ec0ce308b.js"></script>
 
 The fundamental property is `next`. We can actually call it whatever we want but `next` is a pretty clear term. The `mario` object is the `head` of the list. All elements are `nodes` of the structure.
 
 I can rewrite the previous code like this:
 
-```js
-mario = {
-  name: "Mario",
-  next: {
-    name: "John",
-    next: {
-      name: "Luigi",
-    },
-  },
-};
-```
+<script src="https://gist.github.com/el3um4s/04e68e762da640706945f6111a2fc1be.js"></script>
 
 I can also create longer and more complex structures than this. But to understand the basic concept I think this is enough.
 
@@ -87,14 +62,7 @@ The problem requires you to go through a list of items and take an action for ea
 
 The first step is to understand how to iterate between all the various elements. In this case, with this structure, it is better to use a [while](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while) loop: I scroll through the next property of each element as long as the property itself exists:
 
-```js
-export const iterateList = (start) => {
-  let next = start;
-  while (next) {
-    next = next.next;
-  }
-};
-```
+<script src="https://gist.github.com/el3um4s/0110664446dc1e78b26fea01021688a1.js"></script>
 
 This code is the foundation upon which I can build my solution. Suspicion will also be the basis of all the other methods linked to linked lists.
 
@@ -102,62 +70,15 @@ This code is the foundation upon which I can build my solution. Suspicion will a
 
 To make the list useful, and to solve the puzzle, I need to add a couple more arguments to the `iterateList` function. I add the `actionFn` argument
 
-```js
-export const iterateList = (start, actionFn) => {
-  let item = start;
-  while (item) {
-    actionFn(item);
-    item = item.next;
-  }
-};
-```
+<script src="https://gist.github.com/el3um4s/a726d957310582ea6347eb2796957553.js"></script>
 
 I also need a way to perform actions on only certain items in the list. A kind of filter, `filterFn`:
 
-```js
-export const iterateList = (start, actionFn, filterFn) => {
-  let item = start;
-  while (item) {
-    if (filterFn(item)) {
-      actionFn(item);
-    }
-    item = item.next;
-  }
-};
-```
+<script src="https://gist.github.com/el3um4s/aff5c875ba7f2b816f8fa20685e6c1d2.js"></script>
 
 This is all I need to solve the problem. The complete code of my solution, after renaming the variables to make it easier to read, is this:
 
-```js
-const DAY_IN_MILLISECONDS = 1000 * 60 * 60 * 24;
-
-const defaultFilterFn = () => true;
-const defaultActionFn = (wagon) => console.log(`${wagon.emoji} ${wagon.name}`);
-
-export const iterateWagons = (
-  start,
-  actionFn = defaultActionFn,
-  filterFn = defaultFilterFn
-) => {
-  let wagon = start;
-  while (wagon) {
-    if (filterFn(wagon)) {
-      actionFn(wagon);
-    }
-    wagon = wagon.next;
-  }
-};
-
-export const filterOldBreaks = (wagon) =>
-  daysAfterDate(wagon.lastBreakRevision) > 365;
-
-const daysAfterDate = (d) => {
-  const origDate = new Date(d);
-  const today = new Date();
-  const difference = today - origDate;
-  return difference / DAY_IN_MILLISECONDS;
-};
-```
+<script src="https://gist.github.com/el3um4s/94637ff80d5d9bc516d9b7d6853245f5.js"></script>
 
 ### Useful methods for Linked List in JavaScript
 
@@ -167,104 +88,39 @@ After solving the question I spent some time experimenting with linked lists. I 
 
 The first method allows to calculate the number of nodes present in a list.
 
-```js
-const size = (start) => {
-  let count = 0;
-  let item = start;
-  while (item) {
-    count++;
-    item = item.next;
-  }
-  return count;
-};
-```
+<script src="https://gist.github.com/el3um4s/fad8155a3777a9250f2346f038d1bd6f.js"></script>
 
 But I can also get the same result starting from `iterateList()`:
 
-```js
-export const size = (start) => {
-  let count = 0;
-  iterateList(start, () => count++);
-  return count;
-};
-```
+<script src="https://gist.github.com/el3um4s/3ccc6ae2f925499cf441f8cade13ae0e.js"></script>
 
 ### Count how many nodes in a linked list satisfy a condition
 
 I prefer the second method because you can easily modify it to count how many nodes in a list satisfy a given condition:
 
-```js
-export const countNode = (start, filterFn = () => true) => {
-  let count = 0;
-  iterateList(start, () => count++, filterFn);
-  return count;
-};
-```
+<script src="https://gist.github.com/el3um4s/7d01dbec06f0dce0c8b76a0e74815042.js"></script>
 
 ### Find the last node in a linked list
 
 In arrays, it is easy to find the last element. With linked lists you need to scroll through all the nodes until you get to the last one:
 
-```js
-export const last = (start) => {
-  let node = start;
-  while (node.next) {
-    node = node.next;
-  }
-  return node;
-};
-```
+<script src="https://gist.github.com/el3um4s/daaadbe7fc618ea715b46945bb45531b.js"></script>
 
 I can add a filter to get the last of the nodes that satisfies a given condition:
 
-```js
-export const last = (start, filterFn = () => true) => {
-  let node = start;
-  let lastNode = null;
-  while (node.next) {
-    node = node.next;
-    if (filterFn(node)) {
-      lastNode = node;
-    }
-  }
-  return lastNode;
-};
-```
+<script src="https://gist.github.com/el3um4s/a3a1515a378b4ded254788f92a009002.js"></script>
 
 ### Find the first item in a list based on a condition
 
 I can modify the last function to create a method to get the first node that satisfies a certain condition:
 
-```js
-export const first = (start, filterFn = () => true) => {
-  let node = start;
-  let firstNode = null;
-  while (node.next) {
-    if (filterFn(node)) {
-      firstNode = node;
-      break;
-    }
-    node = node.next;
-  }
-  return firstNode;
-};
-```
+<script src="https://gist.github.com/el3um4s/f81dddd93678230db97bb28d85dd7838.js"></script>
 
 ### Find a node in a linked list based on its location
 
 Although there is no index, as with arrays, it is possible to obtain a node of a linked list based on its position.
 
-```js
-export const getByIndex = (start, index) => {
-  let counter = 0;
-  let node = start;
-  while (counter < index) {
-    node = node.next;
-    counter++;
-  }
-  return node;
-};
-```
+<script src="https://gist.github.com/el3um4s/f58ce70d0275729337b87d4267ed8e83.js"></script>
 
 I can also decide to count the elements starting from `1` instead of `0`: just change the original value of `counter`.
 
@@ -272,9 +128,7 @@ I can also decide to count the elements starting from `1` instead of `0`: just c
 
 So far I have only searched among the various nodes. But it can be useful to add a new node. The easiest situation is when we want to add something at the beginning, emulating the `unshift()` method of arrays:
 
-```js
-export const addHead = (start, node) => (node.next = start);
-```
+<script src="https://gist.github.com/el3um4s/1d05033d209a7e269591648e0719125e.js"></script>
 
 Things get a little complicated. At this point it is advisable to create a specific class to manage the various borderline cases. I recommend reading the post by [Gulgina Arkin](https://medium.com/swlh/singly-linked-list-in-javascript-a0e58d045561) that I linked at the beginning.
 
@@ -282,90 +136,44 @@ Things get a little complicated. At this point it is advisable to create a speci
 
 It's quick to delete the head of a list:
 
-```js
-export const removeHead = (start) => {
-  let next = start.next;
-  start.next = null;
-  return next;
-};
-```
+<script src="https://gist.github.com/el3um4s/ee2275560a610e4521975a0b46e4cd9a.js"></script>
 
 ### Add a node to the end of the list
 
 Adding a node to the end of the list takes an extra step. I must first find the last node, and then add the new one to that:
 
-```js
-export const push = (start, node) => {
-  const lastNode = last(start);
-  lastNode.next = node;
-};
-```
+<script src="https://gist.github.com/el3um4s/535beb837c2a42d045a45a454e0c2574.js"></script>
 
 In one line it would be:
 
-```js
-export const push = (start, node) => (lastWagon(start).next = node);
-```
+<script src="https://gist.github.com/el3um4s/5b85bf0df869e13c62baa7bcfe528e46.js"></script>
 
 ### Delete a node at the end of the list
 
 In a symmetrical way I can delete the last element of a linked list:
 
-```js
-export const pop = (start) => {
-  const n = countWagon(start);
-  const node = getByIndex(start, n - 2);
-  node.next = null;
-};
-```
+<script src="https://gist.github.com/el3um4s/9944a05685c6e7fb6d47eeb7217837bf.js"></script>
 
 Or in a more synthetic way
 
-```js
-export const pop = (start) =>
-  (getByIndex(start, countWagon(start) - 2).next = null);
-```
+<script src="https://gist.github.com/el3um4s/82c14a40d62200f16b0e9795d90d9a9d.js"></script>
 
 ### Add an item in a linked list
 
 Another operation that can be useful is to insert an element in a specific position in the list. To do this I have to change the element that precedes the desired position.
 
-```js
-export const insert = (start, index, node) => {
-  const prev = getByIndex(start, index - 1);
-  const next = getByIndex(start, index);
-
-  prev.next = node;
-  node.next = next;
-};
-```
+<script src="https://gist.github.com/el3um4s/533d6ed071209b9676623d891b3722fc.js"></script>
 
 ### Delete a node from a list
 
 Deleting a node involves modifying the node that precedes it.
 
-```js
-export const remove = (start, index) => {
-  const prev = getByIndex(start, index - 1);
-  const next = getByIndex(start, index + 1);
-  prev.next = next;
-};
-```
+<script src="https://gist.github.com/el3um4s/9a346564e81984d613d3f4679787e1d3.js"></script>
 
 ### Edit a node
 
 The last common operation left is to modify a node. This case is quite simple, just retrieve the node to modify with `getByIndex()`
 
-```js
-export const change = (start, index, value) => {
-  let node = getByIndex(start, index);
-  node = {
-    ...node,
-    ...value,
-  };
-  remove(start, index);
-  insert(start, index, node);
-};
-```
+<script src="https://gist.github.com/el3um4s/c3ff999d337782127f0e7aecb264ca02.js"></script>
 
 That's all for today. To help me keep track of this series of posts I've created a list on Medium: [Dev Advent Calendar - The advent diary of an amateur programmer](https://el3um4s.medium.com/list/dev-advent-calendar-89d163132d6e).
