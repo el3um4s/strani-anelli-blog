@@ -40,7 +40,7 @@ There aren't many quick videos on YouTube explaining what they are. There are so
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/W-9hyTm1syc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-In summary, linked lists are a collection of objects, each property of the previous one.
+In short words, linked lists are a collection of objects, each property of the previous one.
 
 {% include picture img="singly-linked-list.webp" ext="jpg" alt="" %}
 
@@ -50,11 +50,11 @@ They are objects made like this:
 
 The fundamental property is `next`. We can actually call it whatever we want but `next` is a pretty clear term. The `mario` object is the `head` of the list. All elements are `nodes` of the structure.
 
-I can rewrite the previous code like this:
+I can rewrite the previous code in this way:
 
 <script src="https://gist.github.com/el3um4s/04e68e762da640706945f6111a2fc1be.js"></script>
 
-I can also create longer and more complex structures than this. But to understand the basic concept I think this is enough.
+I can also create longer and more complex structures but I think this is enough to understand the basic concept.
 
 ### Iterate the elements of a list
 
