@@ -8,7 +8,7 @@ header:
   immagine_estesa: "image"
   immagine_fonte: "Photo credit: [Markus Winkler](https://unsplash.com/@markuswinkler)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2021-12-12 18:00"
+date: "2021-12-12 19:00"
 categories:
   - dev advent
   - javascript
