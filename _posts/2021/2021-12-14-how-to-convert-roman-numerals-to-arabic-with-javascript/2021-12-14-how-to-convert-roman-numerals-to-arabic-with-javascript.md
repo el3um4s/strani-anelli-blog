@@ -33,90 +33,38 @@ The conversion from Roman numerals to Arabic numbers therefore requires two type
 
 To solve this puzzle I used a discussion from a few years ago posted on [stackoverflow](https://stackoverflow.com/questions/48946083/convert-roman-number-to-arabic-using-javascript). The comments present many possible solutions. Starting from there I wrote my solution:
 
-```js
-export const romanToArabic = (input) => {
-  const romans = {
-    I: 1,
-    V: 5,
-    X: 10,
-    L: 50,
-    C: 100,
-    D: 500,
-    M: 1000,
-  };
-  return [...input.toUpperCase()].reduce(
-    (previousValue, currentValue, currentIndex, array) =>
-      romans[array[currentIndex + 1]] > romans[currentValue]
-        ? previousValue - romans[currentValue]
-        : previousValue + romans[currentValue],
-    0
-  );
-};
-```
+<script src="https://gist.github.com/el3um4s/cbbf855caa1016895bc54b14105e614f.js"></script>
 
 How does it work?
 
 First I define an object with Roman numeral letters as a property. The value of each property is the value of the letter:
 
-```js
-const romans = {
-  I: 1,
-  V: 5,
-  X: 10,
-  L: 50,
-  C: 100,
-  D: 500,
-  M: 1000,
-};
-```
+<script src="https://gist.github.com/el3um4s/ef6885703ed30dc3e635d34c6d45a0aa.js"></script>
 
 Then I take the number to convert, which will be a string, and transform it into an array containing characters:
 
-```js
-const inputUppercase = input.toUpperCase();
-const arrayRomans = [...inputUppercase];
-```
+<script src="https://gist.github.com/el3um4s/80b6f784f52914a0979e290e2e05721b.js"></script>
 
 First I turn all the content into uppercase characters; this way I can simplify the later analysis.
 
 To iterate through all the letters I use the [Array.prototype.reduce()
 ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce) method. Unlike other times I use its extended form:
 
-```js
-reduce((previousValue, currentValue, currentIndex, array) => {
-  /* ... */
-}, initialValue);
-```
+<script src="https://gist.github.com/el3um4s/ce22b935b283c039d4894fff1f3a17b5.js"></script>
 
 What I want to do is compare the value I am analyzing with the one that follows it:
 
-```js
-arrayRomans.reduce((previousValue, currentValue, currentIndex, array) => {
-  if (romans[array[currentIndex + 1]] > romans[currentValue]) {
-    //
-  } else {
-    //
-  }, 0
-});
-```
+<script src="https://gist.github.com/el3um4s/bc22137a26bd05b643e5a366fdcaa9fe.js"></script>
 
 I take this number as an example: `["M","X","X","I","V"]`.
 
 With `index = 0` the condition becomes:
 
-```js
-romans[arrayRomans[0 + 1]] > romans["M"];
-romans["X"] > romans["M"];
-10 > 1000;
-```
+<script src="https://gist.github.com/el3um4s/d2752da812fcea19dbaab042e3335e9b.js"></script>
 
 Instead the next one is:
 
-```js
-romans[arrayRomans[1 + 1]] > romans["X"];
-romans["X"] > romans["X"];
-10 > 10;
-```
+<script src="https://gist.github.com/el3um4s/cd6cdeb570788c315e33f2484d618da1.js"></script>
 
 What do I have to do now?
 
@@ -124,15 +72,11 @@ Now I have to calculate the value that that character indicates.
 
 So if the following value is greater than the previous one we have to subtract the current value from the total number:
 
-```js
-previousValue - romans[currentValue];
-```
+<script src="https://gist.github.com/el3um4s/f6f7e658c1eb31d07d2b34ac76785578.js"></script>
 
 On the contrary, if the following value is smaller I can add it to the total:
 
-```js
-previousValue + romans[currentValue];
-```
+<script src="https://gist.github.com/el3um4s/701c3303b4c1ff3c74187bb41132e9fc.js"></script>
 
 If I run all the steps in sequence I get:
 
@@ -140,54 +84,13 @@ If I run all the steps in sequence I get:
 
 A little note on the gif. To delay the execution of the code in JavaScript I used a `sleep()` function:
 
-```js
-function sleep(milliseconds) {
-  var start = new Date().getTime();
-  for (var i = 0; i < 1e7; i++) {
-    if (new Date().getTime() - start > milliseconds) {
-      break;
-    }
-  }
-}
-```
+<script src="https://gist.github.com/el3um4s/8351498f1dc607bc75ce4af76990012c.js"></script>
 
 ### Transforming Arabic numerals into Roman numerals
 
 At this point I wondered how to do the opposite. I then looked for how to convert a decimal number to Roman numerals. I found an interesting article by [Carlos da Costa](https://calolocosta.medium.com/create-a-roman-numerals-converter-in-javascript-a82fda6b7a60) explaining how to do it. I changed his code a bit, trying to simplify it. This is my method:
 
-```js
-export const arabicToRoman = (input) => {
-  const rules = {
-    M: 1000,
-    CM: 900,
-    D: 500,
-    CD: 400,
-    C: 100,
-    XC: 90,
-    L: 50,
-    XL: 40,
-    XXX: 30,
-    XX: 20,
-    X: 10,
-    IX: 9,
-    V: 5,
-    IV: 4,
-    I: 1,
-  };
-  let res = "";
-  let num = parseInt(input);
-  const romans = Object.keys(rules);
-
-  for (let value of romans) {
-    const val = rules[value];
-    while (num >= val) {
-      num -= val;
-      res += value;
-    }
-  }
-  return res;
-};
-```
+<script src="https://gist.github.com/el3um4s/36f4d3ef67ecda07d64e723eb270f828.js"></script>
 
 Although I hope the elves don't decide to convert everything from Arabic numbers back to decimal numbers.
 
