@@ -23,7 +23,7 @@ Oramai gli elfi sono lanciatissimi. Hanno convinto Babbo Natale ad ammodernare t
 
 {% include picture img="cover.webp" ext="jpg" alt="" %}
 
-La conversione di numeri romani in decimali non è un problema facile. Non è possibile usare dei metodi nativi di JavaScript: dobbiamo creare noi una funzione ad hoc. Inoltre la numerazione latina è una numerazione basata lettere raggruppate. Ma il significato della lettera varia in base alle lettere che la seguono o precedono.
+La conversione di numeri romani in decimali non è un problema facile. Non è possibile usare dei metodi nativi di JavaScript: dobbiamo creare noi una funzione ad hoc. Inoltre la numerazione latina è una numerazione basata su raggruppamenti di lettere. Ma il significato della lettera varia in base alle lettere che la seguono o precedono.
 
 Per esempio, la lettera `I` indica la cifra `1`. La lettera `V` indica il numero `5`. Possiamo combinare questi due simboli in due diverse maniere: `IV` e `VI`. Nel nostro sistema numerico diventerebbero `15` e `51`. Ma non è così. Perché `I` davanti a `V` significa `meno 1 a 5`, ovvero `4`. Invece `I` dopo `V` significa `5 più 1`, ovvero `6`.
 
