@@ -327,7 +327,7 @@ function referee() {
 }
 ```
 
-Il metodo `lean()` permette di insegnare all'arbitro le regole. Per il gioco base ottengo:
+Il metodo `learn()` permette di insegnare all'arbitro le regole. Per il gioco base ottengo:
 
 ```js
 const training = {
