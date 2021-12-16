@@ -128,22 +128,7 @@ How do I explain the rules to the referee? Well, with examples. For example, I c
 
 Obviously the referee must have a memory to keep what he learns:
 
-```js
-function referee() {
-  const training = {};
-
-  const learn = (winner, loser) => {
-    if (!choice in training) {
-      training[winner] = {};
-    }
-    training[winner][loser] = 1;
-  };
-
-  const judge = () => {};
-
-  return { learn, judge };
-}
-```
+<script src="https://gist.github.com/el3um4s/b524172e1a1df5a1b6aee8bef4a5d7c8.js"></script>
 
 The `learn()` method allows you to teach the referee the rules. For the base game I get:
 
