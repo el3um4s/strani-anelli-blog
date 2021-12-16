@@ -1,5 +1,5 @@
 ---
-title: "7 Modi per programmare Sasso Carta Forbice in JavaScript"
+title: "7 Ways To Code Rock Paper Scissors in JavaScript"
 published: true
 usa_webp: true
 header:
@@ -8,7 +8,7 @@ header:
   immagine_estesa: "image"
   immagine_fonte: "Photo credit: [**Marcus Wallis**](https://unsplash.com/@marcus_wallis)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2021-12-15 15:00"
+date: "2021-12-15 16:00"
 categories:
   - dev advent
   - javascript
@@ -17,15 +17,15 @@ tags:
   - javascript
 ---
 
-Il puzzle di oggi, il numero 14 del [Dev Advent Calendar 🎅](https://github.com/devadvent/puzzle-14), è una versione elfica di Sasso Carta Forbice. Nonostante si basi su un gioco semplice crearne una versione digitale pone alcuni quesiti interessanti. È il classico problema che può essere risolto in modi diversi. La cosa interessante è capire come semplificare il codice, renderlo leggibile e sopratutto creare una versione che può essere ampliata a piacere
+Today's puzzle, number 14 of the [Dev Advent Calendar 🎅](https://github.com/devadvent/puzzle-14), is an elven version of Rock Paper Scissors. Although it is based on a simple game, creating a digital version raises some interesting questions. It is the classic problem that can be solved in different ways. The interesting thing is to understand how to simplify the code, make it readable and above all create a version that can be expanded at will.
 
-### Il problema: Earth-Fire-Snow Game 🌍🔥❄️ aka Rock-Paper-Scissors 💎📜✂️
+### The puzzle: Earth-Fire-Snow Game 🌍🔥❄️ aka Rock-Paper-Scissors 💎📜✂️
 
 {% include picture img="cover.webp" ext="jpg" alt="" %}
 
-Oggi faccio una cosa diversa. Per prima cosa mostro la soluzione che ho inviato per il contest, poi riporterò i miei appunti sulle varie alternative che ho trovato.
+Today I do different. First I show the solution I submitted for the contest, then I will report my notes on the various alternatives I found.
 
-Cominciamo con il codice:
+Let's start with the code:
 
 ```js
 export const selectWinner = (user1, user2) => {
@@ -48,36 +48,36 @@ function mod(a, b) {
 }
 ```
 
-A prima vista pare un modo un po' strano per affrontare il problema. Ho deciso di non usare il classico approccio `if...then...else`. Ho anche preferito non affrontare la variante `switch`: in rete ci sono mille tutorial di questo tipo. Ho trovato, però, una vecchia discussione di [stackoverflow](https://stackoverflow.com/questions/17976883/rock-paper-scissors-in-javascript) ricca di suggerimenti.
+It seems a bit strange way of dealing with the problem. I decided not to use the classic `if...then...else` approach. I also preferred not to deal with the `switch` variant: there are a thousand tutorials of this type on the net. I did find, however, an old [stackoverflow](https://stackoverflow.com/questions/17976883/rock-paper-scissors-in-javascript) thread full of tricks.
 
-Questo è un suggerimento interessante e un bell'esempio di soluzione creativa. Se osserviamo le regole del gioco abbiamo che:
+This is an interesting suggestion and a good example of a creative solution. If we observe the rules of the game we have that:
 
 - _Earth_ extinguishes _fire_ (_rock_ beats _scissors_)
 - _Snow_ covers _earth_ (_paper_ beats _rock_)
 - _Fire_ melts _snow_ (_scissors_ beats _paper_)
 
-Se li mettiamo in riga notiamo una cosa interessante:
+If we put them in line we notice an interesting thing:
 
 ```
 Earth, Snow, Fire
 Rock, Paper, Scissors
 ```
 
-Prendiamo Snow: snow sconfigge gli elementi che lo precedono e viene sconfitto da quelli che lo seguono.
+Let's take Snow: snow defeats the elements that precede him and is defeated by those that follow him.
 
-Provo a spiegarmi con un disegno e prendendo un gioco simile ma con più opzioni: rock-spock-paper-lizard-scissors
+I try to explain myself with a drawing and taking a similar game but with more options: rock-spock-paper-lizard-scissors
 
 {% include picture img="rock-spock-paper-lizard-scissors.webp" ext="jpg" alt="" %}
 
-Mettendo i simboli in sequenza posso creare un array diverso per ogni simbolo. Il simbolo principale è al centro e sconfigge tutti quelli che lo precedono. Invece tutti i simboli che seguono lo sconfiggono.
+I put the symbols in sequence to create a different array for each symbol. The main symbol is in the center and defeats all those who precede it. Instead, all the symbols that follow defeat him.
 
 ```js
 const choices = ["rock", "spock", "paper", "lizard", "scissors"];
 ```
 
-La cosa interessante è che per come è costruito il gioco l'ordine degli elementi dell'array è sempre lo stesso. Significa che basta un unico array e trattarlo come circuito chiuso.
+Due to the way the game is built, the order of the elements of the array is always the same. It means that a single, well-constructed array is enough to handle all the rules.
 
-Un modo per esprimere questo concetto usare una funzione simile a questa:
+I can express this concept with a function similar to this:
 
 ```js
 function compare(choice1, choice2) {
@@ -100,17 +100,15 @@ function compare(choice1, choice2) {
 }
 ```
 
-Questa funzione non è farina del mio sacco, è di [Paulo Almeida](https://stackoverflow.com/users/1081569/paulo-almeida). Ed è sempre sua l'idea di usare il modulo di un numero per generalizzare ancor di più il codice.
+This function is not my bag, it is by [Paulo Almeida](https://stackoverflow.com/users/1081569/paulo-almeida). It is his idea to use the modulo of a number to generalize the code even more. I also recommend reading this article from a few years ago: [Modulo of Negative Numbers](https://torstencurdt.com/tech/posts/modulo-of-negative-numbers/).
 
-Giusto per inciso, consiglio anche la lettura di questo articolo di qualche anno fa: [Modulo of Negative Numbers](https://torstencurdt.com/tech/posts/modulo-of-negative-numbers/).
+### Code Rock Paper Scissor with `if()`
 
-### Sasso Carta Forbice usando `if()`
-
-Ovviamente questo ragionamento non è l'unico modo per risolvere il problema. In genere le guide e i video in rete consigliano di partire dal semplice prima di complicare. Per esempio questo video, abbastanza lungo ma ben fatto, di Ania Kubów presenta 3 soluzioni classiche
+This reasoning is not the only way to solve the problem. Guides and videos generally recommend starting with the simple before complicating. For example, this video, quite long but well done, by Ania Kubów presents 3 classic solutions
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RwFeg0cEZvQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-La sua soluzione numero 1, riscritta per adattarsi al problema del giorno, è qualcosa del genere:
+Solution number 1, rewritten to fit the specifics of the puzzle, is something like this:
 
 ```js
 export const selectWinner = (user1, user2) => {
@@ -148,11 +146,11 @@ export const selectWinner = (user1, user2) => {
 };
 ```
 
-Penso però che sia possibile fare un passo oltre e semplificare il codice. Per lo meno, trovo tanto più leggibile un codice quanto evita l'utilizzo di condizioni. Anche solo dal punto di vista visivo preferisco semplificare. E dividere.
+I think it's possible to go a step further and simplify the code. I find a code all the more readable when it avoids the use of conditions. Even only from a visual point of view I prefer to simplify. And divide the code into smaller pieces.
 
-### Sasso Carta Forbice usando `ifVal()`
+### Code Rock Paper Scissor with `ifVal()`
 
-Ogni problema può essere scomposto in pezzetti più piccoli. E ogni passaggio ripetuto può essere trasformato in una funzione. Il codice riporta più volte una codice simile a questo:
+Each problem can be broken down into smaller pieces. Each repeated step can be turned into a function. The code repeatedly reports a code similar to this:
 
 ```js
 if (user1.choice === "rock" && user2.choice === "scissors") {
@@ -160,7 +158,7 @@ if (user1.choice === "rock" && user2.choice === "scissors") {
 }
 ```
 
-Posso trasformare in una funzione questo pezzetto, generalizzandolo:
+I can turn this bit into a function:
 
 ```js
 function ifVal(a, b, winner) {
@@ -173,7 +171,7 @@ ifVal("rock", "scissors", user1);
 ifVal("scissors", "rock", user2);
 ```
 
-In questo modo posso gestire tutte le opzioni di Sasso Carta Forbice con un codice più corto e più leggibile:
+In this way I can manage all the Rock Paper Scissors options with a shorter and more readable code:
 
 ```js
 export const selectWinner = (user1, user2) => {
@@ -193,9 +191,9 @@ export const selectWinner = (user1, user2) => {
 };
 ```
 
-### Sasso Carta Forbice usando `switch()`
+### Code Rock Paper Scissor with `switch()`
 
-Un altro modo proposto da Ania Kubów prevede l'utilizzo di `switch`. Questo rende il codice più leggibile rispetto alla sequela di `if` precedenti.
+Another way proposed by Ania Kubów involves the use of `switch`. This makes the code more readable than the previous `if` sequence.
 
 ```js
 export const selectWinner = (user1, user2) => {
@@ -222,13 +220,13 @@ export const selectWinner = (user1, user2) => {
 };
 ```
 
-### Sasso Carta Forbice usando `match()`
+### Code Rock Paper Scissor with `match()`
 
-È però possibile modificare anche questo esempio. Per farlo utilizzo il consiglio di questo post di [Hajime Yamasaki Vukelic](https://medium.com/@hayavuk):
+I can change this example as well. To do this I use the advice of this post by [Hajime Yamasaki Vukelic](https://medium.com/@hayavuk):
 
 - [Alternative to JavaScript’s switch statement with a functional twist](https://codeburst.io/alternative-to-javascripts-switch-statement-with-a-functional-twist-3f572787ba1c)
 
-Creo una funzione `match()`:
+I create the `match()` function:
 
 ```js
 const isFunction = function isFunction(check) {
@@ -247,7 +245,7 @@ const match = (x) => ({
 });
 ```
 
-Poi la uso per gestire le regole e risolvere il puzzle:
+Then I use it to manage the rules and solve the puzzle:
 
 ```js
 export const selectWinner = (user1, user2) => {
@@ -277,13 +275,13 @@ export const selectWinner = (user1, user2) => {
 };
 ```
 
-### Insegnare le regole di Sasso Carta Forbice ad un arbitro
+### Teaching the rules of Rock Paper Scissor to a referee
 
-Finora ho affrontato questo problema partendo da una lista di regole predefinite e conosciute. Per risolvere la funzione classica del gioco è sufficiente. Ma posso rendere le cose più interessanti aggiungendo la possibilità di ampliare le regole a piacere.
+So far I have approached this problem starting from a list of predefined and known rules. To solve the classic game function is enough. But I can make things more interesting by adding the ability to expand the rules at will.
 
-Certo, la prima soluzione presenta può essere facilmente estesa modificando l'array con le regole. Ma voglio provare un approccio diverso. Posso creare un oggetto (in JavaScript ogni cosa è un oggetto, anche le funzioni) che impara le regole del gioco e abbia la capacità di decidere quale giocatore abbia vinto la partita. In altre parole, voglio programmare un arbitro per Sasso Carta Forbice.
+Of course, the first solution presents can be easily extended by modifying the array with the rules. But I want to try a different approach. I can create an object (in JavaScript everything is an object, even functions) that learns the rules of the game and has the ability to decide which player won the game. In other words, I want to create a simple AI referee for Rock Paper Scissor.
 
-Creo quindi una funzione `referee()`:
+I create the `referee()` function:
 
 ```js
 function referee() {
@@ -291,7 +289,7 @@ function referee() {
 }
 ```
 
-Questa funzione dovrà essere in grado di apprendere una regola e di applicarla a richiesta:
+This function should be able to learn a rule and apply it on demand:
 
 ```js
 function referee() {
@@ -302,13 +300,13 @@ function referee() {
 }
 ```
 
-Come faccio a spiegare all'arbitro le regole? Beh, con degli esempi. Posso stabile per esempio che la funzione `learn` contenga due argomenti: al primo posto il simbolo che vince mentre al secondo quello che perde.
+How do I explain the rules to the referee? Well, with examples. For example, I can say that the `learn` function contains two arguments: in the first place the symbol that wins and in the second the one that loses.
 
 ```js
 learn("rock", "scissors");
 ```
 
-Ovviamente l'arbitro deve avere una memoria in cui conservare quello che apprende:
+Obviously the referee must have a memory to keep what he learns:
 
 ```js
 function referee() {
@@ -327,7 +325,7 @@ function referee() {
 }
 ```
 
-Il metodo `lean()` permette di insegnare all'arbitro le regole. Per il gioco base ottengo:
+The `lean()` method allows you to teach the referee the rules. For the base game I get:
 
 ```js
 const training = {
@@ -343,7 +341,7 @@ const training = {
 };
 ```
 
-Questo oggetto funge da memoria per l'arbitro. Posso usarlo con `judge()` per ricavare chi vince tra due combinazioni di simboli:
+This object serves as a memory for the referee. I can use it with `judge()` to figure out who wins between two combinations of symbols:
 
 ```js
 const judge = (user1, user2) => {
@@ -355,7 +353,7 @@ const judge = (user1, user2) => {
 };
 ```
 
-Se unisco tutti i pezzi ottengo una funzione che può essere usata per tutti i giochi simili a Sasso Carta Forbice:
+If I join all the pieces I get a function that can be used for all the games similar to Rock Paper Scissors:
 
 ```js
 function referee() {
@@ -389,7 +387,7 @@ function referee() {
 }
 ```
 
-Per esempio, posso risolvere il puzzle così:
+For example, I can solve the puzzle with:
 
 ```js
 export const selectWinner = (user1, user2) => {
@@ -402,7 +400,7 @@ export const selectWinner = (user1, user2) => {
 };
 ```
 
-Oppure la versione classica così:
+Or the classic version like with:
 
 ```js
 export const selectWinner = (user1, user2) => {
@@ -415,9 +413,9 @@ export const selectWinner = (user1, user2) => {
 };
 ```
 
-### Usare Classi JavaScript per Sasso Carta Forbice
+### Use JavaScript Classes for Rock Paper Scissor
 
-Ovviamente il passo successivo è trasformare la funzione in una classe JavaScript. Il concetto è grosso modo lo stesso cambia leggermente la sintassi del codice:
+Obviously the next step is to transform the function into a JavaScript class. The concept is roughly the same it changes the syntax of the code slightly:
 
 ```js
 class Referee {
@@ -443,7 +441,7 @@ class Referee {
 }
 ```
 
-Posso usare la classe `Referee()` nella mia soluzione in maniera simile:
+I can use the `Referee()` class in my solution in a similar way:
 
 ```js
 export const selectWinner = (user1, user2) => {
@@ -456,8 +454,8 @@ export const selectWinner = (user1, user2) => {
 };
 ```
 
-Bene, questo è tutto. Come ho detto all'inizio, usare JavaScript per Sasso Carta Forbice è un problema semplice ma si presta bene per approfondire molti aspetti di JavaScript.
+Well, that's it. As I said at the beginning, using JavaScript for Rock Paper Scissors is a simple problem. Well, that's it. As I said at the beginning, using JavaScript for Sasso Carta Forbice is a simple problem. However, it is useful for learning more about many aspects of JavaScript.
 
-Infine, gli altri articoli di questa serie natalizia sono disponibili qui:
+The other articles in this Christmas series can be found here:
 
 - [Dev Advent Calendar](https://el3um4s.medium.com/list/dev-advent-calendar-89d163132d6e)
