@@ -27,26 +27,7 @@ Today I do different. First I show the solution I submitted for the contest, the
 
 Let's start with the code:
 
-```js
-export const selectWinner = (user1, user2) => {
-  const choices = ["earth", "snow", "fire"]; // ["rock", "paper", "scissors"]
-  const x = choices.indexOf(user1.choice);
-  const y = choices.indexOf(user2.choice);
-  if (x == y) {
-    return null;
-  }
-  if (mod(x - y, choices.length) < choices.length / 2) {
-    return user1;
-  } else {
-    return user2;
-  }
-};
-
-function mod(a, b) {
-  const c = a % b;
-  return c < 0 ? c + b : c;
-}
-```
+<script src="https://gist.github.com/el3um4s/41f33b0a5216f9fd5049d6e07c224792.js"></script>
 
 It seems a bit strange way of dealing with the problem. I decided not to use the classic `if...then...else` approach. I also preferred not to deal with the `switch` variant: there are a thousand tutorials of this type on the net. I did find, however, an old [stackoverflow](https://stackoverflow.com/questions/17976883/rock-paper-scissors-in-javascript) thread full of tricks.
 
@@ -77,7 +58,7 @@ const choices = ["rock", "spock", "paper", "lizard", "scissors"];
 
 Due to the way the game is built, the order of the elements of the array is always the same. It means that a single, well-constructed array is enough to handle all the rules.
 
-I can express this concept with a function similar to this:
+I can express this concept with a function similar to this one below:
 
 ```js
 function compare(choice1, choice2) {
@@ -146,7 +127,7 @@ export const selectWinner = (user1, user2) => {
 };
 ```
 
-I think it's possible to go a step further and simplify the code. I find a code all the more readable when it avoids the use of conditions. Even only from a visual point of view I prefer to simplify. And divide the code into smaller pieces.
+I think it's possible to go a step further and make the code easier. I find a code all the more readable when it avoids the use of conditions. Even only from a visual point of view I prefer to simplify and split the code into smaller pieces.
 
 ### Code Rock Paper Scissor with `ifVal()`
 
@@ -279,7 +260,7 @@ export const selectWinner = (user1, user2) => {
 
 So far I have approached this problem starting from a list of predefined and known rules. To solve the classic game function is enough. But I can make things more interesting by adding the ability to expand the rules at will.
 
-Of course, the first solution presents can be easily extended by modifying the array with the rules. But I want to try a different approach. I can create an object (in JavaScript everything is an object, even functions) that learns the rules of the game and has the ability to decide which player won the game. In other words, I want to create a simple AI referee for Rock Paper Scissor.
+Of course, the first solution can be easily extended by modifying the array with the rules. But I want to try a different approach. I can create an object (in JavaScript everything is an object, even functions) that learns the rules of the game and has the ability to decide which player won the game. In other words, I want to create a simple AI referee for Rock Paper Scissor.
 
 I create the `referee()` function:
 
