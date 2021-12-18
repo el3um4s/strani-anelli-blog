@@ -45,14 +45,7 @@ An example of use are passwords. If we want to create an identity verification s
 
 This thing fascinates me. Being able to verify the correctness of a password without having to know it. Another feature fascinates me a lot: two similar passwords have very different hashes.
 
-```js
-const h = {
-  abcde: "03de 6c57 0bfe 24bf c328 ccd7 ca46 b76e adaf 4334",
-  ABCDE: "7be0 7aaf 460d 593a 323d 0db3 3da0 5b64 bfdc b3a5",
-  abcdf: "9693 da0e 085a f20e f1f9 82b0 17fc 6ec2 4198 48e5",
-  ABCDF: "0efb 7bbc eafd 99fe 7eaa 38ed d279 ca6e 277c 1aba",
-};
-```
+<script src="https://gist.github.com/el3um4s/0bd50f2a455b23006c2ce224790299b2.js"></script>
 
 This makes it very difficult to trace the starting password.
 
@@ -67,178 +60,79 @@ This is a great help. We can create a list of potential passwords to test. Then 
 
 In NodeJS it is easy to find the hash of a string. Just use the [crypto](https://nodejs.org/api/crypto.html) API:
 
-```js
-import { createHash } from "crypto";
-
-const string = "abcde";
-
-const hash = createHash("sha1").update(string).digest("hex");
-// 03de 6c57 0bfe 24bf c328 ccd7 ca46 b76e adaf 4334
-```
+<script src="https://gist.github.com/el3um4s/ae5a155c306bbf28d2d149ac266c20b1.js"></script>
 
 ### Create a list of potential passwords
 
 The simplest way to create a list of potential passwords to test is to use two nested `for` loops. I use the first one to scroll through the letters of the alphabet:
 
-```js
-export const bruteForcePassword = (hash) => {
-  for (let i = "A".charCodeAt(); i <= "Z".charCodeAt(); i++) {}
-  return null;
-};
-```
+<script src="https://gist.github.com/el3um4s/989c306978526c11ba0229b59bcdbc01.js"></script>
 
 I then insert a second loop to iterate through all numbers from `0` to `999`
 
-```js
-export const bruteForcePassword = (hash) => {
-  for (let i = "A".charCodeAt(); i <= "Z".charCodeAt(); i++) {
-    for (let j = 0; j <= 999; j++) {}
-  }
-  return null;
-};
-```
+<script src="https://gist.github.com/el3um4s/5b21386bddd2fdf17cb998e0e343958f.js"></script>
 
 So I create a `test` variable:
 
-```js
-const test = `${String.fromCharCode(i)}-${j.toString().padStart(3, "0")}`;
-```
+<script src="https://gist.github.com/el3um4s/0b6727fd83dc80b9bc156f3b705575df.js"></script>
 
 I use the [String.prototype.padStart()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart) method to make each password have exactly 3 numbers. This way I can transform `A-0` to `A-000`, `C-12` to `C-012` and so on.
 
 I get the hash
 
-```js
-const hashTest = createHash("sha1").update(test).digest("hex");
-```
+<script src="https://gist.github.com/el3um4s/dc99dc5a8df19279885ecb30de0a6b99.js"></script>
 
 Finally I compare it with what I already have:
 
-```js
-if (hash === hashTest) {
-  return test;
-}
-```
+<script src="https://gist.github.com/el3um4s/f0a17e08f8152509a1bc9b0c62fd2622.js"></script>
 
 I quit the function immediately: I don't need to check the other passwords. Once I found the one generating the correct hash I also found what I was looking for.
 
 The complete code looks like this:
 
-```js
-import { createHash } from "crypto";
-
-export const bruteForcePassword = (hash) => {
-  for (let i = "A".charCodeAt(); i <= "Z".charCodeAt(); i++) {
-    for (let j = 0; j <= 999; j++) {
-      const test = `${String.fromCharCode(i)}-${j.toString().padStart(3, "0")}`;
-      const hashTest = createHash("sha1").update(test).digest("hex");
-      if (hash === hashTest) {
-        return test;
-      }
-    }
-  }
-  return null;
-};
-```
+<script src="https://gist.github.com/el3um4s/e8d407116bb6f9f301e57d83715ae831.js"></script>
 
 ### To Refractor
 
 It is a simple and understandable solution. But I can do better. I can delete the `nested loop`. I can also delete one of the two `returns`. This way I can get something clearer:
 
-```js
-export const bruteForcePassword = (hash) => {
-  let password = null;
-  for (const test of listPassword()) {
-    password = isPassword(hash, test);
-    if (password) break;
-  }
-  return password;
-};
-```
+<script src="https://gist.github.com/el3um4s/73c9fe72aa646601fd6963b8bb3bd404.js"></script>
 
 Actually you could simplify it even more by adding the `listPassword` argument instead of calculating it inside the function. But the puzzle doesn't allow me to do that.
 
 I have decided to extract from the `bruteForcePassword` function everything that is not related to the problem: the creation of the password list and the comparison of the hashes:
 
-```js
-const getHash = (message) => createHash("sha1").update(message).digest("hex");
-const isPassword = (hash, message) =>
-  hash === getHash(message) ? message : null;
-```
+<script src="https://gist.github.com/el3um4s/f4b447c63a20333d80754fb470371cdb.js"></script>
 
 The `isPassword` function returns the password directly and not a boolean value. This way I can take advantage of JavaScript's ability to treat strings as [truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) and null values as [falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy). I need it to simplify the exit from the `for...of` loop.
 
 To generate the password list, I break down the problem into several parts. First I need an array containing the numbers `0` to `999`. I create this function:
 
-```js
-const createArrayNumbers = () =>
-  [...Array(1000).keys()].map((n) => `${n.toString().padStart(3, 0)}`);
-```
+<script src="https://gist.github.com/el3um4s/fa1e27b4c97da891da07a5bd2acd09d3.js"></script>
 
 There is a good discussion on [stackoverflow](https://stackoverflow.com/questions/3746725/how-to-create-an-array-containing-1-n) on this problem. In short, I can create an array of `n` elements with `Array(n)`. If I add the [Array.prototype.keys()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/keys) method and then use the [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), I can get an array of `n` elements each of which contains a number that represents the index of its position:
 
-```js
-[...Array(5).keys()];
-// [0, 1, 2, 3, 4]
-```
+<script src="https://gist.github.com/el3um4s/b923770dfe6ce17aa7f65a7c6cc326ad.js"></script>
 
 I use this array with the[Array.prototype.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) method to add the missing 0s to the first 100 elements.
 
 I can easily create an array containing the letters of the alphabet:
 
-```js
-const createArrayChars = () =>
-  [...Array(26)].map((n, i) => `${String.fromCharCode(i + "A".charCodeAt())}`);
-```
+<script src="https://gist.github.com/el3um4s/adff749ca4dd3eefcbb210130bc8aa49.js"></script>
 
 This time I don't use `keys()`: I can leave all the elements of the array null and then use the index to get the `charCode` of the letter I want to insert.
 
 I create a helper function to join letters and numbers:
 
-```js
-const combineCharWithNumber = (char, numbers) =>
-  numbers.map((n) => `${char}-${n}`);
-```
+<script src="https://gist.github.com/el3um4s/cfa90cc8adf02a3636706b9d389faa53.js"></script>
 
 I add the desired character to each element of the array with numbers. Finally I create the list of potential passwords:
 
-```js
-const listPassword = () =>
-  createArrayChars()
-    .map((char) => combineCharWithNumber(char, createArrayNumbers()))
-    .flat();
-```
+<script src="https://gist.github.com/el3um4s/374bcb1f55c2671a19bcd538b84b2147.js"></script>
 
 By combining everything I get my solution:
 
-```js
-import { createHash } from "crypto";
-
-const getHash = (message) => createHash("sha1").update(message).digest("hex");
-const isPassword = (hash, message) =>
-  hash === getHash(message) ? message : null;
-
-const createArrayNumbers = () =>
-  [...Array(1000).keys()].map((n) => `${n.toString().padStart(3, 0)}`);
-const createArrayChars = () =>
-  [...Array(26)].map((n, i) => `${String.fromCharCode(i + "A".charCodeAt())}`);
-const combineCharWithNumber = (char, numbers) =>
-  numbers.map((n) => `${char}-${n}`);
-
-const listPassword = () =>
-  createArrayChars()
-    .map((char) => combineCharWithNumber(char, createArrayNumbers()))
-    .flat();
-
-export const bruteForcePassword = (hash) => {
-  let password = null;
-  for (const test of listPassword()) {
-    password = isPassword(hash, test);
-    if (password) break;
-  }
-  return password;
-};
-```
+<script src="https://gist.github.com/el3um4s/1789e92cf0d57d4ad8166167a5d810c6.js"></script>
 
 That's all. This puzzle is related to the number 11:
 
