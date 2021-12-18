@@ -49,7 +49,7 @@ This thing fascinates me. Being able to verify the correctness of a password wit
 
 This makes it very difficult to trace the starting password.
 
-### Calcolare l'Hash di una password
+### Calculate the Hash of a password
 
 To make the problem manageable it is necessary to simplify. The rules of engagement are these:
 
