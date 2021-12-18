@@ -19,13 +19,11 @@ tags:
 
 Lo sapevo: dopo aver insegnato agli elfi come [creare password con JavaScript](https://javascript.plainenglish.io/how-to-generate-a-random-password-using-javascript-cbeb4b72ec12) qualcuno ha perso la propria password. Questo è un problema, perché il sistema elfico informatico centrale non conserva copia delle password. Conserva semplicemente l'[hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function), che per sua natura è praticamente impossibile da decodificare. Cosa posso fare, allora?
 
-https://github.com/devadvent/puzzle-17
-
 ### Il problema: Decoding The Code 🔐
 
 {% include picture img="cover.webp" ext="jpg" alt="" %}
 
-Il problema 17 del [Dev Advent Calendar 🎅](https://github.com/devadvent/puzzle-17) si può riassumere così: come crackare una passowrd usando JavaScript? Oppure, come fare un attacco [bruteforce](https://en.wikipedia.org/wiki/Brute-force_search) a una tabella di hash?
+Il problema 17 del [Dev Advent Calendar 🎅](https://github.com/devadvent/puzzle-17) si può riassumere così: come crackare una password usando JavaScript? Oppure, come fare un attacco [bruteforce](https://en.wikipedia.org/wiki/Brute-force_search) a una tabella di hash?
 
 Ovviamente messo così il problema è irrisolvibile. Per come sono costruite le funzioni di crittografia hash non sono reversibili. Ma prima di affrontare il problema mi conviene capire bene cosa vuol dire.
 
