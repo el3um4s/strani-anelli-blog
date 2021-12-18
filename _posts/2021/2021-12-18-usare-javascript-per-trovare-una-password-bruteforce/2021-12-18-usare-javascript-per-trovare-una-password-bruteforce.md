@@ -141,7 +141,7 @@ export const bruteForcePassword = (hash) => {
 };
 ```
 
-### Refractoring
+### Refactor
 
 È una soluzione abbastanza semplice e tutto comprensibile. Ma posso fare di meglio. Posso eliminare il ciclo annidato. Posso anche eliminare uno dei due `return`. In questo modo posso ottenere qualcosa di più chiaro:
 
