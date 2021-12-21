@@ -42,13 +42,7 @@ With:
 
 I can convert to JavaScript to get this function:
 
-```js
-const windChillCelsius = (temperature, windSpeed) =>
-  13.12 +
-  0.6215 * temperature -
-  11.37 * windSpeed ** 0.16 +
-  0.3965 * temperature * windSpeed ** 0.16;
-```
+<script src="https://gist.github.com/el3um4s/446fe375ba3a7a33727ad5b8129cb5e6.js"></script>
 
 Using miles and fahrenheit:
 
@@ -61,29 +55,11 @@ With:
 - **T**: temperature in degrees Fahrenheit
 - **V**: wind velocity in miles per hour
 
-```js
-const windChillFahrenheit = (temperature, windSpeed) =>
-  35.74 +
-  0.6215 * temperature -
-  35.75 * windSpeed ** 0.16 +
-  0.4275 * temperature * windSpeed ** 0.16;
-```
+<script src="https://gist.github.com/el3um4s/a3d69b29a7a9697716115acde25276f8.js"></script>
 
 Combining these two pieces of code I get:
 
-```js
-export const calculateWindchill = (
-  temperature,
-  windSpeed,
-  units = undefined
-) => {
-  const result =
-    units === "US"
-      ? fahrenheit(temperature, windSpeed)
-      : celsius(temperature, windSpeed);
-  return Math.round(result);
-};
-```
+<script src="https://gist.github.com/el3um4s/0cee8b6ddffb94e4cb1ffd0ed136b4b3.js"></script>
 
 ### Convert numbers from one system to another
 
@@ -93,16 +69,10 @@ I am not going to write a full discussion. I will just report some conversion fu
 
 Convert Kilometers and Miles
 
-```js
-const kmToMiles = (km) => km * 0.621371;
-const milesToKm = (miles) => miles / 0.621371;
-```
+<script src="https://gist.github.com/el3um4s/9d9b611740b220c3b816f64a9f713feb.js"></script>
 
 Convert Celsius and Fahrenheit
 
-```js
-const celsiusToFahrenheit = (celsius) => celsius * 1.8 + 32;
-const fahrenheitToCelsius = (fahrenheit) => (fahrenheit - 32) / 1.8;
-```
+<script src="https://gist.github.com/el3um4s/edd7931604f62cc07aa4d65d22633230.js"></script>
 
 That's all for today.
