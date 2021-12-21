@@ -17,7 +17,7 @@ tags:
   - javascript
 ---
 
-Natale si avvicina e Babbo Natale sta ultimando i preparativi. Uno degli aspetti più delicati riguarda l'attrezzatura. La slitta è sottoposta a forti pressioni, e anche le renne, porelle, devono dare il massimo. Per di più continuano nell'arco di una sola notte attraversano tutti i climi del pianeta. Per proteggerle adeguatamente Babbo Natale calcola la temperatura dei ogni località e copre, o scopre, le renne alla bisogna. Ovviamente non basta la temperatura misurata dal termometro: serve la temperatura percepita.
+Natale si avvicina e Babbo Natale sta ultimando i preparativi. Uno degli aspetti più delicati riguarda l'attrezzatura. La slitta è sottoposta a forti pressioni, e anche le renne, porelle, devono dare il massimo. Per di più nell'arco di una sola notte attraversano tutti i climi del pianeta. Per proteggerle adeguatamente Babbo Natale calcola la temperatura dei ogni località e copre, o scopre, le renne alla bisogna. Ovviamente non basta la temperatura misurata dal termometro: serve la temperatura percepita.
 
 ### Il problema: Baby, It's Cold Outside ❄️
 
