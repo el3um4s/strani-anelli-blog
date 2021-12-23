@@ -43,9 +43,7 @@ With `m = number of letters of the alphabet` and `k = shift`.
 
 Starting from this formula I can get a JavaScript function similar to this:
 
-```js
-const chiper = (char, shift) => mod(char + shift, alphabet.length);
-```
+<script src="https://gist.github.com/el3um4s/851279145673f5e2d5b960ae55b93f3b.js"></script>
 
 The problem is figuring out how to pass the letters. The most common method involves converting the character into the corresponding numeric code. Then we add the shift and convert it back to characters.
 
@@ -53,33 +51,15 @@ I decided to do something different. After all, a Caesar cipher is nothing more 
 
 First I create two arrays, one for uppercase letters, the other for lowercase ones:
 
-```js
-const uppercase = () =>
-  [...Array(26)].map((n, i) => `${String.fromCharCode(i + "A".charCodeAt())}`);
-const lowercase = () =>
-  [...Array(26)].map((n, i) => `${String.fromCharCode(i + "a".charCodeAt())}`);
-```
+<script src="https://gist.github.com/el3um4s/ed84b9a68905a772abbfe48b0cfbb41c.js"></script>
 
 Then I need a function to calculate the modulus of a number:
 
-```js
-const mod = (a, b) => {
-  const c = a % b;
-  return c < 0 ? c + b : c;
-};
-```
+<script src="https://gist.github.com/el3um4s/2e84ec5bee1a7643124b4dd117a4444c.js"></script>
 
 Finally something that creates a match between the key and the solution.
 
-```js
-const chiper = (array, shift) => {
-  const cipher = {};
-  array.forEach((value, index) => {
-    cipher[value] = array[mod(index + shift, array.length)];
-  });
-  return cipher;
-};
-```
+<script src="https://gist.github.com/el3um4s/13ab7218f445616bbf3d44b136d3af98.js"></script>
 
 This function accepts an array containing the alphabet as input and returns an object with the encryption code.
 
@@ -87,142 +67,35 @@ For each item in the array, for each letter of the alphabet, it calculates the c
 
 To simplify the resolution I create a helper function to handle the dictionary of both uppercase and lowercase letters.
 
-```js
-const caesarChipher = (shift) => {
-  return {
-    ...chiper(uppercase(), shift),
-    ...chiper(lowercase(), shift),
-  };
-};
-```
+<script src="https://gist.github.com/el3um4s/0b7f0b93eab9fbbe9518cd6e84944f3a.js"></script>
 
 This way I get an object like this:
 
-```js
-const caesar = {
-  A: "N",
-  B: "O",
-  C: "P",
-  //...
-  a: "n",
-  b: "o",
-  c: "p",
-  //...
-};
-```
+<script src="https://gist.github.com/el3um4s/e2fba60c909f7e8a3c58178cfafdc6cc.js"></script>
 
 After getting the cipher I can translate each letter:
 
-```js
-const a = caesar.a; // n
-const aUpper = caesar.A; // N
-const b = caesar["b"]; // o
-```
+<script src="https://gist.github.com/el3um4s/af6bf90aa6de786b5ba62e8a082c9b7b.js"></script>
 
 We can also ignore all non-alphabetic characters in a very simple way: if the matching key does not exist in the cipher then the character is not converted:
 
-```js
-const processCharacter = (cipher, character) =>
-  cipher.hasOwnProperty(character) ? cipher[character] : character;
-```
+<script src="https://gist.github.com/el3um4s/996b17769caf581819ee569ff3416ce4.js"></script>
 
 After creating all the various support functions the solution is short and simple:
 
-```js
-export default (text, shift) => {
-  const caesar = caesarChipher(shift);
-  return [...text].map((c) => processCharacter(caesar, c)).join("");
-};
-```
+<script src="https://gist.github.com/el3um4s/6144148f1404fc1d159f1df322b6d119.js"></script>
 
 There is an interesting aspect to this solution: the same function used to decrypt can also be used to decrypt. Just use a negative shift: in this way the letters are not scrolled forward but backwards allowing you to recover the original message.
 
 This is the complete code:
 
-```js
-const uppercase = () =>
-  [...Array(26)].map((n, i) => `${String.fromCharCode(i + "A".charCodeAt())}`);
-const lowercase = () =>
-  [...Array(26)].map((n, i) => `${String.fromCharCode(i + "a".charCodeAt())}`);
-
-const mod = (a, b) => {
-  const c = a % b;
-  return c < 0 ? c + b : c;
-};
-
-const chiper = (array, shift) => {
-  const cipher = {};
-  array.forEach((value, index) => {
-    cipher[value] = array[mod(index + shift, array.length)];
-  });
-  return cipher;
-};
-
-const caesarChipher = (shift) => {
-  return {
-    ...chiper(uppercase(), shift),
-    ...chiper(lowercase(), shift),
-  };
-};
-
-const processCharacter = (cipher, character) =>
-  cipher.hasOwnProperty(character) ? cipher[character] : character;
-
-export default (text, shift) => {
-  const caesar = caesarChipher(shift);
-  return [...text].map((c) => processCharacter(caesar, c)).join("");
-};
-```
+<script src="https://gist.github.com/el3um4s/998e8c16a587ccb65fb2567fc184c804.js"></script>
 
 ### Prashant Yadav's solution
 
 As I said at the beginning, there are many solutions to this problem online. [Prashant Yadav](https://learnersbucket.com/examples/algorithms/caesar-cipher-in-javascript/) proposes some of the most common.
 
-```js
-let ceaserCipher = (str) => {
-  //Deciphered reference letters
-  let decoded = {
-    a: "n",
-    b: "o",
-    c: "p",
-    d: "q",
-    e: "r",
-    f: "s",
-    g: "t",
-    h: "u",
-    i: "v",
-    j: "w",
-    k: "x",
-    l: "y",
-    m: "z",
-    n: "a",
-    o: "b",
-    p: "c",
-    q: "d",
-    r: "e",
-    s: "f",
-    t: "g",
-    u: "h",
-    v: "i",
-    w: "j",
-    x: "k",
-    y: "l",
-    z: "m",
-  };
-
-  //convert the string to lowercase
-  str = str.toLowerCase();
-
-  //decipher the code
-  let decipher = "";
-  for (let i = 0; i < str.length; i++) {
-    decipher += decoded[str[i]];
-  }
-
-  //return the output
-  return decipher;
-};
-```
+<script src="https://gist.github.com/el3um4s/2530fe9f005bc6f6718bb9b6fc750d43.js"></script>
 
 What are the problems with this approach?
 
@@ -233,42 +106,11 @@ What are the problems with this approach?
 
 His second idea is more interesting:
 
-```js
-let caesarCipher => (str, key) {
-  return str.toUpperCase().replace(/[A-Z]/g, c => String.fromCharCode((c.charCodeAt(0)-65 + key ) % 26 + 65));
-}
-```
+<script src="https://gist.github.com/el3um4s/a14943575dc1814a853781c076576744.js"></script>
 
 This function converts all letters to uppercase and then replaces them. There remains the problem of handling lowercase letters. To do this, you need to change the function:
 
-```js
-//check if letter is uppercase
-function isUpperCase(str) {
-  return str === str.toUpperCase();
-}
-
-//decipher the string
-let ceaserCipher = (str, key) => {
-  let decipher = "";
-
-  //decipher each letter
-  for (let i = 0; i < str.length; i++) {
-    //if letter is uppercase then add uppercase letters
-    if (isUpperCase(str[i])) {
-      decipher += String.fromCharCode(
-        ((str.charCodeAt(i) + key - 65) % 26) + 65
-      );
-    } else {
-      //else add lowercase letters
-      decipher += String.fromCharCode(
-        ((str.charCodeAt(i) + key - 97) % 26) + 97
-      );
-    }
-  }
-
-  return decipher;
-};
-```
+<script src="https://gist.github.com/el3um4s/b39377e6728bfd00358a3800c3fe6740.js"></script>
 
 The management of non-alphabetic characters, including spaces, remains problematic.
 
@@ -276,34 +118,7 @@ The management of non-alphabetic characters, including spaces, remains problemat
 
 [Marian Veteanu's blog](https://codeavenger.com/2017/05/19/JavaScript-Modulo-operation-and-the-Caesar-Cipher.html) has many interesting posts. There is a solution to how to create a Caesar cipher
 
-```js
-function mod(n, p) {
-  return n - p * Math.floor(n / p);
-}
-
-function encrypt(msg, key) {
-  var encMsg = "";
-
-  for (var i = 0; i < msg.length; i++) {
-    var code = msg.charCodeAt(i);
-
-    if (code >= 65 && code <= 65 + 26 - 1) {
-      code -= 65;
-      code = mod(code + key, 26);
-      code += 65;
-    }
-    if (code >= 97 && code <= 97 + 26 - 1) {
-      code -= 97;
-      code = mod(code + key, 26);
-      code += 97;
-    }
-
-    encMsg += String.fromCharCode(code);
-  }
-
-  return encMsg;
-}
-```
+<script src="https://gist.github.com/el3um4s/4c2315a634338c7243d1bb0a13347441.js"></script>
 
 This solution works, but I don't like having so many hard-coded values. But it has the advantage of not using arrays or other objects. Like the next solution.
 
@@ -311,45 +126,7 @@ This solution works, but I don't like having so many hard-coded values. But it h
 
 [Evan Hahn](https://gist.github.com/EvanHahn/2587465) proposes a working solution:
 
-```js
-var caesarShift = function (str, amount) {
-  // Wrap the amount
-  if (amount < 0) {
-    return caesarShift(str, amount + 26);
-  }
-
-  // Make an output variable
-  var output = "";
-
-  // Go through each character
-  for (var i = 0; i < str.length; i++) {
-    // Get the character we'll be appending
-    var c = str[i];
-
-    // If it's a letter...
-    if (c.match(/[a-z]/i)) {
-      // Get its code
-      var code = str.charCodeAt(i);
-
-      // Uppercase letters
-      if (code >= 65 && code <= 90) {
-        c = String.fromCharCode(((code - 65 + amount) % 26) + 65);
-      }
-
-      // Lowercase letters
-      else if (code >= 97 && code <= 122) {
-        c = String.fromCharCode(((code - 97 + amount) % 26) + 97);
-      }
-    }
-
-    // Append
-    output += c;
-  }
-
-  // All done!
-  return output;
-};
-```
+<script src="https://gist.github.com/el3um4s/5ccb8d8ac76eb06d9bf4ddc8ac6df1e1.js"></script>
 
 However, this solution presents some problems. Or, rather, some things I don't like. The first is the presence of several `if` conditions and a` for` loop. I am increasingly convinced that they make it difficult to read the code and difficult to maintain.
 
