@@ -119,7 +119,7 @@ const aUpper = caesar.A; // N
 const b = caesar["b"]; // o
 ```
 
-Possiamo anche ignorare tutti i caratteri non alfabeti in maniera molto semplice: se non esiste la chiave corrispondete nel cifrario allora il carattere non viene convertito:
+Possiamo anche ignorare tutti i caratteri non alfabetici in maniera molto semplice: se non esiste la chiave corrispondete nel cifrario allora il carattere non viene convertito:
 
 ```js
 const processCharacter = (cipher, character) =>
@@ -224,13 +224,10 @@ let ceaserCipher = (str) => {
 };
 ```
 
-Prashant individua i principali:
+Quali sono i problemi di questo approccio?
 
 - un codice di questo genere permette una cifratura solamente con uno shift predefinito (in questo caso di 13)
 - funziona solamente per le lettere in minuscolo
-
-Io aggiungerei che
-
 - funziona solamente con stringhe che non contengono spazi o altri caratteri non contenuti nella variabile `decoded`
 - non serve per decifrare il messaggio
 
