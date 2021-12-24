@@ -8,7 +8,7 @@ header:
   immagine_estesa: "image"
   immagine_fonte: "Photo credit: [**Pierre Bamin**](https://unsplash.com/@bamin)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2021-12-24 1:30"
+date: "2021-12-24 10:00"
 categories:
   - dev advent
   - javascript
@@ -93,7 +93,7 @@ const intersection = (a, b) => a.filter((x) => b.includes(x));
 
 Detto con le parole, sono tutti gli elementi di `a` presenti in `b`.
 
-### Unine di due array
+### Unione di due array
 
 L'ultima operazione è l'unione di due array. Ci sono due modi di intendere questa operazione. Possiamo semplicemente unire due array senza curarci di eventuali valori duplicati:
 
