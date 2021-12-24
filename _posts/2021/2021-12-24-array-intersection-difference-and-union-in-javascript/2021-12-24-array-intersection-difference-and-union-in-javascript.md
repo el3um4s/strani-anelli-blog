@@ -23,7 +23,7 @@ Something went wrong at the North Pole. Santa Claus did a sample check: he disco
 
 {% include picture img="cover.webp" ext="jpg" alt="" %}
 
-I think [Dev Advent Calendar problem 23 🎅](<(https://github.com/devadvent/puzzle-23)>) is the one with the shortest solution: literally 2 lines of code are enough to solve it:
+I think [Dev Advent Calendar problem 23 🎅](https://github.com/devadvent/puzzle-23) is the one with the shortest solution: literally 2 lines of code are enough to solve it:
 
 <script src="https://gist.github.com/el3um4s/96ea733118a96c3017f2ad9b0e4468c9.js"></script>
 
