@@ -8,7 +8,7 @@ header:
   immagine_estesa: "image"
   immagine_fonte: "Photo credit: [**Pierre Bamin**](https://unsplash.com/@bamin)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2021-12-24 13:00"
+date: "2021-12-24 13:10"
 categories:
   - dev advent
   - javascript
@@ -25,11 +25,7 @@ Something went wrong at the North Pole. Santa Claus did a sample check: he disco
 
 I think [Dev Advent Calendar problem 23 🎅](<(https://github.com/devadvent/puzzle-23)>) is the one with the shortest solution: literally 2 lines of code are enough to solve it:
 
-```js
-import items from "../data/items.js";
-export const findMissing = (m, s) =>
-  items.filter((x) => m.includes(x.id) && !s.includes(x.id));
-```
+<script src="https://gist.github.com/el3um4s/96ea733118a96c3017f2ad9b0e4468c9.js"></script>
 
 The question is "_how do I find elements that are in one array but not the other?_".
 
@@ -42,25 +38,15 @@ To answer this question just combine two methods of arrays:
 
 I can then derive this function:
 
-```js
-const difference = (a, b) => a.filter((x) => !b.includes(x));
-```
+<script src="https://gist.github.com/el3um4s/70b5c78ea5560089f70e77cc70e5851f.js"></script>
 
 The second part of the puzzle involves returning an array of objects taken from the array with the elements just found. I can change the function like this:
 
-```js
-const findMissing = (a, b) => {
-  const diff = difference(a, b);
-  const result = items.filter((x) => diff.includes(x.id));
-};
-```
+<script src="https://gist.github.com/el3um4s/c89f2a331fd77b011b450f5ec2882293.js"></script>
 
 I can shorten the code by modifying the test passed to `filter`. Another way to calculate the difference is to say that the element `x` is included in `a` but not in `b`:
 
-```js
-const difference = (list, a, b) =>
-  list.filter((x) => a.includes(x) && !b.includes(x));
-```
+<script src="https://gist.github.com/el3um4s/07f409f0abe5885c833a49924cf5ab01.js"></script>
 
 ### Symmetric difference between two arrays
 
@@ -73,11 +59,7 @@ There are two posts, from some time ago, that were useful to me:
 
 I can find them by running two filters in sequence and then joining the arrays with the [Array.prototype.concat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) method or with the [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax):
 
-```js
-const difference = (a, b) =>
-  a.filter((x) => !b.includes(x)).concat(b.filter((x) => !a.includes(x)));
-const difference = (a, b) => [...a.filter((x) => !b.includes(x)), ...b.filter((x) => !a.includes(x));
-```
+<script src="https://gist.github.com/el3um4s/89d8c0b70a9df30db118fac8174e0d65.js"></script>
 
 ### Intersection of two arrays
 
@@ -85,9 +67,7 @@ Another common operation is to calculate the intersection of two arrays. In othe
 
 Again with the `filter` method:
 
-```js
-const intersection = (a, b) => a.filter((x) => b.includes(x));
-```
+<script src="https://gist.github.com/el3um4s/49482206246d02f227956aa026f84724.js"></script>
 
 Said in words, they are all the elements of `a` present in `b`.
 
@@ -95,28 +75,20 @@ Said in words, they are all the elements of `a` present in `b`.
 
 The last operation is the union of two arrays. There are two ways of defining this operation. We can simply merge two arrays without caring for any duplicate values:
 
-```js
-const union = (a, b) => [...a, ...b];
-```
+<script src="https://gist.github.com/el3um4s/b89de3ddd26481bfeea4a8f10067a19b.js"></script>
 
 In some situations we want to avoid having repeated values. In this case it is better to use a [Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set): it is a JavaScript object that only collects different values, preventing us from creating duplicates.
 
 I can convert an array to a set just like this:
 
-```js
-const arrayToSet = (a) => new Set(a);
-```
+<script src="https://gist.github.com/el3um4s/fae53a6748a812209d9c133e5330cefd.js"></script>
 
 The reverse operation, converting a set to an array, is simple:
 
-```js
-const setToArray = (a) => [...a];
-```
+<script src="https://gist.github.com/el3um4s/8108db05ced1a9d3f3bd2b3ad2c1ed59.js"></script>
 
 I can join two arrays without repeating the double values ​​with this function:
 
-```js
-const union = (a, b) => [...new Set([...a, ...b)];
-```
+<script src="https://gist.github.com/el3um4s/15c15ce2565aed1e2e1db25fd2b5c1cb.js"></script>
 
 Okay, maybe I went a little off topic from today's exercise. But it was the right occasion for me to review the arrays.
