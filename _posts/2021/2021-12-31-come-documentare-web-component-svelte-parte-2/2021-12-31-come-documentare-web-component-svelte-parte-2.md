@@ -181,7 +181,7 @@ Importo quindi il componente nel file `index.svelte`:
 
 In questo modo ottengo una pagina simile a questa:
 
-![document-svelte-01.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-12-31-how-to-document-svelte-components-part-2/document-svelte-01.gif)
+![document-svelte-01.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-12-31-come-documentare-web-component-svelte-parte-2/document-svelte-01.gif)
 
 Aggiungo uno `slot="demo"` per mostrare un'anteprima del componente:
 
@@ -203,7 +203,7 @@ Aggiungo uno `slot="demo"` per mostrare un'anteprima del componente:
 
 In questo modo ottengo un risultato come questo:
 
-![document-svelte-02.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-12-31-how-to-document-svelte-components-part-2/document-svelte-02.gif)
+![document-svelte-02.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-12-31-come-documentare-web-component-svelte-parte-2/document-svelte-02.gif)
 
 E con questo ho concluso la prima parte.
 
@@ -440,7 +440,7 @@ Posso creare un file `slider.md` per creare la documentazione di questo componen
 
 In questo modo alla pagina [el3um4s.github.io/svelte-component-package-starter/slider](https://el3um4s.github.io/svelte-component-package-starter/slider) trovo qualcosa del genere:
 
-![document-svelte-03.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-12-31-how-to-document-svelte-components-part-2/document-svelte-03.gif)
+![document-svelte-03.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-12-31-come-documentare-web-component-svelte-parte-2/document-svelte-03.gif)
 
 E con questo è tutto. Il repository del progetto si può trovare qui:
 
