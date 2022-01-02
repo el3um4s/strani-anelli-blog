@@ -1,5 +1,5 @@
 ---
-title: "Come Documentare Componenti Svelte - Parte 2"
+title: "How To Document Svelte Components - Part 2"
 published: true
 usa_webp: true
 header:
@@ -8,7 +8,7 @@ header:
   immagine_estesa: "image"
   immagine_fonte: "Photo credit: [**Robo Wunderkind**](https://unsplash.com/@robowunderkind)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2021-12-31 19:00"
+date: "2022-01-02 23:30"
 categories:
   - Svelte
   - SvelteKit
@@ -25,43 +25,43 @@ tags:
   - NodeJS
 ---
 
-Ci ho messo un po' più tempo del previsto a scrivere questo post. Un mese, anzi poco più. Un po' per alcuni problemi di salute, un po' perché ha richiesto più tempo di quello che pensavo finire i due repository principali. Quindi, come posso documentare in maniera semplice un web component creato con Svelte?
+This post took me longer than expected. A little over a month. The two main repositories took me longer. This is to answer a question: how can I easily document a web component created with Svelte?
 
-### Premessa
+### Introduction
 
-Prima di cominciare devo precisare un paio di cose. Innanzitutto questo post è composto da tre parti.
+Before starting I have to clarify a couple of things. First of all, this post consists of three parts.
 
-La prima riprende il discorso cominciato con questo articolo:
+The first part takes up the discourse begun with this article:
 
 - [How to Document Svelte Components](https://betterprogramming.pub/how-to-document-svelte-components-ab504661a6fc)
 
-Riprendo il ragionamento che ho cominciato un mese e mezzo fa e lo porto a compimento presentando i due repository che userò.
+I take up my hypothesis from a month and a half ago and present the two repositories that I will use.
 
-La seconda parte è più un ripasso su come creare un blog su GitHub usando pagine statiche. È sostanzialmente un riassunto di questo pezzo:
+The second part is a review of how to create a blog on GitHub using static pages. It is basically a summary of this piece:
 
 - [How to Use SvelteKit with GitHub Pages](https://javascript.plainenglish.io/sveltekit-github-pages-4fe2844773de)
 
-Infine la terza parte riguarda come usare file Markdown (`md`) assieme a componenti Svelte.
+Finally the third part is about how to use Markdown (`md`) files together with Svelte components.
 
-Non parto da un componente nuovo ma da uno che ho già creato:
+I'm not starting from a new component but from one I've already created:
 
 - [How to Create and Publish Svelte Components](https://el3um4s.medium.com/how-to-create-and-publish-svelte-components-e770f1e94435)
 
-Quindi, detto questo, cominciamo.
+So with that said, let's get started.
 
-### Come creare documenti che si documentano da soli
+### How to create documents that document themselves
 
-Per semplificare la creazione della documentazione di componenti Svelte ho creato 2 packages NPM. Il primo, [@el3um4s/svelte-get-component-info](https://www.npmjs.com/package/@el3um4s/svelte-get-component-info), ha il compito di analizzare il componente e di estrarre un oggetto JSON con le informazioni basilari. Il secondo, [@el3um4s/svelte-component-info](https://www.npmjs.com/package/@el3um4s/svelte-component-info), si occupa di trasformare queste informazioni in un formato leggibile a schermo.
+To simplify the creation of the Svelte component documentation I have created 2 NPM packages. The first, [@el3um4s/svelte-get-component-info](https://www.npmjs.com/package/@el3um4s/svelte-get-component-info), has the task of parsing the component and extracting a JSON object with the basic information. The second, [@el3um4s/svelte-component-info](https://www.npmjs.com/package/@el3um4s/svelte-component-info), takes care of transforming this information into a readable format on the screen.
 
-Come mai ho diviso in due il progetto? Semplicemente perché in questo modo è possibile creare delle presentazioni grafiche diverse, se qualcuno volesse farlo.
+Why did I split the project in two? Because in this way it is possible to create different graphic presentations, if someone wants to do it.
 
-Comincio con l'installare il primo:
+I begin by installing the first one:
 
 ```bash
 npm i -D @el3um4s/svelte-get-component-info
 ```
 
-Creo poi un file `getInfoSvelteComponents.js` che mi permetta di leggere tutti i file nella cartella `src\lib\components`. Dopo aver estratto i dati che mi servono li salvo in un file `infoSvelteComponents.json` nella cartella `src\routes`:
+I then create a `getInfoSvelteComponents.js` file that allows me to read all the files in the `src\lib\components` directory. After extracting the data I need, I save it in an `infoSvelteComponents.json` file in the `src\routes` folder:
 
 ```js
 import { writeFileSync } from "fs";
@@ -83,7 +83,7 @@ let data = JSON.stringify(infoFiles);
 writeFileSync("./src/routes/infoSvelteComponents.json", data);
 ```
 
-Può anche essere utile, ma non è indispensabile, creare anche un file `getInfoSvelteComponents-watcher.js` per intercettare automaticamente ogni modifica al codice sorgente del componente:
+It can also be useful, but not essential, to create a `getInfoSvelteComponents-watcher.js` file to automatically intercept any changes to the component source code:
 
 ```js
 import { watch } from "fs";
@@ -97,7 +97,7 @@ watch("./src/lib/components", () => {
 });
 ```
 
-Aggiungo quindi un paio di scripts a `package.json`:
+So I add a couple of scripts to `package.json`:
 
 ```json
 "scripts": {
@@ -106,7 +106,7 @@ Aggiungo quindi un paio di scripts a `package.json`:
 }
 ```
 
-Se eseguo `npm run get-info-svelte-components` ottengo un file simile a questo:
+When I run `npm run get-info-svelte-components` I get a file similar to this:
 
 ```json
 {
@@ -141,14 +141,14 @@ Se eseguo `npm run get-info-svelte-components` ottengo un file simile a questo:
 }
 ```
 
-In pratica per ogni componente nella cartella `lib\components` ottengo un oggetto con 4 proprietà:
+For each component in the `lib\components` directory I get an object with 4 properties:
 
 - props
 - actions
 - slots
 - css
 
-Posso importare queste informazioni nel file `src\routes\index.svelte`
+I can import this information into the `src\routes\index.svelte`file
 
 ```html
 <script lang="ts">
@@ -156,15 +156,15 @@ Posso importare queste informazioni nel file `src\routes\index.svelte`
 </script>
 ```
 
-Già questo sarebbe sufficiente per creare un sistema di documentazione automatico: basta estrarre le informazioni contenute in `infoSvelteComponents` e il gioco è fatto.
+This alone would be enough to create an automatic documentation system: just extract the information contained in `infoSvelteComponents` and that's it.
 
-Ho però preferito creare un componente specifico, [@el3um4s/svelte-component-info](https://www.npmjs.com/package/@el3um4s/svelte-component-info). Lo installo con:
+I preferred to create a specific component, [@el3um4s/svelte-component-info](https://www.npmjs.com/package/@el3um4s/svelte-component-info). I install it with:
 
 ```bash
 npm i @el3um4s/svelte-component-info
 ```
 
-Importo quindi il componente nel file `index.svelte`:
+I then import the component into the `index.svelte` file:
 
 ```svelte
 <script lang="ts">
@@ -179,11 +179,11 @@ Importo quindi il componente nel file `index.svelte`:
   urlPackage="@el3um4s/svelte-component-package-starter" />
 ```
 
-In questo modo ottengo una pagina simile a questa:
+I get a page like to this:
 
 ![document-svelte-01.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-12-31-come-documentare-web-component-svelte-parte-2/document-svelte-01.gif)
 
-Aggiungo uno `slot="demo"` per mostrare un'anteprima del componente:
+I add a `slot="demo"` to show a preview of the component:
 
 ```svelte
 <main>
@@ -201,23 +201,23 @@ Aggiungo uno `slot="demo"` per mostrare un'anteprima del componente:
 </main>
 ```
 
-In questo modo ottengo un risultato come questo:
+This way I get this:
 
 ![document-svelte-02.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-12-31-come-documentare-web-component-svelte-parte-2/document-svelte-02.gif)
 
-E con questo ho concluso la prima parte.
+And with this I concluded the first part.
 
-Resta però una domanda: come posso caricare automaticamente le pagine create da SvelteKit su GitHub? In modo da mantenere la documentazione online.
+But one question remains: how can I automatically upload pages created by SvelteKit to GitHub?
 
-### Come usare SvelteKit con GitHub Pages
+### How to use SvelteKit with GitHub Pages
 
-Parto dall'articolo [How to Use SvelteKit with GitHub Pages](https://javascript.plainenglish.io/sveltekit-github-pages-4fe2844773de) per usare markdown come documentazione dei miei componenti. Quindi, usando quell'articolo come canovaccio, comincio con l'installare [gh-pages](https://www.npmjs.com/package/gh-pages)
+I start from the article [How to Use SvelteKit with GitHub Pages](https://javascript.plainenglish.io/sveltekit-github-pages-4fe2844773de) to use markdown as documentation of my components. I install [gh-pages](https://www.npmjs.com/package/gh-pages):
 
 ```bash
 npm install gh-pages --save-dev
 ```
 
-e quindi aggiungo uno script a `package.json`:
+and then I add a script to `package.json`:
 
 ```json
 "scripts": {
@@ -225,7 +225,7 @@ e quindi aggiungo uno script a `package.json`:
 }
 ```
 
-Creo il file `gh-pages.js`:
+I create the `gh-pages.js` file:
 
 ```js
 import { publish } from "gh-pages";
@@ -247,13 +247,13 @@ publish(
 );
 ```
 
-Aggiungo poi un [adapter-static](https://www.npmjs.com/package/@sveltejs/adapter-static) per poter ottenere delle pagine pronte per GitHub:
+Then I add the [adapter-static](https://www.npmjs.com/package/@sveltejs/adapter-static) to get pages ready for GitHub:
 
 ```bash
 npm i -D @sveltejs/adapter-static@next
 ```
 
-Aggiorno il file `svelte.config.js`:
+I update the `svelte.config.js` file:
 
 ```js
 import preprocess from "svelte-preprocess";
@@ -289,9 +289,9 @@ const config = {
 export default config;
 ```
 
-Aggiungo il file `.nojekyll` alla cartella `static`.
+I add the `.nojekyll` file to the `static` folder.
 
-Ogni volta che creo una nuova versione della documentazione mi conviene ripulire la cartella `build` contenente la precedente. Posso farlo direttamente da NodeJs, creando un file `clean-build.js`:
+Whenever I create a new version of the documentation it is worth cleaning up the `build` folder containing the previous one. I can do this directly from NodeJs, by creating a `clean-build.js` file:
 
 ```js
 import { existsSync, rmSync } from "fs";
@@ -315,13 +315,7 @@ paths.forEach((path) => {
 console.log("Successfully deleted!");
 ```
 
-Per semplificare l'esecuzione dei vari comandi uso [npm-run-all](https://www.npmjs.com/package/npm-run-all)
-
-```bash
-npm i -D npm-run-all
-```
-
-Modifico quindi `package.json`:
+I edit `package.json`:
 
 ```json
 "scripts": {
@@ -330,22 +324,22 @@ Modifico quindi `package.json`:
 }
 ```
 
-Per caricare su GitHub Pages la documentazione è sufficiente usare i comandi:
+To upload the documentation to GitHub Pages, simply use the commands:
 
 ```bash
 npm run build
 npm run deploy
 ```
 
-Ottengo una pagina web simile a questa
+I get a web page similar to this
 
 - [el3um4s.github.io/svelte-component-package-starter](https://el3um4s.github.io/svelte-component-package-starter/)
 
-Finché si tratta di un singolo componente è sufficiente questo. Io però preferisco usare file markdown.
+As long as it is a single component this is sufficient. However, I prefer to use markdown files.
 
-### Come usare Markdown con SvelteKit
+### How to use Markdown with SvelteKit
 
-Importo [mdsvex](https://mdsvex.pngwn.io/):
+I import [mdsvex](https://mdsvex.pngwn.io/):
 
 ```bash
 npm i -D mdsvex
@@ -353,7 +347,7 @@ npx svelte-add@latest mdsvex
 npm install
 ```
 
-E imposto il file di configurazione `mdsvex.config.js`
+And I set the configuration file `mdsvex.config.js`
 
 ```js
 const config = {
@@ -370,7 +364,7 @@ const config = {
 export default config;
 ```
 
-Infine modifico `svelte.config.js` per riconoscere i file `md`
+Finally I modify `svelte.config.js` to recognize the `md` files
 
 ```js
 import { mdsvex } from "mdsvex";
@@ -411,9 +405,9 @@ const config = {
 export default config;
 ```
 
-Adesso posso usare i file `MD` come pagine nella cartella `routes`. Rinomino quindi il file `index.svelte` in `index.md`.
+Now I can use the `md` files as pages in the `routes` directory. I then rename the `index.svelte` file to `index.md`.
 
-Posso creare un file `slider.md` per creare la documentazione di questo componente:
+I can create a `slider.md` file to document this component:
 
 ```svelte
 <script lang="ts">
@@ -438,10 +432,10 @@ Posso creare un file `slider.md` per creare la documentazione di questo componen
 </main>
 ```
 
-In questo modo alla pagina [el3um4s.github.io/svelte-component-package-starter/slider](https://el3um4s.github.io/svelte-component-package-starter/slider) trovo qualcosa del genere:
+So on page [el3um4s.github.io/svelte-component-package-starter/slider](https://el3um4s.github.io/svelte-component-package-starter/slider) I find something like this:
 
 ![document-svelte-03.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2021/2021-12-31-come-documentare-web-component-svelte-parte-2/document-svelte-03.gif)
 
-E con questo è tutto. Il repository del progetto si può trovare qui:
+And this is all. The project repository is here:
 
 - [el3um4s/svelte-component-package-starter](https://github.com/el3um4s/svelte-component-package-starter)
