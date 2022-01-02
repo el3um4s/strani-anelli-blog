@@ -8,7 +8,7 @@ header:
   immagine_estesa: "image"
   immagine_fonte: "Photo credit: [**Robo Wunderkind**](https://unsplash.com/@robowunderkind)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2022-01-02 23:30"
+date: "2022-01-02 23:20"
 categories:
   - Svelte
   - SvelteKit
@@ -63,83 +63,19 @@ npm i -D @el3um4s/svelte-get-component-info
 
 I then create a `getInfoSvelteComponents.js` file that allows me to read all the files in the `src\lib\components` directory. After extracting the data I need, I save it in an `infoSvelteComponents.json` file in the `src\routes` folder:
 
-```js
-import { writeFileSync } from "fs";
-import glob from "glob";
-import { getInfo } from "@el3um4s/svelte-get-component-info";
-
-const basePath = "src/lib/components/";
-
-const listFile = glob.sync(`${basePath}**/*.svelte`);
-
-let infoFiles = {};
-listFile.forEach((file) => {
-  const prop = getInfo(file);
-  const fileName = file.substring(basePath.length);
-  infoFiles[fileName] = prop;
-});
-
-let data = JSON.stringify(infoFiles);
-writeFileSync("./src/routes/infoSvelteComponents.json", data);
-```
+<script src="https://gist.github.com/el3um4s/79bda3c80b1d50373e5a9c214c2bc4f1.js"></script>
 
 It can also be useful, but not essential, to create a `getInfoSvelteComponents-watcher.js` file to automatically intercept any changes to the component source code:
 
-```js
-import { watch } from "fs";
-
-import { exec } from "child_process";
-
-exec("npm run get-info-svelte-components");
-
-watch("./src/lib/components", () => {
-  exec("npm run get-info-svelte-components");
-});
-```
+<script src="https://gist.github.com/el3um4s/419fd8100102cc08039059c9cb923ed1.js"></script>
 
 So I add a couple of scripts to `package.json`:
 
-```json
-"scripts": {
-  "get-info-svelte-components": "node getInfoSvelteComponents.js",
-  "get-info-svelte-components-watcher": "node getInfoSvelteComponents-watcher.js",
-}
-```
+<script src="https://gist.github.com/el3um4s/07e590dd75f31733a146b720a9e2f290.js"></script>
 
 When I run `npm run get-info-svelte-components` I get a file similar to this:
 
-```json
-{
-  "_InputColors.svelte": {
-    "props": [
-      { "name": "firstColor", "defaultValue": "white" },
-      { "name": "secondColor", "defaultValue": "black" }
-    ],
-    "actions": [],
-    "slots": [],
-    "css": []
-  },
-  "GridColors.svelte": {
-    "props": [
-      { "name": "firstColor", "defaultValue": "#fafa6e" },
-      { "name": "secondColor", "defaultValue": "red" },
-      { "name": "steps", "defaultValue": "9" }
-    ],
-    "actions": [],
-    "slots": [],
-    "css": [{ "name": "--default-color-border" }, { "name": "--border-color" }]
-  },
-  "Slider.svelte": {
-    "props": [
-      { "name": "steps", "defaultValue": "9" },
-      { "name": "label", "defaultValue": "Steps" }
-    ],
-    "actions": [],
-    "slots": [],
-    "css": []
-  }
-}
-```
+<script src="https://gist.github.com/el3um4s/0a3dd2492376dba2404339113e2b78dd.js"></script>
 
 For each component in the `lib\components` directory I get an object with 4 properties:
 
@@ -150,11 +86,7 @@ For each component in the `lib\components` directory I get an object with 4 prop
 
 I can import this information into the `src\routes\index.svelte`file
 
-```html
-<script lang="ts">
-  import infoSvelteComponents from "./infoSvelteComponents.json";
-</script>
-```
+<script src="https://gist.github.com/el3um4s/9588bc55901cc1744c4aac019956fcc1.js"></script>
 
 This alone would be enough to create an automatic documentation system: just extract the information contained in `infoSvelteComponents` and that's it.
 
@@ -166,18 +98,7 @@ npm i @el3um4s/svelte-component-info
 
 I then import the component into the `index.svelte` file:
 
-```svelte
-<script lang="ts">
-  import infoSvelteComponents from "./infoSvelteComponents.json";
-  import { SvelteInfo } from "@el3um4s/svelte-component-info";
-</script>
-
-<SvelteInfo
-  name="GridColors"
-  description="Svelte Component Package Starter"
-  info={infoSvelteComponents['GridColors.svelte']}
-  urlPackage="@el3um4s/svelte-component-package-starter" />
-```
+<script src="https://gist.github.com/el3um4s/5e73061c8243d0c8b7f703224b0a3e0b.js"></script>
 
 I get a page like to this:
 
@@ -185,21 +106,7 @@ I get a page like to this:
 
 I add a `slot="demo"` to show a preview of the component:
 
-```svelte
-<main>
-	<SvelteInfo
-		name="GridColors"
-		description="Svelte Component Package Starter"
-		info={infoSvelteComponents['GridColors.svelte']}
-		urlPackage="@el3um4s/svelte-component-package-starter"
-	>
-		<GridColors slot="demo"
-      {...settings}
-      --border-color="orange"
-    />
-	</SvelteInfo>
-</main>
-```
+<script src="https://gist.github.com/el3um4s/ed17486976cc837bee4c549dd7bc6f45.js"></script>
 
 This way I get this:
 
@@ -219,33 +126,11 @@ npm install gh-pages --save-dev
 
 and then I add a script to `package.json`:
 
-```json
-"scripts": {
- "deploy": "node ./gh-pages.js"
-}
-```
+<script src="https://gist.github.com/el3um4s/5211794a6dbb31895f8049e0c1f22327.js"></script>
 
 I create the `gh-pages.js` file:
 
-```js
-import { publish } from "gh-pages";
-
-publish(
-  "build", // path to public directory
-  {
-    branch: "gh-pages",
-    repo: "https://github.com/el3um4s/svelte-component-package-starter.git", // Update to point to your repository
-    user: {
-      name: "Samuele de Tomasi", // update to use your name
-      email: "samuele@stranianelli.com", // Update to use your email
-    },
-    dotfiles: true,
-  },
-  () => {
-    console.log("Deploy Complete!");
-  }
-);
-```
+<script src="https://gist.github.com/el3um4s/3239adf6c4e4262ad74be0977f026092.js"></script>
 
 Then I add the [adapter-static](https://www.npmjs.com/package/@sveltejs/adapter-static) to get pages ready for GitHub:
 
@@ -255,74 +140,17 @@ npm i -D @sveltejs/adapter-static@next
 
 I update the `svelte.config.js` file:
 
-```js
-import preprocess from "svelte-preprocess";
-import adapter from "@sveltejs/adapter-static";
-
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
-  preprocess: [
-    preprocess({
-      style: "postcss",
-      script: "typescript",
-      postcss: true,
-    }),
-  ],
-
-  kit: {
-    target: "#svelte",
-    package: {
-      dir: "package",
-      emitTypes: true,
-    },
-    adapter: adapter({
-      pages: "build",
-      assets: "build",
-      fallback: null,
-    }),
-    paths: {
-      base: "/svelte-component-package-starter",
-    },
-  },
-};
-
-export default config;
-```
+<script src="https://gist.github.com/el3um4s/d7d7d4b9ed9827921576c23aac0af1fb.js"></script>
 
 I add the `.nojekyll` file to the `static` folder.
 
 Whenever I create a new version of the documentation it is worth cleaning up the `build` folder containing the previous one. I can do this directly from NodeJs, by creating a `clean-build.js` file:
 
-```js
-import { existsSync, rmSync } from "fs";
-
-function deleteFolderRecursive(path) {
-  console.log(`Deleting old documents "${path}"...`);
-  if (existsSync(path)) {
-    rmSync(path, {
-      force: true,
-      recursive: true,
-    });
-  }
-}
-
-const paths = ["./build"];
-
-paths.forEach((path) => {
-  deleteFolderRecursive(path);
-});
-
-console.log("Successfully deleted!");
-```
+<script src="https://gist.github.com/el3um4s/efbeb42de857b8d939068e19516d7d92.js"></script>
 
 I edit `package.json`:
 
-```json
-"scripts": {
-  "build": "npm run get-info-svelte-components && npm run clean-build && svelte-kit build",
-	"clean-build": "node clean-build.js"
-}
-```
+<script src="https://gist.github.com/el3um4s/d5db41e635fcb79a94917fc6a4997ca2.js"></script>
 
 To upload the documentation to GitHub Pages, simply use the commands:
 
@@ -349,88 +177,17 @@ npm install
 
 And I set the configuration file `mdsvex.config.js`
 
-```js
-const config = {
-  extensions: [".svelte.md", ".md", ".svx"],
-
-  smartypants: {
-    dashes: "oldschool",
-  },
-
-  remarkPlugins: [],
-  rehypePlugins: [],
-};
-
-export default config;
-```
+<script src="https://gist.github.com/el3um4s/9bd7cb1e84aa69f053e1827e228a06c2.js"></script>
 
 Finally I modify `svelte.config.js` to recognize the `md` files
 
-```js
-import { mdsvex } from "mdsvex";
-import mdsvexConfig from "./mdsvex.config.js";
-import preprocess from "svelte-preprocess";
-import adapter from "@sveltejs/adapter-static";
-
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
-  extensions: [".svelte", ...mdsvexConfig.extensions],
-
-  preprocess: [
-    preprocess({
-      style: "postcss",
-      script: "typescript",
-      postcss: true,
-    }),
-    mdsvex(mdsvexConfig),
-  ],
-
-  kit: {
-    target: "#svelte",
-    package: {
-      dir: "package",
-      emitTypes: true,
-    },
-    adapter: adapter({
-      pages: "build",
-      assets: "build",
-      fallback: null,
-    }),
-    paths: {
-      base: "/svelte-component-package-starter",
-    },
-  },
-};
-
-export default config;
-```
+<script src="https://gist.github.com/el3um4s/d3aeab48d629c8ee8811bfbde1b7cc82.js"></script>
 
 Now I can use the `md` files as pages in the `routes` directory. I then rename the `index.svelte` file to `index.md`.
 
 I can create a `slider.md` file to document this component:
 
-```svelte
-<script lang="ts">
-	import Slider from '$lib/components/Slider.svelte';
-	import infoSvelteComponents from './infoSvelteComponents.json';
-	import { SvelteInfo } from '@el3um4s/svelte-component-info';
-
-	let steps = 8;
-	let label = "Test";
-	$: label = `Test ${steps.toString().padStart(2, "0")}`
-</script>
-
-<main>
-	<SvelteInfo
-		name="Slider"
-		description="Svelte Component Package Starter"
-		info={infoSvelteComponents['Slider.svelte']}
-		urlPackage="@el3um4s/svelte-component-package-starter"
-	>
-    	<Slider bind:steps {label} slot="demo"/>
-    </SvelteInfo>
-</main>
-```
+<script src="https://gist.github.com/el3um4s/ef45e0e0e56caeb4f302d6b6e3429657.js"></script>
 
 So on page [el3um4s.github.io/svelte-component-package-starter/slider](https://el3um4s.github.io/svelte-component-package-starter/slider) I find something like this:
 
