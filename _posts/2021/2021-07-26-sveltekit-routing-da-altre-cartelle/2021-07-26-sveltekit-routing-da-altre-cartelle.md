@@ -65,9 +65,9 @@ const allPosts = import.meta.globEager(`../news/**/*.md`);
 
 Questo mi permette di ottenere tutti i file `md` come moduli. Scorro quindi ogni post che ho trovato per estrarre alcuni dati
 
-``` js
+```js
 for (let path in allPosts) {
-    // ...
+  // ...
 }
 ```
 
@@ -87,20 +87,20 @@ Inserisco tutto questo in un array (`body = []`), array che poi passerò alla pa
 
 ```html
 <script context="module">
-    const allPosts = import.meta.globEager(`../news/**/*.md`);
-    let body = [];
-    for (let path in allPosts) {
-        const post = allPosts[path];
-        const metadata = post.metadata;
-        const p = {
-            path, metadata
-        }
-        body.push(p); 
-    }
+  const allPosts = import.meta.globEager(`../news/**/*.md`);
+  let body = [];
+  for (let path in allPosts) {
+      const post = allPosts[path];
+      const metadata = post.metadata;
+      const p = {
+          path, metadata
+      }
+      body.push(p);
+  }
 
-    export const load = async () => {
-        return { props: {posts: body} }
-    }
+  export const load = async () => {
+      return { props: {posts: body} }
+  }
 </script>
 ```
 
@@ -126,28 +126,30 @@ Adesso non resta che inserire la parte html in `index.svelte`:
 Posso anche fare alcuni giochetti interessanti, per esempio invece di usare uno slug inserito nel frontmatter del post posso usare il nome della cartella. Per farlo estraggo il nome della cartella ripulito dalla data:
 
 ```js
-    for (let path in allPosts) {
-      //...
-        const namePage = path.split('/');
-        const slugPage = namePage[namePage.length-2].slice(11);
-        const p = {
-            path, metadata, slugPage
-        }
-        body.push(p); 
-    }
+for (let path in allPosts) {
+  //...
+  const namePage = path.split("/");
+  const slugPage = namePage[namePage.length - 2].slice(11);
+  const p = {
+    path,
+    metadata,
+    slugPage,
+  };
+  body.push(p);
+}
 ```
 
 Poi creo una funzione di aiuto per usare lo slug del post se presente, altrimenti il nome della cartella:
 
 ```js
-function linkSlug(s:string | undefined, p: string): string {
-    let result = "";
-    if ( !s) {
-        result = p
-    } else {
-        result = s;
-    }
-    return result;
+function linkSlug(s: string | undefined, p: string): string {
+  let result = "";
+  if (!s) {
+    result = p;
+  } else {
+    result = s;
+  }
+  return result;
 }
 ```
 
@@ -166,51 +168,51 @@ Sistemata l'home page non resta che capire come accedere ai vari post usando uno
 Anche qui devo importare i vari post. Ma questa volta importo anche il modulo dei vari post, non solamente alcune informazioni:
 
 ```js
-    export const ssr = false;
-    const allPosts = import.meta.globEager(`../news/**/*.md`);
-    let body = [];
+export const ssr = false;
+const allPosts = import.meta.globEager(`../news/**/*.md`);
+let body = [];
 
-    for (let path in allPosts) {
-        const post = allPosts[path];
-        const metadata = post.metadata;
-        const pathArray = path.split('/');
-        const slugPage = pathArray[pathArray.length-2].slice(11);
+for (let path in allPosts) {
+  const post = allPosts[path];
+  const metadata = post.metadata;
+  const pathArray = path.split("/");
+  const slugPage = pathArray[pathArray.length - 2].slice(11);
 
-        const p = {post, slugPage, metadata };
+  const p = { post, slugPage, metadata };
 
-        body.push(p);
-    }
+  body.push(p);
+}
 ```
 
 Poi non mi resta che filtrare i vari post per estrarre quello che mi interessa caricare:
 
 ```js
-export const load = ({page}) => {
-    const posts = body;
-    const { slug } = page.params;
+export const load = ({ params }) => {
+  const posts = body;
+  const { slug } = params;
 
-    const filteredPosts = posts.filter( (p) => {
-        const slugPost = p.metadata.slug;
-        const slugToCompare = !slugPost ? p.slugPage : slugPost;
-        return slugToCompare.toLowerCase() === slug.toLowerCase();
-    } );
+  const filteredPosts = posts.filter((p) => {
+    const slugPost = p.metadata.slug;
+    const slugToCompare = !slugPost ? p.slugPage : slugPost;
+    return slugToCompare.toLowerCase() === slug.toLowerCase();
+  });
 
-    return {
-        props: {
-            page: filteredPosts[0].post.default,
-        }
-    }
-}
+  return {
+    props: {
+      page: filteredPosts[0].post.default,
+    },
+  };
+};
 ```
 
 Il codice del componente è di per sé molto semplice:
 
 ```html
 <script>
-    export let page;
+  export let page;
 </script>
 
-<svelte:component this={page}/>
+<svelte:component this="{page}" />
 ```
 
 Il codice è finito. Adesso non resta che costruire il sito con:

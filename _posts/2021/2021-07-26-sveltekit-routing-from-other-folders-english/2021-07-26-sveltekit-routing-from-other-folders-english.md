@@ -43,7 +43,6 @@ Before starting a few links:
 - [Vite - Glob Import](https://vitejs.dev/guide/features.html#glob-import)
 - [Sveltekit Markdown Blog](https://www.youtube.com/playlist?list=PLm_Qt4aKpfKgonq1zwaCS6kOD-nbOKx7V)
 
-
 The trick is to "map" all blog posts and keep them as "modules". Then I use [Vite](https://vitejs.dev/) to dynamically import the modules into the blog. To test I don't create a new repository. I continue modifying the [MEMENTO SvelteKit & GitHub Pages](https://github.com/el3um4s/memento-sveltekit-and-github-pages): I add a `src/news` folder to insert the various posts.
 
 I use a structure similar to the one I will need in my blog. So the posts will be divided by year but not by month. Each post will stay in a folder whose first few characters represent the publication date. Inside the folder I will put the images I will need and an `index.md` file with the post. I think in the future I will have to add the ability to use markdown files with other names. That's enough for the moment.
@@ -66,9 +65,9 @@ const allPosts = import.meta.globEager(`../news/**/*.md`);
 
 With this code I get all the `md` files as modules. Then I go through every post I've just found and I extract some data
 
-``` js
+```js
 for (let path in allPosts) {
-    // ...
+  // ...
 }
 ```
 
@@ -88,20 +87,20 @@ I put all in an array (`body = []`). Then I pass `body` to the page with a `load
 
 ```html
 <script context="module">
-    const allPosts = import.meta.globEager(`../news/**/*.md`);
-    let body = [];
-    for (let path in allPosts) {
-        const post = allPosts[path];
-        const metadata = post.metadata;
-        const p = {
-            path, metadata
-        }
-        body.push(p); 
-    }
+  const allPosts = import.meta.globEager(`../news/**/*.md`);
+  let body = [];
+  for (let path in allPosts) {
+      const post = allPosts[path];
+      const metadata = post.metadata;
+      const p = {
+          path, metadata
+      }
+      body.push(p);
+  }
 
-    export const load = async () => {
-        return { props: {posts: body} }
-    }
+  export const load = async () => {
+      return { props: {posts: body} }
+  }
 </script>
 ```
 
@@ -127,28 +126,30 @@ Now I add the html side in `index.svelte`:
 I can also play with frontmatter. I can use the folder name if I don't define a slug in the frontmatter. I extract the name of the folder minus the date:
 
 ```js
-    for (let path in allPosts) {
-      //...
-        const namePage = path.split('/');
-        const slugPage = namePage[namePage.length-2].slice(11);
-        const p = {
-            path, metadata, slugPage
-        }
-        body.push(p); 
-    }
+for (let path in allPosts) {
+  //...
+  const namePage = path.split("/");
+  const slugPage = namePage[namePage.length - 2].slice(11);
+  const p = {
+    path,
+    metadata,
+    slugPage,
+  };
+  body.push(p);
+}
 ```
 
 Then I define the helper function:
 
 ```js
-function linkSlug(s:string | undefined, p: string): string {
-    let result = "";
-    if ( !s) {
-        result = p
-    } else {
-        result = s;
-    }
-    return result;
+function linkSlug(s: string | undefined, p: string): string {
+  let result = "";
+  if (!s) {
+    result = p;
+  } else {
+    result = s;
+  }
+  return result;
 }
 ```
 
@@ -165,51 +166,51 @@ Once I fix the home page, I have to understand how to access the various posts u
 I have to import the various posts. But this time I also import the modules of the various posts:
 
 ```js
-    export const ssr = false;
-    const allPosts = import.meta.globEager(`../news/**/*.md`);
-    let body = [];
+export const ssr = false;
+const allPosts = import.meta.globEager(`../news/**/*.md`);
+let body = [];
 
-    for (let path in allPosts) {
-        const post = allPosts[path];
-        const metadata = post.metadata;
-        const pathArray = path.split('/');
-        const slugPage = pathArray[pathArray.length-2].slice(11);
+for (let path in allPosts) {
+  const post = allPosts[path];
+  const metadata = post.metadata;
+  const pathArray = path.split("/");
+  const slugPage = pathArray[pathArray.length - 2].slice(11);
 
-        const p = {post, slugPage, metadata };
+  const p = { post, slugPage, metadata };
 
-        body.push(p);
-    }
+  body.push(p);
+}
 ```
 
 Now I filter the various posts to extract what I want to show:
 
 ```js
-export const load = ({page}) => {
-    const posts = body;
-    const { slug } = page.params;
+export const load = ({ params }) => {
+  const posts = body;
+  const { slug } = params;
 
-    const filteredPosts = posts.filter( (p) => {
-        const slugPost = p.metadata.slug;
-        const slugToCompare = !slugPost ? p.slugPage : slugPost;
-        return slugToCompare.toLowerCase() === slug.toLowerCase();
-    } );
+  const filteredPosts = posts.filter((p) => {
+    const slugPost = p.metadata.slug;
+    const slugToCompare = !slugPost ? p.slugPage : slugPost;
+    return slugToCompare.toLowerCase() === slug.toLowerCase();
+  });
 
-    return {
-        props: {
-            page: filteredPosts[0].post.default,
-        }
-    }
-}
+  return {
+    props: {
+      page: filteredPosts[0].post.default,
+    },
+  };
+};
 ```
 
 The component itself is very simple:
 
 ```html
 <script>
-    export let page;
+  export let page;
 </script>
 
-<svelte:component this={page}/>
+<svelte:component this="{page}" />
 ```
 
 After that, I can build the static site with:
@@ -233,4 +234,3 @@ The blog is visible at the address: [el3um4s.github.io/memento-sveltekit-and-git
 And this is my Patreon:
 
 - [Patreon](https://www.patreon.com/el3um4s)
-
