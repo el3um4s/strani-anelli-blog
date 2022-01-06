@@ -415,3 +415,43 @@ Il blog invece è visibile all'indirizzo [el3um4s.github.io/memento-sveltekit-an
 Ricordo inoltre l'indirizzo del mio Patreon:
 
 - [Patreon](https://www.patreon.com/el3um4s)
+
+### Update Gennaio 2022
+
+Uno degli ultimi aggiornamenti di SvelteKit ha modificato i parametri passati alla funzione [load()](https://kit.svelte.dev/docs#loading). WebJeda ha caricato un bel video che spiega la questione:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/F2UTRJzo_E4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+In sintesi si tratta di correggere tutte le funzioni `load` sostituendo a `page` uno tra `url` e `params`.
+
+```js
+export const load = async ({ url }) => ({
+  props: {
+    key: url.pathname,
+  },
+});
+```
+
+Oppure
+
+```js
+export const load = ({ params }) => {
+  const posts = body;
+  const { slug } = params;
+
+  const filteredPosts = posts.filter((p) => {
+    const slugPost = p.metadata.slug;
+    const slugToCompare = !slugPost ? p.slugPage : slugPost;
+    return slugToCompare.toLowerCase() === slug.toLowerCase();
+  });
+
+  return {
+    props: {
+      page: filteredPosts[0].post.default,
+      metadata: filteredPosts[0].metadata,
+    },
+  };
+};
+```
+
+SvelteKit è ancora in beta, quindi è previsto che qualche modifica produca alcuni effetti non voluti. Sul GitHub è possibile trovare l'elenco delle cose che mancano per arrivare al rilascio della prima versione stabile (qui: [milestone:1.0](https://github.com/sveltejs/kit/issues?q=is%3Aopen+is%3Aissue+milestone%3A1.0))
