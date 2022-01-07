@@ -1,6 +1,6 @@
 ---
 title: "Statistiche di Medium con JavaScript e Svelte - Part 1"
-published: false
+published: true
 usa_webp: true
 header:
   immagine_tipo: "jpg"
@@ -226,7 +226,7 @@ Quindi, il primo passo è ricordarsi di scaricare le statistiche più aggiornate
 </p>
 ```
 
-![download-stats-01.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2022/2022-01-07-come-scaricare-le-statistiche-di-medium/download-stats-01.gif)
+![download-stats-01.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2022/2022-01-07-come-scaricare-le-statistiche-di-medium-part-1/download-stats-01.gif)
 
 ### Importare un file JSON
 
@@ -496,6 +496,6 @@ Infine aggiungo il grafico alla pagina principale:
 
 In questo modo posso ottenere qualcosa di simile a questo:
 
-![download-stats-02.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2022/2022-01-07-come-scaricare-le-statistiche-di-medium/download-stats-02.gif)
+![download-stats-02.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2022/2022-01-07-come-scaricare-le-statistiche-di-medium-part-1/download-stats-02.gif)
 
 Ok, direi che per il momento è abbastanza. Restano ancora delle cose da dire ma credo che scriverò un altro articolo su questo argomento nei prossimi giorni.
