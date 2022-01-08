@@ -35,7 +35,7 @@ Estremizzando il ragionamento, permettetemelo, l'unico parametro davvero oggetti
 
 Sì, lo so, sembra un discorso venale. E per di più i miei "incassi" sono piccoli, anzi, piccolissimi. Ma voglio partire da qui.
 
-Per farlo mi serve un file JSON contente i dati relativi agli incassi. Per ottenerlo uso l'indirizzo: [medium.com/me/partner/dashboard?format=json](https://medium.com/me/partner/dashboard?format=json).
+Per farlo mi serve un file JSON contenente i dati relativi agli incassi. Per ottenerlo uso l'indirizzo: [medium.com/me/partner/dashboard?format=json](https://medium.com/me/partner/dashboard?format=json).
 
 Questo file è molto interessante, contiene alcuni dati che possono venire utili. Oltre a tanti altri che non comprendo appieno. Di conseguenza la prima cosa da fare è capire come leggerlo.
 
@@ -136,7 +136,7 @@ Oltre ai dati precedenti vengono salvate alcune informazioni aggiuntive: l'id de
 
 ### Post Amounts
 
-Infine `postAmounts`, un array contente un po' di dati interessanti per ogni post pubblicato:
+Infine `postAmounts`, un array contenente un po' di dati interessanti per ogni post pubblicato:
 
 ```json
 {
@@ -185,7 +185,7 @@ Infine `postAmounts`, un array contente un po' di dati interessanti per ogni pos
 }
 ```
 
-Non sto a fare la disanima di tutte le voci, anche perché non le ho copiate tutte. Ci sono però alcuni dati su cui voglio mettere l'accento:
+Non sto a fare la disamina di tutte le voci, anche perché non le ho copiate tutte. Ci sono però alcuni dati su cui voglio mettere l'accento:
 
 - `totalAmountPaidToDate`: è quanto ha guadagnato una storia dal giorno in cui è stata pubblicata
 - `totalAmountInCents`: è il guadagno della storia nel mese corrente
@@ -251,7 +251,7 @@ async function loadDashboardJSON() {
 }
 ```
 
-In sintesi, uso `showOpenFilePicker()` per aprire una finestra di sistema e selezionare il file da usare. Quindi con `getFile()` carico il file nella pagina. Infine uso `text()` per estrane il contenuto e salvarlo in una variabile di tipo `string`.
+In sintesi, uso `showOpenFilePicker()` per aprire una finestra di sistema e selezionare il file da usare. Quindi con `getFile()` carico il file nella pagina. Infine uso `text()` per estrarne il contenuto e salvarlo in una variabile di tipo `string`.
 
 Con un file JSON normale a questo punto sarebbe sufficiente usare [JSON.parse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) per ottenere un oggetto. Ma in questo caso devo prima eliminare i caratteri `])}while(1);</x>`. Creo quindi la funzione `sanitizeOriginalStats()`
 
@@ -368,7 +368,7 @@ In questo modo a schermo posso vedere qualcosa di simile a questo:
 
 ### Aggiungo un grafico
 
-Il passo successivo è capire come mostrare graficamente i valori. Ci sono due librerie che vale la pena di prendere in considerazione:
+Il passo successivo è capire come mostrare graficamente i valori. Ci sono tre librerie che vale la pena di prendere in considerazione:
 
 - [Layer Cake](https://github.com/mhkeller/layercake)
 - [Pancake](https://github.com/Rich-Harris/pancake)
@@ -380,7 +380,7 @@ Comincio con impostare le variabili che mi servono:
 
 - `data` per i dati da mostrare
 - `labels` per le etichette
-- `columns` per il numero delle barre verticali da mostrare e
+- `columns` per il numero delle barre verticali da mostrare
 - `maxData` per scalare correttamente le barre
 
 ```js
