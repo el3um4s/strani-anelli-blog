@@ -39,7 +39,7 @@ The first step is to look for what already exists. There are some interesting ar
 - [How to create responsive tables with pure CSS using Grid Layout Module](https://www.freecodecamp.org/news/https-medium-com-nakayama-shingo-creating-responsive-tables-with-pure-css-using-the-grid-layout-module-8e0ea8f03e83/)
 - [Really Responsive Tables using CSS3 Flexbox](https://hashnode.com/post/really-responsive-tables-using-css3-flexbox-cijzbxd8n00pwvm53sl4l42cx)
 
-From this I began to think about how to create my table.
+From this I started to think about how to create my table.
 
 First, of course, I need the data. I decided not to use fictional data for this article simply because the best way to learn is by solving a real problem. My problem is: I have some stats regarding my earnings on Medium. How can I analyze them?
 
@@ -101,11 +101,11 @@ Finally something like a table appears:
 
 {% include picture img="table-03.webp" ext="jpg" alt="" %}
 
-One thing I don't like: the columns are all the same size. It makes more sense to make some columns smaller and leave the one with the article title larger. To do this I use the `width` property of each `label`:
+There's a thing I don't like: the columns are all the same size. It makes more sense to make some columns smaller and leave the one with the article title larger. To do this I use the `width` property of each `label`:
 
 <script src="https://gist.github.com/el3um4s/8e41c0bf61b4e009da0c8f6450dfe84f.js"></script>
 
-Now the table is a little prettier
+Now the table is a little prettier.
 
 {% include picture img="table-04.webp" ext="jpg" alt="" %}
 
@@ -127,7 +127,7 @@ In a similar way I can correct the alignment of the columns:
 
 ### Keep the header visible
 
-This is fine for tables with little data. But there is a problem when there are several rows of data. Scrolling down disappears the header of the columns making it difficult to read. To keep the first line fixed I have to modify the structure of the HTML part and the CSS style. I start by adding a `header` tag and a `section` tag:
+This is fine for tables with little data. But there is a problem when there are several rows of data. Scrolling down the header of the columns disappears, making it difficult to read. To keep the first line fixed I have to modify the structure of the HTML part and the CSS style. I start by adding a `header` tag and a `section` tag:
 
 <script src="https://gist.github.com/el3um4s/5ce447ab10792745848c6701fee9a3de.js"></script>
 
@@ -191,7 +191,7 @@ Then a couple of props to manage the position on the screen:
 
 <script src="https://gist.github.com/el3um4s/f3a28ea45bb6f48745c2e5c529fa444a.js"></script>
 
-It is also necessary to understand when the menu should be displayed and when not:
+It is also necessary to understand when the menu should be displayed and when it shouldn't be:
 
 <script src="https://gist.github.com/el3um4s/23e08c0ff5c5be587623446e535fbe46.js"></script>
 
@@ -203,7 +203,7 @@ Then I add events to hide the context menu when we click on some other element o
 
 <script src="https://gist.github.com/el3um4s/abcba6b4dbc2bf7c9490e5dc51a494c5.js"></script>
 
-Infine aggiungo qualche stile CSS:
+Last, I add some CSS styles:
 
 <script src="https://gist.github.com/el3um4s/ee9becaea697befb671f3ca7e35c09a1.js"></script>
 
@@ -239,7 +239,7 @@ Now I can sort the various columns:
 
 As far as it works, there remains a problem. It is not clearly visible which column we have selected, or on which row the mouse is positioned. To solve the problem I can use a few lines of CSS.
 
-Let's start with the lines. I think the quickest way is to add an element to which contains all the elements of the row:
+Let's start with the lines. I think the quickest way is to add an element which contains all the elements of the row:
 
 <script src="https://gist.github.com/el3um4s/0f2c86841e9b3ef49545f52daf58499f.js"></script>
 
@@ -247,7 +247,7 @@ I adjust the styles to keep the same format:
 
 <script src="https://gist.github.com/el3um4s/9399bf7a29250852fdcde98685c29101.js"></script>
 
-And then of course I add a hover effect:
+And then, of course, I add a hover effect:
 
 <script src="https://gist.github.com/el3um4s/af756fd2970a23fff5283b61a7d90f38.js"></script>
 
