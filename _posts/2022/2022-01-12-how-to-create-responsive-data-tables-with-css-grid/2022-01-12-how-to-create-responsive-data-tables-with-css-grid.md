@@ -201,9 +201,7 @@ I use [createEventDispatcher](https://svelte.dev/docs#run-time-svelte-createeven
 
 Then I add events to hide the context menu when we click on some other element of the page:
 
-```html
-<svelte:body on:click="{hide}" on:wheel="{hide}" />
-```
+<script src="https://gist.github.com/el3um4s/abcba6b4dbc2bf7c9490e5dc51a494c5.js"></script>
 
 Infine aggiungo qualche stile CSS:
 
@@ -299,20 +297,7 @@ I get this:
 
 I want to customize the choice of the column to use in the chart. I modify the context menu by adding another button:
 
-```html
-<script lang="ts">
-  export let canChart: boolean = false;
-</script>
-
-{#if canChart}
-<button
-  on:click={() => {
-    hide();
-    dispatch("chart-this");
-  }}><ChartBar /></button
->
-{/if}
-```
+<script src="https://gist.github.com/el3um4s/be9db053b6e6c5383d897ab9f7100938.js"></script>
 
 I have to use something to signal when to show the button because not all data can be represented graphically. For example the dates, or the texts. I add a `chartsColumns` variable with the list of columns
 
@@ -324,20 +309,7 @@ Then I add a function to select the data:
 
 There is a problem: how do I know which data I am viewing? There can be various ways. For the moment I think it is enough to highlight the column, perhaps using a bold font.
 
-```html
-<div
-  class="cell"
-  class:data-charted={chartValue === header.key}
->
-  <!--  -->
-</div>
-
-<style>
-.data-charted {
-  font-weight: 700;
-}
-</style>
-```
+<script src="https://gist.github.com/el3um4s/a58dc9c076b138eb4f2ec20ec9a83343.js"></script>
 
 ![table-css-grid-07.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2022/2022-01-11-come-creare-una-tabella-con-css-grid/table-css-grid-07.gif)
 
