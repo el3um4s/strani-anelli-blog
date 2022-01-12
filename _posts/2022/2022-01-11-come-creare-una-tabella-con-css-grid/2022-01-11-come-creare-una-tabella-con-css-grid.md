@@ -1,6 +1,5 @@
 ---
 title: "Come Creare una Tabella con CSS Grid"
-title-english: "How To Create Responsive Data Tables with CSS Grid"
 published: true
 usa_webp: true
 header:
@@ -152,7 +151,7 @@ Il risultato è un po' più elegante ma non è per nulla utile:
 
 {% include picture img="table-02.webp" ext="jpg" alt="" %}
 
-Cosa devo fare? Devo usare la proprietà[grid-template-columns](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns) per definire quante colonne ci devono essere.
+Cosa devo fare? Devo usare la proprietà [grid-template-columns](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns) per definire quante colonne ci devono essere.
 
 Poco fa ho spiegato come creare il prop `headers`. Bene, il numero di colonne è semplicemente il numero di elementi dell'array.
 
@@ -754,7 +753,7 @@ Ottengo un risultato simile a questo:
 
 ### Scegliere i dati da mostrare
 
-Voglio però rendere personalizzabile la scelta della colonna da usare come fonte del grafico. Per farlo modifico il context menu aggiungendo un alto pulsante:
+Voglio però rendere personalizzabile la scelta della colonna da usare come fonte del grafico. Per farlo modifico il context menu aggiungendo un altro pulsante:
 
 ```html
 <script lang="ts">
@@ -831,7 +830,7 @@ C'è però un problema di interpretazione: come faccio a sapere quale dato sto v
 
 ### Aggiungere i numeri alle righe
 
-Restano un ultimo dettaglio: i numeri delle righe. Basta semplicemente aggiungere un indice al ciclo `#each` di Svelte:
+Resta un ultimo dettaglio: i numeri delle righe. Basta semplicemente aggiungere un indice al ciclo `#each` di Svelte:
 
 ```svelte
 <!--  -->
