@@ -1,6 +1,6 @@
 ---
 title: "Statistiche di Medium con JavaScript e Svelte - Part 2"
-published: false
+published: true
 usa_webp: true
 header:
   immagine_tipo: "jpg"
