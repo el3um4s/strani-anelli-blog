@@ -8,7 +8,7 @@ header:
   immagine_estesa: "image"
   immagine_fonte: "Photo credit: [**Chris Liverani**](https://unsplash.com/@chrisliverani)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2022-01-09 23:20"
+date: "2022-01-14 15:00"
 categories:
   - Svelte
   - Components
