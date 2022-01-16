@@ -371,7 +371,7 @@ Ci sono vari modi per farlo, uno furbo è usare un altro file json. Posso scaric
 
 Oggi mi limito a usare quello che già ho. Quindi, come faccio a dividere i vari post per mese e anno di pubblicazione?
 
-Quando ho creato l'interfaccia `StoryAmountStats` ho salvato anche la proprietà `firstPublishedAt` di tipo `firstPublishedAt`:
+Quando ho creato l'interfaccia `StoryAmountStats` ho salvato anche la proprietà `firstPublishedAt` di tipo `CustomDateTime`:
 
 ```ts
 interface StoryAmountStats {
