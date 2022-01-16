@@ -276,7 +276,7 @@ E finalmente ottengo la lista con dei guadagni dei vari articoli:
 
 ### Facciamo una sintesi
 
-Per quanto sia interessante e utile, quello che guardo ogni giorno è un dato di sintesi. La momento compilo a mano, in excel, uno schema simile a questo:
+Per quanto sia interessante e utile, quello che guardo ogni giorno è un dato di sintesi. Al momento compilo a mano, in excel, uno schema simile a questo:
 
 {% include picture img="sintesi-01-excel.webp" ext="jpg" alt="" %}
 
