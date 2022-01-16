@@ -1,6 +1,6 @@
 ---
 title: "Medium Stats With JavaScript and Svelte - Part 2"
-published: false
+published: true
 usa_webp: true
 header:
   immagine_tipo: "jpg"
