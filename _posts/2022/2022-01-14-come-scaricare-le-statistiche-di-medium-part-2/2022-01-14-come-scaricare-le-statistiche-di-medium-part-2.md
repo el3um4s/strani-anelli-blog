@@ -116,7 +116,7 @@ Tra le varie opzioni sul tavolo ho deciso di creare una tabella usando le [CSS G
 
 - [How To Create Responsive Data Tables With CSS Grid](https://betterprogramming.pub/how-to-create-responsive-data-tables-with-css-grid-9e0a37394450)
 
-Quindi, adesso un array con le varie statistiche delle mie storie. Mi serve un secondo array contente le informazioni riguardo alle colonne. Poso crearlo semplicemente a mano:
+Quindi, adesso ho un array con le varie statistiche delle mie storie. Mi serve un secondo array contente le informazioni riguardo alle colonne. Poso crearlo semplicemente a mano:
 
 ```js
 const headersTable = [
