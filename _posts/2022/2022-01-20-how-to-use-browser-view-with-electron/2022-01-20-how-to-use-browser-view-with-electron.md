@@ -13,10 +13,12 @@ categories:
   - Electron
   - TailwindCSS
   - Svelte
+  - BrowserView
 tags:
   - Electron
   - TailwindCSS
   - Svelte
+  - BrowserView
 ---
 
 One of the problems I'm facing with my [gest-dashboard](https://javascript.plainenglish.io/the-journey-of-a-novice-programmer-82366ec7851a) project is managing several windows with Electron. It is a more complex problem than I thought and it prompted me to study the issue. After some testing I discarded <iframe> and <webview>. Instead, I focused on how to use [Browser View](https://www.electronjs.org/docs/latest/api/browser-view) with Electron.
