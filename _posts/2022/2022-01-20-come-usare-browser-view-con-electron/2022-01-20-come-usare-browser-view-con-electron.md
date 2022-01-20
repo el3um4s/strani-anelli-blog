@@ -1,6 +1,5 @@
 ---
 title: "Come usare BrowserView con Electron"
-english-title: "How To Use BrowserView With Electron "
 published: true
 usa_webp: true
 header:
@@ -9,7 +8,7 @@ header:
   immagine_estesa: "image"
   immagine_fonte: "Photo credit: [**Samuele**](https://blog.stranianelli.com/)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2022-01-20 17:00"
+date: "2022-01-20 18:00"
 categories:
   - Electron
   - TailwindCSS
@@ -32,9 +31,9 @@ Poiché questo post parla di un argomento molto specifico non riporto tutti i pa
 
 ### Ma prima: perché usare una browser view?
 
-Ma prima di cominciare occorre rispondere alla domanda: perché usare una browser view invece di un più semplice tag [<webview>](https://www.electronjs.org/docs/latest/api/webview-tag)?
+Ma prima di cominciare occorre rispondere alla domanda: perché usare una browser view invece di un più semplice tag [webview](https://www.electronjs.org/docs/latest/api/webview-tag)?
 
-La prima ragione è che la documentazione stessa di Electron consiglia di farlo. Ormai le `webview` sono in via di dismissione. Per citare [[developer.chrome)](https://developer.chrome.com/docs/extensions/reference/webviewTag/):
+La prima ragione è che la documentazione stessa di Electron consiglia di farlo. Ormai le `webview` sono in via di dismissione. Per citare [developer.chrome](https://developer.chrome.com/docs/extensions/reference/webviewTag/):
 
 ```
 chrome.webviewTag: This API is part of the deprecated Chrome Apps platform. Learn more about migrating your app.
@@ -96,7 +95,7 @@ La prima cosa che mi serve è un pulsante. Anche qui, la scelta è più che libe
 </div>
 ```
 
-La parte importate è però la funzione da eseguire sul `click`:
+La parte importante è la funzione da eseguire sul `click`:
 
 ```svelte
 <script>
@@ -120,7 +119,7 @@ In pratica invio dal renderer il comando `openInNewWindow` con annessi i dettagl
 
 Creo il file `src\electron\IPC\windowManager.ts` in cui inserire il codice della API preposta a gestire la creazione di una nuova finestra con una BrowserView incorporata.
 
-Per prima cosa importo gli le librerie alla base della mia API: il
+Per prima cosa importo le librerie alla base della mia API:
 
 ```ts
 import { BrowserWindow } from "electron";
