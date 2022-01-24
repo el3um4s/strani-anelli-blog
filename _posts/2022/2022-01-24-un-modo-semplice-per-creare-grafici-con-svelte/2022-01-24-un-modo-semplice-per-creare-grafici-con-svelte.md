@@ -8,7 +8,7 @@ header:
   immagine_estesa: "image"
   immagine_fonte: "Photo credit: [**Samuele**](https://blog.stranianelli.com/)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2022-01-23 22:00"
+date: "2022-01-24 11:00"
 categories:
   - Chart
   - Google Chart
@@ -29,7 +29,7 @@ I numeri spiegano la realtà, ma a volte lo fanno in maniera complicata. Le seri
 
 Ma prima di cominciare, ecco cosa voglio creare:
 
-![google-charts-with-svelte-01.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2022/2022-01-23-un-modo-semplice-per-creare-grafici-con-svelte/google-charts-with-svelte-01.gif)
+![google-charts-with-svelte-01.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2022/2022-01-24-un-modo-semplice-per-creare-grafici-con-svelte/google-charts-with-svelte-01.gif)
 
 Sono 5 grafici diversi:
 
@@ -77,7 +77,7 @@ Anche in questo caso, ovviamente, è possibile usare qualsiasi altro framework, 
 
 Allora, comincio con il primo grafico, questo:
 
-![google-charts-with-svelte-02.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2022/2022-01-23-un-modo-semplice-per-creare-grafici-con-svelte/google-charts-with-svelte-02.gif)
+![google-charts-with-svelte-02.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2022/2022-01-24-un-modo-semplice-per-creare-grafici-con-svelte/google-charts-with-svelte-02.gif)
 
 Comincio con il creare un componente `GoogleChartColumn.svelte`. Per prima cosa importo `@google-web-components/google-chart`:
 
@@ -201,7 +201,7 @@ Ovviamente questa funzione va modificata in base ai propri dati.
 
 ### Creare un grafico a torta
 
-![google-charts-with-svelte-03.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2022/2022-01-23-un-modo-semplice-per-creare-grafici-con-svelte/google-charts-with-svelte-03.gif)
+![google-charts-with-svelte-03.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2022/2022-01-24-un-modo-semplice-per-creare-grafici-con-svelte/google-charts-with-svelte-03.gif)
 
 Capito il ragionamento è facile creare anche gli altri grafici. Ovviamente ognuno ha delle caratteristiche particolari. Per esempio il grafico a torta.
 
@@ -309,7 +309,7 @@ Usando lo stesso codice ma cambiando i valori passati ai props posso creare dive
 
 ### Creare un grafico treemap (mappa ad albero)
 
-![google-charts-with-svelte-04.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2022/2022-01-23-un-modo-semplice-per-creare-grafici-con-svelte/google-charts-with-svelte-04.gif)
+![google-charts-with-svelte-04.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2022/2022-01-24-un-modo-semplice-per-creare-grafici-con-svelte/google-charts-with-svelte-04.gif)
 
 [Wikipedia](https://en.wikipedia.org/wiki/Treemapping) spiega bene cosa è una treemap:
 
@@ -402,7 +402,7 @@ Mentre il codice HTML è
 
 ### Creare un grafico a dispersione
 
-![google-charts-with-svelte-05.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2022/2022-01-23-un-modo-semplice-per-creare-grafici-con-svelte/google-charts-with-svelte-05.gif)
+![google-charts-with-svelte-05.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2022/2022-01-24-un-modo-semplice-per-creare-grafici-con-svelte/google-charts-with-svelte-05.gif)
 
 Il grafico a dispersione permette di vedere se c'è qualche correlazione tra due dati. In questo esempio ho provato a mettere in relazione la lunghezza dei diversi post (misurata con il numero di parole) e il ricavo degli stessi. Inoltre ho impostato un tooltip personalizzato quando passiamo con il mouse sopra i vari punti.
 
@@ -500,7 +500,7 @@ Il codice HTML da usare nella pagina è semplicemente:
 
 ### Creare un grafico a calendario
 
-![google-charts-with-svelte-06.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2022/2022-01-23-un-modo-semplice-per-creare-grafici-con-svelte/google-charts-with-svelte-06.gif)
+![google-charts-with-svelte-06.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2022/2022-01-24-un-modo-semplice-per-creare-grafici-con-svelte/google-charts-with-svelte-06.gif)
 
 Il quinto grafico che ho inserito è un grafico a calendario. Serve sostanzialmente per visualizzare i dati su un calendario. L'intensità del colore dei singoli giorni indica la quantità relativa al giorno. Creo che l'esempio classico sia quello mostrato nel profilo di GitHub:
 
