@@ -8,19 +8,11 @@ header:
   immagine_estesa: "image"
   immagine_fonte: "Photo credit: [**Samuele**](https://blog.stranianelli.com/)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2022-01-24 11:00"
+date: "2022-01-24 18:00"
 categories:
   - Chart
-  - Google Chart
-  - Data Analysis
-  - TailwindCSS
-  - Svelte
 tags:
   - Chart
-  - Google Chart
-  - Data Analysis
-  - TailwindCSS
-  - Svelte
 ---
 
 I numeri spiegano la realtà, ma a volte lo fanno in maniera complicata. Le serie e i rapporti sono strumenti potenti ma non sempre chiari. Per questo, spesso, conviene aggiungere un grafico alle proprie pagine. Ma come farlo? Beh, oggi provo a spiegare il modo più semplice che ho trovato per aggiungere grafici a una pagina web.
@@ -59,9 +51,7 @@ Ma c'è un problema. Quale? Che non è così semplice da usare. La pagina [quick
 
 Cercando in rete è possibile trovare le [Google Charts API come web components](https://www.npmjs.com/package/@google-web-components/google-chart). Questo permette di creare un grafico con una sintassi simile a questa:
 
-```html
-<google-chart data='[["Month", "Days"], ["Jan", 31]]'></google-chart>
-```
+<script src="https://gist.github.com/el3um4s/854eb9e50b51ad99b9268172b1832441.js"></script>
 
 Posso importare le API in un progetto con il comando:
 
@@ -81,11 +71,7 @@ Allora, comincio con il primo grafico, questo:
 
 Comincio con il creare un componente `GoogleChartColumn.svelte`. Per prima cosa importo `@google-web-components/google-chart`:
 
-```svelte
-<script type="ts">
-  import "@google-web-components/google-chart";
-</script>
-```
+<script src="https://gist.github.com/el3um4s/49c767f931dc416f9f85b71c98102ca7.js"></script>
 
 Poi definisco i props che mi servono. La [documentazione di Google](https://developers.google.com/chart/interactive/docs/gallery/columnchart) è ben fatta e permette di capire cosa può servire. Per il momento mi limito alle cose fondamentali:
 
@@ -94,108 +80,33 @@ Poi definisco i props che mi servono. La [documentazione di Google](https://deve
 
 Non mi interessano molte opzioni. Mi basta poter personalizzare il titolo e decidere il colore delle varie colonne. Di conseguenza i props diventano:
 
-```svelte
-<script type="ts">
-  import "@google-web-components/google-chart";
-
-  export let data: (String[] | (string | number)[])[] = [];
-  export let title: String = "";
-  export let colors: String[] = [];
-</script>
-```
+<script src="https://gist.github.com/el3um4s/01edbc6ee3567f1a14ecb99ea1b8d55c.js"></script>
 
 I dati sono di un tipo abbastanza bizzarro. Sostanzialmente sono un matrice dove la prima riga indica il nome e il tipo delle colonne:
 
-```ts
-const cols = [
-  { label: "Title", type: "string" },
-  { label: "$", type: "number" },
-];
-```
+<script src="https://gist.github.com/el3um4s/95bfbf39306e991229d8ef35ac5f8b1e.js"></script>
 
 Le righe successive invece contengono i dati effettivi:
 
-```ts
-const rows = [
-  ["september", 1.0],
-  ["october", 1.5],
-  ["november", 1.25],
-];
-```
+<script src="https://gist.github.com/el3um4s/20f9c4bb2e6d9f50defe079a5dfaece6.js"></script>
 
 Aggiungo una variabile dedicata alla configurazione:
 
-```ts
-const options = {
-  title,
-  legend: "none",
-  backgroundColor: "transparent",
-  colors: colors.length > 0 ? colors : undefined,
-  titleTextStyle: { fontSize: 14, color: "#737373" },
-};
-```
+<script src="https://gist.github.com/el3um4s/ecf943a202996fe47ecee8f3c33cd92e.js"></script>
 
 Poiché uso solamente una serie di dati la leggenda è inutile, quindi la imposto come `none`. Modifico anche il colore dello sfondo in modo da non staccare dal resto della pagina (quindi è `transparent`). Infine cambio la formattazione del titolo del grafico usando le proprietà CSS.
 
 Il codice completo del componente è:
 
-```svelte
-<script type="ts">
-  import "@google-web-components/google-chart";
-
-  export let data: (String[] | (string | number)[])[] = [];
-  export let title: String = "";
-  export let colors: String[] = [];
-
-  $: options = {
-    title,
-    legend: "none",
-    backgroundColor: "transparent",
-    colors: colors.length > 0 ? colors : undefined,
-    titleTextStyle: { fontSize: 14, color: "#737373" },
-  };
-</script>
-
-<google-chart {data} options={{ ...options }} />
-```
+<script src="https://gist.github.com/el3um4s/4fabd098e03ba65f968b4b0a811c15b8.js"></script>
 
 Ma come lo posso usare effettivamente in una pagina HTML? Così:
 
-```svelte
-<script lang="ts">
-  import GoogleChartColumn from "./GoogleChartColumn.svelte";
-  import { getMonthlyAmounts, monthlyEarning } from "./MonthlyAmounts";
-
-  const monthlyAmounts = getMonthlyAmounts(mediumPartnerProgram);
-  const monthlyEarning = earningPerMonth(monthlyAmounts);
-</script>
-
-<GoogleChartColumn
-  title="Monthly Earnings"
-  data={monthlyEarning}
-  colors={["#ea580c"]}
-/>
-```
+<script src="https://gist.github.com/el3um4s/937b17bddb8b84fd141c5b092480a657.js"></script>
 
 Per ricavare i dati da inserire creo la funzione `earningPerMonth`:
 
-```ts
-const earningPerMonth = (
-  monthly: PartnerProgram_Analysis_Month[]
-): [string, string | number][] => {
-  const data = monthly.map((m) => m.amount).reverse();
-  const labels: string[] = monthly
-    .map((m) => `${m.month.monthName} ${m.month.year.toString().substring(2)}`)
-    .reverse();
-
-  const column: [string, string] = ["Month", "$"];
-  const rows: [string, number][] = labels.map((label, index) => [
-    label,
-    data[index] / 100,
-  ]);
-  return [column, ...rows];
-};
-```
+<script src="https://gist.github.com/el3um4s/d119ba276021377fc71ea57672033f36.js"></script>
 
 Ovviamente questa funzione va modificata in base ai propri dati.
 
@@ -207,31 +118,7 @@ Capito il ragionamento è facile creare anche gli altri grafici. Ovviamente ognu
 
 Creo il file `GoogleChartPie.svelte`
 
-```svelte
-<script lang="ts">
-  import "@google-web-components/google-chart";
-
-  export let cols: {
-    label: string;
-    type: string;
-  }[] = [];
-  export let rows: [string, number][] = [];
-  export let title: String = "";
-  export let sliceVisibilityThreshold: number = 0;
-</script>
-
-<google-chart
-  type="pie"
-  {cols}
-  {rows}
-  options={{
-    title,
-    backgroundColor: "transparent",
-    titleTextStyle: { fontSize: 14, color: "#737373" },
-    sliceVisibilityThreshold,
-  }}
-/>
-```
+<script src="https://gist.github.com/el3um4s/e4df3588a5025bceb43ec336dbc7658a.js"></script>
 
 Il grafico a torta richiede i dati divisi in due diversi props: `cols` e `rows`. Permette inoltre di passare un valore numerico (compreso tra 0 e 1) per decidere la larghezza minima delle fette della torta.
 
@@ -239,69 +126,11 @@ Per esempio, se imposto `sliceVisibilityThreshold = 0.03` potrò vedere solament
 
 La funzione JavaScript per ottenere i dati è simile a questa:
 
-```ts
-interface PieData {
-  cols: { label: string; type: string }[];
-  rows: [string, number][];
-}
-
-const earningPerStory = (
-  listStories: PartnerProgram_Analysis_ListStories[]
-): PieData => {
-  const listValue: { title: string; amount: number }[] = [...listStories]
-    .sort((a, b) => b.amountTot - a.amountTot)
-    .map((story) => {
-      const title = story.title;
-      const amount = story.amountTot;
-      return { title, amount };
-    });
-
-  const groupedValue = groupBy(listValue, (s) => s.title);
-
-  let rows = [];
-  for (const property in groupedValue) {
-    const amount = groupedValue[property].reduce(
-      (sum, current) => sum + current.amount,
-      0
-    );
-    rows.push([property, amount / 100]);
-  }
-
-  const cols = [
-    { label: "Title", type: "string" },
-    { label: "$", type: "number" },
-  ];
-  return {
-    cols,
-    rows,
-  };
-};
-
-function groupBy(xs, f) {
-  return xs.reduce(
-    (r, v, i, a, k = f(v)) => ((r[k] || (r[k] = [])).push(v), r),
-    {}
-  );
-}
-```
+<script src="https://gist.github.com/el3um4s/ace4623349c4dc1f2c1e08a2e8cb9b04.js"></script>
 
 Adesso posso inserire il grafico nella pagina con:
 
-```svelte
-<script lang="ts">
-  import GoogleChartPie from "./GoogleChartPie.svelte";
-
-  const listStories = getListStoryAmountStats(mediumPartnerProgram);
-  const storyEarning = earningPerStory(listStories);
-</script>
-
-<GoogleChartPie
-  cols={storyEarning.cols}
-  rows={storyEarning.rows}
-  title="Earning Per Story"
-  sliceVisibilityThreshold={2.5 / 100}
-/>
-```
+<script src="https://gist.github.com/el3um4s/e9562420ffc9afbbedb4a8057a501866.js"></script>
 
 Usando lo stesso codice ma cambiando i valori passati ai props posso creare diversi grafici nella stessa pagina:
 
@@ -319,35 +148,7 @@ Una treemap (mappa alberata o mappa ad albero) in visualizzazione delle informaz
 
 Penso che oramai siano chiari i passaggi da seguire. Creo il file `GoogleChartTreemap.svelte`:
 
-```svelte
-<script lang="ts">
-  import "@google-web-components/google-chart";
-
-  export let data: [String, String | null, Number | String, Number | String][] =
-    [];
-  export let title: String = "";
-  export let maxDepth: Number = 1;
-  export let maxPostDepth: Number = 0;
-  export let minColor: String = "#dd0000";
-  export let midColor: String = "#000000";
-  export let maxColor: String = "#00dd00";
-</script>
-
-<google-chart
-  type="treemap"
-  {data}
-  options={{
-    title,
-    backgroundColor: "transparent",
-    titleTextStyle: { fontSize: 14, color: "#737373" },
-    maxDepth,
-    maxPostDepth,
-    minColor,
-    midColor,
-    maxColor,
-  }}
-/>
-```
+<script src="https://gist.github.com/el3um4s/3e269aeee7562a33f4ae89cb1c64b827.js"></script>
 
 I [prop specifici](https://developers.google.com/chart/interactive/docs/gallery/treemap) di questo grafico sono:
 
@@ -357,48 +158,11 @@ I [prop specifici](https://developers.google.com/chart/interactive/docs/gallery/
 
 La funzione per estrarre e preparare i dati è qualcosa di simile a questo:
 
-```ts
-const treemapWordsAndEarning = (
-  listStories: PartnerProgram_Analysis_ListStories[]
-): [String, String, Number | String, Number | String][] => {
-  const rows: [String, String, Number, Number][] = listStories.map((story) => {
-    const title = `${story.title} (${story.firstPublishedAt.year} ${story.firstPublishedAt.monthName} ${story.firstPublishedAt.day})`;
-    const amount = story.amountTot;
-    const words = story.wordCount;
-    const month = `${story.firstPublishedAt.monthName} ${story.firstPublishedAt.year}`;
-    return [title, month, words, amount];
-  });
-
-  const listMonths: [String, String, Number, Number][] = [
-    ...new Set(rows.map((row) => row[1])),
-  ].map((m) => [m, m.slice(m.length - 4), 0, 0]);
-
-  const listYears: [String, String, Number, Number][] = [
-    ...new Set(listMonths.map((m) => m[1])),
-  ].map((y) => [y, "Total", 0, 0]);
-
-  return [
-    ["Title", "Month", "Words", "$"],
-    ["Total", null, 0, 0],
-    ...listYears,
-    ...listMonths,
-    ...rows,
-  ];
-};
-```
+<script src="https://gist.github.com/el3um4s/9e6f3c6fc6aed96a278c4ff34df409be.js"></script>
 
 Mentre il codice HTML è
 
-```svelte
-<GoogleChartTreemap
-  data={treemapWords}
-  title="Words And Earning Per Story"
-  maxPostDepth={3}
-  minColor="#fed7aa"
-  midColor="#f97316"
-  maxColor="#9a3412"
-/>
-```
+<script src="https://gist.github.com/el3um4s/7319bbcdce3aaf20a4a7685034ab0083.js"></script>
 
 ### Creare un grafico a dispersione
 
@@ -408,37 +172,7 @@ Il grafico a dispersione permette di vedere se c'è qualche correlazione tra due
 
 Il codice del componente `GoogleChartScatter.svelte` è simile ai precedenti:
 
-```svelte
-<script lang="ts">
-  import "@google-web-components/google-chart";
-
-  export let data: [
-    Number | String,
-    Number | String,
-    String | { type: String; role: String }
-  ][] = [];
-  export let title: String = "";
-
-  export let axisX: String = data[0][0].toString();
-  export let axisY: String = data[0][1].toString();
-  export let colors: String[] = [];
-</script>
-
-<google-chart
-  type="scatter"
-  {data}
-  options={{
-    title,
-    backgroundColor: "transparent",
-    titleTextStyle: { fontSize: 14, color: "#737373" },
-    legend: "none",
-    hAxis: { title: axisX },
-    vAxis: { title: axisY },
-    colors: colors.length > 0 ? colors : undefined,
-    tooltip: { isHtml: true },
-  }}
-/>
-```
+<script src="https://gist.github.com/el3um4s/1fd0b424576dccc48858803f88c51f49.js"></script>
 
 Ci sono 2 `props` specifici per questo grafico:
 
@@ -449,54 +183,13 @@ Aggiungo inoltre l'opzione `tooltip: { isHtml: true }`. A cosa serve? A poter pe
 
 La funzione per ottenere i dati per il grafico è leggermente diversa dalle precedenti:
 
-```ts
-export const scatterWordsAndEarning = (
-  listStories: PartnerProgram_Analysis_ListStories[]
-): [
-  Number | String,
-  Number | String,
-  String | { type: String; role: String; p: { html: boolean } }
-][] => {
-  const cols: [
-    String,
-    String,
-    { type: String; role: String; p: { html: boolean } }
-  ] = [
-    "Words",
-    "Dollars",
-    { type: "string", role: "tooltip", p: { html: true } },
-  ];
-  const rows: [Number, Number, String][] = listStories.map((story) => [
-    story.wordCount,
-    story.amountTot / 100,
-    `
-    <div style="padding:4px;">
-    <div>${
-      story.title.length > 30 ? story.title.slice(0, 30) + "..." : story.title
-    }</div>
-    <div style="display:grid;grid-template-columns:8ch 8ch;gap:1px; margin:2px;">
-      <div>words</div><div><strong>${story.wordCount}</strong></div>
-      <div>dollars</div><div><strong>${(story.amountTot / 100).toFixed(
-        2
-      )}</strong></div>
-    </div>
-    </div>`,
-  ]);
-  return [cols, ...rows];
-};
-```
+<script src="https://gist.github.com/el3um4s/3bda277bb09dead474734c9b04df0bc6.js"></script>
 
 Ai vari array delle righe aggiungo una string contenente del codice HTML. Questo codice viene poi renderizzato dal componente e mostrato come se fosse un elemento HTML della pagina.
 
 Il codice HTML da usare nella pagina è semplicemente:
 
-```svelte
-<GoogleChartScatter
-  data={scatterWords}
-  title="Words vs Dollars comparison"
-  colors={["#ea580c"]}
-/>
-```
+<script src="https://gist.github.com/el3um4s/2a04e49050b0559bf1698280226ced3e.js"></script>
 
 ### Creare un grafico a calendario
 
@@ -508,187 +201,31 @@ Il quinto grafico che ho inserito è un grafico a calendario. Serve sostanzialme
 
 Rispetto ai grafici precedenti questo richiede un po' di CSS e un piccolo trucco. Ma prima il codice base:
 
-```svelte
-<script lang="ts">
-  import "@google-web-components/google-chart";
-
-  export let cols: {
-    id: string;
-    type: string;
-  }[] = [];
-  export let rows: [Date, number][] = [];
-  export let title: String = "";
-
-  export let colorAxis: [String, String] = ["#f0f9ff", "#0369a1"];
-</script>
-
-<section>
-  <google-chart
-    type="calendar"
-    {cols}
-    {rows}
-    options={{
-      title: title,
-      backgroundColor: "transparent",
-      colorAxis: { colors: colorAxis },
-    }}
-  />
-</section>
-```
+<script src="https://gist.github.com/el3um4s/5956304bf471104e348b4ae0efabdd25.js"></script>
 
 In questo caso mi serve un solo props aggiuntivo, `colorAxis`. È un array composto dai codici dei colori da usare nei vari giorni. Di default il valore più basso è rappresentato da un bianco. Dopo aver importato il componente nella pagina mi sono però accorto che non era praticamente distinguibile dallo sfondo. Ho quindi deciso di partire da un colore più forte:
 
-```svelte
-<GoogleChartCalendar
-  cols={dayWithWords.cols}
-  rows={dayWithWords.rows}
-  title="Words Per Day"
-  colorAxis={["#fdba74", "#9a3412"]}
-/>
-```
+<script src="https://gist.github.com/el3um4s/186f6e8ed23a300e7a2072395c4ea903.js"></script>
 
 La funzione per preparare i dati è simile alle precedent, con ovviamente alcune piccole differenze:
 
-```ts
-interface CalendarData {
-  cols: ColsCalendar[];
-  rows: [Date, number][];
-}
-interface ColsCalendar {
-  id: string;
-  type: string;
-}
-export const writingDay = (
-  listStories: PartnerProgram_Analysis_ListStories[]
-): CalendarData => {
-  const listValue: { date: Date; words: number }[] = listStories.map(
-    (story) => {
-      const { day, month, year } = story.firstPublishedAt;
-      const date: Date = new Date(year, month, day);
-      const words = story.wordCount;
-      return { date, words };
-    }
-  );
-
-  const groupedValue = groupBy(listValue, (s) => s.date);
-
-  let rows = [];
-  for (const property in groupedValue) {
-    const words = groupedValue[property].reduce(
-      (sum, current) => sum + current.words,
-      0
-    );
-    rows.push([new Date(property), words]);
-  }
-
-  const cols = [
-    { type: "date", id: "Date" },
-    { type: "number", id: "$" },
-  ];
-  return {
-    cols,
-    rows,
-  };
-};
-
-function groupBy(xs, f) {
-  return xs.reduce(
-    (r, v, i, a, k = f(v)) => ((r[k] || (r[k] = [])).push(v), r),
-    {}
-  );
-}
-```
+<script src="https://gist.github.com/el3um4s/bbcc4b46a8faadb31407930c85b33f2c.js"></script>
 
 Bene ma non del tutto. Resta un problema legato alle dimensioni del grafico. Non so come mai ma il componente è troppo corto rispetto alla lunghezza del calendario. Devo quindi forzare un po' le dimensioni usando una proprietà CSS:
 
-```css
-section {
-  height: fit-content;
-}
-google-chart {
-  width: 1000px;
-}
-```
+<script src="https://gist.github.com/el3um4s/266a0b61c99bc1f709658d11578d8168.js"></script>
 
 Il secondo problema riguarda invece l'altezza. In questo caso devo calcolarla in base al numero di anni che voglio mostrare. Quindi per prima cosa mi serve capire quanti anni sono:
 
-```ts
-const listDates = rows
-  .map((r) => r[0])
-  .sort((a, b) => {
-    return a.getTime() - b.getTime();
-  });
-const firstYear = listDates[0].getFullYear();
-const lastYear = listDates[listDates.length - 1].getFullYear();
-const years = lastYear - firstYear + 1;
-```
+<script src="https://gist.github.com/el3um4s/1b14a9ab8ebc3091279618e70424ecfa.js"></script>
 
 Poi uso la direttiva [style:property](https://svelte.dev/docs#template-syntax-element-directives-style-property):
 
-```svelte
-<!-- ... -->
-  <google-chart
-    type="calendar"
-    {cols}
-    {rows}
-    options={{
-      title: title,
-      backgroundColor: "transparent",
-      colorAxis: { colors: colorAxis },
-    }}
-    style:height="{175 * years}px"
-  />
-<!-- ... -->
-```
+<script src="https://gist.github.com/el3um4s/b91dc8d8a84556ed674743a9fc9a9307.js"></script>
 
 Unendo il tutto il componente diventa:
 
-```svelte
-<script lang="ts">
-  import "@google-web-components/google-chart";
-
-  export let cols: {
-    id: string;
-    type: string;
-  }[] = [];
-  export let rows: [Date, number][] = [];
-  export let title: String = "";
-
-  export let colorAxis: [String, String] = ["#f0f9ff", "#0369a1"];
-
-  const listDates = rows
-    .map((r) => r[0])
-    .sort((a, b) => {
-      return a.getTime() - b.getTime();
-    });
-  const firstYear = listDates[0].getFullYear();
-  const lastYear = listDates[listDates.length - 1].getFullYear();
-  const years = lastYear - firstYear + 1;
-</script>
-
-<section>
-  <google-chart
-    type="calendar"
-    {cols}
-    {rows}
-    options={{
-      title: title,
-      backgroundColor: "transparent",
-      colorAxis: { colors: colorAxis },
-    }}
-    style:height="{175 * years}px"
-  />
-</section>
-
-<style lang="postcss">
-  section {
-    height: fit-content;
-  }
-  google-chart {
-    width: 1000px;
-  }
-</style>
-```
+<script src="https://gist.github.com/el3um4s/b575bcda702376174ca4cd4d74659db4.js"></script>
 
 Bene, con questo è tutto. Ovviamente questo metodo non è perfetto. Lo trovo però più semplice rispetto ad altre implementazioni che ho provato. Il codice, come al solito, è disponibile nel repository su GitHub:
 
