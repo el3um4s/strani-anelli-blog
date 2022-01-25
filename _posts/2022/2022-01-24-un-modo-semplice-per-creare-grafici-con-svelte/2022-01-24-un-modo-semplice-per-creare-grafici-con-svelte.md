@@ -195,7 +195,7 @@ Il codice HTML da usare nella pagina è semplicemente:
 
 ![google-charts-with-svelte-06.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2022/2022-01-24-un-modo-semplice-per-creare-grafici-con-svelte/google-charts-with-svelte-06.gif)
 
-Il quinto grafico che ho inserito è un grafico a calendario. Serve sostanzialmente per visualizzare i dati su un calendario. L'intensità del colore dei singoli giorni indica la quantità relativa al giorno. Creo che l'esempio classico sia quello mostrato nel profilo di GitHub:
+Il quinto grafico che ho inserito è un grafico a calendario. Serve sostanzialmente per visualizzare i dati su un calendario. L'intensità del colore dei singoli giorni indica la quantità relativa al giorno. Credo che l'esempio classico sia quello mostrato nel profilo di GitHub:
 
 {% include picture img="github-calendar.webp" ext="jpg" alt="" %}
 
@@ -207,7 +207,7 @@ In questo caso mi serve un solo props aggiuntivo, `colorAxis`. È un array compo
 
 <script src="https://gist.github.com/el3um4s/186f6e8ed23a300e7a2072395c4ea903.js"></script>
 
-La funzione per preparare i dati è simile alle precedent, con ovviamente alcune piccole differenze:
+La funzione per preparare i dati è simile alle precedenti, con ovviamente alcune piccole differenze:
 
 <script src="https://gist.github.com/el3um4s/bbcc4b46a8faadb31407930c85b33f2c.js"></script>
 
