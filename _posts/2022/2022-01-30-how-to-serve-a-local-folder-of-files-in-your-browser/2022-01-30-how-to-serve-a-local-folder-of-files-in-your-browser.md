@@ -8,7 +8,7 @@ header:
   immagine_estesa: "image"
   immagine_fonte: "Photo credit: [**David Bruno Silva**](https://unsplash.com/@brlimaproj)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2022-01-30 10:00"
+date: "2022-01-30 11:00"
 categories:
   - Browser
   - Server
@@ -62,45 +62,17 @@ The use requires some obligatory steps:
 
 A little bit of code. Registering a service worker in JavaScript is simple:
 
-```ts
-const registerSW = async () => {
-  console.log("Registering service worker...");
-
-  try {
-    const reg = await navigator.serviceWorker.register("sw.js", {
-      scope: "./",
-    });
-    console.info("Registered service worker on " + reg.scope);
-  } catch (err) {
-    console.warn("Failed to register service worker: ", err);
-  }
-};
-```
+<script src="https://gist.github.com/el3um4s/1a1f6cef74d661e85c5d605664195b7b.js"></script>
 
 It is a good idea to keep the `sw.js` file (the one with the service worker code) in the root folder: this makes your life a lot easier.
 
 In `sw.js` I add an installation triggered event:
 
-```js
-// Install & activate
-self.addEventListener("install", (e) => {
-  console.log("[SW] install");
-
-  // Skip waiting to ensure files can be served on first run.
-  e.waitUntil(Promise.all([self.skipWaiting()]));
-});
-```
+<script src="https://gist.github.com/el3um4s/1c97b5e3d0d9e34ea8c48ebfcbcc76f1.js"></script>
 
 And then another triggered by activation:
 
-```js
-self.addEventListener("activate", (event) => {
-  console.log("[SW] activate");
-
-  // On activation, claim all clients so we can start serving files on first run
-  event.waitUntil(clients.claim());
-});
-```
+<script src="https://gist.github.com/el3um4s/458cd0de2f8d2b36c534ea6e98470fe6.js"></script>
 
 So I installed the service workers. But how to use them?
 
@@ -118,299 +90,59 @@ Obviously we need a way to allow files to pass from disk to service workers. In 
 
 I then create a `pickFolder` function to select a folder on the pc.
 
-```ts
-const pickFolder = async (): Promise<FileSystemDirectoryHandle> => {
-  const folderHandle: FileSystemDirectoryHandle = await window[
-    "showDirectoryPicker"
-  ]();
-  return folderHandle;
-};
-```
+<script src="https://gist.github.com/el3um4s/b935e56c79dc58b9a26731a73ba86814.js"></script>
 
 After getting the folder I need a way to notify the service workers of the choice. I use a `postToSW` function:
 
-```ts
-const postToSW = (o) => {
-  navigator.serviceWorker.controller.postMessage(o);
-};
-```
+<script src="https://gist.github.com/el3um4s/0be028b0d98dafe8dc3262a79bdd680b.js"></script>
 
 Now I can send a message from the HTML page to the service worker. But I need to add a function to the `sw.js` file:
 
-```ts
-// Listen for messages from clients
-self.addEventListener("message", (e) => {
-  console.log(`The client sent me a message`, e.data);
-
-  switch (e.data.type) {
-    case "host-start":
-      // e.waitUntil(StartHost(e)); ... TO DO
-      break;
-    case "host-stop":
-      // ...to do
-      break;
-    default:
-      console.warn(`[SW] Unknown message '${e.data.type}'`);
-      break;
-  }
-});
-```
+<script src="https://gist.github.com/el3um4s/c62abc2199b4fc456e807219bb68076e.js"></script>
 
 But what if the service worker hasn't been initialized yet?
 
 Ashley came up with an elegant solution, and it took me some time to figure it out. It consists of two functions. The first is to create a timer to wait the necessary time:
 
-```ts
-function rejectAfterTimeout(ms, message) {
-  let timeoutId = -1;
-  const promise = new Promise((resolve, reject) => {
-    timeoutId = self.setTimeout(() => reject(message), ms);
-  });
-  const cancel = () => self.clearTimeout(timeoutId);
-  return { promise, cancel };
-}
-```
+<script src="https://gist.github.com/el3um4s/4afadee51b85d27f86690166914fa06e.js"></script>
 
 Then I need the [ServiceWorkerContainer.oncontrollerchange](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/oncontrollerchange) property to intercept when a service worker receives a new active worker:
 
-```ts
-const waitForSWReady = async () => {
-  // If there is no controller service worker, wait for up to 4 seconds for the Service Worker to complete initialisation.
-  if (navigator.serviceWorker && !navigator.serviceWorker.controller) {
-    // Create a promise that resolves when the "controllerchange" event fires.
-    const controllerChangePromise = new Promise((resolve) =>
-      navigator.serviceWorker.addEventListener("controllerchange", resolve, {
-        once: true,
-      })
-    );
-    // Race with a 4-second timeout.
-    const timeout = rejectAfterTimeout(4000, "SW ready timeout");
-    await Promise.race([controllerChangePromise, timeout.promise]);
-    // Did not reject due to timeout: cancel the rejection to avoid breaking in debugger
-    timeout.cancel();
-  }
-};
-```
+<script src="https://gist.github.com/el3um4s/9a37c77aa17970a9c7cdac97d5e6c2bb.js"></script>
 
 Now I have all the tools to create a function to select a folder from the pc and notify the service worker:
 
-```ts
-import { SW } from "./serviceWorker";
-
-const init = async (): Promise<FileSystemDirectoryHandle> => {
-  const folderHandle: FileSystemDirectoryHandle = await pickFolder();
-  await SW.waitForReady();
-  SW.postToSW({
-    type: "host-start",
-  });
-  return folderHandle;
-};
-```
+<script src="https://gist.github.com/el3um4s/7f857703103cf9462c2932b136920f20.js"></script>
 
 Later you can use all of this in an HTML page. In my case I create the `App.svelte` file:
 
-```html
-<script lang="ts">
-  import { onMount } from "svelte";
-  import { SW } from "./sw/serviceWorker";
-  import { FolderHandle } from "./sw/folderHandler";
-
-  let folderHandle = null;
-
-  onMount(async () => {
-    await SW.register();
-  });
-</script>
-
-<button
-  on:click={async () => {
-    folderHandle = await FolderHandle.init();
-  }}>Pick Folder</button
->
-```
+<script src="https://gist.github.com/el3um4s/77c724997b33d3709c43e5d286728554.js"></script>
 
 ### Open the folder as if it were on a server
 
 In summary, at the moment I can choose a folder from the pc and then notify the service workers. But what happens next? Well, I need a `StartHost(e)` function:
 
-```ts
-async function StartHost(e) {
-  const hostName = `host`;
-  const clientId = e.source.id;
-
-  // Tell client it's now hosting.
-  e.source.postMessage({
-    type: "start-ok",
-    hostName,
-    clientId,
-    scope: self.registration.scope,
-  });
-}
-```
+<script src="https://gist.github.com/el3um4s/ccb6b38fb287cab812d1cf8660649603.js"></script>
 
 This allows me to reply to the HTML page by handing over the host name and client id. I can use this information to create a button:
 
-```html
-<button
-  on:click={() => {
-    globalThis.open(`${swScope}${hostName}/`, "_blank");
-  }}>Open in new tab</button
->
-```
+<script src="https://gist.github.com/el3um4s/7f9765daf1a263a75d996db9a7a5eb10.js"></script>
 
 When I click on the button a new page opens. But obviously the page has nothing. I need to add a specific function in `sw.js`:
 
-```js
-self.addEventListener("fetch", (e) => {
-  // Check this is a host URL, e.g. "host/", "host2/"...
-  const swScope = self.registration.scope;
-  const scopeRelativeUrl = e.request.url.substr(swScope.length);
-  const scopeUrlMatch = /^host\d*\//.exec(scopeRelativeUrl);
-
-  // Strip host name from URL and get the URL within the host
-  const hostUrl = scopeUrlMatch[0];
-  const hostName = hostUrl.substr(0, hostUrl.length - 1);
-  const hostRelativeUrl = scopeRelativeUrl.substr(hostUrl.length);
-
-  e.respondWith(HostFetch(hostName, hostRelativeUrl));
-});
-
-async function HostFetch(hostName, url) {
-  // Look up client from the host name.
-  const clientId = storageGetClientId(hostName);
-  console.log("HostFetch", clientId);
-
-  const client = await self.clients.get(clientId.clientId);
-
-  // Create a MessageChannel for the client to send a reply.
-  // Wrap it in a promise so the response can be awaited.
-  const messageChannel = new MessageChannel();
-  const responsePromise = new Promise((resolve, reject) => {
-    messageChannel.port1.onmessage = (e) => {
-      if (e.data.type === "ok") resolve(e.data.file);
-      else reject();
-    };
-  });
-
-  // Post to the client to ask it to provide this file.
-  client.postMessage(
-    {
-      type: "fetch",
-      url,
-      port: messageChannel.port2,
-    },
-    [messageChannel.port2]
-  );
-
-  try {
-    // Wait for the client to reply, and then serve the file it provided.
-    // Note ensure caching is disabled; we want to make sure every request
-    // is re-loaded from disk.
-    const file = await responsePromise;
-    return new Response(file, {
-      status: 200,
-      statusText: "OK",
-      headers: {
-        "Cache-Control": "no-store",
-      },
-    });
-  } catch (err) {
-    return FetchFailedResponse(hostName, url);
-  }
-}
-```
+<script src="https://gist.github.com/el3um4s/357ee4bb30944da8cc6160aca4b5852c.js"></script>
 
 Now I have to go back to the main page. I add an event listener for the `fetch` event
 
-```ts
-navigator.serviceWorker.addEventListener("message", (e) => {
-  switch (e.data.type) {
-    // ...
-    case "fetch":
-      handleFetch(folderHandle, e);
-      break;
-    // ...
-  }
-});
-```
+<script src="https://gist.github.com/el3um4s/4cd16713b041cad97f18cba34c3ca540.js"></script>
 
 Then I create the `handleFetch` function:
 
-```ts
-const handleFetch = async (
-  folderHandle: FileSystemDirectoryHandle,
-  e: MessageEvent<any>
-) => {
-  let relativeUrl = decodeURIComponent(e.data.url);
-
-  // Strip trailing / if any, so the last token is the folder/file name
-  if (relativeUrl.endsWith("/"))
-    relativeUrl = relativeUrl.substr(0, relativeUrl.length - 1);
-
-  // Strip query string if any, since it will cause file name lookups to fail
-  const q = relativeUrl.indexOf("?");
-  if (q !== -1) relativeUrl = relativeUrl.substr(0, q);
-
-  // Look up through any subfolders in path.
-  // Note this uses File System Access API methods
-  const subfolderArr = relativeUrl.split("/");
-  let curFolderHandle = folderHandle;
-
-  for (let i = 0, len = subfolderArr.length - 1 /* skip last */; i < len; ++i) {
-    const subfolder = subfolderArr[i];
-    curFolderHandle = await curFolderHandle.getDirectoryHandle(subfolder);
-  }
-
-  // Check if the name is a directory or a file
-  let file = null;
-  const lastName = subfolderArr[subfolderArr.length - 1];
-  if (!lastName) {
-    // empty name, e.g. for root /, treated as folder
-    file = await generateDirectoryListing(curFolderHandle, relativeUrl);
-  } else {
-    try {
-      const listHandle = await curFolderHandle.getDirectoryHandle(lastName);
-      file = await generateDirectoryListing(listHandle, relativeUrl);
-    } catch {
-      const fileHandle = await curFolderHandle.getFileHandle(lastName);
-      file = await fileHandle.getFile();
-    }
-  }
-
-  // Post file content back to SW down MessageChannel it sent for response
-  e.data.port.postMessage({
-    type: "ok",
-    file,
-  });
-};
-```
+<script src="https://gist.github.com/el3um4s/17b25bdd4fb7d23456312e28624148c9.js"></script>
 
 The `generateDirectoryListing` function creates an HTML page containing the list of files and folders.
 
-```js
-// For generating a directory listing page for a folder
-async function generateDirectoryListing(dirHandle, relativeUrl) {
-  // Display folder with / at end
-  if (relativeUrl && !relativeUrl.endsWith("/")) relativeUrl += "/";
-
-  let str = `<!DOCTYPE html>
-	<html><head>
-	<meta charset="utf-8">
-	<title>Directory listing for ${relativeUrl || "/"}</title>
-	</head><body>
-	<h1>Directory listing for ${relativeUrl || "/"}</h1><ul>`;
-
-  for await (const [name, handle] of dirHandle.entries()) {
-    // Display folders as "name/", otherwise just use name
-    const suffix = handle.kind === "directory" ? "/" : "";
-    str += `<li><a href="${name}${suffix}">${name}${suffix}</a></li>`;
-  }
-
-  str += `</ul></body></html>`;
-
-  return new Blob([str], { type: "text/html" });
-}
-```
+<script src="https://gist.github.com/el3um4s/7f25092f22b7b67e28b6b13da898da60.js"></script>
 
 Ashley Gullen's function is quite basic. In my version I changed it a bit but they are details.
 
@@ -418,14 +150,7 @@ Ashley Gullen's function is quite basic. In my version I changed it a bit but th
 
 The original version of this repository is to open the uploaded folder in another browser tab. In my version I have added the ability to see the content directly on the same page. Just use an `iframe` element and enter the corresponding url:
 
-```svelte
-<iframe
-  title={folderHandle?.name}
-  width="100%"
-  height="100%"
-  src={`${swScope}${hostName}/`}
-/>
-```
+<script src="https://gist.github.com/el3um4s/f7830037014eadb6c7d5af09159b7727.js"></script>
 
 Well, that's all for now. There are many other interesting details but these are the basic concepts. I recommend, again, to consult the original repository:
 
