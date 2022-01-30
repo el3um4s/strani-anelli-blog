@@ -28,6 +28,7 @@ Questa settimana ho sperimentato con il recente `File System Access API`: è una
 Ho deciso di provare a ricreare con Construct 3 un editor di testo con funzionalità simili a quello sviluppato da [Google Chrome Labs](https://github.com/GoogleChromeLabs) ([questo qui](https://googlechromelabs.github.io/text-editor/)). Ho anche seguito alcune delle indicazioni date da web.dev nell'articolo _[The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)_.
 
 Ovviamente ho anche condiviso il tutto su GitHub:
+
 - [il progetto su GitHub](https://github.com/el3um4s/construct-demo)
 - [la demo online](https://c3demo.stranianelli.com/javascript/008-text-editor/demo/)
 
@@ -51,25 +52,28 @@ Vediamole una per una.
 ### openFile
 
 ```js
-export async function openFile({description = "Text Files", accept = {'text/plain': ['.txt', '.md']}} = {}) {
-	const options = {types:[{description, accept}]};
-	 try {
-	 	[Globals.fileHandle] = await window.showOpenFilePicker(options);
-		const filePicked = await Globals.fileHandle.getFile();
-		const contents = await filePicked.text();
-		return {ok: true, filePicked: filePicked, contents: contents};
-	 } catch (err) {
-		return {ok: false, filePicked: null, contents: null};
-	 }
+export async function openFile({
+  description = "Text Files",
+  accept = { "text/plain": [".txt", ".md"] },
+} = {}) {
+  const options = { types: [{ description, accept }] };
+  try {
+    [Globals.fileHandle] = await window.showOpenFilePicker(options);
+    const filePicked = await Globals.fileHandle.getFile();
+    const contents = await filePicked.text();
+    return { ok: true, filePicked: filePicked, contents: contents };
+  } catch (err) {
+    return { ok: false, filePicked: null, contents: null };
+  }
 }
 ```
 
 Tralascio per semplicità, qui e poi, la spiegazione della gestione degli errori tramite `try...catch` e mi concentro sulla prima operazione: [`window.showOpenFilePicker()`](https://wicg.github.io/file-system-access/#api-showopenfilepicker). Questa funzione permette di aprire una finestra di dialogo da cui scegliere uno o più file su disco. Viene quindi restituito un array contente i riferimenti a tutti i file selezionati. È possibile passare come argomento un oggetto in cui impostare alcune opzioni. Di default viene selezionato un solo file, e questo è proprio quello che ci serve.
 
-Eseguendo quindi 
+Eseguendo quindi
 
 ```js
-	[Globals.fileHandle] = await window.showOpenFilePicker(options);
+[Globals.fileHandle] = await window.showOpenFilePicker(options);
 ```
 
 assegno a `Globals.fileHandle` un array di [`FileSystemFileHandle`](https://wicg.github.io/file-system-access/#filesystemfilehandle), in questo caso composto da un solo elemento contente metodi e proprietà per interagire con il file selezionato.
@@ -92,14 +96,14 @@ const contents = await filePicked.text();
 
 ```js
 export async function write(contents) {
-	try {
-		const writable = await Globals.fileHandle.createWritable();
-		await writable.write(contents);
-		await writable.close();
-		return {ok: true}
-	} catch (err) {
-		return {ok: false}
-	}	
+  try {
+    const writable = await Globals.fileHandle.createWritable();
+    await writable.write(contents);
+    await writable.close();
+    return { ok: true };
+  } catch (err) {
+    return { ok: false };
+  }
 }
 ```
 
@@ -122,19 +126,25 @@ Infine chiudiamo il collegamento usando `await writable.close()`.
 ### saveAs
 
 ```js
-export async function saveAs(contents, {description = "Text Files", accept = {'text/plain': ['.txt', '.md']}} = {} ) {
-	const handle = await getNewFileHandle({description, accept});
-	if (handle.ok){
-		Globals.fileHandle = handle.handle;
-		try {
-			const writable = write(contents);
-			return {ok: writable.ok };
-		} catch (err) {
-			return {ok: false};
-		}
-	} else {
-		return {ok: false};
-	}
+export async function saveAs(
+  contents,
+  {
+    description = "Text Files",
+    accept = { "text/plain": [".txt", ".md"] },
+  } = {}
+) {
+  const handle = await getNewFileHandle({ description, accept });
+  if (handle.ok) {
+    Globals.fileHandle = handle.handle;
+    try {
+      const writable = write(contents);
+      return { ok: writable.ok };
+    } catch (err) {
+      return { ok: false };
+    }
+  } else {
+    return { ok: false };
+  }
 }
 ```
 
@@ -145,12 +155,18 @@ Cosa è `getNewFileHandle`? È semplicemente una funzione che richiama `window.s
 ### saveFile
 
 ```js
-export async function saveFile(contents, {description = "Text Files", accept = {'text/plain': ['.txt', '.md']}} = {} ) {
-	if (Globals.fileHandle  == null ) {
-		await saveAs(contents, {description, accept});
-	} else {
-		await write(contents);
-	}
+export async function saveFile(
+  contents,
+  {
+    description = "Text Files",
+    accept = { "text/plain": [".txt", ".md"] },
+  } = {}
+) {
+  if (Globals.fileHandle == null) {
+    await saveAs(contents, { description, accept });
+  } else {
+    await write(contents);
+  }
 }
 ```
 
@@ -160,13 +176,13 @@ export async function saveFile(contents, {description = "Text Files", accept = {
 
 ```js
 export async function loadFromFile() {
-	try {
-		const filePicked = await Globals.fileHandle.getFile();
-		const contents = await filePicked.text();
-		return {ok: true, filePicked: filePicked, contents: contents};
-	} catch (err) {
-		return {ok: false, filePicked: null, contents: null};
-	}
+  try {
+    const filePicked = await Globals.fileHandle.getFile();
+    const contents = await filePicked.text();
+    return { ok: true, filePicked: filePicked, contents: contents };
+  } catch (err) {
+    return { ok: false, filePicked: null, contents: null };
+  }
 }
 ```
 
@@ -181,49 +197,49 @@ import Globals from "./globals.js";
 import * as FileSystemAccess from "./fileSystemAccess.js";
 
 function insertText(text = "") {
-	g_runtime.objects.TextInput.getFirstInstance().text = text;
+  g_runtime.objects.TextInput.getFirstInstance().text = text;
 }
 
 function getText() {
-	return g_runtime.objects.TextInput.getFirstInstance().text;
+  return g_runtime.objects.TextInput.getFirstInstance().text;
 }
 
 export function newFile() {
-	insertText("");
-	Globals.fileHandle = null;
+  insertText("");
+  Globals.fileHandle = null;
 }
 
 export async function openFile() {
-	const contents = await FileSystemAccess.openFile();
-	if (contents.ok) { 
-		const text = contents.contents;
-		insertText(text);
-	}
+  const contents = await FileSystemAccess.openFile();
+  if (contents.ok) {
+    const text = contents.contents;
+    insertText(text);
+  }
 }
 
 export async function saveFile() {
-	const text = getText();
-	await FileSystemAccess.saveFile(text);
+  const text = getText();
+  await FileSystemAccess.saveFile(text);
 }
 
-export async function saveAs(){
-	const text = getText();
-	await FileSystemAccess.saveAs(text);
+export async function saveAs() {
+  const text = getText();
+  await FileSystemAccess.saveAs(text);
 }
 
-export async function reloadFile(){
-	const contents = await FileSystemAccess.loadFromFile();
-	if (contents.ok) { 
-		const text = contents.contents;
-		insertText(text);
-	}
+export async function reloadFile() {
+  const contents = await FileSystemAccess.loadFromFile();
+  if (contents.ok) {
+    const text = contents.contents;
+    insertText(text);
+  }
 }
 ```
 
-Mi concentro solamente su due funzioni, `insertText` e `getText`. Entrambe utilizzano 
+Mi concentro solamente su due funzioni, `insertText` e `getText`. Entrambe utilizzano
 
 ```js
-g_runtime.objects.TextInput.getFirstInstance().text
+g_runtime.objects.TextInput.getFirstInstance().text;
 ```
 
 per accedere alla casella di testo in Construct 3. La prima ne modifica il testo contenuto, la seconda lo legge. Questo è necessario per permettere a C3 di mostrare correttamente il contenuto dell'elemento.
@@ -231,6 +247,7 @@ per accedere alla casella di testo in Construct 3. La prima ne modifica il testo
 Le funzioni successive non fanno altro che richiamare quelle del modulo `FileSystemAccess` collegandole all'editor vero e proprio.
 
 Detto questo, come al solito potete trovare tutto qui:
+
 - [il progetto su GitHub](https://github.com/el3um4s/construct-demo)
 - [la demo online](https://c3demo.stranianelli.com/javascript/008-text-editor/demo/)
 - [Patreon](https://www.patreon.com/el3um4s)
