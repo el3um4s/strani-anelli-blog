@@ -60,56 +60,13 @@ I create a new C3 project and save it locally in the `c3files` folder (`save as 
 
 I change the `rollup.config.js` file to copy the Svelte files automatically into the folder with the Construct 3 source files:
 
-```js
-//...
-import copy from 'rollup-plugin-copy'
-
-export default {
-    //...
-    plugins: [
-        //...
-        !production && copy({
-			targets: [{
-					src: 'public/build/bundle.css',
-					dest: ['c3files/files', 'dist'],
-					rename: 'svelte.css'
-				},
-				{
-					src: 'public/build/bundle.js',
-					dest: ['c3files/files', 'dist'],
-					rename: 'svelte.js'
-				},
-			]
-		}),
-        // ...
-        production && copy({
-			targets: [{
-					src: 'public/build/bundle.css',
-					dest: ['c3files/files', 'dist'],
-					rename: 'svelte.css'
-				},
-				{
-					src: 'public/build/bundle.js',
-					dest: ['c3files/files', 'dist'],
-					rename: 'svelte.js'
-				},
-			]
-		})
-    ],
-    //...
-}
-```
+<script src="https://gist.github.com/el3um4s/a6306b85d1800a7dc9dd7cfd56cb8d2c.js"></script>
 
 When I run `npm run build` or `npm run dev` I copy the files I need into the C3 folder. In order to use them I must first import them into C3 (only the first time).
 
 Inside C3 I create a `main.js` file and use it to import the compiled Svelte file:
 
-```js
-runOnStartup(async runtime => {
-	globalThis.g_runtime = runtime;
-	await runtime.assets.loadScripts("svelte.js");
-});
-```
+<script src="https://gist.github.com/el3um4s/5e99272f46c6658d9696809aff9717e6.js"></script>
 
 From the event sheet I import the CSS file:
 
@@ -134,66 +91,15 @@ root
 
 **CustomStore.ts:**
 
-```ts
-import { writable, Writable} from "svelte/store";
-
-const s:Writable<boolean> = writable(false);
-
-const cs = {
-    subscribe: s.subscribe,
-    true: () => s.set(true),
-    false: () => s.set(false)
-}
-
-export default cs;
-```
+<script src="https://gist.github.com/el3um4s/6be3f5eb2d6ed6b1f403680df983a073.js"></script>
 
 **CustomSvelte.ts:**
 
-```ts
-import cs from "../Stores/CustomStore";
-
-export default function initializeCustomSvelte() {
-    if (!!!globalThis.customSvelte)  { 
-        globalThis.customSvelte = { };
-    };
-
-    globalThis.customSvelte.cs = cs;
-    globalThis.customSvelte.print = print;
-}
-
-function print(test: string = "Hello World!"):void {
-    console.log(test)
-}
-```
+<script src="https://gist.github.com/el3um4s/9ce89689a65bf4ac837dad87db95c2d2.js"></script>
 
 Then I modify the `App.svelte` file to import the initialization function from the store:
 
-```html
-<script lang="ts">
-  import initializeCustomSvelte from "./Globals/CustomSvelte";
-  import cs from "./Stores/CustomStore";
-
-  initializeCustomSvelte();
-  cs.true();
-</script>
-
-<div id="page">
-  {#if $cs}
-    <div>Svelte {$cs}</div>
-  {/if}
-</div>
-
-<style>
-  #page {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-  }
-</style>
-```
+<script src="https://gist.github.com/el3um4s/121e470dc4a530effc5f8a602a4dce20.js"></script>
 
 I can test the operation by entering some test commands in C3:
 
@@ -206,7 +112,8 @@ I can test the operation by entering some test commands in C3:
 -> Run JavaScript: customSvelte.print("SVELTE IS TRUE");
 ```
 
-As usual, I uploaded the code to GitHub: 
+As usual, I uploaded the code to GitHub:
+
 - [el3um4s/memento-svelte-construct-3](https://github.com/el3um4s/memento-svelte-construct-3)
 
 It is also possible to download the template directly on PC with:
@@ -216,4 +123,5 @@ npx degit el3um4s/memento-svelte-construct-3
 ```
 
 Finally, this is my Patreon:
+
 - [patreon.com/el3um4s](https://patreon.com/el3um4s)

@@ -74,7 +74,7 @@ As recommended in a simple and effective way by [Dave Ceddia](https://daveceddia
 - [**ts-jest**](https://www.npmjs.com/package/ts-jest) to let you write your tests in TypeScript
 - [**@testing-library/jest-dom**](https://github.com/testing-library/jest-dom) for handy DOM matcher functions like `toBeInTheDocument`
 - [**svelte-jester**](https://www.npmjs.com/package/svelte-jester) to compile Svelte components for Jest, so that Jest can use them
-- [**@testing-library/svelte**](https://github.com/testing-library/svelte-testing-library)  for some useful functions to test your Svelte components with
+- [**@testing-library/svelte**](https://github.com/testing-library/svelte-testing-library) for some useful functions to test your Svelte components with
 
 It is better to test the compiled component and not the code used for development. Because the code that needs to work is the final one, the compiled code.
 
@@ -97,50 +97,20 @@ npm run dev -- --open
 I add the configuration files. In this case, I used [Koen Van Geert](https://koenvg.medium.com/setting-up-jest-with-sveltekit-4f0a0e379668)'s post. I create the files:
 
 **svelte.config.test.cjs**
-```js
-const preprocess = require('svelte-preprocess');
 
-module.exports = { preprocess: preprocess() };
-```
+<script src="https://gist.github.com/el3um4s/4322d82ccb109ce1af6c91c0b56aa2af.js"></script>
 
 **jest-setup.ts**
-```ts
-import '@testing-library/jest-dom';
-```
+
+<script src="https://gist.github.com/el3um4s/72df1add954a16cdec543c26769dcd74.js"></script>
 
 **jest.config.cjs**
-```js
-module.exports = {
-  transform: {
-    '^.+\\.svelte$': [
-      'svelte-jester',
-      { preprocess: './svelte.config.test.cjs' }
-    ],
-    '^.+\\.ts$': 'ts-jest',
-    '^.+\\.js$': 'ts-jest'
-  },
-  moduleFileExtensions: ['js', 'ts', 'svelte'],
-  moduleNameMapper: {
-  '^\\$lib(.*)$': '<rootDir>/src/lib$1',
-  '^\\$app(.*)$': [
-    '<rootDir>/.svelte-kit/dev/runtime/app$1',
-    '<rootDir>/.svelte-kit/build/runtime/app$1'
-  ]
-  },
-  setupFilesAfterEnv: ['<rootDir>/jest-setup.ts'],
-  collectCoverageFrom: ["src/**/*.{ts,tsx,svelte,js,jsx}"]
-};
-```
+
+<script src="https://gist.github.com/el3um4s/13113d3616c8a2b6a24cb2100d15a5f7.js"></script>
 
 Finally I add some scripts to **package.json**:
 
-```json
-"scripts": {
-  "test": "jest",
-  "test:watch": "npm run test -- --watchAll",
-  "test:coverage": "jest --coverage"
-}
-```
+<script src="https://gist.github.com/el3um4s/2e93cd8163fbcc100c775d8cf6f6c33e.js"></script>
 
 I try to run
 
@@ -172,36 +142,17 @@ I start with something trivial: I just need to understand if Jest is configured 
 
 I will put all the various tests in the `src/__tests__` directory. I create the `Welcome.test.ts` file and start creating a test:
 
-```ts
-/**
- * @jest-environment jsdom
- */
-
-import '@testing-library/jest-dom'
-import Index from '../routes/index.svelte';
-import { render } from '@testing-library/svelte';
-```
+<script src="https://gist.github.com/el3um4s/5bf3ae09d7d753a82dd15951d223a2ff.js"></script>
 
 I import the `index.svelte` file, which is the home of the application. And then the `render` library from [_@testing-library/svelte_](https://github.com/testing-library/svelte-testing-library).
 
 I add a blank test:
 
-```ts
-describe("Test if Jest is working", () => {
-    test('Welcome', () => {});
-});
-```
+<script src="https://gist.github.com/el3um4s/246bb550033bc3b609ce36e659b16b21.js"></script>
 
 Now I have to decide how and what to test. I want to test that there is an element on the page that says `Welcome to SvelteKit`.
 
-```ts
-describe("Test if Jest is working", () => {
-	test('Welcome', () => {
-		const { getByText } = render(Index);
-		expect(getByText('Welcome to SvelteKit')).toBeInTheDocument()
-	});
-});
-```
+<script src="https://gist.github.com/el3um4s/559947025267990f4a19e00496ea9c10.js"></script>
 
 If I run the test now I get:
 
@@ -232,161 +183,41 @@ I know, it's a weird example but it allows me to create a non-trivial component.
 
 I run the `npm run test:watch` command and start by creating a new test file, `src/__tests__/RandomButton.test.ts`:
 
-```ts
-/**
- * @jest-environment jsdom
- */
-
-import RandomButton from '@lib/RandomButton.svelte';
-import { render } from '@testing-library/svelte';
-```
+<script src="https://gist.github.com/el3um4s/47963882f84eb605821944eb65c66bd9.js"></script>
 
 The test fails. Obviously, because the `RandomButton` component doesn't exist yet. I create it.
 
-```html
-<button>Click Me!</button>
-```
+<script src="https://gist.github.com/el3um4s/5c0188278f68ca06e168cf5e48b08972.js"></script>
 
 I add a test:
 
-```ts
-test('Button exist', () => {
-  const { getByRole}  = render(RandomButton);
-  const button = getByRole('button');
-  expect(button).toBeVisible();
-  }
-)
-```
+<script src="https://gist.github.com/el3um4s/614cf1bb4d74bcdd3a2b81de797e842f.js"></script>
 
 The next step is to add a box to show a random number. I create the corresponding test and then update the component to be able to pass the test.
 
-```ts
-test('Button and Value are in the document', () => {
-  const randomButton = render(RandomButton); 
-  
-  const button = randomButton.getByRole('button');
-  expect(button).toBeVisible();
-  
-  const textValue = randomButton.getByTestId('value');
-  expect(textValue).toBeVisible();
-});
-```
+<script src="https://gist.github.com/el3um4s/94fef59fab90377d991f422ffd815fd1.js"></script>
 
-```html
-<div>
-	<button>Click Me!</button>
-	<span data-testid="value" />
-</div>
-```
+<script src="https://gist.github.com/el3um4s/3d3d651720aff8f0195dfe0982a32c92.js"></script>
 
 Well, now I move on to the style of the number. I add a test (which will fail) and then modify the component to pass the test:
 
-```ts
-test('Color value: red if < 0', () => {
-  const randomButton = render(RandomButton, {value: -1});
+<script src="https://gist.github.com/el3um4s/c7b8dce1b43ee4571755df0ca21e00cf.js"></script>
 
-  const textValue = randomButton.getByTestId('value');
-  expect(textValue).toHaveTextContent("-1");
-
-  expect(textValue).toHaveStyle(`
-    background-color: red;
-    color: white;
-`);
-})
-```
-
-```html
-<script lang="ts">
-	export let value: number = 0;
-</script>
-
-<div>
-	<button>Click Me!</button>
-	<span data-testid="value" class="red">{value}</span>
-</div>
-
-<style>
-	.red {
-		background-color: red;
-		color: white;
-	}
-</style>
-```
+<script src="https://gist.github.com/el3um4s/f84f2f55d886d7b840367c1a86f6459c.js"></script>
 
 The next condition is to color the box green if the number is positive. I write the necessary test and then modify the code:
 
-```ts
-test('Color value: green if > 0', () => {
-  const randomButton = render(RandomButton, {value: 1});
+<script src="https://gist.github.com/el3um4s/6fcccd19d43dd85ba62e8e85d6857906.js"></script>
 
-  const textValue = randomButton.getByTestId('value');
-  expect(textValue).toHaveTextContent("1");
-
-  expect(textValue).toHaveStyle(`
-    background-color: green;
-    color: yellow;
-  `);
-})
-```
-
-```html
-<div>
-	<button>Click Me!</button>
-	<span data-testid="value" class={value < 0 ? 'red' : 'green'}>{value}</span>
-</div>
-
-<style>
-	.red {
-		background-color: red;
-		color: white;
-	}
-
-	.green {
-		background-color: green;
-		color: yellow;
-	}
-</style>
-```
+<script src="https://gist.github.com/el3um4s/d373d918130d0127837a5fc9e319021a.js"></script>
 
 So far I have checked the style of the element. In some cases it may also be useful to check for a class. I write the test to check the color of the button:
 
-```ts
-test('Button is blue', () => {
-  const randomButton = render(RandomButton);
-  const button = randomButton.getByRole('button');
-  expect(button).toHaveClass('blue');
-})
-```
+<script src="https://gist.github.com/el3um4s/d6d7b5f21500900ea84b420f379be6b0.js"></script>
 
 and then I change the element code:
 
-```html
-<script lang="ts">
-	export let value: number = 0;
-</script>
-
-<div>
-	<button class="blue">Click Me!</button>
-	<span data-testid="value" class={value < 0 ? 'red' : 'green'}>{value}</span>
-</div>
-
-<style>
-	.red {
-		background-color: red;
-		color: white;
-	}
-
-	.green {
-		background-color: green;
-		color: yellow;
-	}
-
-	.blue {
-		background-color: blue;
-		color: white;
-	}
-</style>
-```
+<script src="https://gist.github.com/el3um4s/66c846792fd336b2bd5205cdd1ae3154.js"></script>
 
 After completing the CSS part I move on to the events. They are two:
 
@@ -395,85 +226,17 @@ After completing the CSS part I move on to the events. They are two:
 
 I start by setting up the first test, the one to generate a random number at the click of the button:
 
-```ts
-import { render, fireEvent } from '@testing-library/svelte';
-
-test('Random Number on click', async () => {
-  const randomButton = render(RandomButton);
-  const button = randomButton.getByRole('button'); 
-  await fireEvent.click(button);
-
-  const randomNumber = randomButton.getByTestId('random-value');
-  expect(randomNumber).toBeInTheDocument();
-  expect(randomNumber).not.toBeVisible();
-  expect(randomNumber).toHaveTextContent(/(.|\s)*\S(.|\s)*/);    
-})
-```
+<script src="https://gist.github.com/el3um4s/8231ad017df879b2874fd98eee1d44c0.js"></script>
 
 I then correct the component in order to pass the test
 
-```html
-<script lang="ts">
-	export let value: number = 0;
-
-	let randomValue: number = 0;
-
-	function getRandomInt(min: number, max: number) {
-		const positive = Math.random() > 0.5 ? 1 : -1;
-		return positive * Math.floor(Math.random() * (max - min) + min);
-	}
-
-	function addRandomNumber() {
-		randomValue = getRandomInt(1, 100);
-	}
-</script>
-
-<div>
-	<button class="blue" on:click={addRandomNumber}>Click Me!</button>
-	<span data-testid="value" class={value < 0 ? 'red' : 'green'}>{value}</span>
-	<div data-testid="random-value" class="hidden">{randomValue}</div>
-</div>
-
-<style>
-	.hidden {
-		display: none;
-	}
-</style>
-```
+<script src="https://gist.github.com/el3um4s/c79c31a3c2d643dd6ec3f02eb86e115e.js"></script>
 
 I pass to the second test:
 
-```ts
-test('Change Value on Click', async () => {
-  const randomButton = render(RandomButton);
-  const button = randomButton.getByRole('button'); 
-  const valueOriginal = parseInt(randomButton.getByTestId('value').textContent);
+<script src="https://gist.github.com/el3um4s/b7ead4c3d0255805d3a3b0f65d1cb07f.js"></script>
 
-  await fireEvent.click(button);
-
-  const randomNumber = parseInt(randomButton.getByTestId('random-value').textContent);
-  const valueResult = randomButton.getByTestId('value');
-
-  const valueExpected = valueOriginal + randomNumber;
-
-  expect(valueResult).toHaveTextContent(`${valueExpected}`);
-})
-```
-
-```html
-<script lang="ts">
-	function addRandomNumber() {
-		randomValue = getRandomInt(1, 100);
-		value += randomValue;
-	}
-</script>
-
-<div>
-	<button class="blue" on:click={addRandomNumber}>Click Me!</button>
-	<span data-testid="value" class={value < 0 ? 'red' : 'green'}>{value}</span>
-	<div data-testid="random-value" class="hidden">{randomValue}</div>
-</div>
-```
+<script src="https://gist.github.com/el3um4s/f127c5d14c6c314578dc11d73482f495.js"></script>
 
 ### Conclusions
 

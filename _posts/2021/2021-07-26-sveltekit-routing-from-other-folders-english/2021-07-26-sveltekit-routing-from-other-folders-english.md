@@ -59,105 +59,39 @@ Also, I want to index the various posts. I change the `src/routes/index.svelte` 
 
 First, I need the list of all markdown files contained in the `news` folder. I use a function of Vite, `globEager`:
 
-```js
-const allPosts = import.meta.globEager(`../news/**/*.md`);
-```
+<script src="https://gist.github.com/el3um4s/b5e8ab0db2833d6b4d68debbd9c49c34.js"></script>
 
 With this code I get all the `md` files as modules. Then I go through every post I've just found and I extract some data
 
-```js
-for (let path in allPosts) {
-  // ...
-}
-```
+<script src="https://gist.github.com/el3um4s/26a10d80b9b580712916c9420242e671.js"></script>
 
 I need the post module
 
-```js
-const post = allPosts[path];
-```
+<script src="https://gist.github.com/el3um4s/02c2cec62e832e1d5e8567e90d73ca53.js"></script>
 
 And I need the metadatas (extracted from the markdown frontmatter):
 
-```js
-const metadata = post.metadata;
-```
+<script src="https://gist.github.com/el3um4s/6336abb291e4453265eb3c2165368124.js"></script>
 
 I put all in an array (`body = []`). Then I pass `body` to the page with a `load()` function:
 
-```html
-<script context="module">
-  const allPosts = import.meta.globEager(`../news/**/*.md`);
-  let body = [];
-  for (let path in allPosts) {
-      const post = allPosts[path];
-      const metadata = post.metadata;
-      const p = {
-          path, metadata
-      }
-      body.push(p);
-  }
-
-  export const load = async () => {
-      return { props: {posts: body} }
-  }
-</script>
-```
+<script src="https://gist.github.com/el3um4s/43887df50e4ca4eaf0dd3927f049f613.js"></script>
 
 Now I add the html side in `index.svelte`:
 
-```html
-<script lang="ts">
-    import { base } from '$app/paths';
-    export let posts;
-</script>
-
-<h1>News</h1>
-
-<ul>
-    {#each posts as {slugPage, metadata: {title, slug}} }
-        <li>
-            <a href={`${base}/${slug}`} >{title}</a>
-        </li>
-    {/each}
-</ul>
-```
+<script src="https://gist.github.com/el3um4s/9a12af4e1ae887c7d3fe96b1021a3014.js"></script>
 
 I can also play with frontmatter. I can use the folder name if I don't define a slug in the frontmatter. I extract the name of the folder minus the date:
 
-```js
-for (let path in allPosts) {
-  //...
-  const namePage = path.split("/");
-  const slugPage = namePage[namePage.length - 2].slice(11);
-  const p = {
-    path,
-    metadata,
-    slugPage,
-  };
-  body.push(p);
-}
-```
+<script src="https://gist.github.com/el3um4s/0a7b44c979479b7ccc4b296fa41c3651.js"></script>
 
 Then I define the helper function:
 
-```js
-function linkSlug(s: string | undefined, p: string): string {
-  let result = "";
-  if (!s) {
-    result = p;
-  } else {
-    result = s;
-  }
-  return result;
-}
-```
+<script src="https://gist.github.com/el3um4s/7e91fff628349c031e7ed05271110877.js"></script>
 
 And I change the html code:
 
-```html
-<a href={`${base}/${linkSlug(slug, slugPage)}`} sveltekit:prefetch >{title}</a>
-```
+<script src="https://gist.github.com/el3um4s/a914ec7a88abbb33cb7393c28310e92f.js"></script>
 
 ### [slug].svelte
 
@@ -165,53 +99,15 @@ Once I fix the home page, I have to understand how to access the various posts u
 
 I have to import the various posts. But this time I also import the modules of the various posts:
 
-```js
-export const ssr = false;
-const allPosts = import.meta.globEager(`../news/**/*.md`);
-let body = [];
-
-for (let path in allPosts) {
-  const post = allPosts[path];
-  const metadata = post.metadata;
-  const pathArray = path.split("/");
-  const slugPage = pathArray[pathArray.length - 2].slice(11);
-
-  const p = { post, slugPage, metadata };
-
-  body.push(p);
-}
-```
+<script src="https://gist.github.com/el3um4s/229b3f4ef9d28747a34e0d69d1adb110.js"></script>
 
 Now I filter the various posts to extract what I want to show:
 
-```js
-export const load = ({ params }) => {
-  const posts = body;
-  const { slug } = params;
-
-  const filteredPosts = posts.filter((p) => {
-    const slugPost = p.metadata.slug;
-    const slugToCompare = !slugPost ? p.slugPage : slugPost;
-    return slugToCompare.toLowerCase() === slug.toLowerCase();
-  });
-
-  return {
-    props: {
-      page: filteredPosts[0].post.default,
-    },
-  };
-};
-```
+<script src="https://gist.github.com/el3um4s/dcdc5be1e2a3e811b7f785b733e7466d.js"></script>
 
 The component itself is very simple:
 
-```html
-<script>
-  export let page;
-</script>
-
-<svelte:component this="{page}" />
-```
+<script src="https://gist.github.com/el3um4s/33d095e0ecc59614f9b9369f516c21c5.js"></script>
 
 After that, I can build the static site with:
 
