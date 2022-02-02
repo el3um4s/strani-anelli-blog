@@ -58,9 +58,9 @@ Translating into numbers, the optimal would be to be able to publish 3 or 4 arti
 
 More specifically, there are 3 articles that I want to be able to write by the end of the month:
 
-1. come creare un context menu con JavaScript
-2. come creare un menù laterale in HTML
-3. come leggere file Excel con JavaScript
+1. how to create a contextual menu with JavaScript
+2. how to create the side navigation bar using html and css
+3. how to read excel file in javascript
 
 I would also like to report my reading recommendations on a regular basis. A sort of list of the most interesting stories I've read on Medium and beyond.
 
