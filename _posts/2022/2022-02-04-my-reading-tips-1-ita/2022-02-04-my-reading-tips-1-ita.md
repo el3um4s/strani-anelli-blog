@@ -8,7 +8,7 @@ header:
   immagine_estesa: "image"
   immagine_fonte: "Photo credit: [**Nick Fewings**](https://unsplash.com/@jannerboy62)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2022-02-07 12:00"
+date: "2022-02-04 10:00"
 categories:
   - diario
   - Medium
@@ -45,7 +45,7 @@ Ammetto di non avere ancora messo in pratica quanto scritto in questa guida di N
 
 [Somnath Singh](https://polymathsomnath.medium.com/) scrive spesso dei pezzi molto interessanti. Nella mia lista dei articoli da consigliare ce ne sono molti suoi. Quindi, oltre a questo articolo consiglio di sfogliare anche i suoi altri post e di leggerne alcuni. Ne vale la pena.
 
-In ogi caso questo pezzo è molto interessante perché raccoglie alcuni consigli di Bill Gates, spiegandoli e aiutando a comprenderli meglio:
+In ogni caso questo pezzo è molto interessante perché raccoglie alcuni consigli di Bill Gates, spiegandoli e aiutando a comprenderli meglio:
 
 1. Don’t overthink, just dive in: `The best way to prepare [to be a programmer] is to write programs, and to study great programs that other people have written.`
 2. Know your tools well — Really well: `If you ever talk to a great programmer, you’ll find he knows his tools like an artist knows his paintbrushes.`
