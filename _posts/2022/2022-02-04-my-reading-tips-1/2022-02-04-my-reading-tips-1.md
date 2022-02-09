@@ -27,7 +27,7 @@ A well done guide on how to create artificial intelligence using JavaScript. Do 
 
 It's a post from a few years ago (2018 ... how fast time goes by) and there's some problem with the formatting. I therefore recommend reading it alongside the source code of the project. It can be found on GitHub: [lordpoint/neural-network-author-classifier](https://github.com/lordpoint/neural-network-author-classifier). To use it locally you need Python 2.7. However, if possible, I recommend using the CDN link:
 
-```
+```ts
 <script src="//unpkg.com/brain.js"></script>
 ```
 
