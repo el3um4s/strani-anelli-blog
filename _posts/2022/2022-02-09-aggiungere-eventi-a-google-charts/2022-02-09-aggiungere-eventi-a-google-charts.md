@@ -205,7 +205,7 @@ Poi non mi resta che unire i pezzi, usando la direttiva [bind:property](https://
 Questo per quanto riguarda gli slider. Devo modificare leggermente anche il grafico. O, meglio, le proprietà `hAxis` e `vAxis` legandole ai valori degli slider.
 
 ```svelte
-<script>
+<script lang="ts">
   $: hAxis = {
     title: axisX,
     viewWindow: { min: hRange[0], max: hRange[1] },
@@ -286,7 +286,8 @@ Oppure l'evento `onmouseout`:
 
 ```svelte
 <google-chart
-  events={["onmouseout"]}
+  events={["onmouseover","onmouseout"]}
+  on:google-chart-onmouseover
   on:google-chart-onmouseout={(e) => { dispatch("mouseout", e); }}
 />
 ```
