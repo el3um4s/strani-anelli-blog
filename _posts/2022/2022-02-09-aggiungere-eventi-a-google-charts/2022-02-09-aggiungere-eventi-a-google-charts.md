@@ -265,7 +265,7 @@ Posso creare un evento legato alla selezione di un elemento usando:
 />
 ```
 
-Uso [l'evento _select_](https://developers.google.com/chart/interactive/docs/events#the-select-event) di Google Chart per recuperare i valori da passare fuori dal componente.
+Uso [l'evento select](https://developers.google.com/chart/interactive/docs/events#the-select-event) di Google Chart per recuperare i valori da passare fuori dal componente.
 
 Prima di andare avanti un appunto sugli eventi di Google Charts. Ci sono 3 eventi che è possibile chiamare da (quasi) ogni grafico:
 

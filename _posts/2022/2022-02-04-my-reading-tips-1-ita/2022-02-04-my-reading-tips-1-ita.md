@@ -23,11 +23,11 @@ Uno dei miei hobby preferiti è leggere. Leggo molto, libri e non solo. Però no
 
 [link](https://itnext.io/you-can-build-a-neural-network-in-javascript-even-if-you-dont-really-understand-neural-networks-e63e12713a3)
 
-Una guida ben fatta di come creare una rudimentale intelligenza artificiale usando JavaScript. Non si dilunga nella parte teorica ma realizza un esempio pratico usando [BrainJS](https://brain.js.org/#/), una libreria per browser e NodeJS.
+Una guida ben fatta di come creare una rudimentale intelligenza artificiale usando JavaScript. Non si dilunga nella parte teorica ma realizza un esempio pratico usando [BrainJS](https://brain.js.org/), una libreria per browser e NodeJS.
 
 È un post di qualche anno fa (2018... come passa velocemente il tempo) e c'è qualche problema con la formattazione. Consiglio quindi di leggerlo affiancando il codice sorgente del progetto. Lo si può trovare su GitHub: [lordpoint/neural-network-author-classifier](https://github.com/lordpoint/neural-network-author-classifier). Per usarlo in locale occorre avere Python 2.7. Consiglio però, se possibile, di usare il link CDN:
 
-```
+```ts
 <script src="//unpkg.com/brain.js"></script>
 ```
 
