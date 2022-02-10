@@ -47,77 +47,25 @@ Per prima cosa ho deciso di non passare più i vari dati tramite `props` ma di u
 
 Creo il file `StorePartnerProgram.ts` e inizio a importare i tipi TS che mi servono, oltre al modulo `writable`:
 
-```ts
-import type { Writable } from "svelte/store";
-import { writable, get } from "svelte/store";
-import type { PartnerProgram } from "../../Interfaces/MediumPartnerProgram";
-```
+<script src="https://gist.github.com/el3um4s/9e3b5acdee2b08b0594094d812c608d1.js"></script>
 
 Creo lo store e lo preparo per l'esportazione:
 
-```ts
-const partnerProgramStore: Writable<PartnerProgram> = writable();
-
-export const partnerProgram = {
-  subscribe: partnerProgramStore.subscribe,
-  set: (p: PartnerProgram) => partnerProgramStore.set(p),
-};
-```
+<script src="https://gist.github.com/el3um4s/cf4dc1b5af40f3ebc35b4ab0cea33b34.js"></script>
 
 Raggruppo quindi tutti i vari metodi di cui ho già parlato in dei nuovi file e li importo:
 
-```ts
-import * as H from "./HelperPartnerProgram";
-import * as U from "./Utility";
-import * as ChartsMonthly from "./HelperMonthlyAmountsCharts";
-import * as ChartsCurrentMonth from "./HelperCurrentMonthCharts";
-import * as Stories from "./HelperSingleStoryData";
-import { getCurrentMonthSynthesis } from "./HelperSynthesis";
-```
+<script src="https://gist.github.com/el3um4s/06c6c8281e8eb8d569409f9313e16ad4.js"></script>
 
 Infine aggiungo i vari metodi allo store:
 
-```ts
-export const partnerProgram = {
-  subscribe: partnerProgramStore.subscribe,
-  set: (p: PartnerProgram) => partnerProgramStore.set(p),
-  getCurrentMonthDate: () => U.getCurrentMonthDate(get(partnerProgramStore)),
-  getMonthlyAmounts: () => H.getMonthlyAmounts(get(partnerProgramStore)),
-  getListStories: () => H.getListStories(get(partnerProgramStore)),
-  getStoryById: (id: string) =>
-    Stories.getStoryById(get(partnerProgramStore), id),
-  getCurrentMonthSynthesis: () =>
-    getCurrentMonthSynthesis(get(partnerProgramStore)),
-  getChartsData: {
-    monthly: {
-      earningPerMonth: () =>
-        ChartsMonthly.earningPerMonth(get(partnerProgramStore)),
-      earningPerStory: () =>
-        ChartsMonthly.earningPerStory(get(partnerProgramStore)),
-      treemapWordsAndEarning: () =>
-        ChartsMonthly.treemapWordsAndEarning(get(partnerProgramStore)),
-      scatterWordsAndEarning: () =>
-        ChartsMonthly.scatterWordsAndEarning(get(partnerProgramStore)),
-      wordPerDay: () => ChartsMonthly.wordPerDay(get(partnerProgramStore)),
-    },
-    currentMonth: {
-      earningPerMonthPub: () =>
-        ChartsCurrentMonth.earningPerMonthPub(get(partnerProgramStore)),
-      earningPerMonthStory: () =>
-        ChartsCurrentMonth.earningPerMonthStory(get(partnerProgramStore)),
-    },
-  },
-};
-```
+<script src="https://gist.github.com/el3um4s/a41dd01e6710ba6eea407efaad2015ea.js"></script>
 
 Dopo aver inglobato i vari metodi in `partnerProgram` posso richiamarli direttamente dai vari componenti.
 
 Per esempio posso ricavare la lista degli articoli del mese scrivendo semplicemente:
 
-```ts
-import { partnerProgram } from "./StorePartnerProgram";
-const listStories = partnerProgram.getListStories();
-```
+<script src="https://gist.github.com/el3um4s/f9b31ef486c774327b5621a63e21af43.js"></script>
 
 ### Controllo lo zoom del grafico scatter plot
 
@@ -135,104 +83,27 @@ npm install svelte-range-slider-pips --save-dev
 
 Quindi importo il componente in `GoogleChartScatter.svelte`:
 
-```ts
-import RangeSlider from "svelte-range-slider-pips";
-```
+<script src="https://gist.github.com/el3um4s/6c2bfe0bd3aa9bea78993f36dd7275f2.js"></script>
 
 L'utilizzo è abbastanza banale:
 
-```svelte
-<RangeSlider
-  values = [...]
-  min = 0
-  max = 100
-  range
-  float
-/>
-```
+<script src="https://gist.github.com/el3um4s/99867c8d49fc96579fbdf5eb8e040821.js"></script>
 
 Ci sono solamente alcuni punti da comprendere. Devo stabilire qual è il range entro cui scegliere i numeri. Conviene calcolarli subito in modo da poter tornare alla visualizzazione originale in un secondo momento:
 
-```ts
-const dataRange = {
-  hAxis: {
-    min: 0,
-    max: Math.floor(
-      Math.max(
-        ...data.map((d, i) => (i > 0 && typeof d[0] == "number" ? d[0] : null))
-      ) * 1.1
-    ),
-  },
-  vAxis: {
-    min: 0,
-    max: Math.floor(
-      Math.max(
-        ...data.map((d, i) => (i > 0 && typeof d[1] == "number" ? d[1] : null))
-      ) * 1.1
-    ),
-  },
-};
-```
+<script src="https://gist.github.com/el3um4s/d89b7b9d1c8223bdaab67ff6813814c8.js"></script>
 
 Il secondo punto riguarda come intercettare i due input. Per farlo creo un array con soli due elementi. Il primo indica il valore minore, il secondo il maggiore:
 
-```ts
-let hRange = [dataRange.hAxis.min, dataRange.hAxis.max];
-let vRange = [dataRange.vAxis.min, dataRange.vAxis.max];
-```
+<script src="https://gist.github.com/el3um4s/55da329314656d6ee67d30085ea81413.js"></script>
 
 Poi non mi resta che unire i pezzi, usando la direttiva [bind:property](https://svelte.dev/docs#template-syntax-element-directives-bind-property) per legare i valori:
 
-```svelte
-<RangeSlider
-  vertical
-  bind:values={vRange}
-  min={dataRange.vAxis.min}
-  max={dataRange.vAxis.max}
-  range
-  float
-/>
-
-<RangeSlider
-  bind:values={hRange}
-  min={dataRange.hAxis.min}
-  max={dataRange.hAxis.max}
-  range
-  float
-/>
-```
+<script src="https://gist.github.com/el3um4s/4a09a9c765b340b0fb139e11e0a29bcb.js"></script>
 
 Questo per quanto riguarda gli slider. Devo modificare leggermente anche il grafico. O, meglio, le proprietà `hAxis` e `vAxis` legandole ai valori degli slider.
 
-```svelte
-<script lang="ts">
-  $: hAxis = {
-    title: axisX,
-    viewWindow: { min: hRange[0], max: hRange[1] },
-  };
-
-  $: vAxis = {
-    title: axisY,
-    viewWindow: { min: vRange[0], max: vRange[1] },
-  };
-</script>
-
-<google-chart
-  class="chart"
-  type="scatter"
-  {data}
-  options={{
-    title,
-    backgroundColor: "transparent",
-    titleTextStyle: { fontSize: 14, color: "#737373" },
-    legend: "none",
-    hAxis,
-    vAxis,
-    colors: colors.length > 0 ? colors : undefined,
-    tooltip: { isHtml: true },
-  }}
-/>
-```
+<script src="https://gist.github.com/el3um4s/49ef70fb5f6c4cc6dba8cae40e3ba073.js"></script>
 
 ### Aggiungere un evento quando selezioniamo un valore nel grafico
 
@@ -242,28 +113,11 @@ Il secondo evento che mi interessa è poter vedere alcune informazioni aggiuntiv
 
 Per generare eventi all'interno di un componente Svelte uso [createEventDispatcher](https://svelte.dev/docs#run-time-svelte-createeventdispatcher):
 
-```ts
-import { createEventDispatcher } from "svelte";
-import "@google-web-components/google-chart";
-
-const dispatch = createEventDispatcher();
-```
+<script src="https://gist.github.com/el3um4s/5b64b16f9b5cff25f1f1707cf3b677be.js"></script>
 
 Posso creare un evento legato alla selezione di un elemento usando:
 
-```svelte
-<google-chart
-  // ...
-  on:google-chart-select={(e) => {
-    const selection = e.detail.chart.getSelection();
-    dispatch("select", {
-      selection,
-      row: selection[0]?.row,
-      value: rows[selection[0]?.row],
-    });
-  }}
-/>
-```
+<script src="https://gist.github.com/el3um4s/38b4fdeae28b648ce206e4b18a0fe5dc.js"></script>
 
 Uso l'[evento select](https://developers.google.com/chart/interactive/docs/events#the-select-event) di Google Chart per recuperare i valori da passare fuori dal componente.
 
@@ -275,116 +129,32 @@ Prima di andare avanti un appunto sugli eventi di Google Charts. Ci sono 3 event
 
 Se però vogliamo usare altri eventi li dobbiamo registrare. Per esempio posso voler intercettare l'evento `on mouse over`:
 
-```svelte
-<google-chart
-  events={["onmouseover"]}
-  on:google-chart-onmouseover
-/>
-```
+<script src="https://gist.github.com/el3um4s/c4f6180f8d751cc7aec24874a4ca113c.js"></script>
 
 Oppure l'evento `onmouseout`:
 
-```svelte
-<google-chart
-  events={["onmouseover","onmouseout"]}
-  on:google-chart-onmouseover
-  on:google-chart-onmouseout={(e) => { dispatch("mouseout", e); }}
-/>
-```
+<script src="https://gist.github.com/el3um4s/5a86bb8e38acc577c5a7607c9cdee57b.js"></script>
 
 ### Mostro un'anteprima della storia
 
 Quello che voglio ottenere è un metodo semplice e veloce per capire a quale post si riferisce un dato. Per farlo passo al grafico anche l'ID della storia:
 
-```ts
-export const earningPerStory = (mediumPartnerProgram: PartnerProgram) => {
-  const listStories = getListStories(mediumPartnerProgram);
-  const rows = listStories
-    .sort((a, b) => b.amountTot - a.amountTot)
-    .map((story) => {
-      const title = story.title;
-      const id = story.id;
-      const amount = story.amountTot / 100;
-      return [title, amount, id];
-    });
-
-  const cols = [
-    { label: "Title", type: "string" },
-    { label: "$", type: "number" },
-    { label: "ID", type: "string" },
-  ];
-
-  return {
-    cols,
-    rows,
-  };
-};
-```
+<script src="https://gist.github.com/el3um4s/fb2594c8f948c2db20d07720ef88b05f.js"></script>
 
 Posso quindi modificare il componente nel file `MonthlyAmounts.svelte`
 
-```svelte
-  <GoogleChartPie
-    cols={storyEarning.cols}
-    rows={storyEarning.rows}
-    title="Earning Per Story"
-    sliceVisibilityThreshold={2.5 / 100}
-    on:select={(e) => {
-      const id = e.detail.value ? e.detail.value[2] : undefined;
-      storySelected = id ? partnerProgram.getStoryById(id) : undefined;
-    }}
-  />
-```
+<script src="https://gist.github.com/el3um4s/dff5b580dc77efe7c1540ac1040254ab.js"></script>
 
 Per ricavare i dati del post a partire dal suo ID è sufficiente la funzione `getStoryById`:
 
-```ts
-export const getStoryById = (
-  mediumPartnerProgram: PartnerProgram,
-  id: string
-) => {
-  const list = mediumPartnerProgram.payload.postAmounts;
-  return list.find((p) => p.post.id === id);
-};
-```
+<script src="https://gist.github.com/el3um4s/4fc5a5eb0ef4204ba46992e67dc2695d.js"></script>
 
 Per visualizzare l'anteprima ho invece creato un componente `CardStory.svelte`:
 
-```svelte
-<script type="ts">
-  import { slide } from "svelte/transition";
-  export let story;
-
-  $: id = story.post.id;
-  $: backgroundImage = `url(https://miro.medium.com/max/160/${story.post.virtuals.previewImage.imageId})`;
-</script>
-
-<section>
-  {#key id}
-    <div class="content" transition:slide>
-      <div class="info">
-        <div class="title">{story.post.title}</div>
-        <div class="subtitle">{story.post.virtuals.subtitle}</div>
-        <div class="link">
-          <a href="https://medium.com/story/{story.post.id}" target="_blank"
-            >Link: medium.com/story/{story.post.id}</a
-          >
-        </div>
-      </div>
-      <div class="previewImage" style:background-image={backgroundImage} />
-    </div>
-  {/key}
-</section>
-```
+<script src="https://gist.github.com/el3um4s/6912fb7f84ba0893410f3e621224dd4f.js"></script>
 
 Posso usare questo componente nelle varie pagine passandogli semplicemente i dati della storia da mostrare:
 
-```svelte
-{#if storySelected}
-  <div class="storySelected">
-    <CardStory story={storySelected} />
-  </div>
-{/if}
-```
+<script src="https://gist.github.com/el3um4s/81db024199c2bc28719acdcc11dce3f5.js"></script>
 
 Bene, questo è tutto per oggi. Ricordo che è possibile vedere il codice del progetto su GitHub.
