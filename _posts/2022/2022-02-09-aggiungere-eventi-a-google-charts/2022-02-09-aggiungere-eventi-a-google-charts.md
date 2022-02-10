@@ -125,7 +125,7 @@ Dopo aver ripulito un po' il codice posso cominciare a ragionare su come miglior
 
 ![charts-events-02.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2022/2022-02-09-aggiungere-eventi-a-google-charts/charts-events-02.gif)
 
-La prima cosa è capire come creare i due slider. Possiamo divertirci a crearli da zero oppure affidarci a qualcosa di già pronto. Per il momento ho scelto la strada semplice. In Internet si possono trovare diversi componenti interessanti. Ho deciso di usare [Range Slider (with pips)](https://github.com/simeydotme/svelte-range-slider-pips) di [Simon Goellner](https://github.com/simeydotme).
+La prima cosa è capire come creare i due slider. Possiamo divertirci a crearli da zero oppure affidarci a qualcosa di già pronto. Per il momento ho scelto la strada semplice. In Internet si possono trovare diversi componenti interessanti. Ho deciso di usare [Range Slider](https://github.com/simeydotme/svelte-range-slider-pips) di [Simon Goellner](https://github.com/simeydotme).
 
 Installo il componente nel mio progetto usando:
 
@@ -265,7 +265,7 @@ Posso creare un evento legato alla selezione di un elemento usando:
 />
 ```
 
-Uso [l'evento select](https://developers.google.com/chart/interactive/docs/events#the-select-event) di Google Chart per recuperare i valori da passare fuori dal componente.
+Uso l'[evento select](https://developers.google.com/chart/interactive/docs/events#the-select-event) di Google Chart per recuperare i valori da passare fuori dal componente.
 
 Prima di andare avanti un appunto sugli eventi di Google Charts. Ci sono 3 eventi che è possibile chiamare da (quasi) ogni grafico:
 
