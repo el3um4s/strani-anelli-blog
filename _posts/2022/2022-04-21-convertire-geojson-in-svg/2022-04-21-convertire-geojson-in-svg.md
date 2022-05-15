@@ -60,7 +60,7 @@ const dataJSONSource = fs.readFileSync(inputGeoJSON, {
 const dataJSON = JSON.parse(dataJSONSource);
 ```
 
-Uso quindi `geojson2svg` per ottenere un array di `path`. Per tenere traccia dei vari dati mi serve un elenco degli attributi da preservare. Creo la variabie `attributes` appositamente per questo scopo.
+Uso quindi `geojson2svg` per ottenere un array di `path`. Per tenere traccia dei vari dati mi serve un elenco degli attributi da preservare. Creo la variabile `attributes` appositamente per questo scopo.
 
 ```js
 import geojson2svg from "geojson2svg";
@@ -301,7 +301,7 @@ fs.writeFileSync(`${fileOutput_POI}.svg`, label_svg);
 
 ### Ingrandire la mappa SVG
 
-Questo metodo funziona abbastanza bene ma presenta un problema: il file SVG risultante è spesso molto piccolo. O, meglio, le etichette risultato sproporzionate rispetto ai confini delle zone. Per risolvere questo problema devo scalare tutto il file. Ho modificato il repository [elrumordelaluz/scale-that-svg](https://github.com/elrumordelaluz/scale-that-svg/blob/master/index.js) per adattarlo alle mie esigenze. In questo modo mi bastano alcune righe di codice per ottenere il risultato che mi interessa
+Questo metodo funziona abbastanza bene ma presenta un problema: il file SVG risultante è spesso molto piccolo. O, meglio, le etichette risultano sproporzionate rispetto ai confini delle zone. Per risolvere questo problema devo scalare tutto il file. Ho modificato il repository [elrumordelaluz/scale-that-svg](https://github.com/elrumordelaluz/scale-that-svg/blob/master/index.js) per adattarlo alle mie esigenze. In questo modo mi bastano alcune righe di codice per ottenere il risultato che mi interessa
 
 ```js
 import { scaleSVG as scale } from "./scale-svg.js";
