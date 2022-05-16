@@ -62,7 +62,7 @@ Of course it depends on what we need. In my case, the [Italian administrative bo
 More specifically, the municipality of Milan publishes some open data in various formats through the website [dati.comune.milano.it](https://dati.comune.milano.it/dataset). There are many interesting maps, often already in GeoJSON. I'm interested in these:
 
 - [Nuclei d'Identità Locale (NIL) VIGENTI - PGT 2030](https://dati.comune.milano.it/dataset/ds964-nil-vigenti-pgt-2030)
-- House numbers with geographic coordinates](https://dati.comune.milano.it/dataset/ds634-numeri-civici-coordinate)
+- [House numbers with geographic coordinates](https://dati.comune.milano.it/dataset/ds634-numeri-civici-coordinate)
 - [ATM - Underground lines routes](https://dati.comune.milano.it/dataset/ds539_atm-percorsi-linee-metropolitane)
 - [ATM - Metro lines stops](https://dati.comune.milano.it/dataset/ds535_atm-fermate-linee-metropolitane)
 - [Education: location of the universities of Milan universities](https://dati.comune.milano.it/dataset/ds94-infogeo-atenei-sedi-localizzazione)

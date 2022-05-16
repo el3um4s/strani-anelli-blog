@@ -27,7 +27,7 @@ Uno dei vantaggi dei file SVG è la possibilità di modificarli con JavaScript i
 
 ### Aprire un file SVG con HTML
 
-Per prima cosa creo un pulsante per selezionare il file da caricare e un elemnto html dove mostrare il file
+Per prima cosa creo un pulsante per selezionare il file da caricare e un elemento html dove mostrare il file
 
 ```svelte
 <script lang="ts">
