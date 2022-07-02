@@ -455,3 +455,65 @@ export const load = ({ params }) => {
 ```
 
 SvelteKit è ancora in beta, quindi è previsto che qualche modifica produca alcuni effetti non voluti. Sul GitHub è possibile trovare l'elenco delle cose che mancano per arrivare al rilascio della prima versione stabile (qui: [milestone:1.0](https://github.com/sveltejs/kit/issues?q=is%3Aopen+is%3Aissue+milestone%3A1.0))
+
+### Update Giugno 2022
+
+Negli ultimi mesi SvelteKit è cambiato molto. Non ho il tempo di seguire tutti gli aggiornamenti, di conseguenza sto aspettando il rilascio della versione stabile. Ciò nonostante alcuni mi hanno chiesto consiglio su come correggere i vari messaggi di errore che appaiono nel mio template. Ho aggiornato il codice per allinearlo all'ultima versione disponibile di SvelteKit.
+
+Per prima cosa modifico il file **src/app.html**:
+
+- sostituisco _%svelte.head%_ con _%sveltekit.head%_
+- sostituisco `<div id="svelte">%svelte.body%</div>` con `<div>%sveltekit.body%</div>`
+
+In questo modo il file diventa:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    %sveltekit.head%
+  </head>
+  <body>
+    <div>%sveltekit.body%</div>
+  </body>
+</html>
+```
+
+Poi modifico il file **tsconfig.json** aggiungendo:
+
+```json
+"extends": "./.svelte-kit/tsconfig.json",
+```
+
+In **svelte.config.js** elimino `kit.target ='#svelte'` e aggiungo un `prerender`:
+
+```js
+kit: {
+	prerender: {
+		crawl: true,
+		enabled: true,
+		onError: 'continue',
+		default: true
+	},
+}
+```
+
+Elimino `export const ssr = false;` da **`src\routes[slug].svelte`**.
+
+Creo quindi il file **src/hooks.js**:
+
+```js
+/** @type {import('@sveltejs/kit').Handle} */
+
+export async function handle({ event, resolve }) {
+  const response = await resolve(event, {
+    ssr: false,
+  });
+  return response;
+}
+```
+
+Infine aggiorno tutte le dipendenze del progetto con il comando `npx npm-check-updates -u`.

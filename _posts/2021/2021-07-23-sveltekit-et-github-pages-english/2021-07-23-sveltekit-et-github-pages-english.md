@@ -458,3 +458,65 @@ export const load = ({ params }) => {
 ```
 
 SvelteKit is still in beta, so some destructive changes are expected. Read more [here](https://svelte.dev/blog/sveltekit-beta), and track progress towards 1.0 [here](https://github.com/sveltejs/kit/issues?q=is%3Aopen+is%3Aissue+milestone%3A1.0).
+
+### Update Giugno 2022
+
+In recent months, SvelteKit has changed a lot. I don't have time to follow all updates, consequently I am waiting for the release of the stable version. Nonetheless, some asked me for advice on how to correct the various error messages that appear in my template. I updated the code to align it with the latest available version of SvelteKit.
+
+First I change the **src/app.html** file:
+
+- I replace _%svelte.head%_ with _%sveltekit.head%_
+- I replace `<div id="svelte">%svelte.body%</div>` with `<div>%sveltekit.body%</div>`
+
+In this way the file becomes:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    %sveltekit.head%
+  </head>
+  <body>
+    <div>%sveltekit.body%</div>
+  </body>
+</html>
+```
+
+Then I modify the ** tsconfig.json file ** adding:
+
+```json
+"extends": "./.svelte-kit/tsconfig.json",
+```
+
+In **svelte.config.js** I delete `kit.target ='#svelte'` and I add a `prerender`:
+
+```js
+kit: {
+	prerender: {
+		crawl: true,
+		enabled: true,
+		onError: 'continue',
+		default: true
+	},
+}
+```
+
+I delete `export const ssr = false;` from **`src\routes[slug].svelte`**.
+
+So I create the **src/hooks.js** file:
+
+```js
+/** @type {import('@sveltejs/kit').Handle} */
+
+export async function handle({ event, resolve }) {
+  const response = await resolve(event, {
+    ssr: false,
+  });
+  return response;
+}
+```
+
+Finally I update all the dependencies of the project with `npx npm-check-updates -u`.
