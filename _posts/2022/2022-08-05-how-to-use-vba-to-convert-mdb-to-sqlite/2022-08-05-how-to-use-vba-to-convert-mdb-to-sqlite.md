@@ -39,13 +39,13 @@ When opening the main form, I initialize some components:
 
 <script src="https://gist.github.com/el3um4s/c2af28d9f1f96eefc24ee7d40e3741c4.js"></script>
 
-I empty the list of tables to export by setting the RowSource field to empty.
+I clean the list of tables to export by setting the RowSource field to empty.
 
 ```vb
 Forms!Menu!tableList.RowSource = ""
 ```
 
-I also empty the log of export operations by setting the logExport field to empty.
+I also clean the log of export operations by setting the logExport field to empty.
 
 ```vb
 Forms!Menu!logExport = ""
@@ -73,9 +73,9 @@ Anyway, after figuring out how to select the database I can get the name of the 
 
 I extract the last part of the address with `Right(strFullPath, Len(strFullPath) - InStrRev(strFullPath, "\"))` and then replace the extension `mdb` with `db` using a code similar to this `Left(nameWithExtension, Len(nameWithExtension) - 3) & "db"`.
 
-To show the list of tables present in the source database I have to break down the problem into two parts. The first is to understand how to read the name of the tables, the second how to show the names on the screen.
+To show the list of tables in the source database I have to break down the problem into two parts. The first is to understand how to read the name of the tables, the second how to show the names on the screen.
 
-To understand how to fill a listbox, is useful the post [Listbox Add/Remove Item AC2000](https://www.599cd.com/tips/access/listbox-additem-2000/). In summary, just pass the list of names, separated by `;` to the control through the property `RowSource`: `MyList.RowSource = "Table1;Table2;Table3"`.
+To understand how to fill a listbox, the post [Listbox Add/Remove Item AC2000](https://www.599cd.com/tips/access/listbox-additem-2000/) is useful. In summary, just pass the list of names, separated by `;` to the control through the property `RowSource`: `MyList.RowSource = "Table1;Table2;Table3"`.
 
 Instead to read the names of the tables I have to establish a connection to the database:
 
@@ -114,7 +114,7 @@ To select all the tables in the list box I use a function written by [Allen Brow
 
 ### Choose the destination folder
 
-Even choosing the destination folder seems a simple thing, except that it is not. Or at least it wasn't in the late 1990s.
+Even choosing the destination folder seems a simple thing, but it is not. Or at least it wasn't in the late 1990s.
 
 <script src="https://gist.github.com/el3um4s/6798fae650b11daa50dfc8973046bc8c.js"></script>
 
@@ -174,4 +174,4 @@ The function `ExportToSQLite table, dbSQLite` looks for the table `table` and ex
 
 <script src="https://gist.github.com/el3um4s/63866ada01ae9f0b2732205661f3a677.js"></script>
 
-Well, that's it with that. This project was very interesting because it required me to do research on some issues of a few decades ago. I found it very instructive to confront some limitations of MS Access. And, to be honest, it's also very frustrating to have to look for workarounds to solve things that I take for granted today.
+Well, that's it with that. This project was very interesting because it required me to do research on some issues of a few decades ago. I found it very instructive to confront some limitations of MS Access. And, to be honest, it's also very frustrating to look for workarounds to solve things that I take for granted today.

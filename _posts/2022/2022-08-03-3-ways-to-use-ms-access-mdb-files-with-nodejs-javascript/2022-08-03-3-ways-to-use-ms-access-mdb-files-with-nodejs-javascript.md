@@ -25,9 +25,9 @@ tags:
 
 There is a problem that has been bothering me for some years. I have a few hundred databases in mdb format (Microsoft Access 2000) full of data from a quarter of a century, and I don't want to lose them. This is a complex problem, because it concerns several issues. The databases are still in use, so I can't just replace them. Furthermore, being the result of a ten-year accumulation, they are very spaghetti code. Finally, those who use these databases often know almost nothing about computers.
 
-Important: these are databases used by voluntary organizations. They often run on old, obsolete, low-memory, low-performance computers. And they are mostly Windows PCs.
+Important: these databases are used by voluntary associations. They often run on old, obsolete, low-memory, low-performance computers. And they are mostly Windows PCs.
 
-Finally, as a last requirement, they must be able to work even in situations where there is no internet connection. Better to be completely offline most of the time. The passage of data from one machine to another must be able to take place quickly and easily, using USB sticks or CDs.
+Finally, as a last requirement, they must be able to work even in situations where there is no internet connection. Better to be completely offline most of the time. The passage of data from one machine to another must be quick and easy, using USB sticks or CDs.
 
 I've tried various solutions, but couldn't find one that worked.
 
@@ -39,7 +39,7 @@ One attempt was to use [mdbtools](https://github.com/mdbtools/mdbtools) for linu
 npm install @el3um4s/mdbtools
 ```
 
-I can then get the list of tables in an mdb file using a function similar to this:
+Then, I can get the list of tables in an mdb file using a function similar to this:
 
 <script src="https://gist.github.com/el3um4s/95644c78a6a6c6a66e9787be1d9db5b8.js"></script>
 
@@ -55,7 +55,7 @@ Or directly save a table in a csv file
 
 <script src="https://gist.github.com/el3um4s/c0d63cf981a449bdb49bff4fd2d0c427.js"></script>
 
-All very nice except that in some cases it doesn't work. These are quite specific cases, and they concern the particularity of my mother tongue: accents. Some tables use accented characters. And this misleads some exports and some queries.
+All very well but, in some cases, it doesn't work. These are quite specific cases, and they concern the particularity of my mother tongue: accents. Some tables use accented characters. And this misleads some exports and some queries.
 
 ### NODE ADODB
 
@@ -71,11 +71,11 @@ I can query a database table with this command:
 
 <script src="https://gist.github.com/el3um4s/da1f7ee4cbe64f6a1a13430a83c54c27.js"></script>
 
-This package works, but only on Windows. Also it can be very slow. Yes, it is a good solution for operations to be performed once in a while but not for frequent use.
+This package works, but only on Windows. Also, it can be very slow. Yes, it is a good solution for operations to be performed once in a while but not for frequent use.
 
 ### NODE MDB
 
-I then tried to recreate this repository from scratch, [el3um4s/node-mdb](https://github.com/el3um4s/node-mdb) . To install it just write:
+Then, I tried to recreate this repository from scratch, [el3um4s/node-mdb](https://github.com/el3um4s/node-mdb) . To install it just write:
 
 ```bash
 npm i @el3um4s/node-mdb
@@ -97,11 +97,11 @@ Or edit the table with queries similar to these:
 
 <script src="https://gist.github.com/el3um4s/c989c2a54abd9d548985bf724a727abb.js"></script>
 
-Again, however, the system tends to be slow in some databases. And anyway, it only works under Windows.
+Again, however, the system tends to be slow in some databases. And, anyway, it only works on Windows.
 
 ### Conclusion
 
-So what? Well, after trying various solutions, and noticing that there are inconsistencies in behavior under Windows, I have decided that perhaps the best way is to try to convert the various databases from MDB to SQLite.
+So what? Well, after trying many solutions, and noticing that there are inconsistencies in behavior on Windows, I decided that perhaps the best way is to try to convert the various databases from MDB to SQLite.
 
 This way I can use a package like [sqlite3](https://www.npmjs.com/package/sqlite3):
 

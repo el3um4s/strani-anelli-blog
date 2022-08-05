@@ -23,7 +23,7 @@ tags:
   - DB
 ---
 
-So how can I convert an MDB file to a SQLite database? At the end of the day the easiest way is to create an MDB database to semi-automatically convert the other MDB files. I want to get a mask similar to this:
+So how can I convert an MDB file to a SQLite database? At the end of the day the easiest way is to create an MDB databas,e to semi-automatically convert the other MDB files. I want to get a mask similar to this:
 
 {% include picture img="ExportMDBtoSQLite3.webp" ext="jpg" alt="" %}
 
@@ -42,7 +42,7 @@ Microsoft Access doesn't natively recognize SQLite files, I need drivers. There 
 - [ODBC Driver for SQLite](https://www.devart.com/odbc/sqlite/) by devart. But it costs $ 170.
 - [SQLite ODBC Driver](https://www.sqlitetutorial.net/download-install-sqlite/) by Christian Werner. But it's stuck at SQLite version 3.32.3
 
-For me the free drivers is enough. Then I install the **SQLite ODBC Driver**.
+Free drivers are suitable for me. Then I install the **SQLite ODBC Driver**.
 
 {% include picture img="04 - Installa DRIVER - 04.webp" ext="jpg" alt="" %}
 
@@ -66,7 +66,7 @@ Then I select the SQLite database (using the _Browse..._ button ), I set the par
 
 {% include picture img="10 - Esporta da Access - 05.webp" ext="jpg" alt="" %}
 
-As long as it's a handful of databases, and a few tables, it's possible to do everything manually. But when things get bigger, when there are tens, hundreds or even thousands of tables, you need to use a more automatic solution. For this reason, I have created a solution that allows me to export an MS Access database to a SQLite database. I uploaded the code to GitHub in the [el3um4s/how-to-export-mdb-to-sqlite-3](https://github.com/el3um4s/how-to-export-mdb-to-sqlite-3) repository .
+As long as it's a handful of databases, and a few tables, it's possible to do everything manually. But when things get bigger, when there are dozens, hundreds or even thousands of tables, you need to use a more automatic option. For this reason, I have created a solution that allows me to export an MS Access database to a SQLite database. I uploaded the code to GitHub in the [el3um4s/how-to-export-mdb-to-sqlite-3](https://github.com/el3um4s/how-to-export-mdb-to-sqlite-3) repository .
 
 Download to PC two files:
 
