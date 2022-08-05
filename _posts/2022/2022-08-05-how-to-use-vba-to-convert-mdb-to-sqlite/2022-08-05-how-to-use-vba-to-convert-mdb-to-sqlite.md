@@ -37,13 +37,7 @@ I omit the part related to the creation of the interface, I think it is quite si
 
 When opening the main form, I initialize some components:
 
-```vb
-Private Sub Form_Open(Cancel As Integer)
-    Forms!Menu!tableList.RowSource = ""
-    Forms!Menu!logExport = ""
-    pathOriginal
-End Sub
-```
+<script src="https://gist.github.com/el3um4s/c2af28d9f1f96eefc24ee7d40e3741c4.js"></script>
 
 I empty the list of tables to export by setting the RowSource field to empty.
 
@@ -59,63 +53,23 @@ Forms!Menu!logExport = ""
 
 I simplify by always using the same source database. I put the database in the same folder as the main program. I derive the location of the application using `CurrentProject.path`
 
-```vb
-Public Function pathOriginal() As String
-    Dim result As String
-    result = CurrentProject.path & "\NewSQLiteDB.db"
-
-    Forms!Menu!pathOriginalSQLiteDB = result
-
-    pathOriginal = result
-End Function
-```
+<script src="https://gist.github.com/el3um4s/f6e2945df88bcfd4617e27de63bc5f7e.js"></script>
 
 ### Choose the file to export
 
 By clicking on _Choose Database_ I choose the MDB file to export. After choosing the file I show the list of tables and select them all (generally I want to export a whole database). Finally I use the source database name to set the target database name:
 
-```vb
-Private Sub btnChooseDatabase_Click()
-    SelectDatabase
-    nameNewDatabaseFromOriginalPath
-    ShowListTable
-    SelectAllTables
-End Sub
-```
+<script src="https://gist.github.com/el3um4s/594d5bd5f2b807d3f917693c6f2ede36.js"></script>
 
 The function to select a file seems simple enough but it is not:
 
-```vb
-Public Function SelectDatabase() As String
-    Dim path As String
-    path = GetOpenFile()
-
-    Forms!Menu!pathDatabase = path
-
-    SelectDatabase = path
-End Function
-```
+<script src="https://gist.github.com/el3um4s/98b0f9ecaea0da391a1d674064fcfa80.js"></script>
 
 The problem is that MS Access 2000 doesn't have an easy way to select a file. To do this you need a special function `GetOpenFile()`. I'm not reporting the code here, it's about 300 lines, but on GitHub I uploaded the [GetFile.bas](https://github.com/el3um4s/how-to-export-mdb-to-sqlite-3/blob/main/src/GetFile.bas). The code is not mine, it was created a few decades ago by Ken Getz, himself the result of code dating [back to 1998](http://vbnet.mvps.org/index.html?code/callback/browsecallback.htm).
 
 Anyway, after figuring out how to select the database I can get the name of the target database:
 
-```vb
-Public Function nameNewDatabaseFromOriginalPath() As String
-    Dim strFullPath As String
-    strFullPath = Forms!Menu!pathDatabase
-
-    Dim nameWithExtension As String
-    nameWithExtension = Right(strFullPath, Len(strFullPath) - InStrRev(strFullPath, "\"))
-
-    Dim name As String
-    name = Left(nameWithExtension, Len(nameWithExtension) - 3) & "db"
-
-    Forms!Menu!nameNewDatabase = name
-
-    nameNewDatabaseFromOriginalPath = name
-End Function
-```
+<script src="https://gist.github.com/el3um4s/ca9ef5ecc0164195f62ef9085f891f9a.js"></script>
 
 I extract the last part of the address with `Right(strFullPath, Len(strFullPath) - InStrRev(strFullPath, "\"))` and then replace the extension `mdb` with `db` using a code similar to this `Left(nameWithExtension, Len(nameWithExtension) - 3) & "db"`.
 
@@ -152,70 +106,17 @@ Next
 
 By combining everything I get the function `ShowListTable`:
 
-```vb
-Public Function ShowListTable() As Boolean
-  Forms!Menu!tableList.RowSource = ""
-  Dim database As String
-  database = Forms!Menu!pathDatabase
-
-  Dim db As DAO.database
-  Dim tdf As DAO.TableDef
-
-  Set db = OpenDatabase(database, False)
-
-  For Each tdf In db.TableDefs
-      If Not (tdf.name Like "MSys*" Or tdf.name Like "~*") Then
-          If Forms!Menu!tableList.RowSource = "" Then
-              Forms!Menu!tableList.RowSource = tdf.name
-          Else
-              Forms!Menu!tableList.RowSource = Forms!Menu!tableList.RowSource & ";" & tdf.name
-          End If
-      End If
-  Next
-  ShowListTable = True
-End Function
-```
+<script src="https://gist.github.com/el3um4s/c1d36f87128618a64172a1c8c2a6f9d1.js"></script>
 
 To select all the tables in the list box I use a function written by [Allen Browne](http://allenbrowne.com/)
 
-```vb
-Public Function SelectAllTables() As Boolean
-  ListBoxSelectAll Forms!Menu!tableList
-  SelectAllTables = ListBoxSelectAll(Forms!Menu!tableList)
-End Function
-
-Public Function ListBoxSelectAll(ByVal lst As ListBox) As Boolean
-  Dim lngRow As Long
-
-  If lst.MultiSelect Then
-      For lngRow = 0 To lst.ListCount - 1
-          lst.Selected(lngRow) = True
-      Next
-      ListBoxSelectAll = True
-  End If
-
-  ListBoxSelectAll = True
-End Function
-```
+<script src="https://gist.github.com/el3um4s/e737ad726017d0096bfab379d2f4b335.js"></script>
 
 ### Choose the destination folder
 
 Even choosing the destination folder seems a simple thing, except that it is not. Or at least it wasn't in the late 1990s.
 
-```vb
-Private Sub btnDestinationFolder_Click()
-  SelectDestinationFolder
-End Sub
-
-Public Function SelectDestinationFolder() As String
-  Dim path As String
-  path = BrowseFolder("Select destination folder")
-
-  Forms!Menu!destinationFolder = path
-
-  SelectDestinationFolder = path
-End Function
-```
+<script src="https://gist.github.com/el3um4s/6798fae650b11daa50dfc8973046bc8c.js"></script>
 
 The function `BrowseFolder` is a function that takes care of opening a dialog box to select a folder. The original codex is by [Terry Kreft](http://access.mvps.org/access/api/). On GitHub I uploaded the [GetFolderName.bas](https://github.com/el3um4s/how-to-export-mdb-to-sqlite-3/blob/main/src/GetFolderName.bas) file with a copy of the code.
 
@@ -223,151 +124,39 @@ The function `BrowseFolder` is a function that takes care of opening a dialog bo
 
 The export involves two distinct operations:
 
-```vb
-Private Sub btnExportTo_Click()
-  createNewDatabase
-  exportSelectedTables
-
-  MsgBox "COMPLETED"
-End Sub
-```
+<script src="https://gist.github.com/el3um4s/5fa4bfb98e0966edec415123134a0a7a.js"></script>
 
 First I create a new SQLite database, and then I fill it with Microsoft Access tables.
 
 The simplest way to create a new SQLite database is to start from an existing empty one, copy it to the destination folder and rename it.
 
-```vb
-Public Function createNewDatabase() As Boolean
-  Dim originalDB As String
-  originalDB = Forms!Menu!pathOriginalSQLiteDB
-
-  Dim newNameDB As String
-  newNameDB = Forms!Menu!nameNewDatabase
-
-  Dim destinationFolder As String
-  destinationFolder = Forms!Menu!destinationFolder
-
-  CreateFolder destinationFolder
-
-  Dim destinationFile As String
-  destinationFile = destinationFolder & "\" & newNameDB
-
-  CopyAFileDeletingOld originalDB, destinationFile
-
-  createNewDatabase = DoesFileExist(destinationFile)
-End Function
-```
+<script src="https://gist.github.com/el3um4s/ed6764653b6982339d9433c818e9d492.js"></script>
 
 To copy a file, I must first verify that it exists. To do this I use a simple function:
 
-```vb
-Public Function DoesFileExist(ByRef filePath) As Boolean
-  DoesFileExist = Dir(filePath) <> ""
-End Function
-```
+<script src="https://gist.github.com/el3um4s/442c50c95f387929e1fafdaa0913e307.js"></script>
 
 The same thing for folders; I have to make sure that a destination folder exists. The function `CreateFolder` takes care of this:
 
-```vb
-Public Function DoesFolderExist(ByRef folderPath As String) As Boolean
-  DoesFolderExist = Dir(folderPath, vbDirectory) <> ""
-End Function
-
-Public Function CreateFolder(ByRef folderPath As String) As Boolean
-  If Not DoesFolderExist(folderPath) Then
-    MkDir folderPath
-  End If
-  CreateFolder = DoesFolderExist(folderPath)
-End Function
-```
+<script src="https://gist.github.com/el3um4s/b8c229444745e7733f3959dd61973930.js"></script>
 
 To copy a file I can use `FileCopy filePath, destinationFile`. To delete any previous file with the same name I can instead use `Kill destinationFile`. By merging these snippets I can create the function `CopyAFileDeletingOld`:
 
-```vb
-Public Function CopyAFileDeletingOld(ByRef filePath As String, ByRef destinationFile As String) As Boolean
-  If DoesFileExist(filePath) Then
-    If DoesFileExist(destinationFile) Then
-        Kill destinationFile
-    End If
-    FileCopy filePath, destinationFile
-  End If
-
-  CopyAFileDeletingOld = Dir(destinationFile) <> ""
-End Function
-```
+<script src="https://gist.github.com/el3um4s/0393de580443506bdc5129611b10c138.js"></script>
 
 ### Export the tables
 
 The function that deals with exporting the tables is this:
 
-```vb
-Public Function exportSelectedTables() As Boolean
-
-  Dim dbAccess As String
-  dbAccess = Forms!Menu!pathDatabase
-
-  Dim newNameDB As String
-  newNameDB = Forms!Menu!nameNewDatabase
-
-  Dim destinationFolder As String
-  destinationFolder = Forms!Menu!destinationFolder
-
-  Dim destinationFile As String
-  destinationFile = destinationFolder & "\" & newNameDB
-
-  updateMessage "START"
-
-  Dim t As Variant
-  For Each t In Forms!Menu!tableList.ItemsSelected()
-    Dim nameTable As String
-    nameTable = Forms!Menu!tableList.Column(0, t)
-
-    Dim message As String
-    message = Forms!Menu!logExport
-    updateMessage nameTable & ": EXPORT" & vbCrLf & message
-
-    ExportFromOtherDatabaseToSQLite dbAccess, nameTable, destinationFile
-
-    updateMessage nameTable & ": OK" & vbCrLf & message
-  Next
-
-  exportSelectedTables = True
-End Function
-```
+<script src="https://gist.github.com/el3um4s/990ed147f427a4b6fbcae7ad6c3302fa.js"></script>
 
 The function `updateMessage` is a function that updates the log message and does not contribute to the export:
 
-```vb
-Public Function updateMessage(ByVal message As String) As String
-  Application.Echo False
-
-  Forms!Menu!logExport = message
-  Forms!Menu!logExport.Requery
-
-  Application.Echo True
-
-  updateMessage = message
-End Function
-```
+<script src="https://gist.github.com/el3um4s/1e8cf51933066226d393231a1bd263dc.js"></script>
 
 The important part is `ExportFromOtherDatabaseToSQLite dbAccess, nameTable, destinationFile`. This function accepts as input the location of the source database, the name of the table to be exported and the location of the target database.
 
-```vb
-Public Function ExportFromOtherDatabaseToSQLite(ByVal dbAccess As String, ByVal table As String, ByVal dbSQLite As String) As Boolean
-
-  Dim db As DAO.database
-  Set db = OpenDatabase(dbAccess, False)
-
-  DoCmd.TransferDatabase acImport, "Microsoft Access", dbAccess, acTable, table, table, False
-
-  ExportToSQLite table, dbSQLite
-
-  DoCmd.DeleteObject acTable, table
-  db.Close
-
-  ExportFromOtherDatabaseToSQLite = True
-End Function
-```
+<script src="https://gist.github.com/el3um4s/06eb01d330f1e60de43772a27a131632.js"></script>
 
 To make things easier I import the tables which I then have to export using:
 
@@ -383,13 +172,6 @@ DoCmd.DeleteObject acTable, table
 
 The function `ExportToSQLite table, dbSQLite` looks for the table `table` and exports it to `dbSQLite`:
 
-```vb
-Public Function ExportToSQLite(ByVal table As String, ByVal database As String) As Boolean
-
-  DoCmd.TransferDatabase acExport, "ODBC", "ODBC;DSN=SQLite3 Datasource;Database=" & database & ";StepAPI=0;SyncPragma=NORMAL;NoTXN=0;Timeout=100000;ShortNames=0;LongNames=0;NoCreat=0;NoWCHAR=0;FKSupport=0;JournalMode=;OEMCP=0;LoadExt=;BigInt=0;JDConv=0;", acTable, table, table, False
-
-  ExportToSQLite = True
-End Function
-```
+<script src="https://gist.github.com/el3um4s/63866ada01ae9f0b2732205661f3a677.js"></script>
 
 Well, that's it with that. This project was very interesting because it required me to do research on some issues of a few decades ago. I found it very instructive to confront some limitations of MS Access. And, to be honest, it's also very frustrating to have to look for workarounds to solve things that I take for granted today.
