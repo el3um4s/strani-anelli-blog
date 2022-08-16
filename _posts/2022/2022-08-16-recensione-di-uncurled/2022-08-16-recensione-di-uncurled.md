@@ -36,7 +36,7 @@ Il libro si divide in [diverse sezioni](https://un.curl.dev/intro/the-book):
 5. **Project**, strettamente legato alla sezione precedente, continua a indagare e a spiegare la stretta correlazione tra persone, open source e rapporti di buon vicinato.
 6. **Money**, ovvero come autofinanziare un progetto open source. O, per dirla in altre parole, _non lasciare il tuo lavoro sperando che l'open source ti paghi la pagnotta_.
 7. **Source**, dove Daniel spiega come gestire i contributi di altri sviluppatori, la documentazione scritta da altri e altri aspetti più squisitamente legati al codice.
-8. **Security**, dove l'autore spiga i problemi più comuni per creare del codice sicuro, e come gestire i cacciatori di bug (Bug Bounty)
+8. **Security**, dove l'autore spiega i problemi più comuni per creare del codice sicuro, e come gestire i cacciatori di bug (Bug Bounty).
 9. **Maintainer**, un altra sezione molto interessante in cui si affrontano i compiti necessari per mantenere un progetto open source. E, di conseguenza, le responsabilità di un maintainer. Spoiler: sono molte di più le cose da fare rispetto a quello che uno si aspetta.
 10. **Evolution**, ovvero com'è cambiato il mondo dell'Open Source negli ultimi tre decenni.
 11. **Life**, come gestire la propria vita e non trascurare la propria famiglia. E mia moglie ringrazia sentitamente per questo capitolo.
@@ -50,13 +50,13 @@ Detto questo, cosa ho capito io?
 
 Beh, ci sono alcune cose che mi hanno colpito e di cui voglio tenere nota.
 
-**A volte un progetto tira l'altro**, come per le ciliege. È un'aspetto comune in tutti i processi creativi. La risoluzione di problemi matematici, informatici, logici non è diversa: partendo da un problema particolare si incontrano molti altri problemi legati a quello iniziale. E spesso non c'è altro modo che risolverli per poter tornare a quello iniziale. Penso sia uno degli aspetti più belli della programmazione. E anche più frustranti.
+**A volte un progetto tira l'altro**, come per le ciliegie. È un'aspetto comune in tutti i processi creativi. La risoluzione di problemi matematici, informatici, logici non è diversa: partendo da un problema particolare si incontrano molti altri problemi legati a quello iniziale. E spesso non c'è altro modo che risolverli per poter tornare a quello iniziale. Penso sia uno degli aspetti più belli della programmazione. E anche più frustranti.
 
 **Perfect is the enemy of the good**, e a volte il buono è più che sufficiente. Anzi, a volte anche il mediocre va bene per risolvere un problema. E anche se un problema è un problema, una soluzione è una soluzione. Ed è spesso meglio cominciare da una soluzione e poi cambiare se necessario.
 
 **Open Source spesso vuol dire lavoro in solitaria**. Non so perché, ma è una cosa che mi ha colpito. Sì, lo so che i miei progetti sono sostanzialmente tutti frutto del mio lavoro. E per quanto mi ostini a lasciarli Open Source, beh, è più un lavoro da cowboy solitario più che di squadra. Scoprire che è la norma mi ha in qualche modo rassicurato. E anche in qualche modo spaventato.
 
-**Fanno più le lamentele che i complimenti**. E questo, ahimè vale in quasi tutti i campi. Quando si cura un progetto Open Source, o qualsiasi altra cosa gratis, sono più le voci di chi si lamenta piuttosto di chi ringrazia. In fin dei conti è anche comprensibile: chi usa una mia libreria vuole una soluzione. Se tutto va liscio non c'è nessuna ragione per interrogarsi sul perché. Se invece qualcosa non va, beh, ecco che la ricerca della soluzione prevede l'interpellare chi ha proposto quella soluzione.
+**Fanno più rumore le lamentele che i complimenti**. E questo, ahimè vale in quasi tutti i campi. Quando si cura un progetto Open Source, o qualsiasi altra cosa gratis, sono più le voci di chi si lamenta piuttosto di chi ringrazia. In fin dei conti è anche comprensibile: chi usa una mia libreria vuole una soluzione. Se tutto va liscio non c'è nessuna ragione per interrogarsi sul perché. Se invece qualcosa non va, beh, ecco che la ricerca della soluzione prevede l'interpellare chi ha proposto quella soluzione.
 
 **Aspettati insulti**. Anche questo vale per tutto, ci sarà qualcuno che insulterà. Lo so che non ha senso, ma così è. L'unica cosa da fare è restare calmi, e non rispondere a tono. Magari aspettare un giorno prima di rispondere, e farlo con tranquillità. E se la cosa non funziona, allungare un po' alla volta i tempi di risposta fino a far cadere la conversazione. Non c'è nessun progetto Open Source per vale la pena di farsi venire il sangue amaro.
 
