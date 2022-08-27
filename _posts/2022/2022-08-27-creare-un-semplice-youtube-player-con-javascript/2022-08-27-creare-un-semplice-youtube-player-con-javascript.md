@@ -29,7 +29,7 @@ L'interfaccia è abbastanza semplice. La maggior parte dello schermo è occupata
 
 È un progetto pensato come dimostrazione, quindi nel codice ho messo la possibilità di visualizzare i video di YouTube partendo da due file JSON distinti. Il primo con gli ID dei video, il secondo con gli URL. Ovviamente è possibile scegliere il proprio metodo preferito.
 
-È inoltre possibile scaricare il codice da questo link: [simple-youtube-player.c3p]([link](https://blog.stranianelli.com/c3p/simple-youtube-player.c3p).
+È inoltre possibile scaricare il codice da questo link: [simple-youtube-player.c3p](https://blog.stranianelli.com/c3p/simple-youtube-player.c3p).
 
 Eseguendo il progetto l'interfaccia è simile a questa:
 
