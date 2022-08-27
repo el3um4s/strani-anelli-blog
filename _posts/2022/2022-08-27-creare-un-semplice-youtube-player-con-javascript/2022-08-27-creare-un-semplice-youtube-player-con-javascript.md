@@ -153,7 +153,7 @@ export function unMute(iframeId) {
 }
 ```
 
-### Caricare un video ma non eseguirlo automaticamente:
+### Caricare un video ma non eseguirlo automaticamente
 
 ```js
 export function cueVideoById(iframeId, videoId) {
