@@ -33,7 +33,7 @@ Facendo i conti della serva, il prezzo più basso è `13$*12=156$ l'anno`, oppur
 
 Ammetto che questo aspetto mi ha disturbato, e non poco. Prima di procedere ho voluto leggere qualche altro parere, ma sfortunatamente in rete non c'è granché. Penso valga la pena di citare due sole recensioni:
 
-- [Article Forge Review PROS & CONS (2022) | Just Another Website Content Writer?](https://www.kasareviews.com/article-forge-review-website-content-writer/) di Kasa Review
+- [Article Forge Review PROS & CONS (2022) Just Another Website Content Writer?](https://www.kasareviews.com/article-forge-review-website-content-writer/) di Kasa Review
 - [Article Forge Review](https://tlcooper0001.medium.com/article-forge-review-966aa79f0755) di [Terry L. Cooper](https://tlcooper0001.medium.com/)
 
 Detto questo, ho deciso di provare Article Forge per 5 giorni.
