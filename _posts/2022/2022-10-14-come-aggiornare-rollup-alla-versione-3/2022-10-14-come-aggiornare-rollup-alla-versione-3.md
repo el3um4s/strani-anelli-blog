@@ -8,7 +8,7 @@ header:
   immagine_estesa: "image"
   immagine_fonte: "Photo credit: [**Max Chen**](https://unsplash.com/@maxchen2k)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2022-09-14 12:00"
+date: "2022-10-14 12:00"
 categories:
   - javascript
   - svelte
@@ -116,7 +116,7 @@ function serve() {
 }
 ```
 
-Devo sostituire `require("child_process")` con `import` qualcosa:
+Devo sostituire `require("child_process")` con `import { spawn } from "child_process"`:
 
 ```javascript
 import { spawn } from "child_process";
