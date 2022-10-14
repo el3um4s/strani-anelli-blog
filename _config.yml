@@ -121,7 +121,7 @@ author:
   name             : "Samuele"
   twitter          : "el3um4s"
   avatar           : "https://blog.stranianelli.com/assets/images/avatar.png"
-  bio              : "'I'm a hobby programmer, experimenting with Construct 3, Javascript and DenoJS."
+  bio              : "'I'm a hobby programmer, experimenting with Construct 3, Javascript and Electron."
   location         : "Milano"
   email            : "samuele@stranianelli.com"
   links:
