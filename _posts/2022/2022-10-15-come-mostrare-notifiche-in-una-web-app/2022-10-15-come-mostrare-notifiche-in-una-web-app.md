@@ -33,7 +33,7 @@ Visivamente, questo è il risultato che voglio ottenere:
 
 ![copied-to-clipboard.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2022/2022-10-15-come-mostrare-notifiche-in-una-web-app/copied-to-clipboard.gif)
 
-Come si può, la notifica è una piccola barra che appare in alto a destra. La barra è di colore verde, e contiene un messaggio di testo. La barra rimane visibile per un breve periodo di tempo, e poi scompare. La cosa interessante è che posso usare lo stesso metodo per mostrare diverse notifiche, di diversi colori e con diversi messaggi.
+Come si può vedere, la notifica è una piccola barra che appare in alto a destra. La barra è di colore verde, e contiene un messaggio di testo. La barra rimane visibile per un breve periodo di tempo, e poi scompare. La cosa interessante è che posso usare lo stesso metodo per mostrare diverse notifiche, di diversi colori e con diversi messaggi.
 
 ### Creo uno store per le notifiche
 
@@ -110,7 +110,7 @@ const notifications = {
 };
 ```
 
-Anche in questo caso uso il metodo `update()`, unito al metodo [filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) per rimuovere la notifica dall'array.
+Anche in questo caso uso il metodo `update()`, unito al metodo [filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), per rimuovere la notifica dall'array.
 
 Per gestire la scompara delle notifiche mi serve un timer, o qualcosa di simile. Per fortuna viene in mio aiuto il metodo [SetTimeout()](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout):
 
@@ -260,7 +260,7 @@ Ma come faccio a mostrare le notifiche con un colore diverso a seconda del tipo?
 <!-- ... -->
 ```
 
-Posso rendere il tutto più bellino aggiungendo un'animazione per evidenziare l'apparire e lo scomparire delle notifiche. Per farlo uso [svelte/trasition](https://svelte.dev/docs#run-time-svelte-transition) e [svelte/animate](https://svelte.dev/docs#run-time-svelte-animate):
+Posso rendere il tutto più bellino aggiungendo un'animazione per evidenziare l'apparire e lo scomparire delle notifiche. Per farlo uso [svelte/transition](https://svelte.dev/docs#run-time-svelte-transition) e [svelte/animate](https://svelte.dev/docs#run-time-svelte-animate):
 
 ```svelte
 <script>
