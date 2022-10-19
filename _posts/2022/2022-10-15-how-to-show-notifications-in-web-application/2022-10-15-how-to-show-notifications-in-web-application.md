@@ -125,4 +125,4 @@ Or, if I want to show a notification of a different color, I just need to change
 
 <script src="https://gist.github.com/el3um4s/07a41311e7ba58dd9668b519d5a3e0c2.js"></script>
 
-Well, I'd say that's all for now. If you want to see the full code, you can find it on [GitHub](https://github.com/el3um4s/docrypt). The application is available on [docrypt.org](https://docrypt.org/)..
+Well, that's all for now. If you want to see the full code, you can find it on [GitHub](https://github.com/el3um4s/docrypt). The application is available on [docrypt.org](https://docrypt.org/).
