@@ -23,7 +23,7 @@ tags:
   - css
 ---
 
-I continue with my notes regarding my app for encrypting and decrypting text messages (DoCrypt.org[DoCrypt.org](https://docrypt.org/)). I decided to use two languages, Italian and English. But I intend to add more languages in the future. I have chosen to create a specific component to manage the different languages. I think it's an easy way to build multilingual apps. In this post I talk about how to create a multilingual component with Svelte.
+I continue with my notes regarding my app for encrypting and decrypting text messages ([DoCrypt.org](https://docrypt.org/)). I decided to use two languages, Italian and English. But I intend to add more languages in the future. I have chosen to create a specific component to manage the different languages. I think it's an easy way to build multilingual apps. In this post I talk about how to create a multilingual component with Svelte.
 
 I use [Svelte](https://svelte.dev/), because it's simple. It can also translate all the components of the application in real time.
 
@@ -32,8 +32,6 @@ The idea is simple: I create a component to display the text in a specific langu
 <script src="https://gist.github.com/el3um4s/35c364a2044a0419468cfdfd5117bda3.js"></script>
 
 This way, I can change the language anywhere in the application, simply by using `lang.set("it")` or `lang.set("en")`.
-
-In questo modo, posso cambiare la lingua in qualsiasi punto dell'applicazione, semplicemente usando `lang.set("it")` o `lang.set("en")`.
 
 The second step is to create a dictionary. I can use various techniques, but for a small project one object is enough.
 
