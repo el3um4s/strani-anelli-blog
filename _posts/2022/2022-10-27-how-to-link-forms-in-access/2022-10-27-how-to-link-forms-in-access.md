@@ -38,31 +38,7 @@ The second form is used to display the position of the open database, and that o
 
 I create two functions:
 
-```vb
-Public Function getNameCurrentDB()
-    Dim db As DAO.Database
-    Set db = CurrentDb()
-
-    Dim name As String
-    name = db.name
-
-    Set db = Nothing
-
-    getNameCurrentDB = name
-End Function
-
-Public Function getNameFormDB()
-    Dim db As DAO.Database
-    Set db = CodeDb()
-
-    Dim name As String
-    name = db.name
-
-    Set db = Nothing
-
-    getNameFormDB = name
-End Function
-```
+<script src="https://gist.github.com/el3um4s/a26fabfdcdb6697bb7b6c4ce9239eaef.js"></script>
 
 So you get something like this:
 
@@ -70,15 +46,7 @@ So you get something like this:
 
 I also need two functions to open the two forms:
 
-```vb
-Public Sub openFormNotes()
-    DoCmd.OpenForm "frmNotes"
-End Sub
-
-Public Sub openFormInfo()
-    DoCmd.OpenForm "frmInfo"
-End Sub
-```
+<script src="https://gist.github.com/el3um4s/e901607b13073fcc6608176013972150.js"></script>
 
 ### Create the other databases
 
@@ -90,21 +58,7 @@ In order to actually link the masks I have to add a reference to the project. I 
 
 This is the simplest solution but I prefer to implement a general function.
 
-```vb
-Public Function AddReference(referenceToImport As String, nameDatabase As String)
-    Dim reference As reference
-
-    For Each reference In Access.References
-        Dim nameReference As String
-        nameReference = reference.Name
-        If nameReference = referenceToImport Then
-            Access.References.Remove reference
-        End If
-    Next reference
-
-    Set reference = References.AddFromFile(nameDatabase)
-End Function
-```
+<script src="https://gist.github.com/el3um4s/34df01e24675bf6a7263a640849ff4f0.js"></script>
 
 First I make sure that the same reference does not already exist. If there is I remove it. Then I add again the reference to the database I want to connect with.
 
@@ -116,37 +70,11 @@ I create some controls and add a button
 
 So I write the function:
 
-```vb
-Private Sub linkForms_Click()
-    On Error GoTo Err_linkForms_Click
-
-    Dim nameReference As String
-    nameReference = Forms![Menu]!NameReference.Value
-
-    Dim nameDatabase As String
-    nameDatabase = Forms![Menu]!NameDatabase.Value
-
-    AddReference nameReference, nameDatabase
-
-Exit_linkForms_Click:
-    Exit Sub
-
-Err_linkForms_Click:
-    Resume Exit_linkForms_Click
-End Sub
-```
+<script src="https://gist.github.com/el3um4s/e687abc70f019541761d62e4496564fb.js"></script>
 
 After connecting the two databases, I can call the functions to open the forms.
 
-```vb
-Public Function openNotes()
-    Notes.openFormNotes
-End Function
-
-Public Function openInfo()
-    Notes.openFormInfo
-End Function
-```
+<script src="https://gist.github.com/el3um4s/77c1a9abdfc481adfd29dd59b0b2df4e.js"></script>
 
 The final result is this:
 
