@@ -8,7 +8,7 @@ header:
   immagine_estesa: "image"
   immagine_fonte: "Photo credit: [**Sangga Rima Roman Selia**](https://unsplash.com/@sxy_selia)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2022-10-27 16:30"
+date: "2022-10-27 16:00"
 categories:
   - ms-access
   - database
