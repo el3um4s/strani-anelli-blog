@@ -30,7 +30,7 @@ Il procedimento, dopo averlo compreso, è abbastanza semplice e intuitivo. Preve
 3. Collegare i database al database di riferimento
 4. Richiamare le maschere quando servono
 
-## Creare un database di riferimento
+### Creare un database di riferimento
 
 In questo post non voglio complicare troppo le cose, quindi creo un database semplice (lo chiamo `notes`). Contiene una sola tabella, `tbNotes` con 2 campi: `ID` e `Note`. Inoltre, contiene due maschere. La prima, `frmNotes`, che permette di inserire le varie note e di eliminarle.
 
@@ -82,7 +82,7 @@ Public Sub openFormInfo()
 End Sub
 ```
 
-## Creare gli altri database
+### Creare gli altri database
 
 Ora che ho il database con le maschere di riferimento posso creare altri database. Creo il database `otherNotes`. Per il momento creo una maschera con due pulsati, ma senza implementare il codice:
 
