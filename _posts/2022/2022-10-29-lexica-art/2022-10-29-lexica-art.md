@@ -28,7 +28,7 @@ Anche in questo test ho usato la frase `Duomo Square in Milan, by night, with a 
 
 Come confronto possiamo provare a cercare la stessa cosa con Google Images:
 
-{% include picture img="lexica-search-milano.webp" ext="jpg" alt="" %}
+{% include picture img="google-search-milano.webp" ext="jpg" alt="" %}
 
 La quantità di immagini trovate è decisamente diversa. E la qualità è decisamente inferiore.
 
@@ -58,7 +58,7 @@ C'è un'altra cosa che mi piace molto di Lexica Art: è possibile salvare le imm
 
 {% include picture img="lexica-art-my-likes.webp" ext="jpg" alt="" %}
 
-Ma non è ancora finita. C'è ancora un'altra cosa che mi piace. È possibile caricare un'immagine e usarla come base per crearne delle altre. Provo con una paperella di papera:
+Ma non è ancora finita. C'è ancora un'altra cosa che mi piace. È possibile caricare un'immagine e usarla come base per crearne delle altre. Provo con una paperella di gomma:
 
 {% include picture img="lexica-art-upload.webp" ext="jpg" alt="" %}
 
