@@ -14,6 +14,11 @@ categories:
   - stable-diffusion
   - review
   - image auto generated
+tags:
+  - machine-learning
+  - stable-diffusion
+  - review
+  - image auto generated
 ---
 
 After [Dream Studio](https://blog.stranianelli.com/my-first-look-at-stable-diffusion-dreamstudio-beta/), I decided to test [Lexica Art](https://lexica.art/), another [Stable Diffusion](https://stability.ai/) project, which allows you to search for images and create images from text. It's less customizable than Dream Studio, but it's easier to use and, above all, it's free.
