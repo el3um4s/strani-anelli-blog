@@ -10,17 +10,13 @@ header:
   overlay_filter: rgba(79, 79, 79, 0.5)
 date: "2022-10-30 9:00"
 categories:
-  - Maps
-  - JavaScript
-  - Svelte
-  - TypeScript
-  - NodeJS
+  - machine-learning
+  - stable-diffusion
+  - image auto generated
 tags:
-  - Maps
-  - JavaScript
-  - Svelte
-  - TypeScript
-  - NodeJS
+  - machine-learning
+  - stable-diffusion
+  - image auto generated
 ---
 
 Negli ultimi giorni sono entrato in fissa con l'arte generata tramite l'Intelligenza Artificiale. Non ho le conoscenze necessarie per comprendere davvero il funzionamento di questi algoritmi, ma mi diverte molto sperimentare con le varie opzioni. Uno dei concetti più strani, per me, è quello di _guidance scale_. In questo post cercherò di capire cosa significa.
