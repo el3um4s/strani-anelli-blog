@@ -90,4 +90,4 @@ Per finire, se uso `Picasso` ottengo un risultato molto interessante:
 
 {% include picture img="cat-10.webp" ext="jpg" alt="" %}
 
-Bene, per il momento è tutto. Penso che mi manchi ancora un po' di pratica per scrivere dei prompt migliori. Se avete qualche consiglio, non esitate a lasciarlo nei commenti.
+Bene, per il momento è tutto. Penso che mi manchi ancora un po' di pratica per scrivere dei prompt migliori.
