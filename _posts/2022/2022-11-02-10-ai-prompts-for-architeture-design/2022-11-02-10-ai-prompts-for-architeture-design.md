@@ -127,7 +127,7 @@ Dimensions: 512 × 512
 A modern mayan palace in london, big windows, very detailed, very realistic, octane render, 8k, unreal, soft light, intricate details, trending on artstation, pastel color texture, sunset
 ```
 
-Seed: 0
+Seed: 940093187
 
 Guidance scale: 7
 
@@ -167,7 +167,7 @@ Dimensions: 512 × 512
 
 {% include picture img="architeture-09-variations.webp" ext="jpg" alt="" %}
 
-### 10
+### The Impossible
 
 {% include picture img="architeture-10.webp" ext="jpg" alt="" %}
 
