@@ -37,7 +37,7 @@ Bene, detto questo posso cominciare a provare cosa succede usando una lente fish
 
 {% include picture img="fish-eye.webp" ext="jpg" alt="" %}
 
-### LEnti per paesaggi: 14mm e 28 mm
+### Lenti per paesaggi: 14mm e 28 mm
 
 Adesso provo a chiedere all'IA di usare una lente da 14mm. Uso come prompt:
 
