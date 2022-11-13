@@ -8,7 +8,7 @@ header:
   immagine_estesa: "image"
   immagine_fonte: "Photo credit: [**Samuele**](https://blog.stranianelli.com/)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2022-11-13 10:00"
+date: "2022-11-13 9:00"
 categories:
   - indice delle cose notevoli
 tags:
