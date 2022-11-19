@@ -21,7 +21,7 @@ tags:
 
 Quando ho cominciato a sperimentare con la creazione di immagini tramite l'Intelligenza Artificiale, mia moglie mi ha fatto notare una cosa. Come questa tecnica pittorica, o se preferite, artistica, permettesse di ottenere risultati interessanti in campi molto diversi. Lei è appassionata di gioielleria artigianale e mi ha chiesto se era possibile creare immagini di gioielli tramite l'Intelligenza Artificiale. Non le interessano tanto la precisione dei dettagli quanto la possibilità di avere una fonte di ispirazione per le sue creazioni.
 
-Voglio tornare su questo tema in un prossimo post; penso abbia ragione, e che sia possibile usare questi software come fonte di ispirazione, di studio e di test. Quindi, oggi proverò a creare diversi modelli di gioielli con l'AI, seguendo il tema di alcuni dei contest e delle gare a cui lei ha partecipato. Ecco le mie idee per il [match creativo di Lisart Bijoux](https://www.youtube.com/@lisisland).
+Voglio tornare su questo tema in un prossimo post; penso abbia ragione, e che sia possibile usare questi software come fonte di ispirazione, di studio e di test. Quindi, oggi proverò a creare diversi modelli di gioielli con l'AI, seguendo il tema di alcuni dei contest e delle gare a cui lei ha partecipato. Ecco le mie idee per il [contest di Semplici Bijoux 2022](https://www.youtube.com/@semplicibijoux7815).
 
 ### Fase 1: Orecchini Mondrian
 
