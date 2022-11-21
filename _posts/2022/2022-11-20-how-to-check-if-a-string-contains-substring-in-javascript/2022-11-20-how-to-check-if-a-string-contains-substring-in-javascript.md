@@ -1,5 +1,5 @@
 ---
-title: "10 Modi Per Trovare Una Parola In Un Testo Con JavaScript"
+title: "How To Check If A String Contains Substring In JavaScript"
 published: true
 usa_webp: true
 header:
