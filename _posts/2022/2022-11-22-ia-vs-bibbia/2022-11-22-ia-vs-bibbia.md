@@ -27,7 +27,7 @@ Comincio con **Abraham (אַבְרָהָם)** Il primo profeta, il primo patriar
 
 {% include picture img="moses.webp" ext="jpg" alt="" %}
 
-Diverso il caso si **Moses (משֶׁה)**. Qui l'AI non ha una idea propone molte scene di azione. Ed effettivamente la vita di questo personaggio presenta molte possibilità di rappresentazione.
+Diverso il caso di **Moses (משֶׁה)**. Qui l'AI non ha una idea precisa e propone molte scene di azione. Effettivamente la vita di questo personaggio presenta molte possibilità di rappresentazione.
 
 {% include picture img="moses-2.webp" ext="jpg" alt="" %}
 
