@@ -8,7 +8,7 @@ header:
   immagine_estesa: "image"
   immagine_fonte: "Photo credit: [**Samuele**](https://blog.stranianelli.com/)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2022-11-23 9:00"
+date: "2022-11-23 15:00"
 categories:
   - indice delle cose notevoli
 tags:
@@ -21,7 +21,7 @@ Rieccomi con un nuovo post della mia rubrica aperiodica. Oggi parlerò di React 
 
 {% include picture img="card.webp" ext="jpg" alt="" %}
 
-In questo articolo Francisco Mendes ci mostra come creare delle card moderne usando React e Tailwind. Le card sono un elemento molto comune in molti siti web e Francisco ci mostra come creare delle card che siano responsive e che siano facilmente personalizzabili.
+In questo articolo Francisco Mendes ci mostra come creare delle [card moderne usando React e Tailwind](https://dev.to/franciscomendes10866/how-to-create-modern-cards-using-react-and-tailwind-2ded). Le card sono un elemento molto comune in molti siti web e Francisco ci mostra come creare delle card che siano responsive e che siano facilmente personalizzabili.
 
 Ma la cosa che mi interessa davvero non è la parte legata a React quanto quella su Tailwind. E più in generale gli stili CSS legati alle classi usate. Perché? Perché vorrei scrivere un articolo simile a questo ma usando Svelte. Non è detto che lo farò, ma intanto mi tengo da parte questo codice per poterlo usare come riferimento.
 
