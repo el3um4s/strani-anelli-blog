@@ -29,7 +29,7 @@ Oggi mi concentro sulla [prima gerarchia degli angeli](https://en.wikipedia.org/
 
 ### Serafini
 
-Comincio quindi con i **Serafini**, gli angeli puù vicini a Dio, quelli più importanti nella loro vicinanza al creatore. Ma come vengono descritti nella Bibbia? Con queste parole di [Isaia](<https://en.wikisource.org/wiki/Bible_(King_James)/Isaiah#6:1>):
+Comincio quindi con i **Serafini**, gli angeli più vicini a Dio, quelli più importanti nella loro vicinanza al creatore. Ma come vengono descritti nella Bibbia? Con queste parole di [Isaia](<https://en.wikisource.org/wiki/Bible_(King_James)/Isaiah#6:1>):
 
 ```
 each one had six wings; with twain he covered his face, and with twain he covered his feet, and with twain he did fly
