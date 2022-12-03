@@ -8,7 +8,7 @@ header:
   immagine_estesa: "image"
   immagine_fonte: "Photo credit: [**Samuele**](https://blog.stranianelli.com/)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2022-12-02 16:00"
+date: "2022-12-03 16:00"
 categories:
   - machine-learning
   - stable-diffusion
@@ -75,3 +75,11 @@ Il discorso cambia se andiamo a vedere gli altri cavalieri. Il cavaliere rosso p
 Il cavaliere nero, invece, mi ha stupito. Mi aspettavo qualcosa di più epico, di più medioevale. Ma l'AI ha scelto un cavaliere che somiglia quasi a un ninja. E ha fatto sparire la bilancia. Non so se è un errore o se l'AI ha intenzionalmente voluto rappresentare un cavaliere che non porta con sé la bilancia della giustizia.
 
 {% include picture img="black.webp" ext="jpg" alt="" %}
+
+Per finire l'ultimo cavaliere, quello verdastro, la Morte
+
+{% include picture img="pale.webp" ext="jpg" alt="" %}
+
+Anche in questo caso mi aspettavo qualcosa di più "classico". Tipo la vecchia signora con la falce in mano. Invece l'IA propone una carrellata di mostri scheletrici e deformi. Quasi fossero usciti da un incubo.
+
+Che poi, a pensarci bene, è proprio quello che sono i 4 cavalieri, l'incubo della fine del mondo generata dalle brutture dell'umanità.
