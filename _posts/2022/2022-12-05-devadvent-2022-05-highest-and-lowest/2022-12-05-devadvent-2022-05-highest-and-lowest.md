@@ -110,7 +110,19 @@ export class Kata {
       .split(" ")
       .map((x) => parseInt(x))
       .sort((a, b) => a - b);
+
     return `${arr[arr.length - 1]} ${arr[0]}`;
   }
+}
+```
+
+```js
+function highAndLow(numbers) {
+  const arr = numbers
+    .split(" ")
+    .map((c) => parseInt(c))
+    .sort((a, b) => a - b);
+
+  return `${arr[arr.length - 1]} ${arr[0]}`;
 }
 ```
