@@ -40,7 +40,7 @@ Examples
 
 ### The solution
 
-{% include picture img="image-2.webp" ext="jpg" alt="robot humanoid grabbing a book" %}
+{% include picture img="image-2.webp" ext="jpg" alt="a cute little robot grabbing a book. beautiful light. soft colour scheme, 8 k render" %}
 
 The first thing to do is to read the problem well. It's not just about reversing the order of the letters in a word or phrase. It's not just about reversing the order of the letters in a word or phrase. But it may be useful to start from this part, to understand how to deal with the problem.
 
