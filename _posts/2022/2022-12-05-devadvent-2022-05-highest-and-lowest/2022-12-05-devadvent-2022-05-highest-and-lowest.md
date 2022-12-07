@@ -23,7 +23,7 @@ tags:
   - typescript
 ---
 
-New day, new exercise for my DevAdvent 2023. Over the weekend I discovered a few other devAdvents but still decided not to follow any of them. Instead, I will continue to pick a random problem from CodeWars. [Today's one](https://www.codewars.com/kata/554b4ac871d6813a03000035) is about how to find the minimum and maximum of a series of numbers.
+New day, new exercise for my DevAdvent 2022. Over the weekend I discovered a few other devAdvents but still decided not to follow any of them. Instead, I will continue to pick a random problem from CodeWars. [Today's one](https://www.codewars.com/kata/554b4ac871d6813a03000035) is about how to find the minimum and maximum of a series of numbers.
 
 ### The problem
 
