@@ -75,6 +75,8 @@ This regex reads like this:
 
 This way I get an array containing all the words.
 
+{% include picture img="image-4.webp" ext="jpg" alt="kawai cute little representation of word of biggest number, beautiful light. soft colour scheme, 8 k render" %}
+
 The next step is figuring out how to capitalize the first letter of a word. FreeCodeCamp has published a nice guide on this topic ([link](https://www.freecodecamp.org/news/javascript-capitalize-first-letter-of-word/)).
 
 I use the [String.charAt()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt) method to get the first character of the word. Then I use the [String.toUpperCase()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase) method to convert it to uppercase. Finally I use the [String.slice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice) method to get the rest of the word.
