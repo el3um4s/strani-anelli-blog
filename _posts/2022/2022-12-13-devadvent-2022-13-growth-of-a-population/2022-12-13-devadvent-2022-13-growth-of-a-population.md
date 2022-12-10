@@ -54,7 +54,7 @@ p0, percent, aug (inhabitants coming or leaving each year), p (population to equ
 
 the function `nb_year` should return `n` number of entire years needed to get a population greater or equal to `p`.
 
-aug is an integer, percent a positive or null floating number, p0 and p are positive integers (> 0)
+`aug` is an integer, `percent` a positive or null floating number, `p0` and `p` are positive integers (`> 0`)
 
 ```
 Examples:
