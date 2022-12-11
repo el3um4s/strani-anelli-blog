@@ -70,9 +70,7 @@ Don't forget to convert the percent parameter as a percentage in the body of you
 
 {% include picture img="image-3.webp" ext="jpg" alt="kawai cute little representation of bar graph on a wall, beautiful light. soft colour scheme, 8 k render" %}
 
-I decided to solve this problem in two ways. The first is the most simple and the second is a little more complex.
-
-The first solution is the most simple. It is a simple `while` loop that will iterate until the condition is met. The condition is that the population is greater than or equal to the target population.
+I decided to solve this problem in two ways. The first solution is the most simple. It is a simple `while` loop that will iterate until the condition is met. The condition is that the population is greater than or equal to the target population.
 
 ```ts
 export const nbYear = (
@@ -95,7 +93,7 @@ export const nbYear = (
 
 The most difficult point is to understand the problem well. Since we are talking about population, the number must be an integer. Writing 0.25 inhabitants is meaningless. For this I have to use the Math.trunc() method to truncate the number of the expected population.
 
-I can write the same function a little more succinctly.
+I can write the same function a little more concise.
 
 ```js
 function nbYear(p0, percent, aug, p) {
