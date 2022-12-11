@@ -69,6 +69,12 @@ diagrammatic drawing of math concepts
 
 {% include picture img="diagrammatic.webp" ext="jpg" alt="" %}
 
+```
+diagrammatic drawing of a machine to sum numbers
+```
+
+{% include picture img="sum.webp" ext="jpg" alt="" %}
+
 ### Paper Cut Craft Illustration
 
 ```
@@ -76,3 +82,11 @@ paper cut craft illustration of mandelbrot
 ```
 
 {% include picture img="paper-craft.webp" ext="jpg" alt="" %}
+
+### Paper quilling
+
+```
+Paper quilling of math formula
+```
+
+{% include picture img="paper-quilling.webp" ext="jpg" alt="" %}
