@@ -29,8 +29,6 @@ Today's DevAdvent 2022 issue was particularly interesting. In itself it is not v
 
 link to the [Kata](https://www.codewars.com/kata/554a44516729e4d80b000012)
 
-{% include picture img="image-2.webp" ext="jpg" alt="kawai cute little representation of bar graph on a wall, beautiful light. soft colour scheme, 8 k render" %}
-
 A man has a rather old car being worth `$2000`. He saw a secondhand car being worth `$8000`. He wants to keep his old car until he can buy the secondhand one.
 
 He thinks he can save $1000 each month but the prices of his old car and of the new one decrease of `1.5` percent per month. Furthermore this percent of loss increases of `0.5` percent at the end of every two months. Our man finds it difficult to make all these calculations.
