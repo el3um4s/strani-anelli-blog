@@ -1,5 +1,5 @@
 ---
-title: "DevAdvent 2022: #16 The Persistence Bugger Problem: From Intimidation to Understanding"
+title: "DevAdvent 2022: #16 Multiplicative Persistence"
 published: true
 usa_webp: true
 header:
