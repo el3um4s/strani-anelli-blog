@@ -8,7 +8,7 @@ header:
   immagine_estesa: "image"
   immagine_fonte: "Photo credit: [**Samuele**](https://blog.stranianelli.com/)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2022-12-23 16:00"
+date: "2022-12-23 09:00"
 categories:
   - devadvent
   - js
@@ -49,6 +49,8 @@ add("11", "99");   -> "110"
 - You can't use other libraries
 
 ### The AI Solution
+
+{% include picture img="image-2.webp" ext="jpg" alt="kawai cute little cartoon mastodon character, with a book, beautiful light. soft colour scheme, 8 k render" %}
 
 I admit that I was stumbling in the dark. The problem is that I can't use BigInt, which would be the most logical and also the most effective solution. After searching the internet a bit and not finding a solution, I tried asking ChatGPT for some ideas. It gave me this solution:
 
@@ -107,6 +109,8 @@ This code defines a function add that takes in two large integers as strings and
 9. Finally, the function returns the result variable, which contains the sum of the two large integers as a string.
 
 ### My Solution
+
+{% include picture img="image-3.webp" ext="jpg" alt="kawai cute little cartoon mastodon character, with a book, beautiful light. soft colour scheme, 8 k render" %}
 
 The proposed solution is good, and I could be satisfied with it. But I don't like it. I don't like it because finding the solution this way is a bit like cheating. And above all because it takes away the pleasure of discovery and study.
 
