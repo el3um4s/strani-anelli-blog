@@ -100,6 +100,8 @@ However, there's one thing I don't like. That series of 'if...then...else' condi
 
 Let's take a closer look at the code.
 
+{% include picture img="image-4.webp" ext="jpg" alt="kawai cute little cartoon orcs characters, in armor, beautiful light. soft colour scheme, 8 k render" %}
+
 What I want to do is compare each element in the array and then count how many elements meet the given condition.
 
 I'll try rephrasing the sentence in a different way: I want to get from each array all the elements that meet a certain condition. In other words, I want to filter all the elements that are greater than the corresponding element in the other array.
