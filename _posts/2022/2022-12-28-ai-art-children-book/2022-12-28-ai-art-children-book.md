@@ -123,3 +123,5 @@ Bene, queste sono le immagini che ho ottenuto. La cosa interessante è che lo st
 ```
 A penguin is drawing on a computer with Photoshop, in an ice igloo, with a window showing a sunset. Children book illustration, in the style of Oliver Jeffers
 ```
+
+{% include picture img="prompt.webp" ext="jpg" alt="" %}
