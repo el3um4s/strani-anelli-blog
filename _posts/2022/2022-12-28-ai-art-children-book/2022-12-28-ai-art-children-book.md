@@ -118,7 +118,7 @@ a penguin playing videogame, children book illustration, in the style of Oliver 
 
 ### Conclusion
 
-Bene, queste sono le immagini che ho ottenuto. La cosa interessante è che lo stile dei disegni richiama, più o meno, lo stile dei disegnatori originali. Però non sono del tutto soddisfatto. Alcune delle immagini sono interessanti ma in generale non molto. Penso che ci sia ancora molto da migliorare, a partire dai prompt usati. Per esempio se uso un prompt più elaborato ottengo disegni più interessanti:
+These are the images I got from my experiments. The interesting thing is that the style recalls, more or less, the style by the original illustrators. However, I’m not completely satisfied. Some of the pictures are fascinating but not all of them. I think there is much to improve, starting with the prompts. For example, if I choose an in-depth prompt, I get more intriguing images:
 
 ```
 A penguin is drawing on a computer with Photoshop, in an ice igloo, with a window showing a sunset. Children book illustration, in the style of Oliver Jeffers
