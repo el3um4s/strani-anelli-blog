@@ -1,5 +1,6 @@
 ---
-title: "AI and the Apple: the different mediums"
+title: "From Acrylic to Watercolor: A Tour of AI Art Media"
+subtitle: "A Step-by-Step Walkthrough of Generating Images with Different Mediums Using AI"
 published: true
 usa_webp: true
 header:
