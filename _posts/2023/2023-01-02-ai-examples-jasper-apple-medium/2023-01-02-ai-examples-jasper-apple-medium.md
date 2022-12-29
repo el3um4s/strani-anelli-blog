@@ -128,3 +128,142 @@ An Apple in a table, watercolor
 ```
 
 {% include picture img="apple-watercolor.webp" ext="jpg" alt="An Apple in a table, watercolor" %}
+
+Well, these 10 are the basic mediums, but we can use others. By searching the internet, you can find [other suggestions](https://promptomania.com/generic-prompt-builder/). For example:
+
+- canvas
+- charcoal
+- crayon
+- glass
+- mosaic
+- felt
+- origami
+- papercutting
+- ice-carving
+- wall decal
+- stencil
+- indian art
+- negative space
+- classic oil painting
+- modern oil painting
+- pastel
+- pencil sketch
+- spray paint
+- wood panels
+- paint-by-numbers
+- impasto
+- silkscreen printing
+- finger painting
+- lithograph
+- engraving
+- découpage
+- linocut
+- risograph
+- couache
+- cave painting
+- tapestry
+- text
+- typeface
+- frame
+- banner
+- aquatint
+- fretwork
+- overglaze
+- azulejo
+- glaze
+- inglaze
+- paleolithic pottery
+- neolitic pottery
+- light art
+- light painting
+- resin
+- enamel pin
+- latte art
+- coffee stain
+- smoke art
+- tattoo
+- sticker bomb
+- toy
+- scrapbooking
+- sparkly
+- soviet art
+
+### Canvas
+
+```
+An Apple in a table, canvas
+```
+
+{% include picture img="apple-canvas.webp" ext="jpg" alt="An Apple in a table, canvas" %}
+
+### Charcoal
+
+```
+An Apple in a table, charcoal
+```
+
+{% include picture img="apple-charcoal.webp" ext="jpg" alt="An Apple in a table, charcoal" %}
+
+### Crayon
+
+```
+An Apple in a table, crayon
+```
+
+{% include picture img="apple-crayon.webp" ext="jpg" alt="An Apple in a table, crayon" %}
+
+### Glass
+
+```
+An Apple in a table, glass
+```
+
+{% include picture img="apple-glass.webp" ext="jpg" alt="An Apple in a table, glass" %}
+
+### Mosaic
+
+```
+An Apple in a table, mosaic
+```
+
+{% include picture img="apple-mosaic.webp" ext="jpg" alt="An Apple in a table, mosaic" %}
+
+### Felt
+
+```
+An Apple in a table, felt
+```
+
+{% include picture img="apple-felt.webp" ext="jpg" alt="An Apple in a table, felt" %}
+
+### Origami
+
+```
+An Apple in a table, origami
+```
+
+{% include picture img="apple-origami.webp" ext="jpg" alt="An Apple in a table, origami" %}
+
+### Papercutting
+
+```
+An Apple in a table, papercutting
+```
+
+{% include picture img="apple-papercutting.webp" ext="jpg" alt="An Apple in a table, papercutting" %}
+
+### Ice-carving
+
+```
+An Apple in a table, ice-carving
+```
+
+{% include picture img="apple-ice.webp" ext="jpg" alt="An Apple in a table, ice-carving" %}
+
+### Wall Decal
+
+```
+An Apple in a table, wall decal
+```
+
+{% include picture img="apple-wall.webp" ext="jpg" alt="An Apple in a table, wall decal" %}
