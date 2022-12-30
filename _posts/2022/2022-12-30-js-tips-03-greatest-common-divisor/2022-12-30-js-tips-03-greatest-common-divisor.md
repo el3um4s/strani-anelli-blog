@@ -21,7 +21,7 @@ tags:
   - typescript
 ---
 
-The problem today is related to mathematics. Specifically, it is about finding the greatest common divisor of two positive integers. In mathematics, the greatest common divisor of two integers `a` and `b`, which are not both equal to zero, is denoted by `MCD(a,b)` and is the largest natural number by which both can be divided.
+The problem today is related to mathematics. Specifically, it is about finding the greatest common divisor of two positive integers. In mathematics, the greatest common divisor of two integers `a` and `b`, which are not both equal to zero, is denoted by `GCD(a,b)` and is the largest natural number by which both can be divided.
 
 ### The Problem: Greatest Common Divisor
 
