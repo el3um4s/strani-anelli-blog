@@ -103,7 +103,7 @@ This method works, but it is a bit slow.
 
 {% include picture img="image-05.webp" ext="jpg" alt="2 Kawai cute little  cartoon android clones character playing the trumpet, beautiful light, soft colour scheme, 8 k render, pastel" %}
 
-And that's where the `structuredClone()` method comes into play. The syntax is very simple:
+And that's where the [`structuredClone()`](https://developer.mozilla.org/en-US/docs/Web/API/structuredClone) method comes into play. The syntax is very simple:
 
 ```js
 structuredClone(value);
