@@ -9,7 +9,7 @@ header:
   immagine_estesa: "image"
   immagine_fonte: "Photo credit: [**Samuele**](https://blog.stranianelli.com/)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2023-01-02 09:00"
+date: "2023-01-09 09:00"
 categories:
   - machine-learning
   - stable-diffusion
