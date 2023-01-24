@@ -22,7 +22,7 @@ tags:
   - typescript
 ---
 
-Qualche mese fa è stata pubblicata una versione di SQLite 3 compilata per WebAssembly. Cosa significa? Significa poter usare nativamente SQLite 3 in un browser. In altre parole, abbiamo a nostra disposizione la potenza e la facilità d'uso di uno dei miglio database relazionali direttamente dal browser. Ho cominciato a sperimentare questa possibilità, e ho creato una pagina per testare le operazioni di base. In questo post riporterò i miei appunti sui passaggi fondamentali da seguire.
+Qualche mese fa è stata pubblicata una versione di SQLite 3 compilata per WebAssembly. Cosa significa? Significa poter usare nativamente SQLite 3 in un browser. In altre parole, abbiamo a nostra disposizione la potenza e la facilità d'uso di uno dei migliori database relazionali direttamente dal browser. Ho cominciato a sperimentare questa possibilità, e ho creato una pagina per testare le operazioni di base. In questo post riporterò i miei appunti sui passaggi fondamentali da seguire.
 
 ![test-sqlite.gif](https://raw.githubusercontent.com/el3um4s/strani-anelli-blog/master/_posts/2023/2023-01-20-js-wasm-sqlite3-01-italiano/test-sqlite.gif)
 
