@@ -102,7 +102,8 @@ const deserialize = (db, bytes) => {
     p,
     bytes.length,
     bytes.length,
-    0
+    sqlite3.capi.SQLITE_DESERIALIZE_FREEONCLOSE |
+      sqlite3.capi.SQLITE_DESERIALIZE_RESIZEABLE
   );
   return db;
 };
@@ -131,7 +132,8 @@ const readDatabase = (arrayBuffer) => {
     p,
     bytes.length,
     bytes.length,
-    0
+    sqlite3.capi.SQLITE_DESERIALIZE_FREEONCLOSE |
+      sqlite3.capi.SQLITE_DESERIALIZE_RESIZEABLE
   );
   return db;
 };
