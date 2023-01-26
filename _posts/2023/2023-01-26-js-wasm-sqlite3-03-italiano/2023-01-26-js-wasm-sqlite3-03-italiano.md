@@ -9,7 +9,7 @@ header:
   immagine_estesa: "image"
   immagine_fonte: "Photo credit: [**Samuele**](https://blog.stranianelli.com/)"
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: "2023-01-24 16:00"
+date: "2023-01-26 16:00"
 categories:
   - js
   - ts
