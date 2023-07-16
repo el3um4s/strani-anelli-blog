@@ -32,100 +32,100 @@ Here, we can enter the URL for the maps and the `Service Type` to use. We can le
 
 **Google Map**
 
-`https://mt1.google.com/vt/lyrs=r&x={col}&y={row}&z={level}`
-
 {% include picture img="Google Map.webp" ext="jpg" alt="" %}
+
+`https://mt1.google.com/vt/lyrs=r&x={col}&y={row}&z={level}`
 
 **Google Satellite Hybrid**
 
-`https://mt1.google.com/vt/lyrs=y&x={col}&y={row}&z={level}`
-
 {% include picture img="Google Satellite Hybrid.webp" ext="jpg" alt="" %}
+
+`https://mt1.google.com/vt/lyrs=y&x={col}&y={row}&z={level}`
 
 **Google Earth Basemap**
 
-`https://mt1.google.com/vt/lyrs=s&x={col}&y={row}&z={level}`
-
 {% include picture img="Google Earth Basemap.webp" ext="jpg" alt="" %}
+
+`https://mt1.google.com/vt/lyrs=s&x={col}&y={row}&z={level}`
 
 **Google Labels**
 
-`https://mt.google.com/vt/lyrs=h&hl=en&z={level}&x={col}&y={row}` (Note: instead of `hl=en`, you can insert a different language, e.g.,` hl=it`)
-
 {% include picture img="Google Labels.webp" ext="jpg" alt="" %}
+
+`https://mt.google.com/vt/lyrs=h&hl=en&z={level}&x={col}&y={row}` (Note: instead of `hl=en`, you can insert a different language, e.g.,` hl=it`)
 
 **Google Aerial**
 
-`https://mt.google.com/vt/lyrs=s&hl=en&z={level}&x={col}&y={row}`
-
 {% include picture img="Google Aerial.webp" ext="jpg" alt="" %}
+
+`https://mt.google.com/vt/lyrs=s&hl=en&z={level}&x={col}&y={row}`
 
 **Google Terrain**
 
-`https://mt1.google.com/vt/lyrs=p&x={col}&y={row}&z={level}`
-
 {% include picture img="Google Terrain.webp" ext="jpg" alt="" %}
+
+`https://mt1.google.com/vt/lyrs=p&x={col}&y={row}&z={level}`
 
 **Google Roads**
 
-`https://mt1.google.com/vt/lyrs=h&x={col}&y={row}&z={level}`
-
 {% include picture img="Google Roads.webp" ext="jpg" alt="" %}
+
+`https://mt1.google.com/vt/lyrs=h&x={col}&y={row}&z={level}`
 
 **OpenStreetMap**
 
-`https://a.tile.openstreetmap.org/{level}/{col}/{row}.png`
-
 {% include picture img="OpenStreetMap.webp" ext="jpg" alt="" %}
+
+`https://a.tile.openstreetmap.org/{level}/{col}/{row}.png`
 
 **OpenStreetMap Blueprint**
 
-`https://www.arcgis.com/sharing/rest/content/items/80be160f0ca1413d898ad4e90d197278/resources/styles/root.json`
-
 {% include picture img="OpenStreetMap Blueprint.webp" ext="jpg" alt="" %}
 
+`https://www.arcgis.com/sharing/rest/content/items/80be160f0ca1413d898ad4e90d197278/resources/styles/root.json`
+
 **OpenStreetMap Light Gray Canvas**
+
+{% include picture img="OpenStreetMap Light Gray Canvas.webp" ext="jpg" alt="" %}
 
 `https://www.arcgis.com/sharing/rest/content/items/29a71939af7a498584f44c4feca7249b/resources/styles/root.json`
 
 `https://www.arcgis.com/sharing/rest/content/items/1932e7d4432d45dabc0d4d13109c1f09/resources/styles/root.json`
 
-{% include picture img="OpenStreetMap Light Gray Canvas.webp" ext="jpg" alt="" %}
-
 **OpenStreetMap Dark Gray Canvas**
+
+{% include picture img="OpenStreetMap Dark Gray Canvas.webp" ext="jpg" alt="" %}
 
 `https://www.arcgis.com/sharing/rest/content/items/b49a8db3fe6e4f9f99cb713aee150e8d/resources/styles/root.json`
 
 `https://www.arcgis.com/sharing/rest/content/items/cb38f2afc497482a85579dce4c3ff4ed/resources/styles/root.json`
 
-{% include picture img="OpenStreetMap Dark Gray Canvas.webp" ext="jpg" alt="" %}
-
 **OpenStreetMap Navigation**
-
-`https://www.arcgis.com/sharing/rest/content/items/f886634ab3f349f18199bf554bf75ee3/resources/styles/root.json`
 
 {% include picture img="OpenStreetMap Navigation.webp" ext="jpg" alt="" %}
 
-**OpenStreetMap Navigation Dark**
+`https://www.arcgis.com/sharing/rest/content/items/f886634ab3f349f18199bf554bf75ee3/resources/styles/root.json`
 
-`https://www.arcgis.com/sharing/rest/content/items/92966c7ebc3d4ddaac34050560568bad/resources/styles/root.json`
+**OpenStreetMap Navigation Dark**
 
 {% include picture img="OpenStreetMap Navigation Dark.webp" ext="jpg" alt="" %}
 
-**Stamen Toner**
+`https://www.arcgis.com/sharing/rest/content/items/92966c7ebc3d4ddaac34050560568bad/resources/styles/root.json`
 
-`https://stamen-tiles.a.ssl.fastly.net/toner/{z}/{x}/{y}.png`
+**Stamen Toner**
 
 {% include picture img="Stamen Toner.webp" ext="jpg" alt="" %}
 
-**Stamen Terrain**
+`https://stamen-tiles.a.ssl.fastly.net/toner/{z}/{x}/{y}.png`
 
-`https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg`
+**Stamen Terrain**
 
 {% include picture img="Stamen Terrain.webp" ext="jpg" alt="" %}
 
+`https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg`
+
 **Stamen Watercolor**
 
-`https://stamen-tiles.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg`
-
 {% include picture img="Stamen Watercolor.webp" ext="jpg" alt="" %}
+
+`https://stamen-tiles.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg`
