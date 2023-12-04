@@ -342,7 +342,7 @@ export default globalThis.Counter;
 
 Da un Event Sheet uso il codice JavaScript
 
-```
+```js
 globalThis.Counter();
 ```
 
