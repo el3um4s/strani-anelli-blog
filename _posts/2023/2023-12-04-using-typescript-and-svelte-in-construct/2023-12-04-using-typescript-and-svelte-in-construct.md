@@ -20,7 +20,7 @@ tags:
   - svelte
 ---
 
-The latest version of Construct 3 introduces an interesting feature: the ability to use TypeScript. Ashley has written a comprehensive guide on the various steps to follow (you can find it [here](https://www.construct.net/en/tutorials/using-typescript-construct-3003)). Building upon this, I want to add some notes on how to integrate Svelte into a Construct project.
+The latest version of Construct 3 introduces an interesting feature: the ability to use TypeScript. Ashley wrote a comprehensive guide on the various steps to follow (you can find it [here](https://www.construct.net/en/tutorials/using-typescript-construct-3003)). Building upon this, I want to add some notes on how to integrate Svelte into a Construct project.
 
 These notes are divided into two parts. In the first part, I'll summarize the main steps to use TypeScript within C3. It's a condensed version of Ashley's guide. In the second part, I'll focus on using Svelte, reproducing the simplest example:
 
@@ -42,7 +42,7 @@ After setting up your computer, you can create a project in Construct. Save the 
 
 {% include picture img="save-as-project-folder.webp" ext="jpg" alt="Menu ► Project ► Save as ► Save as project folder..." %}
 
-The next step is to right-click on `Scripts` and choose `TypeScript ► Set up TypeScript`.
+The next step is right-click on `Scripts` and choose `TypeScript ► Set up TypeScript`.
 
 {% include picture img="set-up-typescript.webp" ext="jpg" alt="TypeScript ► Set up TypeScript" %}
 
@@ -74,7 +74,7 @@ declare global {
 
 This allows me to customize `globalThis`.
 
-I then add the file `scripts/definitions/defs.ts`:
+Then I add the file `scripts/definitions/defs.ts`:
 
 ```ts
 export interface Globals {}
@@ -114,7 +114,7 @@ So far, we've covered configuring C3 and TypeScript. Now it's time to add [Svelt
 
 Remember the purpose of this tutorial: creating a button that counts clicks. In other words, replicating a basic example.
 
-To do this, the first thing to do is create a folder to save the Svelte-related files. I'll creatively call this folder `Svelte`. From within it, I open a terminal and use the command:
+To do this, the first thing to do is create a folder to save the Svelte-related files. I'll be creative and call this folder `Svelte`. From within it, I open a terminal and use the command:
 
 ```bash
 npm create vite@latest
