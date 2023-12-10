@@ -77,8 +77,7 @@ export default {
 };
 ```
 
-Ho due modi per permettere a Svelte di usare gli stili di Tailwind. Il primo è di creare un componente `TailwindCSS.svelte`
-:
+Ho due modi per permettere a Svelte di usare gli stili di Tailwind. Il primo è di creare un componente `TailwindCSS.svelte`:
 
 ```html
 <style>
