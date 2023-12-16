@@ -63,7 +63,7 @@ Subito sotto ci sono le immagini generate, con evidenziate quelle selezionate e 
 
 A fondo pagina trovo un prompt di esempio con lo stile creato
 
-{% include picture img="style-decoder-for-midjourney-04.webp" ext="jpg" alt="style-decoder-for-midjourney-04" %}
+{% include picture img="style-decoder-for-midjourney-05.webp" ext="jpg" alt="style-decoder-for-midjourney-05" %}
 
 ```text
 /imagine prompt: House by canal --style v6k9dkS9FT4SPJwK0jc2sn7vURzlhorZqDL5jlft
