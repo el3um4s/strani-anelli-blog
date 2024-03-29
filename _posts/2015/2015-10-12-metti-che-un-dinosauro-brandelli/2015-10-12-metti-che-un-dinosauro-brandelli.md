@@ -2,12 +2,18 @@
 title: Metti che un Dinosauro… (Brandelli)
 usa_webp: true
 header:
-  immagine_tipo: "jpg"
+  immagine_tipo: jpg
   miniatura: strani-anelli-dinosauri
   immagine_estesa: strani-anelli-dinosauri
-  overlay_filter: 'rgba(79, 79, 79, 0.5)'
-  immagine_fonte: 'Photo credit: [Arturo Garcia](https://unsplash.com/@arturomontes)'
-date: '2015-10-12 17:00'
+  overlay_filter: rgba(79, 79, 79, 0.5)
+  immagine_fonte: "Photo credit: [Arturo Garcia](https://unsplash.com/@arturomontes)"
+date: 2015-10-12 17:00
+cover: cover.webp
+categories:
+  - Nessuna Categoria
+column: Racconti
+published: true
+description: Ho in testa una storia, e più passa il tempo più prende forma. Bè, non è esattamente un racconto, è più un mondo che si sta formando, con tutta una sua mitologia. E’ una cosa strana.
 ---
 
 Ho in testa una storia, e più passa il tempo più prende forma.

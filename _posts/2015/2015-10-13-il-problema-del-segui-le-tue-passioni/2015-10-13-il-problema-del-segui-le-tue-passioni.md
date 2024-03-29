@@ -9,7 +9,6 @@ header:
   immagine_fonte: 'Photo credit: [**Jossuha Théophile**](https://unsplash.com/@nunchakouy)'
 date: '2015-10-13 17:00'
 ---
-
 Segui sempre le tue passioni. Sì, certo, pare un buon consiglio. Se organizzi la tua vita attorno a quello che ami fare di certo avrai una vita meravigliosa. Per di più, in genere, ti piace fare quello che sai fare bene. Come può essere sbagliato questo consiglio?
 
 ### Segui le tue passioni: il problema del tempo

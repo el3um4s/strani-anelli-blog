@@ -2,11 +2,17 @@
 title: Luglio (Racconto)
 usa_webp: true
 header:
-  immagine_tipo: "jpg"
+  immagine_tipo: jpg
   miniatura: strani-anelli-viaggio-in-treno
   immagine_estesa: strani-anelli-viaggio-in-treno
   overlay_filter: rgba(79, 79, 79, 0.5)
-date: '2015-10-05 17:21'
+date: 2015-10-05 17:21
+categories:
+  - Nessuna Categoria
+cover: cover.webp
+column: Racconti
+published: true
+description: Che strana giornata. Tutto il giorno in movimento. E un pomeriggio passato in ospedale accanto ad una persona a me cara operata d’urgenza ieri notte. Erano dieci anni che non entravo nell’ospedale di Vicenza. Vuoi perché sono 10-15 anni che non vivo più in quelle zone. Vuoi perché tutte le volte che sono stato male ero fuori dall’Italia.
 ---
 
 Che strana giornata. Tutto il giorno in movimento. E un pomeriggio passato in ospedale accanto ad una persona a me cara operata d’urgenza ieri notte.
