@@ -40,15 +40,6 @@ export function searchPostsIndex(searchTerm: string) {
 					content: getMatches(post.content as string, match)
 				};
 			})
-		// .map(({ slug, title, content }) => {
-		// 	return {
-		// 		slug,
-		// 		// replace match in title with a marker
-		// 		title: replaceTextWithMarker(title, match),
-		// 		// match words in post and replace matches with marker
-		// 		content: getMatches(content as string, match)
-		// 	};
-		// })
 	);
 }
 

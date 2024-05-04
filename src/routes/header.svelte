@@ -46,12 +46,12 @@
 				</a>
 			</li>
 			<li> -->
-			<li>
+			<!-- <li>
 				<a href="{config.url}/search">
 					<Search />
 					<span>Search</span>
 				</a>
-			</li>
+			</li> -->
 			<li>
 				<a href="{config.url}/contact">
 					<Contact />
