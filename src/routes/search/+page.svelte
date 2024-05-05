@@ -1,44 +1,24 @@
 <script lang="ts">
-	import { slide } from 'svelte/transition';
 	import * as config from '$lib/config';
 	import type { Post } from '$lib/types';
-	import { base } from '$app/paths';
-	import { formatDate } from '$lib/utils';
-
-	// import PostPreview from '$lib/components/custom/post-preview.svelte';
-
 	import PostPreview from '$lib/components/search/search-results.svelte';
 
-	// Vite has a special import for workers
-	import SearchWorker from '$lib/components/search/search-worker?worker';
-	import { onMount } from 'svelte';
+	let { data } = $props();
 
-	let search: 'idle' | 'load' | 'ready' = 'idle';
-	let searchTerm = '';
-	let results: Post[] = [];
-	let searchWorker: Worker;
+	let searchTerm = $state('');
+	let allPosts: Post[] = data.posts;
 
-	onMount(() => {
-		// create worker
-		searchWorker = new SearchWorker();
-		// listen for messages
-		searchWorker.addEventListener('message', (e) => {
-			const { type, payload } = e.data;
-			type === 'ready' && (search = 'ready');
-			type === 'results' && (results = payload.results);
-		});
-		// initialize when the component mounts
-		searchWorker.postMessage({ type: 'load' });
-	});
+	let results = $derived([...filterPosts(allPosts, searchTerm)]);
 
-	$: if (search === 'ready') {
-		// update results
-		searchWorker.postMessage({ type: 'search', payload: { searchTerm } });
-	}
-
-	$: if (results.length > 0) {
-		console.log('results', results.length);
-		console.log(results);
+	function filterPosts(list: Post[], term: string): Post[] {
+		if (term.replaceAll(' ', '').length >= 3) {
+			return list.filter((post) => {
+				const union: string = `${JSON.stringify(post).toLowerCase()}`;
+				return union.includes(term.toLowerCase());
+			});
+		} else {
+			return [];
+		}
 	}
 </script>
 
@@ -61,10 +41,6 @@
 		/>
 	</form>
 </div>
-
-{#if search == 'load'}
-	<p>loading...</p>
-{/if}
 
 {#if results.length == 0}
 	No results found

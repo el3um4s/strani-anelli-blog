@@ -4,7 +4,7 @@
 
 	// import About from '$lib/icons/about.svelte';
 	import Contact from '$lib/icons/contact.svelte';
-	// import RSS from '$lib/icons/rss.svelte';
+	import RSS from '$lib/icons/rss.svelte';
 	import Logo from '$lib/icons/logo.svelte';
 	import Dark from '$lib/icons/dark.svelte';
 	import Light from '$lib/icons/light.svelte';
@@ -32,11 +32,6 @@
 			<span>{config.title}</span>
 		</a>
 
-		<!-- Search Box -->
-		<!-- <div class="search">
-			<input type="search" placeholder="Search..." />
-		</div> -->
-
 		<!-- Navigation -->
 		<ul>
 			<!-- <li>
@@ -46,12 +41,12 @@
 				</a>
 			</li>
 			<li> -->
-			<!-- <li>
+			<li>
 				<a href="{config.url}/search">
 					<Search />
 					<span>Search</span>
 				</a>
-			</li> -->
+			</li>
 			<li>
 				<a href="{config.url}/contact">
 					<Contact />
@@ -64,12 +59,12 @@
 					<span>Thanks</span>
 				</a>
 			</li>
-			<!-- <li>
+			<li>
 				<a href="{config.url}/rss.xml" target="_blank">
 					<RSS />
 					<span>RSS</span>
 				</a>
-			</li> -->
+			</li>
 
 			<li>
 				{#if theme == 'dark'}

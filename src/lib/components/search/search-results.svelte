@@ -34,11 +34,11 @@
 		<p class="date">{formatDate(post.date)}</p>
 		<p class="description">{@html post.description}</p>
 
-		{#if post.content}
+		<!-- {#if post.content}
 			{#each post.content as content}
 				<p class="search-content">{@html content}</p>
 			{/each}
-		{/if}
+		{/if} -->
 
 		<div class="tags">
 			{#each post.categories as tag}
