@@ -20,7 +20,7 @@ La prima volta che ho sentito Katalin Karikó parlare è stato in tv. Rispondeva
 
 Non so se per le luci dello studio televisivo, o per una mia suggestione, mi sono convinto di una cosa: Katalin aveva una luce di rivalsa nei suoi occhi. La stessa luce di chi ce l'ha fatta nonostante tutto e tutti.
 
-Ho comprato l'autobiografia di Katalin. Ho divorato le sue parole. Mi sono addirittura commosso, in alcuni momenti. Ma questo non fa testo, secondo mia moglie mi commuovo molto facilmente. Mi sono arrabbiato quando le cose non sono andate come lei voleva. E avrei voluto dirle che poteva festeggiare i suoi successi, che sei era meritati tutti.
+Ho comprato l'autobiografia di Katalin. Ho divorato le sue parole. Mi sono addirittura commosso, in alcuni momenti. Ma questo non fa testo, secondo mia moglie mi commuovo molto facilmente. Mi sono arrabbiato quando le cose non sono andate come lei voleva. E avrei voluto dirle che poteva festeggiare i suoi successi, che se li era meritati tutti.
 
 Ho amato la storia di Katalin Karikó, futuro premio Nobel per la Medicina, madre dei vaccini a mRNA, scienziata - anzi _kutató_, "cercatrice", immigrata, donna testarda e forte.
 

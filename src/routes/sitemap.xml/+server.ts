@@ -22,16 +22,16 @@ export async function GET({ fetch }) {
 			<channel>
 				<title>${config.title}</title>
 				<description>${config.description}</description>
-				<link>${config.url}</link>
-				<atom:link href="${config.url}/rss.xml" rel="self" type="application/rss+xml"/>
+				<link>${config.site}</link>
+				<atom:link href="${config.site}/sitemap.xml" rel="self" type="application/rss+xml"/>
 				${posts
 					.map(
 						(post) => `
 						<item>
 							<title>${sanitizeRSS(post.title)}</title>
 							<description>${sanitizeRSS(post.description)}</description>
-							<link>${config.url}/${post.slug}</link>
-							<guid isPermaLink="true">${config.url}/${post.slug}</guid>
+							<link>${config.site}/${post.slug}</link>
+							<guid isPermaLink="true">${config.site}/${post.slug}</guid>
 							<pubDate>${new Date(post.date).toUTCString()}</pubDate>
 						</item>
 					`

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "it/2021/05/svelte-chrome-extension-construct-3/post.md",
+                "file": "it/2024/05/recensione-nonostante-tutto-katalin-kariko/post.md",
                 "mode": "source",
                 "source": false
               }
@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "it/2021/05/svelte-chrome-extension-construct-3/post.md",
+                "file": "it/2024/05/recensione-nonostante-tutto-katalin-kariko/post.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "it/2021/05/svelte-chrome-extension-construct-3/post.md",
+                "file": "it/2024/05/recensione-nonostante-tutto-katalin-kariko/post.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "it/2021/05/svelte-chrome-extension-construct-3/post.md"
+                "file": "it/2024/05/recensione-nonostante-tutto-katalin-kariko/post.md"
               }
             }
           }
@@ -147,8 +146,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "60a72a6899843952",
+  "active": "dfa9b1358920e54f",
   "lastOpenFiles": [
+    "it/2021/05/svelte-chrome-extension-construct-3/post.md",
     "en/2021/05/svelte-chrome-extension-construct-3-english/post.md",
     "it/2020/03/construct-3-creare-un-menu-laterale/post.md",
     "it/2020/02/aphantasia-e-cose-senza-senso/post.md",
@@ -193,7 +193,6 @@
     "en/2023/01/js-tips-09-highest-scoring-word/post.md",
     "en/2023/01/js-tips-08-how-to-validate-sudoku-solutions/post.md",
     "en/2023/01/ai-experiments-farmyard-gods/post.md",
-    "en/2023/01/js-tips-07-how-to-do-a-snail-sort/post.md",
-    "en/2023/01/js-tips-06-how-to-clone-anything-in-javascript/post.md"
+    "en/2023/01/js-tips-07-how-to-do-a-snail-sort/post.md"
   ]
 }
