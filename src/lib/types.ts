@@ -14,6 +14,7 @@ export type Post = {
 	jolly?: any;
 	lang?: string;
 	content?: string;
+	subtitle?: string;
 };
 
 export type Frontmatter = {
@@ -25,4 +26,5 @@ export type Frontmatter = {
 	cover?: string; //
 	column?: string; //
 	lang?: string; //
+	subtitle?: string; //
 };

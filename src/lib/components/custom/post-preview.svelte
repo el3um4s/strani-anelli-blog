@@ -32,7 +32,11 @@
 			<a href="{base}/{post.slug}">{post.title}</a>
 		</h3>
 		<p class="date">{formatDate(post.date)}</p>
-		<p class="description">{post.description}</p>
+		{#if post.subtitle}
+			<p class="description">{post.subtitle}</p>
+		{:else if post.description}
+			<p class="description">{post.description}</p>
+		{/if}
 		<div class="tags">
 			{#each post.categories as tag}
 				<a href="{base}/category/{tag}" class="tag">#{tag}</a>

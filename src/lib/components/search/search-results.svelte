@@ -32,7 +32,11 @@
 			<a href="{base}/{post.slug}">{@html post.title}</a>
 		</h3>
 		<p class="date">{formatDate(post.date)}</p>
-		<p class="description">{@html post.description}</p>
+		{#if post.subtitle}
+			<p class="description">{@html post.subtitle}</p>
+		{:else if post.description}
+			<p class="description">{@html post.description}</p>
+		{/if}
 
 		<!-- {#if post.content}
 			{#each post.content as content}

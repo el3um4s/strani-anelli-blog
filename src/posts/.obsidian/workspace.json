@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "thanks/post.md",
+                "file": "it/2024/05/recensione-nonostante-tutto-katalin-kariko/post.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "thanks/post.md",
+                "file": "it/2024/05/recensione-nonostante-tutto-katalin-kariko/post.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "thanks/post.md",
+                "file": "it/2024/05/recensione-nonostante-tutto-katalin-kariko/post.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "thanks/post.md"
+                "file": "it/2024/05/recensione-nonostante-tutto-katalin-kariko/post.md"
               }
             }
           }
@@ -148,10 +148,14 @@
   },
   "active": "dfa9b1358920e54f",
   "lastOpenFiles": [
+    "it/2024/05/recensione-nonostante-tutto-katalin-kariko",
+    "thanks/post.md",
+    "it/2024/05/recensione-nonostante-tutto-katalin-kariko/post.md",
+    "it/2024/05",
+    "it/2024",
     "thanks/cover.webp",
     "thanks/cover.webp.crdownload",
     "it/2014/contact/post.md",
-    "thanks/post.md",
     "thanks",
     "en/2023/12/reverse-engineering-midjourney-style/image.png",
     "en/2023/12/reverse-engineering-midjourney-style/post.md",
@@ -163,7 +167,6 @@
     "en/2023/12/reverse-engineering-midjourney-style/dark-gallery.png",
     "en/2023/12/reverse-engineering-midjourney-style/dark-gallery.webp",
     "en/2023/12/reverse-engineering-midjourney-style/dark-gallery.jpg",
-    "en/2023/12/reverse-engineering-midjourney-style/image-dark-09.png",
     "en/2023/12/reverse-engineering-midjourney-style",
     "en/2023/12/using-tailwind-with-svelte/post.md",
     "en/2023/12/using-tailwind-with-svelte",
@@ -176,9 +179,7 @@
     "en/2023/07/how-to-add-google-maps-to-arcgis-pro/post.md",
     "en/2023/07/how-to-add-google-maps-to-arcgis-pro",
     "en/2023/02/how-to-use-private-repo-as-npm-dependency/post.md",
-    "en/2023/02/how-to-use-private-repo-as-npm-dependency",
     "en/2023/01/js-wasm-sqlite3-03/post.md",
-    "en/2023/01/js-wasm-sqlite3-03",
     "en/2023/01/js-wasm-sqlite3-02/post.md",
     "en/2023/01/ai-single-word-portrait-fantasy/post.md",
     "en/2023/01/google-and-openai-translation/post.md",
@@ -192,7 +193,6 @@
     "en/2023/01/js-tips-05-common-denominators/post.md",
     "en/2023/01/js-tips-04-least-common-multiple/post.md",
     "en/2023/01/ai-examples-jasper-apple-medium/post.md",
-    "it/2023/12/midjourney-style-tuner-reverse/post.md",
-    "it/2023/12/chatgpt-prompt-generator-midjourney-it/post.md"
+    "it/2023/12/midjourney-style-tuner-reverse/post.md"
   ]
 }
