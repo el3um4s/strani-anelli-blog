@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "it/2024/05/recensione-nonostante-tutto-katalin-kariko/post.md",
+                "file": "it/2021/05/svelte-chrome-extension-construct-3/post.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "subtitle",
+                "query": "http:\\\\",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "it/2024/05/recensione-nonostante-tutto-katalin-kariko/post.md",
+                "file": "it/2021/05/svelte-chrome-extension-construct-3/post.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "it/2024/05/recensione-nonostante-tutto-katalin-kariko/post.md",
+                "file": "it/2021/05/svelte-chrome-extension-construct-3/post.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "it/2024/05/recensione-nonostante-tutto-katalin-kariko/post.md"
+                "file": "it/2021/05/svelte-chrome-extension-construct-3/post.md"
               }
             }
           }
@@ -146,11 +147,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "dfa9b1358920e54f",
+  "active": "60a72a6899843952",
   "lastOpenFiles": [
+    "en/2021/05/svelte-chrome-extension-construct-3-english/post.md",
+    "it/2020/03/construct-3-creare-un-menu-laterale/post.md",
+    "it/2020/02/aphantasia-e-cose-senza-senso/post.md",
+    "it/2020/02/welcome-aphantasia/post.md",
+    "it/2020/02/aphantasia-linguaggio-e-regia/post.md",
+    "it/2024/05/recensione-nonostante-tutto-katalin-kariko/post.md",
     "it/2024/05/recensione-nonostante-tutto-katalin-kariko",
     "thanks/post.md",
-    "it/2024/05/recensione-nonostante-tutto-katalin-kariko/post.md",
     "it/2024/05",
     "it/2024",
     "thanks/cover.webp",
@@ -177,7 +183,6 @@
     "en/2023/07/how-to-view-arcgis-pro-coordinates-in-google-maps/post.md",
     "en/2023/07/how-to-view-arcgis-pro-coordinates-in-google-maps",
     "en/2023/07/how-to-add-google-maps-to-arcgis-pro/post.md",
-    "en/2023/07/how-to-add-google-maps-to-arcgis-pro",
     "en/2023/02/how-to-use-private-repo-as-npm-dependency/post.md",
     "en/2023/01/js-wasm-sqlite3-03/post.md",
     "en/2023/01/js-wasm-sqlite3-02/post.md",
@@ -189,10 +194,6 @@
     "en/2023/01/js-tips-08-how-to-validate-sudoku-solutions/post.md",
     "en/2023/01/ai-experiments-farmyard-gods/post.md",
     "en/2023/01/js-tips-07-how-to-do-a-snail-sort/post.md",
-    "en/2023/01/js-tips-06-how-to-clone-anything-in-javascript/post.md",
-    "en/2023/01/js-tips-05-common-denominators/post.md",
-    "en/2023/01/js-tips-04-least-common-multiple/post.md",
-    "en/2023/01/ai-examples-jasper-apple-medium/post.md",
-    "it/2023/12/midjourney-style-tuner-reverse/post.md"
+    "en/2023/01/js-tips-06-how-to-clone-anything-in-javascript/post.md"
   ]
 }

@@ -7,13 +7,13 @@ categories:
 tags:
   - Aphantasia
   - aphantasia-linguaggio-e-regia
-  - apantahisa-e-cose-senza-senso
+  - aphantasia-e-cose-senza-senso
 cover: cover.webp
 lang: it
 description: "Stavo rileggendo  l'elenco delle cose che non hanno senso, per chi ha l'Aphantasia. E c'è una cosa che ho notato, complice anche reddit: la questione può essere più estesa rispetto alle singole espressioni idiomatiche. Può essere una questione di linguaggio. Partendo da un assunto: il linguaggio non è una metafora per le idee. Mi spiego meglio."
 ---
 
-Stavo rileggendo  l'elenco delle [cose che non hanno senso, per chi ha l'Aphantasia](https://blog.stranianelli.com/apantahisa-e-cose-senza-senso/). E c'è una cosa che ho notato, complice anche [reddit](https://www.reddit.com/r/Aphantasia/): la questione può essere più estesa rispetto alle singole espressioni idiomatiche. Può essere una questione di linguaggio. Partendo da un assunto: il linguaggio non è una metafora per le idee. Mi spiego meglio.
+Stavo rileggendo  l'elenco delle [cose che non hanno senso, per chi ha l'Aphantasia](https://blog.stranianelli.com/aphantasia-e-cose-senza-senso/). E c'è una cosa che ho notato, complice anche [reddit](https://www.reddit.com/r/Aphantasia/): la questione può essere più estesa rispetto alle singole espressioni idiomatiche. Può essere una questione di linguaggio. Partendo da un assunto: il linguaggio non è una metafora per le idee. Mi spiego meglio.
 
 Se dico "_albero_", non sto di dicendo una parola ma evocando un'immagine. O, meglio, per un'aphant è "solamente" una parola, o meglio, un concetto. Ma per gli altri la parola si trasformerà in una immagine nella mente. Poiché non ho dato altre informazioni, ognuno pescherà dalla propria memoria un'immagine diversa di un albero. E funziona così per ogni parola. Per ogni concetto. Per tutto quanto. Per chi ha l'Aphantasia è difficile da comprendere perché è abituato a pensare che lo scambio di informazioni avvenga a livello di suoni (la parola "albero") e di concetti (il concetto generico di "albero"). Ma non è così per la grande maggioranza delle persone. Per quasi tutti l'atto del pensare è l'atto di trasformare una parola in una immagine nella propria testa. Questo vuol dire che possiamo trasmettere immagini nella testa delle persone. Le immagini che noi vogliamo:
 

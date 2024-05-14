@@ -6,8 +6,8 @@ categories:
   - Aphantasia
 tags:
   - Aphantasia
-  - apantahisa-e-cose-senza-senso
   - l-elefante-nella-stanza
+  - aphantasia-e-cose-senza-senso
 cover: cover.webp
 lang: it
 description: Continuo a ragionare sulla'Aphantasia. Questi sono alcune piccole "rivelazioni" su alcuni aspetti che avevo, evidentemente, non compreso appieno. Del tipo, che se a me uno dice di non pensare all'ippopotamo io non penso a nessun ippopotamo. Non mi appare nessun pop up con l'immagine dell'ippopotamo della pubblicità, o quelli in tutù di Fantasia, o altro. Per te, dotato di Fantasia, sì, invece, vero?

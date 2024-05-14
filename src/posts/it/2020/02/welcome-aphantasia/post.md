@@ -7,14 +7,14 @@ categories:
 tags:
   - Aphantasia
   - welcome-aphantasia
-  - apantahisa-e-cose-senza-senso
   - l-elefante-nella-stanza
+  - aphantasia-e-cose-senza-senso
 cover: cover.webp
 lang: it
 description: Non ho mai usato granché reddit, ma in questi giorni mi sono trovato spesso a leggere nella sezione Aphantasia. C'è una discussione molto positiva, intitolata Welcome, new people! An acceptance + positivity thread. Mi piace e la trovo interessante. Per questo, dopo aver parlato delle mie piccole scoperte su come pensa chi è dotato di immaginazione mentale voglio riportare alcuni motivi per dare il benvenuto all'Aphantasia.
 ---
 
-Non ho mai usato granché reddit, ma in questi giorni mi sono trovato spesso a leggere nella [sezione Aphantasia](https://www.reddit.com/r/Aphantasia/). C'è una discussione molto positiva, intitolata [Welcome, new people! An acceptance + positivity thread](https://www.reddit.com/r/Aphantasia/comments/f1efmw/welcome_new_people_an_acceptance_positivity_thread/). Mi piace e la trovo interessante. Per questo, dopo aver parlato delle mie piccole scoperte su [come pensa chi è dotato di immaginazione mentale](https://blog.stranianelli.com/apantahisa-e-cose-senza-senso/) voglio riportare alcuni motivi per dare il benvenuto all'Aphantasia.
+Non ho mai usato granché reddit, ma in questi giorni mi sono trovato spesso a leggere nella [sezione Aphantasia](https://www.reddit.com/r/Aphantasia/). C'è una discussione molto positiva, intitolata [Welcome, new people! An acceptance + positivity thread](https://www.reddit.com/r/Aphantasia/comments/f1efmw/welcome_new_people_an_acceptance_positivity_thread/). Mi piace e la trovo interessante. Per questo, dopo aver parlato delle mie piccole scoperte su [come pensa chi è dotato di immaginazione mentale](https://blog.stranianelli.com/aphantasia-e-cose-senza-senso/) voglio riportare alcuni motivi per dare il benvenuto all'Aphantasia.
 
 Perché, [ne ho già parlato](https://blog.stranianelli.com/l-elefante-nella-stanza/), ci vuole un po' di tempo per accettare l'Aphantasia, e prima di poterlo fare tocca passare per uno stato di frustrazione, di confusione e di tristezza. Per contrastare tutto questo è bene ricordare alcune cose:
 
