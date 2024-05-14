@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "it/2024/05/recensione-nonostante-tutto-katalin-kariko/post.md",
+                "file": "it/2024/05/review-breaking-through-by-katalin-kariko/post.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "it/2024/05/recensione-nonostante-tutto-katalin-kariko/post.md",
+                "file": "it/2024/05/review-breaking-through-by-katalin-kariko/post.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "it/2024/05/recensione-nonostante-tutto-katalin-kariko/post.md",
+                "file": "it/2024/05/review-breaking-through-by-katalin-kariko/post.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "it/2024/05/recensione-nonostante-tutto-katalin-kariko/post.md"
+                "file": "it/2024/05/review-breaking-through-by-katalin-kariko/post.md"
               }
             }
           }
@@ -148,13 +148,18 @@
   },
   "active": "dfa9b1358920e54f",
   "lastOpenFiles": [
+    "it/2024/05/review-breaking-through-by-katalin-kariko/image.jpg",
+    "it/2024/05/review-breaking-through-by-katalin-kariko/post.md",
+    "it/2024/05/Untitled/image.jpg.crdownload",
+    "it/2024/05/recensione-nonostante-tutto-katalin-kariko/post.md",
+    "it/2024/05/recensione-nonostante-tutto-katalin-kariko/image.jpg",
+    "it/2024/05/review-breaking-through-by-katalin-kariko",
     "it/2021/05/svelte-chrome-extension-construct-3/post.md",
     "en/2021/05/svelte-chrome-extension-construct-3-english/post.md",
     "it/2020/03/construct-3-creare-un-menu-laterale/post.md",
     "it/2020/02/aphantasia-e-cose-senza-senso/post.md",
     "it/2020/02/welcome-aphantasia/post.md",
     "it/2020/02/aphantasia-linguaggio-e-regia/post.md",
-    "it/2024/05/recensione-nonostante-tutto-katalin-kariko/post.md",
     "it/2024/05/recensione-nonostante-tutto-katalin-kariko",
     "thanks/post.md",
     "it/2024/05",
@@ -171,17 +176,13 @@
     "en/2023/12/reverse-engineering-midjourney-style/flat-dark-gallery.png",
     "en/2023/12/reverse-engineering-midjourney-style/flat-dark-gallery.jpg",
     "en/2023/12/reverse-engineering-midjourney-style/dark-gallery.png",
-    "en/2023/12/reverse-engineering-midjourney-style/dark-gallery.webp",
-    "en/2023/12/reverse-engineering-midjourney-style/dark-gallery.jpg",
     "en/2023/12/reverse-engineering-midjourney-style",
     "en/2023/12/using-tailwind-with-svelte/post.md",
     "en/2023/12/using-tailwind-with-svelte",
     "en/2023/12/achieving-100-percent-child-div-height-without-specifying-parents/post.md",
     "en/2023/12/achieving-100-percent-child-div-height-without-specifying-parents",
     "en/2023/12/using-typescript-and-svelte-in-construct/post.md",
-    "en/2023/12/using-typescript-and-svelte-in-construct",
     "en/2023/07/how-to-view-arcgis-pro-coordinates-in-google-maps/post.md",
-    "en/2023/07/how-to-view-arcgis-pro-coordinates-in-google-maps",
     "en/2023/07/how-to-add-google-maps-to-arcgis-pro/post.md",
     "en/2023/02/how-to-use-private-repo-as-npm-dependency/post.md",
     "en/2023/01/js-wasm-sqlite3-03/post.md",
@@ -191,8 +192,6 @@
     "en/2023/01/js-wasm-sqlite3-01/post.md",
     "en/2023/01/ai-experiments-comics-generator/post.md",
     "en/2023/01/js-tips-09-highest-scoring-word/post.md",
-    "en/2023/01/js-tips-08-how-to-validate-sudoku-solutions/post.md",
-    "en/2023/01/ai-experiments-farmyard-gods/post.md",
-    "en/2023/01/js-tips-07-how-to-do-a-snail-sort/post.md"
+    "en/2023/01/js-tips-08-how-to-validate-sudoku-solutions/post.md"
   ]
 }
