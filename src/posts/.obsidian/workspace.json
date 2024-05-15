@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "fb52297058624ec9",
+        "id": "1c39df1a4ff3b19e",
         "type": "tabs",
         "children": [
           {
-            "id": "dfa9b1358920e54f",
+            "id": "ca04104bb8664083",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "it/2024/05/review-breaking-through-by-katalin-kariko/post.md",
+                "file": "templates/post.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "it/2024/05/review-breaking-through-by-katalin-kariko/post.md",
+                "file": "templates/post.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "it/2024/05/review-breaking-through-by-katalin-kariko/post.md",
+                "file": "templates/post.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "it/2024/05/review-breaking-through-by-katalin-kariko/post.md"
+                "file": "templates/post.md"
               }
             }
           }
@@ -146,14 +146,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "dfa9b1358920e54f",
+  "active": "ca04104bb8664083",
   "lastOpenFiles": [
-    "it/2024/05/review-breaking-through-by-katalin-kariko/image.jpg",
-    "it/2024/05/review-breaking-through-by-katalin-kariko/post.md",
-    "it/2024/05/Untitled/image.jpg.crdownload",
+    "it/2024/05/Untitled/Untitled.md",
+    "templates/post.md",
     "it/2024/05/recensione-nonostante-tutto-katalin-kariko/post.md",
+    "it/2024/05/Untitled/post.md",
+    "templates/javascript",
+    "it/2021/12/usare-javascript-per-trovare-una-password-bruteforce/post.md",
+    "en/2024/05/review-breaking-through-by-katalin-kariko/post.md",
+    "templates",
+    "it/2024/05/Untitled",
+    "en/2024/05",
+    "en/2024",
+    "en/2024/05/review-breaking-through-by-katalin-kariko/image.jpg",
+    "it/2024/05/Untitled/image.jpg.crdownload",
     "it/2024/05/recensione-nonostante-tutto-katalin-kariko/image.jpg",
-    "it/2024/05/review-breaking-through-by-katalin-kariko",
+    "en/2024/05/review-breaking-through-by-katalin-kariko",
     "it/2021/05/svelte-chrome-extension-construct-3/post.md",
     "en/2021/05/svelte-chrome-extension-construct-3-english/post.md",
     "it/2020/03/construct-3-creare-un-menu-laterale/post.md",
@@ -165,9 +174,7 @@
     "it/2024/05",
     "it/2024",
     "thanks/cover.webp",
-    "thanks/cover.webp.crdownload",
     "it/2014/contact/post.md",
-    "thanks",
     "en/2023/12/reverse-engineering-midjourney-style/image.png",
     "en/2023/12/reverse-engineering-midjourney-style/post.md",
     "en/2023/12/reverse-engineering-midjourney-style/image.webp",
@@ -176,11 +183,8 @@
     "en/2023/12/reverse-engineering-midjourney-style/flat-dark-gallery.png",
     "en/2023/12/reverse-engineering-midjourney-style/flat-dark-gallery.jpg",
     "en/2023/12/reverse-engineering-midjourney-style/dark-gallery.png",
-    "en/2023/12/reverse-engineering-midjourney-style",
     "en/2023/12/using-tailwind-with-svelte/post.md",
-    "en/2023/12/using-tailwind-with-svelte",
     "en/2023/12/achieving-100-percent-child-div-height-without-specifying-parents/post.md",
-    "en/2023/12/achieving-100-percent-child-div-height-without-specifying-parents",
     "en/2023/12/using-typescript-and-svelte-in-construct/post.md",
     "en/2023/07/how-to-view-arcgis-pro-coordinates-in-google-maps/post.md",
     "en/2023/07/how-to-add-google-maps-to-arcgis-pro/post.md",
@@ -189,9 +193,6 @@
     "en/2023/01/js-wasm-sqlite3-02/post.md",
     "en/2023/01/ai-single-word-portrait-fantasy/post.md",
     "en/2023/01/google-and-openai-translation/post.md",
-    "en/2023/01/js-wasm-sqlite3-01/post.md",
-    "en/2023/01/ai-experiments-comics-generator/post.md",
-    "en/2023/01/js-tips-09-highest-scoring-word/post.md",
-    "en/2023/01/js-tips-08-how-to-validate-sudoku-solutions/post.md"
+    "en/2023/01/js-wasm-sqlite3-01/post.md"
   ]
 }

@@ -15,6 +15,7 @@ export type Post = {
 	lang?: string;
 	content?: string;
 	subtitle?: string;
+	ignore?: boolean;
 };
 
 export type Frontmatter = {
@@ -27,4 +28,5 @@ export type Frontmatter = {
 	column?: string; //
 	lang?: string; //
 	subtitle?: string; //
+	ignore?: boolean; //
 };

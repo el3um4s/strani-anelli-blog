@@ -1,9 +1,10 @@
 {
-	"types": {
-		"aliases": "aliases",
-		"cssclasses": "multitext",
-		"tags": "tags",
-		"link": "multitext",
-		"date": "date"
-	}
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "link": "multitext",
+    "date": "date",
+    "ignore": "checkbox"
+  }
 }

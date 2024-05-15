@@ -16,12 +16,14 @@ async function getPosts() {
 			const metadata = file.metadata as Omit<Post, 'slug'>;
 			const post = {
 				...metadata,
-				date: metadata.date.substring(0, 10),
+				ignore: !!metadata?.ignore,
+				date: !metadata?.ignore ? metadata.date.substring(0, 10) : '9999-12-31',
 				slug,
 				src,
 				srcP
 			} satisfies Post;
-			post.published && posts.push(post);
+
+			post.published && !post.ignore && posts.push(post);
 		}
 	}
 
