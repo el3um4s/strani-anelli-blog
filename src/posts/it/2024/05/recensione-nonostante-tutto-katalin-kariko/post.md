@@ -3,6 +3,7 @@ title: Recensione - Nonostante tutto di Katalin Karikó
 description: Questo post racconta la vita ispiratrice di Katalin Karikó, dai suoi umili inizi in Ungheria alla scoperta rivoluzionaria dell'mRNA. Un viaggio di lotta, resilienza e innovazione che ha cambiato il mondo della medicina.
 categories:
   - Review
+  - Recensione
 lang: it
 published: true
 date: 2024-05-14

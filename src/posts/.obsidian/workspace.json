@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "1c39df1a4ff3b19e",
+        "id": "f3e0a9871008f437",
         "type": "tabs",
         "children": [
           {
-            "id": "ca04104bb8664083",
+            "id": "bf3decd2d0254dad",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "templates/post.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "templates/post.md",
+                "file": "it/2024/05/13-powerful-lessons-from-katalin-kariko-autobiography/post.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +98,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "templates/post.md",
+                "file": "it/2024/05/13-powerful-lessons-from-katalin-kariko-autobiography/post.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +121,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "templates/post.md"
+                "file": "it/2024/05/13-powerful-lessons-from-katalin-kariko-autobiography/post.md"
               }
             }
           }
@@ -146,21 +142,27 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ca04104bb8664083",
+  "active": "1ec8894ed9638d54",
   "lastOpenFiles": [
-    "it/2024/05/Untitled/Untitled.md",
-    "templates/post.md",
+    "it/2024/05/13-powerful-lessons-from-katalin-kariko-autobiography/image.jpg",
+    "it/2024/05/Untitled/image.jpg.crdownload",
+    "it/2024/05/13-consigli-di-vita-di-katalin-kariko-autobiografia-che-ispira/image.jpg",
+    "it/2024/05/13-consigli-di-vita-di-katalin-karikó-autobiografia-che-ispira/image.jpg.crdownload",
+    "it/2024/05/13-consigli-di-vita-di-katalin-kariko-autobiografia-che-ispira/post.md",
+    "templates/javascript.md",
+    "it/2024/05/13-powerful-lessons-from-katalin-kariko-autobiography/post.md",
     "it/2024/05/recensione-nonostante-tutto-katalin-kariko/post.md",
-    "it/2024/05/Untitled/post.md",
+    "it/2024/05/13-powerful-lessons-from-katalin-kariko-autobiography",
+    "templates/recensione.md",
+    "en/2024/05/review-breaking-through-by-katalin-kariko/post.md",
+    "it/2024/05/13-consigli-di-vita-di-katalin-kariko-autobiografia-che-ispira",
+    "templates/post.md",
     "templates/javascript",
     "it/2021/12/usare-javascript-per-trovare-una-password-bruteforce/post.md",
-    "en/2024/05/review-breaking-through-by-katalin-kariko/post.md",
     "templates",
-    "it/2024/05/Untitled",
     "en/2024/05",
     "en/2024",
     "en/2024/05/review-breaking-through-by-katalin-kariko/image.jpg",
-    "it/2024/05/Untitled/image.jpg.crdownload",
     "it/2024/05/recensione-nonostante-tutto-katalin-kariko/image.jpg",
     "en/2024/05/review-breaking-through-by-katalin-kariko",
     "it/2021/05/svelte-chrome-extension-construct-3/post.md",
@@ -171,8 +173,6 @@
     "it/2020/02/aphantasia-linguaggio-e-regia/post.md",
     "it/2024/05/recensione-nonostante-tutto-katalin-kariko",
     "thanks/post.md",
-    "it/2024/05",
-    "it/2024",
     "thanks/cover.webp",
     "it/2014/contact/post.md",
     "en/2023/12/reverse-engineering-midjourney-style/image.png",
@@ -182,17 +182,12 @@
     "en/2023/12/reverse-engineering-midjourney-style/flat-dark-gallery.webp",
     "en/2023/12/reverse-engineering-midjourney-style/flat-dark-gallery.png",
     "en/2023/12/reverse-engineering-midjourney-style/flat-dark-gallery.jpg",
-    "en/2023/12/reverse-engineering-midjourney-style/dark-gallery.png",
     "en/2023/12/using-tailwind-with-svelte/post.md",
     "en/2023/12/achieving-100-percent-child-div-height-without-specifying-parents/post.md",
     "en/2023/12/using-typescript-and-svelte-in-construct/post.md",
     "en/2023/07/how-to-view-arcgis-pro-coordinates-in-google-maps/post.md",
     "en/2023/07/how-to-add-google-maps-to-arcgis-pro/post.md",
     "en/2023/02/how-to-use-private-repo-as-npm-dependency/post.md",
-    "en/2023/01/js-wasm-sqlite3-03/post.md",
-    "en/2023/01/js-wasm-sqlite3-02/post.md",
-    "en/2023/01/ai-single-word-portrait-fantasy/post.md",
-    "en/2023/01/google-and-openai-translation/post.md",
-    "en/2023/01/js-wasm-sqlite3-01/post.md"
+    "en/2023/01/js-wasm-sqlite3-03/post.md"
   ]
 }
