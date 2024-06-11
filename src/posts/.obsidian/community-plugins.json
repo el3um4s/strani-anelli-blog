@@ -1,4 +1,8 @@
 [
   "obsidian-linter",
-  "obsidian-front-matter-title-plugin"
+  "obsidian-front-matter-title-plugin",
+  "image-converter",
+  "obsidian-custom-frames",
+  "click-clack",
+  "editing-toolbar"
 ]

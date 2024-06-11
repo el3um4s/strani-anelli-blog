@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f3e0a9871008f437",
+        "id": "fb8df32fc34249c0",
         "type": "tabs",
         "children": [
           {
-            "id": "bf3decd2d0254dad",
+            "id": "2fc2b9b97693a801",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -81,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "it/2024/05/13-powerful-lessons-from-katalin-kariko-autobiography/post.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "it/2024/05/13-powerful-lessons-from-katalin-kariko-autobiography/post.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -120,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "it/2024/05/13-powerful-lessons-from-katalin-kariko-autobiography/post.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -134,6 +130,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-custom-frames:Open Google Gemini": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -142,17 +139,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1ec8894ed9638d54",
+  "active": "2fc2b9b97693a801",
   "lastOpenFiles": [
-    "it/2024/05/13-powerful-lessons-from-katalin-kariko-autobiography/image.jpg",
+    "it/2024/06/accendi-il-mio-fuoco-tra-le-righe/post.md",
+    "it/2024/05/recensione-nonostante-tutto-katalin-kariko/post.md",
+    "it/2024/06/accendi-il-mio-fuoco-tra-le-righe/image.jpg",
+    "it/2024/06/accendi-il-mio-fuoco-tra-le-righe/image.jpg.crdownload",
+    "templates/Tra le Righe.md",
+    "templates/Beyond the Words.md",
+    "it/2024/05/13-consigli-di-vita-di-katalin-kariko-autobiografia-che-ispira/post.md",
+    "it/2024/06/accendi-il-mio-fuoco-tra-le-righe",
+    "it/2024/06",
+    "en/2024/05/13-powerful-lessons-from-katalin-kariko-autobiography/image.jpg",
     "it/2024/05/Untitled/image.jpg.crdownload",
     "it/2024/05/13-consigli-di-vita-di-katalin-kariko-autobiografia-che-ispira/image.jpg",
     "it/2024/05/13-consigli-di-vita-di-katalin-karikó-autobiografia-che-ispira/image.jpg.crdownload",
-    "it/2024/05/13-consigli-di-vita-di-katalin-kariko-autobiografia-che-ispira/post.md",
     "templates/javascript.md",
-    "it/2024/05/13-powerful-lessons-from-katalin-kariko-autobiography/post.md",
-    "it/2024/05/recensione-nonostante-tutto-katalin-kariko/post.md",
-    "it/2024/05/13-powerful-lessons-from-katalin-kariko-autobiography",
+    "en/2024/05/13-powerful-lessons-from-katalin-kariko-autobiography/post.md",
+    "en/2024/05/13-powerful-lessons-from-katalin-kariko-autobiography",
     "templates/recensione.md",
     "en/2024/05/review-breaking-through-by-katalin-kariko/post.md",
     "it/2024/05/13-consigli-di-vita-di-katalin-kariko-autobiografia-che-ispira",
@@ -161,17 +165,14 @@
     "it/2021/12/usare-javascript-per-trovare-una-password-bruteforce/post.md",
     "templates",
     "en/2024/05",
-    "en/2024",
     "en/2024/05/review-breaking-through-by-katalin-kariko/image.jpg",
     "it/2024/05/recensione-nonostante-tutto-katalin-kariko/image.jpg",
-    "en/2024/05/review-breaking-through-by-katalin-kariko",
     "it/2021/05/svelte-chrome-extension-construct-3/post.md",
     "en/2021/05/svelte-chrome-extension-construct-3-english/post.md",
     "it/2020/03/construct-3-creare-un-menu-laterale/post.md",
     "it/2020/02/aphantasia-e-cose-senza-senso/post.md",
     "it/2020/02/welcome-aphantasia/post.md",
     "it/2020/02/aphantasia-linguaggio-e-regia/post.md",
-    "it/2024/05/recensione-nonostante-tutto-katalin-kariko",
     "thanks/post.md",
     "thanks/cover.webp",
     "it/2014/contact/post.md",
@@ -180,14 +181,10 @@
     "en/2023/12/reverse-engineering-midjourney-style/image.webp",
     "en/2023/12/reverse-engineering-midjourney-style/image.jpg",
     "en/2023/12/reverse-engineering-midjourney-style/flat-dark-gallery.webp",
-    "en/2023/12/reverse-engineering-midjourney-style/flat-dark-gallery.png",
-    "en/2023/12/reverse-engineering-midjourney-style/flat-dark-gallery.jpg",
     "en/2023/12/using-tailwind-with-svelte/post.md",
     "en/2023/12/achieving-100-percent-child-div-height-without-specifying-parents/post.md",
     "en/2023/12/using-typescript-and-svelte-in-construct/post.md",
     "en/2023/07/how-to-view-arcgis-pro-coordinates-in-google-maps/post.md",
-    "en/2023/07/how-to-add-google-maps-to-arcgis-pro/post.md",
-    "en/2023/02/how-to-use-private-repo-as-npm-dependency/post.md",
-    "en/2023/01/js-wasm-sqlite3-03/post.md"
+    "en/2023/07/how-to-add-google-maps-to-arcgis-pro/post.md"
   ]
 }

@@ -227,7 +227,9 @@
       "enabled": false
     },
     "space-between-chinese-japanese-or-korean-and-english-or-numbers": {
-      "enabled": false
+      "enabled": false,
+      "english-symbols-punctuation-before": "-+;:'\"°%$)]",
+      "english-symbols-punctuation-after": "-+'\"([¥$"
     },
     "trailing-spaces": {
       "enabled": false,
@@ -297,6 +299,30 @@
       "label": "correggi link con doppio webp nelle immagini",
       "find": "\\.webp\\.webp\\)",
       "replace": ".webp)",
+      "flags": "gm"
+    },
+    {
+      "label": " == to <mark>",
+      "find": " ==",
+      "replace": " <mark>",
+      "flags": "gm"
+    },
+    {
+      "label": "== to </mark>",
+      "find": "== ",
+      "replace": "</mark> ",
+      "flags": "gm"
+    },
+    {
+      "label": " \\*\\*== to <mark>",
+      "find": "\\*\\*==",
+      "replace": " **<mark>",
+      "flags": "gm"
+    },
+    {
+      "label": "==\\*\\* to <mark>",
+      "find": "==\\*\\*",
+      "replace": "</mark>**",
       "flags": "gm"
     }
   ],

@@ -1,0 +1,69 @@
+.theme-dark {
+  --bold-color: orange;
+  --italic-color: goldenrod;
+  --link-color: lightseagreen;
+  --link-decoration: lightseagreen underline dotted;
+  --link-color-hover: mediumaquamarine;
+  --link-decoration-hover: mediumaquamarine underline dotted;
+  --link-unresolved-color: red;
+  --link-unresolved-decoration-style: wavy underline;
+  --link-external-color: lightseagreen;
+  --link-external-color-hover: mediumaquamarine;
+  --link-external-decoration: underline;
+
+  --tag-color: steelblue;
+  --tag-color-hover: slateblue;
+
+  --checkbox-color: steelblue;
+  --checkbox-border-color-hover: steelblue;
+}
+
+.theme-dark .tel {
+  color: orange;
+}
+
+.tel::before {
+  content: "☎️";
+}
+
+.theme-dark img {
+  border: 4px solid ivory;
+  border-radius: 8px;
+}
+
+.theme-dark img:hover {
+  border-color: var(--italic-color);
+}
+
+.theme-light {
+}
+
+/* TESTO EVIDENZIATO */
+
+.theme-dark .cm-s-obsidian span.cm-highlight, .markdown-rendered mark {
+	--text-highlight-bg: gold;
+	--bold-color: black;
+	color: black;
+	padding-left: 4px;
+	padding-right: 4px;
+	border-radius: 0 8px 0 8px;
+}
+
+mark {
+	background: gold;
+	--bold-color: black;
+	color: black;
+	padding-left: 4px;
+	padding-right: 4px;
+	border-radius: 0 8px 0 8px;
+}
+
+/*.theme-dark .search-result-file-matched-text {
+    color: black;
+}*/
+
+/* IMMAGINE ANNULATA */
+
+.cm-html-embed:has(.immagineAnnullata) + .media-embed > img {
+  filter: brightness(40%);
+}
