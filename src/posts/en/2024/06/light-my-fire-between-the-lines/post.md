@@ -59,6 +59,6 @@ May these words spark your curiosity, challenge your assumptions, and open your 
 > «Where are you taking me?» 
 > «You need to be alone. Like when you locked yourself in the bathroom. Remember? 'Bathroom occupied! No entry.'» 
 > «Why are you telling me this now?» 
-> «**Because sometimes we all need to withdraw into ourselves. <mark>Not to hide, but to illuminate our spirit.</mark>»
+> «**Because sometimes we all need to withdraw into ourselves. <mark>Not to hide, but to illuminate our spirit.</mark>**»
 
 > «Life throws all sorts of things at you, but there always comes a time when you figure out what to do with it all. The good, the bad, the ugly. At some point, it all makes sense, maybe even becomes your strength. Then comes the day you truly let go of the memories. **The day the accounts are settled, the anger fades, the pain dissolves.**»
