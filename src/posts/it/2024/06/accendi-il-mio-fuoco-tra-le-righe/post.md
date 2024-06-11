@@ -26,7 +26,7 @@ Spero che queste citazioni offrano spunti di riflessione, vi facciano nascere nu
 - Lingua Originale: **Italiano**
 
 
-> È stata lei a convincermi mandandomi un vocale di sette minuti che raggiungeva il suo apice con queste parole: "**Per quanto tu possa viaggiare lontano, con la mente e con lo spirito, il nostro corpo ha una sua saggezza e <mark>il sangue una sua geografica capace di riportarci sempre a casa</mark>**".
+> È stata lei a convincermi mandandomi un vocale di sette minuti che raggiungeva il suo apice con queste parole: «**Per quanto tu possa viaggiare lontano, con la mente e con lo spirito, il nostro corpo ha una sua saggezza e <mark>il sangue una sua geografica capace di riportarci sempre a casa</mark>».
 
 
 > Finalmente suona la campanella. Vedo piccola grande correre verso l'uscita, è felicissima, sorride raggiante, poi mi vede, smette gradualmente di correre, mi raggiunge strisciando i piedi, sbuffa: «Ma scusa, ma non doveva venirmi a prendere papà?»  

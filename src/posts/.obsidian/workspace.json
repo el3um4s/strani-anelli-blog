@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "fb8df32fc34249c0",
+        "id": "001bbb6d94a2fd84",
         "type": "tabs",
         "children": [
           {
-            "id": "2fc2b9b97693a801",
+            "id": "0c9944fd39626de1",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -139,9 +139,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2fc2b9b97693a801",
+  "active": "0c9944fd39626de1",
   "lastOpenFiles": [
+    "en/2024/06/light-my-fire-between-the-lines/post.md",
     "it/2024/06/accendi-il-mio-fuoco-tra-le-righe/post.md",
+    "en/2024/06/light-my-fire-between-the-lines/image.jpg",
+    "en/2024/06/light-my-fire-between-the-lines",
+    "en/2024/06",
     "it/2024/05/recensione-nonostante-tutto-katalin-kariko/post.md",
     "it/2024/06/accendi-il-mio-fuoco-tra-le-righe/image.jpg",
     "it/2024/06/accendi-il-mio-fuoco-tra-le-righe/image.jpg.crdownload",
@@ -163,8 +167,6 @@
     "templates/post.md",
     "templates/javascript",
     "it/2021/12/usare-javascript-per-trovare-una-password-bruteforce/post.md",
-    "templates",
-    "en/2024/05",
     "en/2024/05/review-breaking-through-by-katalin-kariko/image.jpg",
     "it/2024/05/recensione-nonostante-tutto-katalin-kariko/image.jpg",
     "it/2021/05/svelte-chrome-extension-construct-3/post.md",
@@ -180,11 +182,9 @@
     "en/2023/12/reverse-engineering-midjourney-style/post.md",
     "en/2023/12/reverse-engineering-midjourney-style/image.webp",
     "en/2023/12/reverse-engineering-midjourney-style/image.jpg",
-    "en/2023/12/reverse-engineering-midjourney-style/flat-dark-gallery.webp",
     "en/2023/12/using-tailwind-with-svelte/post.md",
     "en/2023/12/achieving-100-percent-child-div-height-without-specifying-parents/post.md",
     "en/2023/12/using-typescript-and-svelte-in-construct/post.md",
-    "en/2023/07/how-to-view-arcgis-pro-coordinates-in-google-maps/post.md",
-    "en/2023/07/how-to-add-google-maps-to-arcgis-pro/post.md"
+    "en/2023/07/how-to-view-arcgis-pro-coordinates-in-google-maps/post.md"
   ]
 }
