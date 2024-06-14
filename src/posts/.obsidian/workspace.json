@@ -4,14 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "90db4318497fb1ca",
+        "id": "954867e1e0f62880",
         "type": "tabs",
         "children": [
           {
-            "id": "e881a828560b1985",
+            "id": "e8cb03683fccb312",
             "type": "leaf",
             "state": {
-              "type": "custom-frames-google-gemini",
+              "type": "empty",
               "state": {}
             }
           }
@@ -140,14 +140,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e881a828560b1985",
+  "active": "e8cb03683fccb312",
   "lastOpenFiles": [
     "it/2024/06/il-tuo-secondo-cervello-tra-le-righe/post.md",
+    "en/2024/06/building-a-second-brain-between-the-lines/post.md",
+    "en/2024/06/building-a-second-brain-between-the-lines/image.jpg",
+    "en/2024/06/building-a-second-brain-between-the-lines/image.jpg.crdownload",
+    "en/2024/06/light-my-fire-between-the-lines/post.md",
+    "en/2024/06/building-a-second-brain-between-the-lines",
     "it/2024/06/accendi-il-mio-fuoco-tra-le-righe/post.md",
     "it/2024/06/il-tuo-secondo-cervello-tra-le-righe/image.jpg",
     "it/2024/06/il-tuo-secondo-cervello-tra-le-righe/image.jpg.crdownload",
     "it/2024/06/il-tuo-secondo-cervello-tra-le-righe",
-    "en/2024/06/light-my-fire-between-the-lines/post.md",
     "en/2024/06/light-my-fire-between-the-lines/image.jpg",
     "en/2024/06/light-my-fire-between-the-lines",
     "en/2024/06",
@@ -162,10 +166,8 @@
     "en/2024/05/13-powerful-lessons-from-katalin-kariko-autobiography/image.jpg",
     "it/2024/05/Untitled/image.jpg.crdownload",
     "it/2024/05/13-consigli-di-vita-di-katalin-kariko-autobiografia-che-ispira/image.jpg",
-    "it/2024/05/13-consigli-di-vita-di-katalin-karikó-autobiografia-che-ispira/image.jpg.crdownload",
     "templates/javascript.md",
     "en/2024/05/13-powerful-lessons-from-katalin-kariko-autobiography/post.md",
-    "en/2024/05/13-powerful-lessons-from-katalin-kariko-autobiography",
     "templates/recensione.md",
     "en/2024/05/review-breaking-through-by-katalin-kariko/post.md",
     "templates/post.md",
@@ -183,9 +185,7 @@
     "it/2014/contact/post.md",
     "en/2023/12/reverse-engineering-midjourney-style/image.png",
     "en/2023/12/reverse-engineering-midjourney-style/post.md",
-    "en/2023/12/reverse-engineering-midjourney-style/image.webp",
     "en/2023/12/using-tailwind-with-svelte/post.md",
-    "en/2023/12/achieving-100-percent-child-div-height-without-specifying-parents/post.md",
-    "en/2023/12/using-typescript-and-svelte-in-construct/post.md"
+    "en/2023/12/achieving-100-percent-child-div-height-without-specifying-parents/post.md"
   ]
 }

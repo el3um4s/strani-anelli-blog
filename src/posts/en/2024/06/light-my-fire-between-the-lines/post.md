@@ -1,7 +1,7 @@
 ---
 date: 2024-06-11
 ignore: false
-title: Between The Lines Of "Light My Fire"
+title: Beyond the Words Of "Light My Fire"
 description: I decided to collect the words that struck me from "Light My Fire" by Brenda Lodigiani, a novel that explores the nuances of love, family and personal growth. Brenda's words made me laugh, reflect and move, and I hope they can do the same with you.
 categories:
   - Notes
