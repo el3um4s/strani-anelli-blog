@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "001bbb6d94a2fd84",
+        "id": "90db4318497fb1ca",
         "type": "tabs",
         "children": [
           {
-            "id": "0c9944fd39626de1",
+            "id": "e881a828560b1985",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "en/2024/06/light-my-fire-between-the-lines/post.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "custom-frames-google-gemini",
+              "state": {}
             }
           }
         ]
@@ -69,7 +65,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 423.5
+    "width": 423.5,
+    "collapsed": true
   },
   "right": {
     "id": "787e2429f51f629a",
@@ -85,7 +82,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "en/2024/06/light-my-fire-between-the-lines/post.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +98,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "en/2024/06/light-my-fire-between-the-lines/post.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +119,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "en/2024/06/light-my-fire-between-the-lines/post.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -147,10 +140,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0c9944fd39626de1",
+  "active": "e881a828560b1985",
   "lastOpenFiles": [
-    "en/2024/06/light-my-fire-between-the-lines/post.md",
+    "it/2024/06/il-tuo-secondo-cervello-tra-le-righe/post.md",
     "it/2024/06/accendi-il-mio-fuoco-tra-le-righe/post.md",
+    "it/2024/06/il-tuo-secondo-cervello-tra-le-righe/image.jpg",
+    "it/2024/06/il-tuo-secondo-cervello-tra-le-righe/image.jpg.crdownload",
+    "it/2024/06/il-tuo-secondo-cervello-tra-le-righe",
+    "en/2024/06/light-my-fire-between-the-lines/post.md",
     "en/2024/06/light-my-fire-between-the-lines/image.jpg",
     "en/2024/06/light-my-fire-between-the-lines",
     "en/2024/06",
@@ -171,9 +168,7 @@
     "en/2024/05/13-powerful-lessons-from-katalin-kariko-autobiography",
     "templates/recensione.md",
     "en/2024/05/review-breaking-through-by-katalin-kariko/post.md",
-    "it/2024/05/13-consigli-di-vita-di-katalin-kariko-autobiografia-che-ispira",
     "templates/post.md",
-    "templates/javascript",
     "it/2021/12/usare-javascript-per-trovare-una-password-bruteforce/post.md",
     "en/2024/05/review-breaking-through-by-katalin-kariko/image.jpg",
     "it/2024/05/recensione-nonostante-tutto-katalin-kariko/image.jpg",
@@ -189,10 +184,8 @@
     "en/2023/12/reverse-engineering-midjourney-style/image.png",
     "en/2023/12/reverse-engineering-midjourney-style/post.md",
     "en/2023/12/reverse-engineering-midjourney-style/image.webp",
-    "en/2023/12/reverse-engineering-midjourney-style/image.jpg",
     "en/2023/12/using-tailwind-with-svelte/post.md",
     "en/2023/12/achieving-100-percent-child-div-height-without-specifying-parents/post.md",
-    "en/2023/12/using-typescript-and-svelte-in-construct/post.md",
-    "en/2023/07/how-to-view-arcgis-pro-coordinates-in-google-maps/post.md"
+    "en/2023/12/using-typescript-and-svelte-in-construct/post.md"
   ]
 }
