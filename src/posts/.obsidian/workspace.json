@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "700d51abde8ac49c",
+        "id": "3fcd8931d11ef8f8",
         "type": "tabs",
         "children": [
           {
-            "id": "753d67effdcdf417",
+            "id": "bc6e65d926cefd62",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -44,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "http:\\\\",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -81,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "it/2024/07/sherlock-holmes-arte-del-ragionamento-tra-le-righe/post.md",
+                "file": "en/2024/07/Sherlock Holmes and the Art of Reasoning/post.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +98,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "it/2024/07/sherlock-holmes-arte-del-ragionamento-tra-le-righe/post.md",
+                "file": "en/2024/07/Sherlock Holmes and the Art of Reasoning/post.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +121,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "it/2024/07/sherlock-holmes-arte-del-ragionamento-tra-le-righe/post.md"
+                "file": "en/2024/07/Sherlock Holmes and the Art of Reasoning/post.md"
               }
             }
           }
@@ -145,10 +145,15 @@
   },
   "active": "1ec8894ed9638d54",
   "lastOpenFiles": [
+    "en/2024/07/Sherlock Holmes and the Art of Reasoning/image.jpg",
+    "en/2024/07/Sherlock Holmes and the Art of Reasoning/post.md",
+    "it/2024/07/sherlock-holmes-arte-del-ragionamento-tra-le-righe/post.md",
+    "en/2024/07/Sherlock Holmes and the Art of Reasoning",
+    "en/2024/07",
+    "it/2024/07/sherlock-holmes-arte-del-ragionamento-tra-le-righe/post 1.md",
     "it/2024/07/sherlock-holmes-arte-del-ragionamento-tra-le-righe/image.jpg",
     "it/2024/07/sherlock-holmes-arte-del-ragionamento-tra-le-righe/image.jpg.crdownload",
     "it/2024/06/il-tuo-secondo-cervello-tra-le-righe/post.md",
-    "it/2024/07/sherlock-holmes-arte-del-ragionamento-tra-le-righe/post.md",
     "it/2024/07/sherlock-holmes-arte-del-ragionamento-tra-le-righe",
     "it/2024/07",
     "en/2024/06/building-a-second-brain-between-the-lines/post.md",
@@ -162,10 +167,8 @@
     "it/2024/06/il-tuo-secondo-cervello-tra-le-righe",
     "en/2024/06/light-my-fire-between-the-lines/image.jpg",
     "en/2024/06/light-my-fire-between-the-lines",
-    "en/2024/06",
     "it/2024/05/recensione-nonostante-tutto-katalin-kariko/post.md",
     "it/2024/06/accendi-il-mio-fuoco-tra-le-righe/image.jpg",
-    "it/2024/06/accendi-il-mio-fuoco-tra-le-righe/image.jpg.crdownload",
     "templates/Tra le Righe.md",
     "templates/Beyond the Words.md",
     "it/2024/05/13-consigli-di-vita-di-katalin-kariko-autobiografia-che-ispira/post.md",
@@ -186,10 +189,6 @@
     "it/2020/02/welcome-aphantasia/post.md",
     "it/2020/02/aphantasia-linguaggio-e-regia/post.md",
     "thanks/post.md",
-    "thanks/cover.webp",
-    "it/2014/contact/post.md",
-    "en/2023/12/reverse-engineering-midjourney-style/image.png",
-    "en/2023/12/reverse-engineering-midjourney-style/post.md",
-    "en/2023/12/using-tailwind-with-svelte/post.md"
+    "it/2014/contact/post.md"
   ]
 }

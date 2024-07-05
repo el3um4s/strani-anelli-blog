@@ -1,6 +1,6 @@
 ---
 date: 2024-07-05
-ignore: true
+ignore: false
 title: Tra le Righe di "Sherlock Holmes e l'arte del ragionamento"
 description: Appunti sparsi sul come migliorare le proprie capacità di ragionamento a partire dai romanzi di Sherlock Holmes
 categories:
