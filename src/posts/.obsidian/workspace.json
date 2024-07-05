@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "954867e1e0f62880",
+        "id": "700d51abde8ac49c",
         "type": "tabs",
         "children": [
           {
-            "id": "e8cb03683fccb312",
+            "id": "753d67effdcdf417",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -65,8 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 423.5,
-    "collapsed": true
+    "width": 423.5
   },
   "right": {
     "id": "787e2429f51f629a",
@@ -82,6 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "it/2024/07/sherlock-holmes-arte-del-ragionamento-tra-le-righe/post.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,6 +98,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "it/2024/07/sherlock-holmes-arte-del-ragionamento-tra-le-righe/post.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +120,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "it/2024/07/sherlock-holmes-arte-del-ragionamento-tra-le-righe/post.md"
+              }
             }
           }
         ]
@@ -140,9 +143,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e8cb03683fccb312",
+  "active": "1ec8894ed9638d54",
   "lastOpenFiles": [
+    "it/2024/07/sherlock-holmes-arte-del-ragionamento-tra-le-righe/image.jpg",
+    "it/2024/07/sherlock-holmes-arte-del-ragionamento-tra-le-righe/image.jpg.crdownload",
     "it/2024/06/il-tuo-secondo-cervello-tra-le-righe/post.md",
+    "it/2024/07/sherlock-holmes-arte-del-ragionamento-tra-le-righe/post.md",
+    "it/2024/07/sherlock-holmes-arte-del-ragionamento-tra-le-righe",
+    "it/2024/07",
     "en/2024/06/building-a-second-brain-between-the-lines/post.md",
     "en/2024/06/building-a-second-brain-between-the-lines/image.jpg",
     "en/2024/06/building-a-second-brain-between-the-lines/image.jpg.crdownload",
@@ -161,10 +169,7 @@
     "templates/Tra le Righe.md",
     "templates/Beyond the Words.md",
     "it/2024/05/13-consigli-di-vita-di-katalin-kariko-autobiografia-che-ispira/post.md",
-    "it/2024/06/accendi-il-mio-fuoco-tra-le-righe",
-    "it/2024/06",
     "en/2024/05/13-powerful-lessons-from-katalin-kariko-autobiography/image.jpg",
-    "it/2024/05/Untitled/image.jpg.crdownload",
     "it/2024/05/13-consigli-di-vita-di-katalin-kariko-autobiografia-che-ispira/image.jpg",
     "templates/javascript.md",
     "en/2024/05/13-powerful-lessons-from-katalin-kariko-autobiography/post.md",
@@ -185,7 +190,6 @@
     "it/2014/contact/post.md",
     "en/2023/12/reverse-engineering-midjourney-style/image.png",
     "en/2023/12/reverse-engineering-midjourney-style/post.md",
-    "en/2023/12/using-tailwind-with-svelte/post.md",
-    "en/2023/12/achieving-100-percent-child-div-height-without-specifying-parents/post.md"
+    "en/2023/12/using-tailwind-with-svelte/post.md"
   ]
 }
