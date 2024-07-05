@@ -104,8 +104,7 @@ Qualche giorno fa mia moglie mi ha consigliato un libro su come funziona la ment
 - Bias di conferma, del senno del poi, del punto cieco
 - Presunzione di Onestà ed Error Management Theory
 - In quanto esseri umani, siamo soggetti all’errore, fa parte della nostra natura
-- L'umiltà assorbe esperienza e la converte in saggezza, l'arroganza è uno schermo contro cui l'esperienza rimbalza lasciando
-- l'ignoranza
+- L'umiltà assorbe esperienza e la converte in saggezza, l'arroganza è uno schermo contro cui l'esperienza rimbalza lasciando l'ignoranza
 - Essere umili significa avere le proprie radici piantate per terra. È l'unico modo per crescere rigogliosi anziché rinsecchirsi e morire
 - Fiduciosa umiltà. Perché solo quando gli errori sono sempre nuovi stiamo imparando cose nuove
 - Multitasking no buono

@@ -11,8 +11,12 @@
             "id": "bc6e65d926cefd62",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "en/2024/07/Sherlock Holmes and the Art of Reasoning/post.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -143,11 +147,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1ec8894ed9638d54",
+  "active": "bc6e65d926cefd62",
   "lastOpenFiles": [
-    "en/2024/07/Sherlock Holmes and the Art of Reasoning/image.jpg",
-    "en/2024/07/Sherlock Holmes and the Art of Reasoning/post.md",
     "it/2024/07/sherlock-holmes-arte-del-ragionamento-tra-le-righe/post.md",
+    "en/2024/07/Sherlock Holmes and the Art of Reasoning/post.md",
+    "en/2024/07/Sherlock Holmes and the Art of Reasoning/image.jpg",
     "en/2024/07/Sherlock Holmes and the Art of Reasoning",
     "en/2024/07",
     "it/2024/07/sherlock-holmes-arte-del-ragionamento-tra-le-righe/post 1.md",

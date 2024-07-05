@@ -27,7 +27,6 @@ It's a very interesting book, full of food for thought. Here is the table of con
 
 - Introduction: Sherlock Holmes and the art of thinking
     - Can you become like Sherlock Holmes? (_no, he's a fictional character_)
-
 1. A wonderful brain
     1. The "10 percent solution" (_myth_)
     2. An ingenious pudding (_the brain is a pudding_)
@@ -90,7 +89,6 @@ It's a very interesting book, full of food for thought. Here is the table of con
         8. Sometimes it's worth getting distracted
         9. It's time to make our decision
         10. Let's evaluate the choice made
-
 - Conclusions: the "secret" of Sherlock Holmes (_have the courage to be wrong_)
 
 ### Scattered Notes
@@ -106,8 +104,7 @@ It's a very interesting book, full of food for thought. Here is the table of con
 - Confirmation bias, hindsight bias, blind spot bias
 - Presumption of Honesty and Error Management Theory
 - As human beings, we are subject to error, it is part of our nature
-- Humility absorbs experience and converts it into wisdom, arrogance is a screen against which experience bounces leaving
-- ignorance
+- Humility absorbs experience and converts it into wisdom, arrogance is a screen against which experience bounces leaving ignorance
 - Being humble means having your roots planted on the ground. It's the only way to grow lush instead of withering and dying
 - Confident humility. Because only when mistakes are always new are we learning new things
 - Multitasking is not good
