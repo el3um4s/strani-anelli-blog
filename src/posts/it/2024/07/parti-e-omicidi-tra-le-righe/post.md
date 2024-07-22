@@ -65,7 +65,7 @@ La raccolta include un glossario che spiega alcuni termini giapponesi presenti n
 
 ### Riassunto dei racconti
 
-#### Parti e Omicidi
+#### **Parti e Omicidi**
 
 Il racconto si svolge in un Giappone distopico in cui la società ha istituito il "Sistema dei parti e omicidi". Questo sistema permette a chi dà alla luce dieci bambini di poter uccidere una persona a propria scelta. La protagonista, Ikuko, lavora in un'azienda dove una sua ex collega, Mizuho, ha deciso di diventare una "gestante", intraprendendo il percorso per poter uccidere qualcuno.
 
@@ -81,7 +81,7 @@ Nel frattempo, Mizuho rimane incinta e Chika-chan, una giovane collega di Ikuko,
 
 Tamaki dà alla luce il suo decimo figlio e sceglie come vittima Sakiko, che viene uccisa da Ikuko e Tamaki insieme. Durante l'omicidio, Ikuko scopre che Sakiko era incinta e, sopraffatta dal senso di colpa, decide di diventare a sua volta una gestante per compensare la vita che ha appena tolto.
 
-#### Triade
+#### **Triade**
 
 Il racconto "Triade" esplora le dinamiche di una relazione poliamorosa tra tre adolescenti: Mayumi, Makoto e Keita. In questo Giappone distopico, le "troppie", relazioni a tre, sono comuni tra i giovani, in contrasto con la visione tradizionale delle relazioni di coppia degli adulti.
 
@@ -91,7 +91,7 @@ Il racconto esplora anche le tensioni tra la protagonista Mayumi e sua madre, ch
 
 La storia si conclude con una riflessione sulle diverse forme di amore e di relazione, mettendo in discussione la visione tradizionale e conservatrice degli adulti e abbracciando la libertà e l'autenticità delle scelte dei giovani.
 
-#### Un Matrimonio Pulito
+#### **Un Matrimonio Pulito**
 
 Il racconto "Un matrimonio pulito" esplora il concetto di matrimonio in un futuro in cui il sesso e la procreazione sono diventati sempre più disgiunti. La protagonista, Mizuki, è sposata con Nobuhiro, un uomo con cui condivide un ideale di "matrimonio pulito", privo di coinvolgimento sessuale e basato sulla convivenza pacifica e sull'igiene.
 
@@ -103,7 +103,7 @@ Nonostante ciò, Mizuki e Nobuhiro decidono di provare il Clean Breeding nella c
 
 Il racconto si conclude con l'incertezza sul futuro della coppia e solleva interrogativi sulla natura del matrimonio, della procreazione e dell'amore in un mondo in cui la tecnologia e la medicina hanno alterato profondamente le relazioni umane.
 
-#### Ultimi Momenti di Vita
+#### **Ultimi Momenti di Vita**
 
 Il racconto "Ultimi momenti di vita" è ambientato in un futuro in cui la morte per cause naturali o accidentali è stata sconfitta dalla medicina. Le persone possono scegliere di morire quando sentono che è il momento giusto, seguendo le istruzioni di manuali che suggeriscono i modi migliori per farlo.
 

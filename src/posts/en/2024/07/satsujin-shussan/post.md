@@ -66,7 +66,7 @@ The collection includes a glossary explaining some Japanese terms present in the
 
 ### Summary of the Stories
 
-#### Satsujin shussan
+#### **Satsujin shussan**
 
 The story takes place in a dystopian Japan where society has established the "System of Births and Murders." This system allows those who give birth to ten children to kill one person of their choice. The protagonist, Ikuko, works in a company where a former colleague, Mizuho, has decided to become a "gestating woman," embarking on the path to be able to kill someone.
 
@@ -82,7 +82,7 @@ Meanwhile, Mizuho becomes pregnant, and Chika-chan, a young colleague of Ikuko's
 
 Tamaki gives birth to her tenth child and chooses Sakiko as her victim, who is killed by Ikuko and Tamaki together. During the murder, Ikuko discovers that Sakiko was pregnant and, overwhelmed by guilt, decides to become a gestating woman herself to compensate for the life she has just taken.
 
-#### Triad
+### **Triad**
 
 The story "Triad" explores the dynamics of a polyamorous relationship between three teenagers: Mayumi, Makoto, and Keita. In this dystopian Japan, "troppies," relationships of three, are common among young people, contrasting with the traditional view of couple relationships held by adults.
 
@@ -92,7 +92,7 @@ The story also explores the tensions between the protagonist Mayumi and her moth
 
 The story concludes with a reflection on the different forms of love and relationships, challenging the traditional and conservative view of adults and embracing the freedom and authenticity of young people's choices.
 
-#### A Clean Marriage
+### **A Clean Marriage**
 
 The story "A Clean Marriage" explores the concept of marriage in a future where sex and procreation have become increasingly disjointed. The protagonist, Mizuki, is married to Nobuhiro, a man with whom she shares an ideal of a "clean marriage," devoid of sexual involvement and based on peaceful coexistence and hygiene.
 
@@ -104,7 +104,7 @@ Despite this, Mizuki and Nobuhiro decide to try Clean Breeding at the clinic, wh
 
 The story concludes with uncertainty about the couple's future and raises questions about the nature of marriage, procreation, and love in a world where technology and medicine have profoundly altered human relationships.
 
-#### Last Moments of Life
+#### **Last Moments of Life**
 
 The story "Last Moments of Life" is set in a future where death from natural or accidental causes has been defeated by medicine. People can choose to die when they feel the time is right, following the instructions of manuals that suggest the best ways to do so.
 
