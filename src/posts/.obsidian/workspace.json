@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "3fcd8931d11ef8f8",
+        "id": "1f28094ee175e510",
         "type": "tabs",
         "children": [
           {
-            "id": "bc6e65d926cefd62",
+            "id": "e85ea65f2ae78523",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "en/2024/07/Sherlock Holmes and the Art of Reasoning/post.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -69,7 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 423.5
+    "width": 265.5
   },
   "right": {
     "id": "787e2429f51f629a",
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "en/2024/07/Sherlock Holmes and the Art of Reasoning/post.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "en/2024/07/Sherlock Holmes and the Art of Reasoning/post.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "en/2024/07/Sherlock Holmes and the Art of Reasoning/post.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -147,12 +139,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bc6e65d926cefd62",
+  "active": "e85ea65f2ae78523",
   "lastOpenFiles": [
+    "en/2024/07/satsujin-shussan/post.md",
+    "it/2024/07/parti-e-omicidi-tra-le-righe/post.md",
+    "it/2024/07/parti-e-omicidi-tra-le-righe/image.jpg",
+    "en/2024/07/satsujin-shussan/image.jpg.crdownload",
+    "it/2024/07/parti-e-omicidi-tra-le-righe/image.jpg.crdownload",
+    "en/2024/07/satsujin-shussan/image.jpg",
+    "en/2024/07/sherlock-holmes-and-the-art-of-reasoning/post.md",
+    "en/2024/07/satsujin-shussan",
     "it/2024/07/sherlock-holmes-arte-del-ragionamento-tra-le-righe/post.md",
-    "en/2024/07/Sherlock Holmes and the Art of Reasoning/post.md",
-    "en/2024/07/Sherlock Holmes and the Art of Reasoning/image.jpg",
-    "en/2024/07/Sherlock Holmes and the Art of Reasoning",
+    "it/2024/07/parti-e-omicidi-tra-le-righe",
+    "en/2024/07/sherlock-holmes-and-the-art-of-reasoning/image.jpg",
+    "en/2024/07/sherlock-holmes-and-the-art-of-reasoning",
     "en/2024/07",
     "it/2024/07/sherlock-holmes-arte-del-ragionamento-tra-le-righe/post 1.md",
     "it/2024/07/sherlock-holmes-arte-del-ragionamento-tra-le-righe/image.jpg",
@@ -164,13 +164,9 @@
     "en/2024/06/building-a-second-brain-between-the-lines/image.jpg",
     "en/2024/06/building-a-second-brain-between-the-lines/image.jpg.crdownload",
     "en/2024/06/light-my-fire-between-the-lines/post.md",
-    "en/2024/06/building-a-second-brain-between-the-lines",
     "it/2024/06/accendi-il-mio-fuoco-tra-le-righe/post.md",
     "it/2024/06/il-tuo-secondo-cervello-tra-le-righe/image.jpg",
-    "it/2024/06/il-tuo-secondo-cervello-tra-le-righe/image.jpg.crdownload",
-    "it/2024/06/il-tuo-secondo-cervello-tra-le-righe",
     "en/2024/06/light-my-fire-between-the-lines/image.jpg",
-    "en/2024/06/light-my-fire-between-the-lines",
     "it/2024/05/recensione-nonostante-tutto-katalin-kariko/post.md",
     "it/2024/06/accendi-il-mio-fuoco-tra-le-righe/image.jpg",
     "templates/Tra le Righe.md",
@@ -184,15 +180,11 @@
     "en/2024/05/review-breaking-through-by-katalin-kariko/post.md",
     "templates/post.md",
     "it/2021/12/usare-javascript-per-trovare-una-password-bruteforce/post.md",
-    "en/2024/05/review-breaking-through-by-katalin-kariko/image.jpg",
-    "it/2024/05/recensione-nonostante-tutto-katalin-kariko/image.jpg",
     "it/2021/05/svelte-chrome-extension-construct-3/post.md",
     "en/2021/05/svelte-chrome-extension-construct-3-english/post.md",
     "it/2020/03/construct-3-creare-un-menu-laterale/post.md",
     "it/2020/02/aphantasia-e-cose-senza-senso/post.md",
     "it/2020/02/welcome-aphantasia/post.md",
-    "it/2020/02/aphantasia-linguaggio-e-regia/post.md",
-    "thanks/post.md",
-    "it/2014/contact/post.md"
+    "it/2020/02/aphantasia-linguaggio-e-regia/post.md"
   ]
 }
