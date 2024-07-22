@@ -2,7 +2,7 @@
 date: 2024-07-22
 ignore: false
 title: Between the Lines of "Satsujin Shussan"
-description: Murata Sayaka's "Satsujin shussan" (translated to "Earthlings") is a thought-provoking collection of short stories set in a dystopian Japan. It delves into the lives of individuals grappling with a disturbing societal system that links procreation to murder. Through their experiences, the stories raise profound questions about morality, freedom, and the essence of humanity.
+description: Murata Sayaka's "Satsujin shussan" is a thought-provoking collection of short stories set in a dystopian Japan. It delves into the lives of individuals grappling with a disturbing societal system that links procreation to murder. Through their experiences, the stories raise profound questions about morality, freedom, and the essence of humanity.
 categories:
   - Notes
   - Appunti
@@ -13,7 +13,7 @@ tags:
   - Appunti
   - Notes
 column: Beyond the Words
-subtitle: In a world where killing grants the right to procreate, who is really free?
+subtitle: Murata Sayaka's "Satsujin shussan" is a thought-provoking collection of short stories set in a dystopian Japan. It delves into the lives of individuals grappling with a disturbing societal system that links procreation to murder. Through their experiences, the stories raise profound questions about morality, freedom, and the essence of humanity.
 ---
 The last book I read is a collection of short stories by Murata Sayaka. I have to admit that I was disappointed by the book as a whole. The idea behind the first story is quite intriguing (1 life in exchange for 10), but it's developed in a trivial way and with a banal style. The story is somewhat saved by the choice to gradually reveal information. This shuffling of the cards helps maintain a minimum of curiosity. But nothing more.
 
