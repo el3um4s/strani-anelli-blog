@@ -30,3 +30,11 @@ export type Frontmatter = {
 	subtitle?: string; //
 	ignore?: boolean; //
 };
+
+export type Comic = {
+	category: string;
+	src: string;
+	srcP: String[];
+	date: string;
+	order: string;
+};

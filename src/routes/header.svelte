@@ -10,6 +10,7 @@
 	import Light from '$lib/icons/light.svelte';
 	import Search from '$lib/icons/search.svelte';
 	import Thanks from '$lib/icons/thanks.svelte';
+	import Comics from '$lib/icons/comics.svelte';
 
 	let theme = browser
 		? window.localStorage.getItem('theme') ?? window.localStorage.setItem('theme', 'light')
@@ -41,6 +42,12 @@
 				</a>
 			</li>
 			<li> -->
+			<!-- <li>
+				<a href="{config.url}/comics/last">
+					<Comics />
+					<span>Comics</span>
+				</a>
+			</li> -->
 			<li>
 				<a href="{config.url}/search">
 					<Search />
