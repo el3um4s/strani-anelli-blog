@@ -42,12 +42,12 @@
 				</a>
 			</li>
 			<li> -->
-			<!-- <li>
+			<li>
 				<a href="{config.url}/comics/last">
 					<Comics />
 					<span>Comics</span>
 				</a>
-			</li> -->
+			</li>
 			<li>
 				<a href="{config.url}/search">
 					<Search />

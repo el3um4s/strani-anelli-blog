@@ -32,6 +32,9 @@ export type Frontmatter = {
 };
 
 export type Comic = {
+	index: number;
+	title: string;
+	slug: string;
 	category: string;
 	src: string;
 	srcP: String[];
