@@ -6,7 +6,7 @@ export async function load({ fetch, params }) {
 	try {
 		const { slug } = params;
 
-		const response = await fetch('../api/comics');
+		const response = await fetch('../../api/comics');
 		// console.log(response);
 
 		const allComics = await response.json();

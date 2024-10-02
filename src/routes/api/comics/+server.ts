@@ -1,6 +1,8 @@
 import { json } from '@sveltejs/kit';
 import type { Comic } from '$lib/types';
 
+export const prerender = true;
+
 async function getComics() {
 	let comics: Comic[] = [];
 
