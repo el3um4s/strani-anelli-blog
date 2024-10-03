@@ -15,17 +15,31 @@ async function getComics() {
 		const src = path.replace('/src/posts/comics', '');
 		const srcP = src.split('/');
 		const category = path.split('/').at(-2);
-		const slug = srcP.at(-1)?.replaceAll('.webp', '').replaceAll('.jpg', '') || '';
+		const slug =
+			srcP
+				.at(-1)
+				?.replaceAll('.webp', '')
+				.replaceAll('.jpg', '')
+				.replaceAll(' - ', '-')
+				.replaceAll(' ', '-')
+				.replaceAll(',', '')
+				.replaceAll("'", '')
+				.replaceAll('(', '')
+				.replaceAll(')', '')
+				.replaceAll('.', '-')
+				.toLowerCase() || '';
 
-		const date = slug
+		const slugTemp = srcP.at(-1)?.replaceAll('.webp', '').replaceAll('.jpg', '') || '';
+
+		const date = slugTemp
 			.split('-')
 			.at(0)
 			?.replaceAll('.webp', '')
 			.replaceAll('.jpg', '')
 			.replaceAll(' ', '')
 			.replaceAll('.', '-');
-		const title = slug.split('-').at(1);
-		const order = slug.split('-').at(2)?.replaceAll(' ', '');
+		const title = slugTemp.split('-').at(1);
+		const order = slugTemp.split('-').at(2)?.replaceAll(' ', '');
 
 		const comic: Comic = {
 			slug: slug || '',
