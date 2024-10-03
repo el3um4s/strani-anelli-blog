@@ -28,7 +28,7 @@
 <header>
 	<nav>
 		<!-- Title -->
-		<a href={config.url} class="title">
+		<a href={config.linkSite} class="title">
 			<Logo />
 			<span>{config.title}</span>
 		</a>
@@ -43,25 +43,25 @@
 			</li>
 			<li> -->
 			<li>
-				<a href="{config.url}/comics/last">
+				<a href="{config.linkSite}/comics/last">
 					<Comics />
 					<span>Comics</span>
 				</a>
 			</li>
 			<li>
-				<a href="{config.url}/search">
+				<a href="{config.linkSite}/search">
 					<Search />
 					<span>Search</span>
 				</a>
 			</li>
 			<li>
-				<a href="{config.url}/contact">
+				<a href="{config.linkSite}/contact">
 					<Contact />
 					<span>Contact</span>
 				</a>
 			</li>
 			<li>
-				<a href="{config.url}/thanks">
+				<a href="{config.linkSite}/thanks">
 					<Thanks />
 					<span>Thanks</span>
 				</a>
