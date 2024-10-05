@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "83bcd7c2520adedf",
+        "id": "cf95c786fadc918c",
         "type": "tabs",
         "children": [
           {
-            "id": "8211b2584c3dab6d",
+            "id": "4c0fba8a628f4b92",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "en/2024/10/my-journey-into-drawing/post.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "en/2024/10/my-journey-into-drawing/post.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "en/2024/10/my-journey-into-drawing/post.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "en/2024/10/my-journey-into-drawing/post.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -147,21 +139,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8211b2584c3dab6d",
+  "active": "4c0fba8a628f4b92",
   "lastOpenFiles": [
-    "it/2024/10/il-mio-viaggio-nel-disegno/post.md",
-    "comics/The World of Iaini/2024.09.25 - Putting the Pieces Back Together - 028.webp",
-    "comics/The World of Iaini/2024.10.10 - Colour Study (Feeling Blue) - 038.jpg",
-    "comics/The World of Iaini/2024.09.17 - Resting in Each Other's Arms - 020.webp",
-    "comics/The World of Iaini/2024.10.08 - Rolling Along - 036.webp",
-    "comics/The World of Iaini/2024.09.24 - Venice Selfie  - 027.webp",
-    "comics/The World of Iaini/2024.09.23 - Love Connection - 026.webp",
-    "comics/The World of Iaini/2024.10.07 - Happy Together - 034.webp",
-    "comics/The World of Iaini/2024.09.30 - Light in the Darkness - 033.webp",
-    "comics/The World of Iaini/2024.09.29 - Rockin' Iaini - 032.webp",
-    "comics/The World of Iaini/2024.09.28 - Serenade  - 031.webp",
-    "comics/The World of Iaini",
+    "en/2023/02/how-to-use-private-repo-as-npm-dependency/post.md",
+    "en/2023/12/reverse-engineering-midjourney-style/image-03.png",
+    "en/2023/12/using-tailwind-with-svelte/npx-tailwind-init.jpg",
+    "en/2023/12/using-tailwind-with-svelte/npx-tailwind-init.webp",
+    "en/2023/12/using-tailwind-with-svelte/post.md",
+    "en/2023/12/using-tailwind-with-svelte/preview.gif",
+    "en/2023/12/using-tailwind-with-svelte/svelte-app-and-tailwind.jpg",
+    "en/2023/12/using-tailwind-with-svelte/svelte-app-and-tailwind.webp",
+    "en/2023/12/using-tailwind-with-svelte/svelte-app-and-tailwind.png",
+    "en/2023/12/reverse-engineering-midjourney-style/style-decoder-for-midjourney-06.png",
+    "en/2023/12/reverse-engineering-midjourney-style/style-decoder-for-midjourney-06.jpg",
+    "en/2023/12/reverse-engineering-midjourney-style/style-decoder-for-midjourney-06.webp",
+    "en/2023/12/reverse-engineering-midjourney-style/post.md",
+    "en/2024/05/review-breaking-through-by-katalin-kariko/post.md",
     "en/2024/10/my-journey-into-drawing/post.md",
+    "it/2024/10/il-mio-viaggio-nel-disegno/post.md",
+    "comics/The World of Iaini",
     "it/2024/10/il-mio-viaggio-nel-disegno/image.jpg.crdownload",
     "comics/Drawing Practice/2024.08.31 - Underwater Fun - 003.webp.crdownload",
     "comics/Drawing Practice/2024.09.07 - Character Parade - 010.webp.crdownload",
@@ -188,11 +184,7 @@
     "templates/javascript.md",
     "en/2024/05/13-powerful-lessons-from-katalin-kariko-autobiography/post.md",
     "templates/recensione.md",
-    "en/2024/05/review-breaking-through-by-katalin-kariko/post.md",
     "templates/post.md",
-    "it/2021/12/usare-javascript-per-trovare-una-password-bruteforce/post.md",
-    "it/2021/05/svelte-chrome-extension-construct-3/post.md",
-    "en/2021/05/svelte-chrome-extension-construct-3-english/post.md",
-    "it/2020/03/construct-3-creare-un-menu-laterale/post.md"
+    "it/2021/12/usare-javascript-per-trovare-una-password-bruteforce/post.md"
   ]
 }
