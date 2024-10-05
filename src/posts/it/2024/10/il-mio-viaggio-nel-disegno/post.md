@@ -1,6 +1,6 @@
 ---
 ignore: false
-title: ' Riscoprire la Creatività: Il Mio Viaggio nel Disegno'
+title: ' Riscoprire la Creatività - Il Mio Viaggio nel Disegno'
 published: true
 date: 2024-10-05
 categories:
@@ -12,7 +12,6 @@ tags:
   - my-journey-into-drawing
 lang: it
 cover: image.jpg
-description:
 subtitle: Come il disegno mi ha aiutato a esprimermi e a ritrovare me stesso
 ---
 

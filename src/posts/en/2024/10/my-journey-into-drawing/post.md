@@ -1,6 +1,6 @@
 ---
 ignore: false
-title: 'Rediscovering Creativity: My Journey into Drawing'
+title: 'Rediscovering Creativity - My Journey into Drawing'
 published: true
 date: 2024-10-05
 categories:
@@ -12,10 +12,8 @@ tags:
   - drawing
 lang: en
 cover: image.jpg
-description:
 subtitle: How drawing is helping me express myself and rediscover who I am
 ---
-
 Over the past few months, I've been focusing a lot on drawing. Last spring, I injured my leg and was immobilized for a while. In addition to spending a lot of time reading, at my wife's suggestion, I picked up a pencil and paper again. I started taking an online drawing course (on [https://www.21-draw.com/](https://www.21-draw.com/)) and... I'm still drawing now.
 
 The interesting thing is that the more I draw, the less I feel the need to use AI to generate images. Drawing with a pencil first, then with a graphics tablet, has become a habit that relaxes me, makes me feel good, and de-stresses me.
