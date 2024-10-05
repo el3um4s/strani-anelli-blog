@@ -11,8 +11,12 @@
             "id": "8211b2584c3dab6d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "en/2024/10/my-journey-into-drawing/post.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "en/2024/10/my-journey-into-drawing/post.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "en/2024/10/my-journey-into-drawing/post.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "en/2024/10/my-journey-into-drawing/post.md"
+              }
             }
           }
         ]
@@ -141,39 +149,42 @@
   },
   "active": "8211b2584c3dab6d",
   "lastOpenFiles": [
+    "it/2024/10/il-mio-viaggio-nel-disegno/post.md",
+    "comics/The World of Iaini/2024.09.25 - Putting the Pieces Back Together - 028.webp",
+    "comics/The World of Iaini/2024.10.10 - Colour Study (Feeling Blue) - 038.jpg",
+    "comics/The World of Iaini/2024.09.17 - Resting in Each Other's Arms - 020.webp",
+    "comics/The World of Iaini/2024.10.08 - Rolling Along - 036.webp",
+    "comics/The World of Iaini/2024.09.24 - Venice Selfie  - 027.webp",
+    "comics/The World of Iaini/2024.09.23 - Love Connection - 026.webp",
+    "comics/The World of Iaini/2024.10.07 - Happy Together - 034.webp",
+    "comics/The World of Iaini/2024.09.30 - Light in the Darkness - 033.webp",
+    "comics/The World of Iaini/2024.09.29 - Rockin' Iaini - 032.webp",
+    "comics/The World of Iaini/2024.09.28 - Serenade  - 031.webp",
+    "comics/The World of Iaini",
+    "en/2024/10/my-journey-into-drawing/post.md",
+    "it/2024/10/il-mio-viaggio-nel-disegno/image.jpg.crdownload",
+    "comics/Drawing Practice/2024.08.31 - Underwater Fun - 003.webp.crdownload",
+    "comics/Drawing Practice/2024.09.07 - Character Parade - 010.webp.crdownload",
+    "comics/Drawing Practice/2024.09.04 - Three's a Crowd - 007.webp.crdownload",
+    "comics/Drawing Practice/2024.09.03 - Floating Friends - 006.webp.crdownload",
+    "comics/Drawing Practice/2024.09.02 - Space Cat - 005.webp.crdownload",
+    "comics/Drawing Practice/2024.09.01 - Breaking Free - 004.webp.crdownload",
+    "comics/Drawing Practice/2024.09.08 - One Drawing a Day - 011.webp.crdownload",
+    "comics/Drawing Practice/2024.10.09 - Light and Shadow Study - 037.webp.crdownload",
+    "it/2024/10/come-creare-una-sezione-dedicata-ai-fumetti-con-svelte/post - Copia.md",
     "en/2024/07/satsujin-shussan/post.md",
     "it/2024/07/parti-e-omicidi-tra-le-righe/post.md",
-    "it/2024/07/parti-e-omicidi-tra-le-righe/image.jpg",
-    "en/2024/07/satsujin-shussan/image.jpg.crdownload",
-    "it/2024/07/parti-e-omicidi-tra-le-righe/image.jpg.crdownload",
-    "en/2024/07/satsujin-shussan/image.jpg",
     "en/2024/07/sherlock-holmes-and-the-art-of-reasoning/post.md",
-    "en/2024/07/satsujin-shussan",
     "it/2024/07/sherlock-holmes-arte-del-ragionamento-tra-le-righe/post.md",
-    "it/2024/07/parti-e-omicidi-tra-le-righe",
-    "en/2024/07/sherlock-holmes-and-the-art-of-reasoning/image.jpg",
-    "en/2024/07/sherlock-holmes-and-the-art-of-reasoning",
-    "en/2024/07",
     "it/2024/07/sherlock-holmes-arte-del-ragionamento-tra-le-righe/post 1.md",
-    "it/2024/07/sherlock-holmes-arte-del-ragionamento-tra-le-righe/image.jpg",
-    "it/2024/07/sherlock-holmes-arte-del-ragionamento-tra-le-righe/image.jpg.crdownload",
     "it/2024/06/il-tuo-secondo-cervello-tra-le-righe/post.md",
-    "it/2024/07/sherlock-holmes-arte-del-ragionamento-tra-le-righe",
-    "it/2024/07",
     "en/2024/06/building-a-second-brain-between-the-lines/post.md",
-    "en/2024/06/building-a-second-brain-between-the-lines/image.jpg",
-    "en/2024/06/building-a-second-brain-between-the-lines/image.jpg.crdownload",
     "en/2024/06/light-my-fire-between-the-lines/post.md",
     "it/2024/06/accendi-il-mio-fuoco-tra-le-righe/post.md",
-    "it/2024/06/il-tuo-secondo-cervello-tra-le-righe/image.jpg",
-    "en/2024/06/light-my-fire-between-the-lines/image.jpg",
     "it/2024/05/recensione-nonostante-tutto-katalin-kariko/post.md",
-    "it/2024/06/accendi-il-mio-fuoco-tra-le-righe/image.jpg",
     "templates/Tra le Righe.md",
     "templates/Beyond the Words.md",
     "it/2024/05/13-consigli-di-vita-di-katalin-kariko-autobiografia-che-ispira/post.md",
-    "en/2024/05/13-powerful-lessons-from-katalin-kariko-autobiography/image.jpg",
-    "it/2024/05/13-consigli-di-vita-di-katalin-kariko-autobiografia-che-ispira/image.jpg",
     "templates/javascript.md",
     "en/2024/05/13-powerful-lessons-from-katalin-kariko-autobiography/post.md",
     "templates/recensione.md",
@@ -182,9 +193,6 @@
     "it/2021/12/usare-javascript-per-trovare-una-password-bruteforce/post.md",
     "it/2021/05/svelte-chrome-extension-construct-3/post.md",
     "en/2021/05/svelte-chrome-extension-construct-3-english/post.md",
-    "it/2020/03/construct-3-creare-un-menu-laterale/post.md",
-    "it/2020/02/aphantasia-e-cose-senza-senso/post.md",
-    "it/2020/02/welcome-aphantasia/post.md",
-    "it/2020/02/aphantasia-linguaggio-e-regia/post.md"
+    "it/2020/03/construct-3-creare-un-menu-laterale/post.md"
   ]
 }
