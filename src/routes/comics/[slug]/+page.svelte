@@ -67,7 +67,7 @@
 			</p>
 
 			<h1 class="title">
-				{data.title}
+				#{data.position} - {data.title}
 			</h1>
 
 			<p class="date">

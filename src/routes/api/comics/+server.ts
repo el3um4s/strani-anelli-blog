@@ -49,16 +49,18 @@ async function getComics() {
 			title: title || '',
 			date: date || '1900-01-01',
 			order: order || '000',
-			index: -1
+			index: -1,
+			position: -1
 		};
 		comics.push(comic);
 	}
 
+	const totalComics = comics.length;
 	comics = comics
 		.sort((first, second) => (second.order < first.order ? -1 : second.order > first.order ? 1 : 0))
 		.sort((first, second) => new Date(second.date).getTime() - new Date(first.date).getTime())
 		.map((c, i) => {
-			return { ...c, index: i };
+			return { ...c, index: i, position: totalComics - i };
 		});
 
 	return comics;

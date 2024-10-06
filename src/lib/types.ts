@@ -40,4 +40,5 @@ export type Comic = {
 	srcP: String[];
 	date: string;
 	order: string;
+	position: number;
 };
