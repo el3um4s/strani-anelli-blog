@@ -2,6 +2,7 @@
 	// import Footer from './footer.svelte';
 	import Header from './header.svelte';
 	import Content from './content.svelte';
+	import BlogMovedNotice from './BlogMovedNotice.svelte';
 
 	// import '../app.css';
 	import '../css/tailwind.pcss';
@@ -12,10 +13,12 @@
 <div class="layout">
 	<!-- Header -->
 	<Header />
+	<BlogMovedNotice />
 
 	<main>
 		<Content url={data.url}>
 			<slot />
 		</Content>
 	</main>
+	<BlogMovedNotice />
 </div>

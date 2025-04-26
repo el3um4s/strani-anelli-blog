@@ -11,8 +11,14 @@
             "id": "4c0fba8a628f4b92",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "en/2023/01/ai-examples-jasper-apple-medium/post.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "post"
             }
           }
         ]
@@ -34,8 +40,11 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
-              }
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -50,7 +59,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -58,7 +69,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -81,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "en/2023/01/ai-examples-jasper-apple-medium/post.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,7 +102,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for post"
             }
           },
           {
@@ -97,9 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "en/2023/01/ai-examples-jasper-apple-medium/post.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from post"
             }
           },
           {
@@ -109,8 +128,12 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
-              }
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -118,7 +141,14 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "en/2023/01/ai-examples-jasper-apple-medium/post.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of post"
             }
           }
         ]
@@ -130,17 +160,25 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-custom-frames:Open Google Gemini": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "obsidian-custom-frames:Open Google Gemini": false,
+      "publish:Publish changes...": false
     }
   },
   "active": "4c0fba8a628f4b92",
   "lastOpenFiles": [
+    "it/2024/07/sherlock-holmes-arte-del-ragionamento-tra-le-righe/post.md",
+    "it/2024/10/il-mio-viaggio-nel-disegno/post.md",
+    "it/2018/100-days-of-coding-tempo-scaduto-piu-o-meno/post.md",
+    "it/2018/100-days-of-coding-tempo-scaduto-piu-o-meno/fine-100-giorni.jpg",
+    "it/2015/12/la-fontana-racconto/post.md",
+    "it/2015/12/la-fontana-racconto/la-fontana.webp",
+    "templates/Beyond the Words.md",
     "en/2023/02/how-to-use-private-repo-as-npm-dependency/post.md",
     "en/2023/12/reverse-engineering-midjourney-style/image-03.png",
     "en/2023/12/using-tailwind-with-svelte/npx-tailwind-init.jpg",
@@ -151,12 +189,9 @@
     "en/2023/12/using-tailwind-with-svelte/svelte-app-and-tailwind.webp",
     "en/2023/12/using-tailwind-with-svelte/svelte-app-and-tailwind.png",
     "en/2023/12/reverse-engineering-midjourney-style/style-decoder-for-midjourney-06.png",
-    "en/2023/12/reverse-engineering-midjourney-style/style-decoder-for-midjourney-06.jpg",
-    "en/2023/12/reverse-engineering-midjourney-style/style-decoder-for-midjourney-06.webp",
     "en/2023/12/reverse-engineering-midjourney-style/post.md",
     "en/2024/05/review-breaking-through-by-katalin-kariko/post.md",
     "en/2024/10/my-journey-into-drawing/post.md",
-    "it/2024/10/il-mio-viaggio-nel-disegno/post.md",
     "comics/The World of Iaini",
     "it/2024/10/il-mio-viaggio-nel-disegno/image.jpg.crdownload",
     "comics/Drawing Practice/2024.08.31 - Underwater Fun - 003.webp.crdownload",
@@ -171,7 +206,6 @@
     "en/2024/07/satsujin-shussan/post.md",
     "it/2024/07/parti-e-omicidi-tra-le-righe/post.md",
     "en/2024/07/sherlock-holmes-and-the-art-of-reasoning/post.md",
-    "it/2024/07/sherlock-holmes-arte-del-ragionamento-tra-le-righe/post.md",
     "it/2024/07/sherlock-holmes-arte-del-ragionamento-tra-le-righe/post 1.md",
     "it/2024/06/il-tuo-secondo-cervello-tra-le-righe/post.md",
     "en/2024/06/building-a-second-brain-between-the-lines/post.md",
@@ -179,12 +213,9 @@
     "it/2024/06/accendi-il-mio-fuoco-tra-le-righe/post.md",
     "it/2024/05/recensione-nonostante-tutto-katalin-kariko/post.md",
     "templates/Tra le Righe.md",
-    "templates/Beyond the Words.md",
     "it/2024/05/13-consigli-di-vita-di-katalin-kariko-autobiografia-che-ispira/post.md",
     "templates/javascript.md",
     "en/2024/05/13-powerful-lessons-from-katalin-kariko-autobiography/post.md",
-    "templates/recensione.md",
-    "templates/post.md",
-    "it/2021/12/usare-javascript-per-trovare-una-password-bruteforce/post.md"
+    "templates/recensione.md"
   ]
 }
